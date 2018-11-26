@@ -13,6 +13,7 @@ class Forspell
     words.map do |word|
       @errors << word unless dictionary.check?(word)
     end
-    @errors.empty? ? true : @errors
+    
+    errors.empty? ? true : errors
   end
 end

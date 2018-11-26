@@ -12,5 +12,9 @@ RSpec.describe Forspell do
       checker.check_spelling('s0me r4ndom stuff')
       expect(checker.errors).to contain_exactly('s0me', 'r4ndom')
     end
+
+    it 'should skip class names and special words' do
+      
+    end
   end
 end
