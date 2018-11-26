@@ -1,4 +1,6 @@
 require './lib/forspell'
+require 'pry'
+
 RSpec.describe Forspell do
   let(:checker) { described_class.new } # with default en-Us dictionary
 
@@ -14,7 +16,7 @@ RSpec.describe Forspell do
     end
 
     it 'should skip class names and special words' do
-      
+      checker.check_spelling 'See the examples in the Namespace::Examples, '
     end
   end
 end

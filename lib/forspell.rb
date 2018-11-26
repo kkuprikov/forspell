@@ -8,12 +8,7 @@ class Forspell
   end
 
   def check_spelling input
-    @errors = []
     words = input.split(/[^[[:word:]]']+/)
-    words.map do |word|
-      @errors << word unless dictionary.check?(word)
-    end
-    
-    errors.empty? ? true : errors
+    @errors = words.select { |word| !dictionary.check?(word) }
   end
 end
