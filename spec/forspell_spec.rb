@@ -20,4 +20,27 @@ RSpec.describe Forspell do
       expect(checker.errors).to contain_exactly('darlin')
     end
   end
+
+  describe '#check_file' do
+
+    subject { checker.errors }
+    before { checker.check_file 'spec/fixtures/devise_readme.md' }
+
+    context 'with abbreviations' do
+      let(:checker) { described_class.new(params: { with_abbreviations: true }) }
+
+      it 'should check a readme file and return errors' do
+        is_expected.not_to be_empty
+        is_expected.to include('README')
+      end
+    end
+
+    context 'without abbreviations' do
+      it 'should check a readme file and return errors' do
+        ENV['check_abbreviations'] = nil
+        is_expected.not_to include('README')
+        is_expected.not_to be_empty
+      end
+    end
+  end
 end

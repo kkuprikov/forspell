@@ -1,5 +1,10 @@
 source 'https://rubygems.org'
 
 gem 'ffi-hunspell'
-gem 'rspec'
-gem 'pry'
+gem 'redcarpet'
+gem 'nokogiri'
+
+group :test, :development do
+  gem 'rspec'
+  gem 'pry'
+end
