@@ -4,10 +4,11 @@ class MarkdownFilter
   def initialize input = nil, **params
     @input = input || IO.read(params[:file])
     @values = []
+    @parser = params[:parser] || 'Kramdown'
   end
 
   def process
-    tree = Kramdown::Document.new(@input).to_filtered_hash
+    tree = Kramdown::Document.new(@input, input: @parser).to_filtered_hash
     extract_values(tree)
     self
   end
