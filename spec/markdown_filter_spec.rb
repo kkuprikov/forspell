@@ -17,12 +17,11 @@ RSpec.describe MarkdownFilter do
       specify { is_expected.not_to include 'This is code' }
     end
 
-    describe 'real docs' do
-      let(:filepath) { 'spec/fixtures/devise_readme.md' }
+    describe 'mixed inline code and blocks' do
+      let(:filepath) { 'spec/fixtures/code_mixed.md' }
 
-      it 'should not include any code' do
-        
-      end
+      specify { is_expected.not_to include 'code' }
+      specify { is_expected.to include 'plain text' }
     end
   end
 end
