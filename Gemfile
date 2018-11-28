@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 gem 'ffi-hunspell'
 gem 'redcarpet'
-gem 'nokogiri'
+gem 'kramdown'
 
 group :test, :development do
   gem 'rspec'
