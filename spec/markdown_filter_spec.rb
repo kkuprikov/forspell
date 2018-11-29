@@ -26,7 +26,7 @@ RSpec.describe MarkdownFilter do
 
     describe 'devise readme' do
       let(:filepath) { 'spec/fixtures/devise_readme.md' }
-      specify { is_expected.not_to include '```' }
+      specify { is_expected.not_to include 'http' }
     end
   end
 end

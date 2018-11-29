@@ -1,15 +1,18 @@
 require 'ffi/hunspell'
 
 class Forspell
-  attr_reader :errors, :dictionary, :params
+  attr_reader :dictionary
 
-  def initialize(dictionary_name: 'en_US', **params)
+  def initialize(dictionary_name: 'en_US')
     @dictionary = FFI::Hunspell.dict(dictionary_name)
-    @params = params
   end
 
   def check_spelling input
     words = input.split(/[^[[:word:]]_#]+/)
-    @errors = words.select{ |word| !dictionary.check?(word) }.sort.uniq
+    words.select{ |word| !dictionary.check?(word) }.sort.uniq
+  end
+
+  def check_docs hash
+    hash.transform_values{ |v| check_spelling(v) }.select{ |k, v| !v.empty? }
   end
 end

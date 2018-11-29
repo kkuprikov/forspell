@@ -25,6 +25,7 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.8.0)
     rspec-support (3.8.0)
+    yard (0.9.16)
 
 PLATFORMS
   ruby
@@ -35,6 +36,10 @@ DEPENDENCIES
   pry
   redcarpet
   rspec
+  yard
+
+RUBY VERSION
+   ruby 2.4.1p111
 
 BUNDLED WITH
-   1.16.1
+   1.17.1

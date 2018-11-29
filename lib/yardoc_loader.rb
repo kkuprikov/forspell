@@ -2,17 +2,22 @@ require 'yard'
 require 'yard/registry'
 
 class YardocLoader
-  attr_reader :documented_objects
+  YARDOC_OPTIONS = %w(--no-output --no-progress --no-stats).freeze
+
+  attr_reader :result
 
   def initialize **params
-    @file = params[:file]
+    @path = params[:file]
   end
 
   def process
-    #default @file path is current directory
-    @file ? YARD::Registry.load!(@file) : YARD::Registry.load!
-    @documented_objects = YARD::Registry.all.map do |object|
+    YARD::CLI::Yardoc.new.run(*YARDOC_OPTIONS) unless @path
+    @path ? YARD::Registry.load!(@path) : YARD::Registry.load!
+
+    @result = YARD::Registry.all.map do |object|
       [object.path, object.docstring] unless object.docstring.empty?
     end.compact.to_h
+
+    self
   end
 end
