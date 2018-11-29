@@ -7,16 +7,15 @@ RSpec.describe Forspell do
 
   describe '#check_spelling' do
     it 'should work if the spelling of each word is correct' do
-      checker.check_spelling('Richard Of York Gave Battle In Vain')
-      expect(checker.errors).to be_empty
+      input = 'Richard Of York Gave Battle In Vain'
+      expect(checker.check_spelling(input)).to be_empty
     end
 
     it 'should return words with incorrect spelling' do
-      checker.check_spelling('s0me r4ndom stuff')
-      expect(checker.errors).to contain_exactly('s0me', 'r4ndom')
+      expect(checker.check_spelling('s0me r4ndom stuff')).to contain_exactly('s0me', 'r4ndom')
     end
 
-    describe 'checking real docs' do
+    describe 'checking readme-s' do
       let(:filtered_input) { MarkdownFilter.new(file: filepath, parser: 'GFM').process.result }
       subject { checker.check_spelling(filtered_input) }
 
@@ -38,6 +37,25 @@ RSpec.describe Forspell do
       describe 'bundler readme' do
         let(:filepath) { 'spec/fixtures/bundler_readme.md' }
         specify { is_expected.to include('prerelease') }
+      end
+    end
+  end
+
+  describe 'check_docs' do
+
+    subject { checker.check_docs(docs_input) }
+    describe 'test docs input' do
+      let(:docs_input) { 
+        {
+        'MyClass#my_method' => '@params some params \n This method has some test behavior', 
+        'MyClass#another_method' => '' 
+        }
+      }
+
+      specify do 
+        is_expected.to be_a Hash
+        expect(subject.keys).to contain_exactly('MyClass#my_method')
+        expect(subject['MyClass#my_method']).to contain_exactly('params')
       end
     end
   end
