@@ -1,5 +1,6 @@
 require './lib/forspell'
 require './lib/markdown_filter'
+require 'yard'
 require 'pry'
 
 RSpec.describe Forspell do
@@ -47,15 +48,15 @@ RSpec.describe Forspell do
     describe 'test docs input' do
       let(:docs_input) { 
         {
-        'MyClass#my_method' => '@params some params \n This method has some test behavior', 
-        'MyClass#another_method' => '' 
+          'MyClass#my_method' => YARD::Docstring.new('See the env or some akward variables described here: http://external.io \n This method has some test behavior'), 
+          'MyClass#correct_method' => YARD::Docstring.new('Everything is correct here'), 
         }
       }
 
       specify do 
         is_expected.to be_a Hash
-        expect(subject.keys).to contain_exactly('MyClass#my_method')
-        expect(subject['MyClass#my_method']).to contain_exactly('params')
+        expect(subject.keys).to contain_exactly('MyClass#my_method:')
+        expect(subject['MyClass#my_method:']).to contain_exactly('akward', 'io')
       end
     end
   end

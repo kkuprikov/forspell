@@ -1,3 +1,4 @@
+require 'rdoc'
 require 'yard'
 require 'yard/registry'
 
