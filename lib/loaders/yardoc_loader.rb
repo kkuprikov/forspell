@@ -1,6 +1,5 @@
 require 'rdoc'
 require 'yard'
-require 'yard/registry'
 require_relative'./base_loader'
 
 class YardocLoader < BaseLoader
