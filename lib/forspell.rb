@@ -11,15 +11,15 @@ class Forspell
 
   attr_reader :dictionary, :result
 
-  def initialize(dictionary_name: 'en_US', **params)
+  def initialize(dictionary_name: 'en_US', logfile: STDOUT, file: nil, no_output: false)
     @dictionary = FFI::Hunspell.dict(dictionary_name)
-    @file = params[:file]
+    @file = file
     @loader_class = loader_class(@file)
 
-    unless params[:no_output]
-      @logger = Logger.new(params[:logfile] || STDOUT)
+    unless no_output
+      @logger = Logger.new(logfile)
       @logger.formatter = proc do |severity, datetime, progname, msg|
-        "#{msg}\n"
+        "#{ msg }\n"
       end
     end
   end

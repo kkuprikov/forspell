@@ -14,11 +14,11 @@ class YardocLoader < BaseLoader
 
   attr_reader :result
 
-  def initialize **params
-    @format_class = params[:markup] ? RDOC_FORMATS[params[:markup]] : RDoc::RD
-    fail "Unsupported markup format: #{ params[:markup] }" unless @format_class
+  def initialize markup: nil, file: nil
+    @format_class = markup ? RDOC_FORMATS[markup] : RDoc::RD
+    fail "Unsupported markup format: #{ markup }" unless @format_class
 
-    @path = params[:file]
+    @path = file
   end
 
   def process

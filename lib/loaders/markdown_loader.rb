@@ -6,10 +6,10 @@ require_relative'../kramdown/converter/filtered_hash'
 class MarkdownLoader < BaseLoader
   attr_reader :result
 
-  def initialize input = nil, **params
-    @input = input || IO.read(params[:file])
+  def initialize input = nil, file: nil, parser: 'GFM'
+    @input = input || IO.read(file)
     @result = {}
-    @parser = params[:parser] || 'GFM'
+    @parser = parser
   end
 
   def process
@@ -21,7 +21,7 @@ class MarkdownLoader < BaseLoader
   private
 
   def extract_values tree
-    tree[:children].select{ |child| child.is_a?(Hash) }.map do |child| 
+    tree[:children].grep(Hash).map do |child| 
       if child[:children]
         extract_values(child)
       else
