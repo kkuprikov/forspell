@@ -16,10 +16,11 @@ class Forspell
     @file = params[:file]
     @loader_class = loader_class(@file)
 
-    @logger = Logger.new(params[:logfile] || STDOUT) unless params[:no_output]
-    
-    @logger.formatter = proc do |severity, datetime, progname, msg|
-      "#{msg}\n"
+    unless params[:no_output]
+      @logger = Logger.new(params[:logfile] || STDOUT)
+      @logger.formatter = proc do |severity, datetime, progname, msg|
+        "#{msg}\n"
+      end
     end
   end
 
