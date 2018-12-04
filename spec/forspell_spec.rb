@@ -1,28 +1,31 @@
-require './lib/forspell'
-require './lib/markdown_filter'
 require 'yard'
 require 'pry'
+require_relative '../lib/forspell'
+require_relative '../lib/loaders/markdown_loader'
 
 RSpec.describe Forspell do
   let(:checker) { described_class.new } # with default en-Us dictionary
 
   describe '#check_spelling' do
     it 'should work if the spelling of each word is correct' do
-      input = 'Richard Of York Gave Battle In Vain'
+      input = 'Richard Of York Gave Battle In Vain'.split(' ')
       expect(checker.check_spelling(input)).to be_empty
     end
 
     it 'should return words with incorrect spelling' do
-      expect(checker.check_spelling('s0me r4ndom stuff')).to contain_exactly('s0me', 'r4ndom')
+      expect(checker.check_spelling('s0me r4ndom stuff'.split(' '))).to contain_exactly('s0me', 'r4ndom')
     end
 
     describe 'checking readme-s' do
-      let(:filtered_input) { MarkdownFilter.new(file: filepath, parser: 'GFM').process.result }
-      subject { checker.check_spelling(filtered_input) }
+      # let(:filtered_input) { MarkdownLoader.new(file: filepath, parser: 'GFM').process.result }
+      let(:checker) { described_class.new(file: filepath, no_output: true) }
+      subject { checker.process.result.values.flatten }
 
       describe 'devise readme' do
         let(:filepath) { 'spec/fixtures/devise_readme.md' }
-        specify { is_expected.to include('behaviour') }
+        specify { 
+          # binding.pry
+          is_expected.to include('behaviour') }
       end
 
       describe 'sidekiq readme' do
@@ -42,22 +45,5 @@ RSpec.describe Forspell do
     end
   end
 
-  describe 'check_docs' do
-
-    subject { checker.check_docs(docs_input) }
-    describe 'test docs input' do
-      let(:docs_input) { 
-        {
-          'MyClass#my_method' => YARD::Docstring.new('See the env or some akward variables described here: http://external.io \n This method has some test behavior'), 
-          'MyClass#correct_method' => YARD::Docstring.new('Everything is correct here'), 
-        }
-      }
-
-      specify do 
-        is_expected.to be_a Hash
-        expect(subject.keys).to contain_exactly('MyClass#my_method:')
-        expect(subject['MyClass#my_method:']).to contain_exactly('akward', 'io')
-      end
-    end
-  end
+  
 end

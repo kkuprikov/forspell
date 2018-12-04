@@ -1,0 +1,4 @@
+#!/usr/bin/env ruby
+require_relative '../lib/forspell'
+
+Forspell.new(file: ARGV.first).process

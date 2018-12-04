@@ -6,6 +6,7 @@ module Kramdown
         hash = {:type => el.type}
         hash[:attr] = el.attr unless el.attr.empty?
         hash[:value] = el.value unless el.value.nil?
+        hash[:location] = el.options[:location]
         unless el.children.empty?
           hash[:children] = []
           el.children.each {|child| hash[:children] << convert(child)}
