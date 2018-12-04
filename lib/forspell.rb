@@ -13,12 +13,14 @@ class Forspell
 
   def initialize(dictionary_name: 'en_US', **params)
     @dictionary = FFI::Hunspell.dict(dictionary_name)
+    @file = params[:file]
+    @loader_class = loader_class(@file)
+
     @logger = Logger.new(params[:logfile] || STDOUT) unless params[:no_output]
+    
     @logger.formatter = proc do |severity, datetime, progname, msg|
       "#{msg}\n"
     end
-    @file = params[:file]
-    @loader_class = loader_class(@file)
   end
 
   def check_spelling words
@@ -43,9 +45,5 @@ class Forspell
   def pretty_print result_hash
     @logger.info 'Spellchecking result:'
     result_hash.each_pair { |object, errors| @logger.info "#{ object }: #{ errors.join(', ') }" }
-  end
-
-  def range_or_line_number range
-    range.size > 1  ? range : range.first
   end
 end
