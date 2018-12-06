@@ -30,8 +30,12 @@ class YardocLoader < BaseLoader
     elsif !@path
       YARD::CLI::Yardoc.new.run(*YARDOC_OPTIONS)
       YARD::Registry.load!
-    else # path to .yardoc supplied
-      YARD::Registry.load!(@path)
+    else # path is supplied
+      current_dir = Dir.pwd
+      Dir.chdir @path
+      YARD::CLI::Yardoc.new.run(*YARDOC_OPTIONS)
+      Dir.chdir current_dir
+      YARD::Registry.load!("#{ @path }/.yardoc")
     end
 
     DICTIONARY_CLASSES.each do |yard_class|
