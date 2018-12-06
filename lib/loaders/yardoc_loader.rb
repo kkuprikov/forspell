@@ -3,8 +3,6 @@ require 'yard'
 require_relative'./base_loader'
 
 class YardocLoader < BaseLoader
-  include CodeObjectsFilter
-
   YARDOC_OPTIONS = %w(--no-output --no-progress --no-stats).freeze
 
   RDOC_FORMATS = {
@@ -12,22 +10,33 @@ class YardocLoader < BaseLoader
     'markdown' => RDoc::Markdown
   }.freeze
 
+  DICTIONARY_CLASSES = [
+    YARD::CodeObjects::ClassObject,
+    YARD::CodeObjects::NamespaceObject
+  ]
+
   attr_reader :result
 
   def initialize markup: nil, file: nil
     @format_class = markup ? RDOC_FORMATS[markup] : RDoc::RD
     fail "Unsupported markup format: #{ markup }" unless @format_class
-
+    @custom_dictionary = []
     @path = file
   end
 
   def process
-    if @path
+    if @path && !File.directory?(@path)
      YARD::Registry.load([@path], true) 
-    else
+    elsif !@path
       YARD::CLI::Yardoc.new.run(*YARDOC_OPTIONS)
       YARD::Registry.load!
+    else # path to .yardoc supplied
+      YARD::Registry.load!(@path)
     end
+
+    DICTIONARY_CLASSES.each do |yard_class|
+      @custom_dictionary += YARD::Registry.all.grep(yard_class).map{|object| object.name(prefix: true)}
+    end    
 
     @result = YARD::Registry.all.map do |object|
       ["#{ object.path }:#{ object.docstring.line_range }", filter_code_objects(extract_text(object.docstring))] unless object.docstring.empty?

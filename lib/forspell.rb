@@ -40,7 +40,7 @@ class Forspell
 
   def loader_class file
     return YardocLoader unless file
-    FORMATS_TO_LOADERS_MAP[File.extname(file)]
+    FORMATS_TO_LOADERS_MAP[File.extname(file)] || YardocLoader
   end
 
   def pretty_print result_hash
