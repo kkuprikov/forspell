@@ -43,7 +43,7 @@ class YardocLoader < BaseLoader
     end    
 
     @result = YARD::Registry.all.map do |object|
-      ["#{ object.path }:#{ object.docstring.line_range }", filter_code_objects(extract_text(object.docstring))] unless object.docstring.empty?
+      ["#{object.files.flatten.first} #{ object.path }:#{ object.docstring.line_range }", filter_code_objects(extract_text(object.docstring))] unless object.docstring.empty?
     end.compact.to_h
 
     self

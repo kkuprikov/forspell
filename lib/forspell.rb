@@ -17,7 +17,7 @@ class Forspell
     @loader_class = loader_class(@file)
 
     unless no_output
-      @logger = Logger.new(logfile)
+      @logger = Logger.new(logfile || STDOUT)
       @logger.formatter = proc do |severity, datetime, progname, msg|
         "#{ msg }\n"
       end
