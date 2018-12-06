@@ -7,6 +7,7 @@ class MarkdownLoader < BaseLoader
   attr_reader :result
 
   def initialize input = nil, file: nil, parser: 'GFM'
+    @custom_dictionary = []
     @input = input || IO.read(file)
     @result = {}
     @parser = parser
