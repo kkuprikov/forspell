@@ -1,6 +1,6 @@
 1:
-  paragraph: 'These are some params'
-  words: ['These', 'are', 'some', 'params']
+  paragraph: 'These are some params filesystem'
+  words: ['These', 'are', 'some', 'params', 'filesystem']
   errors: []
 2:
   paragraph: "Checking words with apostrohes like doesn't, haven't, don't"
@@ -9,4 +9,12 @@
 3:
   paragraph: "example with <tt>need to filter that</tt> tags <p>*.asd</p> <dd>!@$#%@%SDF413ef#$&%&</dd>"
   words: ['example', 'with', 'tags']
+  errors: []
+4:
+  paragraph: "fake apostrophed words like 'text/javascript'"
+  words: ['fake', 'apostrophed', 'words', 'like', 'text', 'javascript']
+  errors: ['apostrophed', 'javascript']
+5:
+  paragraph: "# Compares the +other+ MIME::Type based on how reliable it is before doing a normal <=> comparison. "
+  words: ['Compares', 'the', 'other', 'based', 'on', 'how', 'reliable', 'it', 'is', 'before', 'doing', 'a', 'normal', 'comparison']
   errors: []

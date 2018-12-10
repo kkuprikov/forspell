@@ -33,6 +33,7 @@ class Forspell
 
     @result = data.map do |part| 
       part[:errors] = check_spelling(part[:words])
+      part[:errors_with_suggestions] = part[:errors].map{ |word| [word, dictionary.suggest(word).first] }.to_h
       part.delete(:words)
       part 
     end.reject{ |part| part[:errors].empty? }
@@ -49,7 +50,7 @@ class Forspell
   end
 
   def pretty_print result_hash
-    @logger.info 'Spellchecking result:'
-    result_hash.each { |object| @logger.info object.to_s }
-  end
+    # result_hash.each { |object| @logger.info object.to_s }
+    @logger.info result_hash.to_yaml
+  end 
 end
