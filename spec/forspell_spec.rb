@@ -48,7 +48,7 @@ RSpec.describe Forspell do
       subject { described_class.new.check_spelling(input) }
 
       data = YAML.load_file 'spec/fixtures/examples.yml'
-      data.each_pair do |index, spec_hash|
+      data.each_with_index do |spec_hash, index|
         describe "example #{ index }" do
           let(:input) { spec_hash['words'] }
           specify { is_expected.to contain_exactly(*spec_hash['errors']) }

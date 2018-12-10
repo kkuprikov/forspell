@@ -6,6 +6,15 @@ require 'fcntl'
 module Sidekiq
   module Logging
 
+    # erraccessor
+    attr_accessor :test
+
+    attr_accessor :wont_show
+    alias_method :wont_show?, :wont_show
+
+    # erralias
+    alias_method :test?, :test
+
     def self.job_hash_context(job_hash)
       # If we're using a wrapper class, like ActiveJob, use the "wrapped"
       # attribute to expose the underlying thing.

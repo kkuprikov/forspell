@@ -1,0 +1,24 @@
+---
+- :file: lib/cocoon/view_helpers.rb
+  :object: Cocoon::ViewHelpers#link_to_remove_association
+  :location: !ruby/range
+    begin: 5
+    end: 14
+    excl: false
+  :errors:
+  - html
+  :errors_with_suggestions:
+    html: HTML
+- :file: lib/cocoon/view_helpers.rb
+  :object: Cocoon::ViewHelpers#link_to_add_association
+  :location: !ruby/range
+    begin: 56
+    end: 69
+    excl: false
+  :errors:
+  - formtastic
+  - html
+  :errors_with_suggestions:
+    formtastic: fantastical
+    html: HTML
+

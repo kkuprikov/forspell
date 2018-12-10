@@ -1,0 +1,428 @@
+---
+- :file: lib/json/common.rb
+  :object: JSON.deep_const_get
+  :location: !ruby/range
+    begin: 32
+    end: 35
+    excl: false
+  :errors:
+  - namespace
+  :errors_with_suggestions:
+    namespace: name space
+- :file: lib/json/common.rb
+  :object: JSON::GeneratorError
+  :location: !ruby/range
+    begin: 126
+    end: 126
+    excl: false
+  :errors:
+  - unparser
+  :errors_with_suggestions:
+    unparser: sparser
+- :file: lib/json/common.rb
+  :object: JSON::MissingUnicodeSupport
+  :location: !ruby/range
+    begin: 131
+    end: 132
+    excl: false
+  :errors:
+  - iconv
+  - unicode
+  :errors_with_suggestions:
+    iconv: icon
+    unicode: Unicode
+- :file: lib/json/common.rb
+  :object: JSON#load
+  :location: 
+  :errors:
+  - serialise
+  - untrusted
+  :errors_with_suggestions:
+    serialise: serialize
+    untrusted: entrusted
+- :file: lib/json/common.rb
+  :object: JSON.load
+  :location: !ruby/range
+    begin: 309
+    end: 322
+    excl: false
+  :errors:
+  - serialise
+  - untrusted
+  :errors_with_suggestions:
+    serialise: serialize
+    untrusted: entrusted
+- :file: lib/json/common.rb
+  :object: Class#json_creatable?
+  :location: !ruby/range
+    begin: 449
+    end: 452
+    excl: false
+  :errors:
+  - serialised
+  :errors_with_suggestions:
+    serialised: serialized
+- :file: lib/json/add/set.rb
+  :object: Set.json_create
+  :location: !ruby/range
+    begin: 7
+    end: 9
+    excl: false
+  :errors:
+  - Marshalled
+  - marshalling
+  :errors_with_suggestions:
+    Marshalled: Marshall ed
+    marshalling: marshaling
+- :file: lib/json/add/set.rb
+  :object: Set#as_json
+  :location: !ruby/range
+    begin: 14
+    end: 16
+    excl: false
+  :errors:
+  - marshalling
+  :errors_with_suggestions:
+    marshalling: marshaling
+- :file: lib/json/add/date.rb
+  :object: Date.json_create
+  :location: !ruby/range
+    begin: 9
+    end: 10
+    excl: false
+  :errors:
+  - Deserializes
+  :errors_with_suggestions:
+    Deserializes: Serializes
+- :file: lib/json/add/time.rb
+  :object: Time.json_create
+  :location: !ruby/range
+    begin: 8
+    end: 8
+    excl: false
+  :errors:
+  - Deserializes
+  :errors_with_suggestions:
+    Deserializes: Serializes
+- :file: lib/json/add/range.rb
+  :object: Range.json_create
+  :location: !ruby/range
+    begin: 8
+    end: 9
+    excl: false
+  :errors:
+  - Deserializes
+  :errors_with_suggestions:
+    Deserializes: Serializes
+- :file: lib/json/add/range.rb
+  :object: Range#to_json
+  :location: !ruby/range
+    begin: 23
+    end: 25
+    excl: false
+  :errors:
+  - boolean
+  :errors_with_suggestions:
+    boolean: Boolean
+- :file: lib/json/add/regexp.rb
+  :object: Regexp.json_create
+  :location: !ruby/range
+    begin: 8
+    end: 10
+    excl: false
+  :errors:
+  - Deserializes
+  :errors_with_suggestions:
+    Deserializes: Serializes
+- :file: lib/json/add/struct.rb
+  :object: Struct.json_create
+  :location: !ruby/range
+    begin: 8
+    end: 9
+    excl: false
+  :errors:
+  - Deserializes
+  :errors_with_suggestions:
+    Deserializes: Serializes
+- :file: lib/json/add/struct.rb
+  :object: Struct#to_json
+  :location: !ruby/range
+    begin: 25
+    end: 26
+    excl: false
+  :errors:
+  - structs
+  :errors_with_suggestions:
+    structs: struts
+- :file: lib/json/add/symbol.rb
+  :object: Symbol.json_create
+  :location: !ruby/range
+    begin: 21
+    end: 21
+    excl: false
+  :errors:
+  - Deserializes
+  :errors_with_suggestions:
+    Deserializes: Serializes
+- :file: lib/json/add/complex.rb
+  :object: Complex.json_create
+  :location: !ruby/range
+    begin: 9
+    end: 10
+    excl: false
+  :errors:
+  - Deserializes
+  :errors_with_suggestions:
+    Deserializes: Serializes
+- :file: lib/json/add/ostruct.rb
+  :object: OpenStruct.json_create
+  :location: !ruby/range
+    begin: 9
+    end: 10
+    excl: false
+  :errors:
+  - Deserializes
+  :errors_with_suggestions:
+    Deserializes: Serializes
+- :file: lib/json/add/ostruct.rb
+  :object: OpenStruct#to_json
+  :location: !ruby/range
+    begin: 26
+    end: 27
+    excl: false
+  :errors:
+  - struct's
+  :errors_with_suggestions:
+    struct's: strut's
+- :file: lib/json/pure/parser.rb
+  :object: JSON::Pure::Parser::UNESCAPE_MAP
+  :location: !ruby/range
+    begin: 145
+    end: 145
+    excl: false
+  :errors:
+  - Unescape
+  :errors_with_suggestions:
+    Unescape: Escapement
+- :file: lib/json/add/rational.rb
+  :object: Rational.json_create
+  :location: !ruby/range
+    begin: 8
+    end: 9
+    excl: false
+  :errors:
+  - Deserializes
+  :errors_with_suggestions:
+    Deserializes: Serializes
+- :file: lib/json/add/date_time.rb
+  :object: DateTime.json_create
+  :location: !ruby/range
+    begin: 9
+    end: 11
+    excl: false
+  :errors:
+  - Deserializes
+  :errors_with_suggestions:
+    Deserializes: Serializes
+- :file: lib/json/add/exception.rb
+  :object: Exception.json_create
+  :location: !ruby/range
+    begin: 8
+    end: 9
+    excl: false
+  :errors:
+  - Deserializes
+  - backtrace
+  :errors_with_suggestions:
+    Deserializes: Serializes
+    backtrace: backtrack
+- :file: lib/json/add/exception.rb
+  :object: Exception#to_json
+  :location: !ruby/range
+    begin: 26
+    end: 27
+    excl: false
+  :errors:
+  - backtrace
+  :errors_with_suggestions:
+    backtrace: backtrack
+- :file: lib/json/add/bigdecimal.rb
+  :object: BigDecimal.json_create
+  :location: !ruby/range
+    begin: 8
+    end: 10
+    excl: false
+  :errors:
+  - Marshalled
+  - marshalling
+  :errors_with_suggestions:
+    Marshalled: Marshall ed
+    marshalling: marshaling
+- :file: lib/json/add/bigdecimal.rb
+  :object: BigDecimal#as_json
+  :location: !ruby/range
+    begin: 15
+    end: 17
+    excl: false
+  :errors:
+  - marshalling
+  :errors_with_suggestions:
+    marshalling: marshaling
+- :file: lib/json/pure/generator.rb
+  :object: JSON#utf8_to_json
+  :location: !ruby/range
+    begin: 40
+    end: 41
+    excl: false
+  :errors:
+  - endian
+  :errors_with_suggestions:
+    endian: Indian
+- :file: lib/json/pure/generator.rb
+  :object: JSON.utf8_to_json
+  :location: 
+  :errors:
+  - endian
+  :errors_with_suggestions:
+    endian: Indian
+- :file: lib/json/pure/generator.rb
+  :object: JSON::Pure::Generator::State.from_state
+  :location: !ruby/range
+    begin: 86
+    end: 89
+    excl: false
+  :errors:
+  - unconfigured
+  :errors_with_suggestions:
+    unconfigured: reconfigured
+- :file: lib/json/pure/generator.rb
+  :object: JSON::Pure::Generator::GeneratorMethods::Hash#to_json
+  :location: !ruby/range
+    begin: 275
+    end: 279
+    excl: false
+  :errors:
+  - unparsed
+  :errors_with_suggestions:
+    unparsed: unpardonable
+- :file: lib/json/pure/generator.rb
+  :object: JSON::Pure::Generator::GeneratorMethods::Array#to_json
+  :location: !ruby/range
+    begin: 324
+    end: 327
+    excl: false
+  :errors:
+  - unparsed
+  :errors_with_suggestions:
+    unparsed: unpardonable
+- :file: lib/json/pure/generator.rb
+  :object: JSON::Pure::Generator::GeneratorMethods::String#to_json
+  :location: !ruby/range
+    begin: 390
+    end: 392
+    excl: false
+  :errors:
+  - endian
+  :errors_with_suggestions:
+    endian: Indian
+- :file: lib/json/pure/generator.rb
+  :object: JSON::Pure::Generator::GeneratorMethods::String::Extend
+  :location: !ruby/range
+    begin: 407
+    end: 408
+    excl: false
+  :errors:
+  - extinding
+  :errors_with_suggestions:
+    extinding: extending
+- :file: lib/json/pure/generator.rb
+  :object: JSON::Pure::Generator::GeneratorMethods::String#to_json_raw_object
+  :location: !ruby/range
+    begin: 423
+    end: 426
+    excl: false
+  :errors:
+  - unparsed
+  :errors_with_suggestions:
+    unparsed: unpardonable
+- :file: lib/json/pure/generator.rb
+  :object: JSON::Pure::Generator::GeneratorMethods::TrueClass#to_json
+  :location: !ruby/range
+    begin: 442
+    end: 442
+    excl: false
+  :errors:
+  - "'true"
+  :errors_with_suggestions:
+    "'true": 'true'
+- :file: lib/json/pure/generator.rb
+  :object: JSON::Pure::Generator::GeneratorMethods::FalseClass#to_json
+  :location: !ruby/range
+    begin: 447
+    end: 447
+    excl: false
+  :errors:
+  - "'false"
+  :errors_with_suggestions:
+    "'false": 'false'
+- :file: lib/json/pure/generator.rb
+  :object: JSON::Pure::Generator::GeneratorMethods::NilClass#to_json
+  :location: !ruby/range
+    begin: 452
+    end: 452
+    excl: false
+  :errors:
+  - "'null"
+  :errors_with_suggestions:
+    "'null": 'null'
+- :file: ext/json/ext/generator/generator.c
+  :object: JSON::Ext::Generator::State.from_state
+  :location: !ruby/range
+    begin: 1014
+    end: 1019
+    excl: true
+  :errors:
+  - unconfigured
+  :errors_with_suggestions:
+    unconfigured: reconfigured
+- :file: ext/json/ext/generator/generator.c
+  :object: JSON::Ext::Generator::GeneratorMethods::String#to_json
+  :location: !ruby/range
+    begin: 405
+    end: 410
+    excl: true
+  :errors:
+  - endian
+  :errors_with_suggestions:
+    endian: Indian
+- :file: ext/json/ext/generator/generator.c
+  :object: JSON::Ext::Generator::GeneratorMethods::TrueClass#to_json
+  :location: !ruby/range
+    begin: 462
+    end: 465
+    excl: true
+  :errors:
+  - "'true"
+  :errors_with_suggestions:
+    "'true": 'true'
+- :file: ext/json/ext/generator/generator.c
+  :object: JSON::Ext::Generator::GeneratorMethods::FalseClass#to_json
+  :location: !ruby/range
+    begin: 472
+    end: 475
+    excl: true
+  :errors:
+  - "'false"
+  :errors_with_suggestions:
+    "'false": 'false'
+- :file: ext/json/ext/generator/generator.c
+  :object: JSON::Ext::Generator::GeneratorMethods::NilClass#to_json
+  :location: !ruby/range
+    begin: 482
+    end: 485
+    excl: true
+  :errors:
+  - "'null"
+  :errors_with_suggestions:
+    "'null": 'null'
+

@@ -16,7 +16,7 @@ RSpec.describe TestClass do
 
     context 'with fixture examples' do
       data = YAML.load_file 'spec/fixtures/examples.yml'
-      data.each_pair do |index, spec_hash|
+      data.each_with_index do |spec_hash, index|
         describe "example #{ index }" do
           let(:input) { spec_hash['paragraph'] }
           specify { is_expected.to contain_exactly(*spec_hash['words']) }

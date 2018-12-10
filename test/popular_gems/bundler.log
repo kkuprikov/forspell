@@ -1,0 +1,2492 @@
+---
+- :file: lib/bundler/version.rb
+  :object: Bundler
+  :location: !ruby/range
+    begin: 3
+    end: 11
+    excl: false
+  :errors:
+  - lockfiles
+  :errors_with_suggestions:
+    lockfiles: lock files
+- :file: lib/bundler.rb
+  :object: Bundler.bundle_path
+  :location: !ruby/range
+    begin: 78
+    end: 78
+    excl: false
+  :errors:
+  - filesystem
+  :errors_with_suggestions:
+    filesystem: file system
+- :file: lib/bundler.rb
+  :object: Bundler.bin_path
+  :location: !ruby/range
+    begin: 87
+    end: 87
+    excl: false
+  :errors:
+  - binstubs
+  :errors_with_suggestions:
+    binstubs: bin stubs
+- :file: lib/bundler.rb
+  :object: Bundler.definition
+  :location: !ruby/range
+    begin: 126
+    end: 130
+    excl: false
+  :errors:
+  - Gemfile
+  - lockfile
+  :errors_with_suggestions:
+    Gemfile: Gem file
+    lockfile: lock file
+- :file: lib/bundler/cli.rb
+  :object: Bundler::CLI#auto_install
+  :location: !ruby/range
+    begin: 715
+    end: 721
+    excl: false
+  :errors:
+  - cmd
+  - config
+  :errors_with_suggestions:
+    cmd: cm
+    config: con fig
+- :file: lib/bundler/dsl.rb
+  :object: Bundler::Dsl::DSLError#to_s
+  :location: !ruby/range
+    begin: 546
+    end: 563
+    excl: false
+  :errors:
+  - podspec
+  :errors_with_suggestions:
+    podspec: pod spec
+- :file: lib/bundler/inline.rb
+  :object: "#gemfile"
+  :location: !ruby/range
+    begin: 5
+    end: 33
+    excl: false
+  :errors:
+  - Gemfile
+  :errors_with_suggestions:
+    Gemfile: Gem file
+- :file: lib/bundler/mirror.rb
+  :object: Bundler::Settings::Mirrors#for
+  :location: !ruby/range
+    begin: 18
+    end: 21
+    excl: false
+  :errors:
+  - uri
+  :errors_with_suggestions:
+    uri: uric
+- :file: lib/bundler/mirror.rb
+  :object: Bundler::Settings::Mirror
+  :location: !ruby/range
+    begin: 57
+    end: 61
+    excl: false
+  :errors:
+  - uri
+  :errors_with_suggestions:
+    uri: uric
+- :file: lib/bundler/plugin/api.rb
+  :object: Bundler::Plugin
+  :location: !ruby/range
+    begin: 4
+    end: 5
+    excl: false
+  :errors:
+  - Gemfile
+  - approptiate
+  :errors_with_suggestions:
+    Gemfile: Gem file
+    approptiate: appropriate
+- :file: lib/bundler/plugin.rb
+  :object: Bundler::Plugin#gemfile_install
+  :location: 
+  :errors:
+  - Gemfile
+  :errors_with_suggestions:
+    Gemfile: Gem file
+- :file: lib/bundler/plugin.rb
+  :object: Bundler::Plugin.gemfile_install
+  :location: !ruby/range
+    begin: 70
+    end: 74
+    excl: false
+  :errors:
+  - Gemfile
+  :errors_with_suggestions:
+    Gemfile: Gem file
+- :file: lib/bundler/plugin.rb
+  :object: Bundler::Plugin#exec_command
+  :location: 
+  :errors:
+  - Cli
+  - approriate
+  :errors_with_suggestions:
+    Cli: Cl
+    approriate: appropriate
+- :file: lib/bundler/plugin.rb
+  :object: Bundler::Plugin.exec_command
+  :location: !ruby/range
+    begin: 140
+    end: 141
+    excl: false
+  :errors:
+  - Cli
+  - approriate
+  :errors_with_suggestions:
+    Cli: Cl
+    approriate: appropriate
+- :file: lib/bundler/plugin.rb
+  :object: Bundler::Plugin#hook
+  :location: 
+  :errors:
+  - api
+  :errors_with_suggestions:
+    api: API
+- :file: lib/bundler/plugin.rb
+  :object: Bundler::Plugin.hook
+  :location: !ruby/range
+    begin: 187
+    end: 192
+    excl: false
+  :errors:
+  - api
+  :errors_with_suggestions:
+    api: API
+- :file: lib/bundler/plugin.rb
+  :object: Bundler::Plugin#validate_plugin!
+  :location: 
+  :errors:
+  - rb
+  :errors_with_suggestions:
+    rb: Rb
+- :file: lib/bundler/plugin.rb
+  :object: Bundler::Plugin.validate_plugin!
+  :location: !ruby/range
+    begin: 229
+    end: 234
+    excl: false
+  :errors:
+  - rb
+  :errors_with_suggestions:
+    rb: Rb
+- :file: lib/bundler/plugin.rb
+  :object: Bundler::Plugin#register_plugin
+  :location: 
+  :errors:
+  - namespace
+  - rb
+  :errors_with_suggestions:
+    namespace: name space
+    rb: Rb
+- :file: lib/bundler/plugin.rb
+  :object: Bundler::Plugin.register_plugin
+  :location: !ruby/range
+    begin: 240
+    end: 248
+    excl: false
+  :errors:
+  - namespace
+  - rb
+  :errors_with_suggestions:
+    namespace: name space
+    rb: Rb
+- :file: lib/bundler/plugin.rb
+  :object: Bundler::Plugin#load_plugin
+  :location: 
+  :errors:
+  - rb
+  :errors_with_suggestions:
+    rb: Rb
+- :file: lib/bundler/plugin.rb
+  :object: Bundler::Plugin.load_plugin
+  :location: !ruby/range
+    begin: 282
+    end: 284
+    excl: false
+  :errors:
+  - rb
+  :errors_with_suggestions:
+    rb: Rb
+- :file: lib/bundler/source.rb
+  :object: Bundler::Source#double_check_for
+  :location: !ruby/range
+    begin: 36
+    end: 38
+    excl: false
+  :errors:
+  - gemspecs
+  :errors_with_suggestions:
+    gemspecs: gem specs
+- :file: lib/bundler/worker.rb
+  :object: Bundler::Worker#enq
+  :location: !ruby/range
+    begin: 34
+    end: 36
+    excl: false
+  :errors:
+  - Enqueue
+  :errors_with_suggestions:
+    Enqueue: En queue
+- :file: lib/bundler/fetcher.rb
+  :object: Bundler::Fetcher
+  :location: !ruby/range
+    begin: 9
+    end: 9
+    excl: false
+  :errors:
+  - rubygems
+  :errors_with_suggestions:
+    rubygems: ruby gems
+- :file: lib/bundler/fetcher.rb
+  :object: Bundler::Fetcher#specs_with_retry
+  :location: !ruby/range
+    begin: 110
+    end: 110
+    excl: false
+  :errors:
+  - bundler
+  :errors_with_suggestions:
+    bundler: bundle
+- :file: lib/bundler/fetcher.rb
+  :object: Bundler::Fetcher#specs
+  :location: !ruby/range
+    begin: 117
+    end: 117
+    excl: false
+  :errors:
+  - bundler
+  :errors_with_suggestions:
+    bundler: bundle
+- :file: lib/bundler/version.rb
+  :object: Bundler::VERSION
+  :location: !ruby/range
+    begin: 7
+    end: 9
+    excl: false
+  :errors:
+  - bundler
+  :errors_with_suggestions:
+    bundler: bundle
+- :file: lib/bundler/injector.rb
+  :object: Bundler::Injector#remove_deps
+  :location: !ruby/range
+    begin: 126
+    end: 127
+    excl: false
+  :errors:
+  - gemfile
+  :errors_with_suggestions:
+    gemfile: gem file
+- :file: lib/bundler/resolver.rb
+  :object: Bundler::Resolver#amount_constrained
+  :location: !ruby/range
+    begin: 232
+    end: 237
+    excl: false
+  :errors:
+  - infty
+  :errors_with_suggestions:
+    infty: nifty
+- :file: lib/bundler/settings.rb
+  :object: Bundler::Settings#path
+  :location: !ruby/range
+    begin: 223
+    end: 224
+    excl: false
+  :errors:
+  - config
+  - isnt
+  :errors_with_suggestions:
+    config: con fig
+    isnt: inst
+- :file: lib/bundler/ui/shell.rb
+  :object: Bundler::UI::Shell#tell_me
+  :location: !ruby/range
+    begin: 101
+    end: 101
+    excl: false
+  :errors:
+  - valimism
+  :errors_with_suggestions:
+    valimism: vandalism
+- :file: lib/bundler/installer.rb
+  :object: Bundler::Installer#run
+  :location: !ruby/range
+    begin: 36
+    end: 69
+    excl: false
+  :errors:
+  - Gemfile
+  - Sixthly
+  - binstubs
+  - executables
+  - rb
+  :errors_with_suggestions:
+    Gemfile: Gem file
+    Sixthly: Sixths
+    binstubs: bin stubs
+    executables: executable
+    rb: Rb
+- :file: lib/bundler/definition.rb
+  :object: Bundler::Definition.build
+  :location: !ruby/range
+    begin: 21
+    end: 27
+    excl: false
+  :errors:
+  - gemfile
+  - lockfile
+  :errors_with_suggestions:
+    gemfile: gem file
+    lockfile: lock file
+- :file: lib/bundler/definition.rb
+  :object: Bundler::Definition#resolve
+  :location: !ruby/range
+    begin: 240
+    end: 244
+    excl: false
+  :errors:
+  - Gemfile
+  :errors_with_suggestions:
+    Gemfile: Gem file
+- :file: lib/bundler/definition.rb
+  :object: Bundler::Definition#converge_locked_specs
+  :location: !ruby/range
+    begin: 734
+    end: 736
+    excl: false
+  :errors:
+  - Gemfile
+  - lockfile
+  :errors_with_suggestions:
+    Gemfile: Gem file
+    lockfile: lock file
+- :file: lib/bundler/gem_helper.rb
+  :object: Bundler::GemHelper.instance
+  :location: &1 !ruby/range
+    begin: 12
+    end: 12
+    excl: false
+  :errors:
+  - install'd
+  :errors_with_suggestions:
+    install'd: installed
+- :file: lib/bundler/gem_helper.rb
+  :object: Bundler::GemHelper.instance=
+  :location: *1
+  :errors:
+  - install'd
+  :errors_with_suggestions:
+    install'd: installed
+- :file: lib/bundler/plugin/api.rb
+  :object: Bundler::Plugin::API#cache_dir
+  :location: !ruby/range
+    begin: 52
+    end: 54
+    excl: false
+  :errors:
+  - dir
+  :errors_with_suggestions:
+    dir: deer
+- :file: lib/bundler/plugin/api.rb
+  :object: Bundler::Plugin::API#tmp
+  :location: !ruby/range
+    begin: 59
+    end: 62
+    excl: false
+  :errors:
+  - dir
+  - tmp
+  :errors_with_suggestions:
+    dir: deer
+    tmp: mp
+- :file: lib/bundler/plugin/dsl.rb
+  :object: Bundler::Plugin::DSL
+  :location: !ruby/range
+    begin: 5
+    end: 5
+    excl: false
+  :errors:
+  - Gemfile
+  :errors_with_suggestions:
+    Gemfile: Gem file
+- :file: lib/bundler/plugin/dsl.rb
+  :object: Bundler::Plugin::DSL#inferred_plugins
+  :location: !ruby/range
+    begin: 15
+    end: 22
+    excl: false
+  :errors:
+  - bundler
+  :errors_with_suggestions:
+    bundler: bundle
+- :file: lib/bundler/source/git.rb
+  :object: Bundler::Source::Git#install_path
+  :location: !ruby/range
+    begin: 88
+    end: 90
+    excl: false
+  :errors:
+  - repo
+  - repos
+  :errors_with_suggestions:
+    repo: rope
+    repos: ropes
+- :file: lib/bundler/source/git.rb
+  :object: Bundler::Source::Git#cache_path
+  :location: !ruby/range
+    begin: 206
+    end: 209
+    excl: false
+  :errors:
+  - repo
+  - repos
+  :errors_with_suggestions:
+    repo: rope
+    repos: ropes
+- :file: lib/bundler/source/git.rb
+  :object: Bundler::Source::Git#validate_spec
+  :location: !ruby/range
+    begin: 313
+    end: 313
+    excl: false
+  :errors:
+  - gemspec
+  :errors_with_suggestions:
+    gemspec: gem spec
+- :file: lib/bundler/plugin/index.rb
+  :object: Bundler::Plugin::Index#load_index
+  :location: !ruby/range
+    begin: 129
+    end: 134
+    excl: false
+  :errors:
+  - param
+  :errors_with_suggestions:
+    param: para
+- :file: lib/bundler/psyched_yaml.rb
+  :object: Bundler::YamlLibrarySyntaxError
+  :location: !ruby/range
+    begin: 25
+    end: 25
+    excl: false
+  :errors:
+  - Syck
+  :errors_with_suggestions:
+    Syck: Eyck
+- :file: lib/bundler/rubygems_ext.rb
+  :object: Gem::Dependency#matches_spec?
+  :location: !ruby/range
+    begin: 164
+    end: 164
+    excl: false
+  :errors:
+  - Backport
+  :errors_with_suggestions:
+    Backport: Back port
+- :file: lib/bundler/rubygems_ext.rb
+  :object: Gem::Requirement#none?
+  :location: !ruby/range
+    begin: 175
+    end: 175
+    excl: false
+  :errors:
+  - Backport
+  :errors_with_suggestions:
+    Backport: Back port
+- :file: lib/bundler/rubygems_ext.rb
+  :object: Gem::Requirement#exact?
+  :location: !ruby/range
+    begin: 184
+    end: 184
+    excl: false
+  :errors:
+  - Backport
+  :errors_with_suggestions:
+    Backport: Back port
+- :file: lib/bundler/build_metadata.rb
+  :object: Bundler::BuildMetadata.built_at
+  :location: !ruby/range
+    begin: 19
+    end: 19
+    excl: false
+  :errors:
+  - bundler
+  :errors_with_suggestions:
+    bundler: bundle
+- :file: lib/bundler/build_metadata.rb
+  :object: Bundler::BuildMetadata.git_commit_sha
+  :location: !ruby/range
+    begin: 24
+    end: 24
+    excl: false
+  :errors:
+  - bundler
+  :errors_with_suggestions:
+    bundler: bundle
+- :file: lib/bundler/shared_helpers.rb
+  :object: Bundler::SharedHelpers#filesystem_access
+  :location: !ruby/range
+    begin: 95
+    end: 114
+    excl: false
+  :errors:
+  - ie
+  :errors_with_suggestions:
+    ie: IE
+- :file: lib/bundler/source/rubygems.rb
+  :object: Bundler::Source::Rubygems#cache_globally
+  :location: !ruby/range
+    begin: 500
+    end: 509
+    excl: false
+  :errors:
+  - subdirectory
+  :errors_with_suggestions:
+    subdirectory: sub directory
+- :file: lib/bundler/source/rubygems.rb
+  :object: Bundler::Source::Rubygems#download_cache_path
+  :location: !ruby/range
+    begin: 520
+    end: 530
+    excl: false
+  :errors:
+  - subdirectories
+  - subdirectory
+  :errors_with_suggestions:
+    subdirectories: sub directories
+    subdirectory: sub directory
+- :file: lib/bundler/yaml_serializer.rb
+  :object: Bundler::YAMLSerializer
+  :location: !ruby/range
+    begin: 4
+    end: 4
+    excl: false
+  :errors:
+  - serializer
+  - yaml
+  :errors_with_suggestions:
+    serializer: serialize
+    yaml: yam
+- :file: lib/bundler/yaml_serializer.rb
+  :object: Bundler::YAMLSerializer#convert_to_backward_compatible_key
+  :location: 
+  :errors:
+  - settings'
+  :errors_with_suggestions:
+    settings': setting's
+- :file: lib/bundler/yaml_serializer.rb
+  :object: Bundler::YAMLSerializer.convert_to_backward_compatible_key
+  :location: !ruby/range
+    begin: 79
+    end: 79
+    excl: false
+  :errors:
+  - settings'
+  :errors_with_suggestions:
+    settings': setting's
+- :file: lib/bundler/plugin/installer.rb
+  :object: Bundler::Plugin::Installer#install_definition
+  :location: !ruby/range
+    begin: 31
+    end: 35
+    excl: false
+  :errors:
+  - Gemfile
+  :errors_with_suggestions:
+    Gemfile: Gem file
+- :file: lib/bundler/plugin/installer.rb
+  :object: Bundler::Plugin::Installer#check_sources_consistency!
+  :location: !ruby/range
+    begin: 46
+    end: 49
+    excl: false
+  :errors:
+  - Rubocop
+  - bbatsov
+  - github
+  - rubocop
+  :errors_with_suggestions:
+    Rubocop: Rubicon
+    bbatsov: batsmen
+    github: git hub
+    rubocop: Rubicon
+- :file: lib/bundler/plugin/installer.rb
+  :object: Bundler::Plugin::Installer#install_rubygems
+  :location: !ruby/range
+    begin: 71
+    end: 78
+    excl: false
+  :errors:
+  - rubygems
+  :errors_with_suggestions:
+    rubygems: ruby gems
+- :file: lib/bundler/plugin/installer.rb
+  :object: Bundler::Plugin::Installer#install_from_specs
+  :location: !ruby/range
+    begin: 95
+    end: 100
+    excl: false
+  :errors:
+  - deps
+  :errors_with_suggestions:
+    deps: deeps
+- :file: lib/bundler/plugin/api/source.rb
+  :object: Bundler::Plugin::API::Source
+  :location: !ruby/range
+    begin: 8
+    end: 42
+    excl: false
+  :errors:
+  - eql
+  - gemfile
+  - lockfile
+  - plugins'
+  - uri
+  :errors_with_suggestions:
+    eql: eel
+    gemfile: gem file
+    lockfile: lock file
+    plugins': plugin's
+    uri: uric
+- :file: lib/bundler/plugin/api/source.rb
+  :object: Bundler::Plugin::API::Source#options_to_lock
+  :location: !ruby/range
+    begin: 67
+    end: 73
+    excl: false
+  :errors:
+  - lockfile
+  :errors_with_suggestions:
+    lockfile: lock file
+- :file: lib/bundler/plugin/api/source.rb
+  :object: Bundler::Plugin::API::Source#specs
+  :location: !ruby/range
+    begin: 117
+    end: 128
+    excl: false
+  :errors:
+  - gemspec
+  :errors_with_suggestions:
+    gemspec: gem spec
+- :file: lib/bundler/plugin/api/source.rb
+  :object: Bundler::Plugin::API::Source#unlock!
+  :location: !ruby/range
+    begin: 159
+    end: 162
+    excl: false
+  :errors:
+  - lockfile
+  :errors_with_suggestions:
+    lockfile: lock file
+- :file: lib/bundler/plugin/api/source.rb
+  :object: Bundler::Plugin::API::Source#cache
+  :location: !ruby/range
+    begin: 177
+    end: 187
+    excl: false
+  :errors:
+  - bundler
+  :errors_with_suggestions:
+    bundler: bundle
+- :file: lib/bundler/plugin/api/source.rb
+  :object: Bundler::Plugin::API::Source#==
+  :location: !ruby/range
+    begin: 196
+    end: 206
+    excl: false
+  :errors:
+  - Gemfile
+  - attibutes
+  - eql
+  - lockfile
+  :errors_with_suggestions:
+    Gemfile: Gem file
+    attibutes: attributes
+    eql: eel
+    lockfile: lock file
+- :file: lib/bundler/plugin/api/source.rb
+  :object: Bundler::Plugin::API::Source#hash
+  :location: !ruby/range
+    begin: 215
+    end: 217
+    excl: false
+  :errors:
+  - behaviour
+  - docstring
+  :errors_with_suggestions:
+    behaviour: behavior
+    docstring: doc string
+- :file: lib/bundler/plugin/api/source.rb
+  :object: Bundler::Plugin::API::Source#to_lock
+  :location: !ruby/range
+    begin: 247
+    end: 253
+    excl: false
+  :errors:
+  - lockfile
+  :errors_with_suggestions:
+    lockfile: lock file
+- :file: lib/bundler/gem_remote_fetcher.rb
+  :object: Bundler::GemRemoteFetcher
+  :location: !ruby/range
+    begin: 6
+    end: 10
+    excl: false
+  :errors:
+  - 3db265cc20b2f813
+  - gemstash
+  - github
+  - rubygems
+  :errors_with_suggestions:
+    3db265cc20b2f813: 
+    gemstash: gem stash
+    github: git hub
+    rubygems: ruby gems
+- :file: lib/bundler/stub_specification.rb
+  :object: Bundler::StubSpecification#load_paths
+  :location: !ruby/range
+    begin: 65
+    end: 66
+    excl: false
+  :errors:
+  - bundler
+  :errors_with_suggestions:
+    bundler: bundle
+- :file: lib/bundler/similarity_detector.rb
+  :object: Bundler::SimilarityDetector#similar_words
+  :location: !ruby/range
+    begin: 12
+    end: 12
+    excl: false
+  :errors:
+  - "'word"
+  :errors_with_suggestions:
+    "'word": word
+- :file: lib/bundler/similarity_detector.rb
+  :object: Bundler::SimilarityDetector#similar_word_list
+  :location: !ruby/range
+    begin: 18
+    end: 19
+    excl: false
+  :errors:
+  - eg
+  :errors_with_suggestions:
+    eg: eh
+- :file: lib/bundler/similarity_detector.rb
+  :object: Bundler::SimilarityDetector#levenshtein_distance
+  :location: !ruby/range
+    begin: 31
+    end: 31
+    excl: false
+  :errors:
+  - aspx
+  - informit
+  - seqNum
+  - www
+  :errors_with_suggestions:
+    aspx: asp
+    informit: inform it
+    seqNum: sequin
+    www: WWW
+- :file: lib/bundler/remote_specification.rb
+  :object: Bundler::RemoteSpecification
+  :location: !ruby/range
+    begin: 6
+    end: 9
+    excl: false
+  :errors:
+  - rubygems'
+  :errors_with_suggestions:
+    rubygems': Rubbermaid
+- :file: lib/bundler/remote_specification.rb
+  :object: Bundler::RemoteSpecification#__swap__
+  :location: !ruby/range
+    begin: 51
+    end: 53
+    excl: false
+  :errors:
+  - Rubyforge
+  - backend
+  :errors_with_suggestions:
+    Rubyforge: Ruby forge
+    backend: backed
+- :file: lib/bundler/remote_specification.rb
+  :object: Bundler::RemoteSpecification#sort_obj
+  :location: !ruby/range
+    begin: 59
+    end: 67
+    excl: false
+  :errors:
+  - Bundler's
+  :errors_with_suggestions:
+    Bundler's: Bundle's
+- :file: lib/bundler/rubygems_integration.rb
+  :object: Bundler::RubygemsIntegration#fetch_all_remote_specs
+  :location: !ruby/range
+    begin: 266
+    end: 269
+    excl: false
+  :errors:
+  - Gemfile
+  :errors_with_suggestions:
+    Gemfile: Gem file
+- :file: lib/bundler/rubygems_integration.rb
+  :object: Bundler::RubygemsIntegration#replace_bin_path
+  :location: !ruby/range
+    begin: 436
+    end: 438
+    excl: false
+  :errors:
+  - bundler
+  :errors_with_suggestions:
+    bundler: bundle
+- :file: lib/bundler/rubygems_integration.rb
+  :object: Bundler::RubygemsIntegration#replace_entrypoints
+  :location: !ruby/range
+    begin: 509
+    end: 510
+    excl: false
+  :errors:
+  - bundlerized
+  :errors_with_suggestions:
+    bundlerized: bowdlerized
+- :file: lib/bundler/rubygems_integration.rb
+  :object: Bundler::RubygemsIntegration#backport_segment_generation
+  :location: !ruby/range
+    begin: 525
+    end: 526
+    excl: false
+  :errors:
+  - backports
+  - monkeypatching
+  :errors_with_suggestions:
+    backports: back ports
+    monkeypatching: monkey patching
+- :file: lib/bundler/rubygems_integration.rb
+  :object: Bundler::RubygemsIntegration#backport_yaml_initialize
+  :location: !ruby/range
+    begin: 535
+    end: 535
+    excl: false
+  :errors:
+  - backport
+  :errors_with_suggestions:
+    backport: back port
+- :file: lib/bundler/rubygems_integration.rb
+  :object: Bundler::RubygemsIntegration#backport_base_dir
+  :location: !ruby/range
+    begin: 544
+    end: 545
+    excl: false
+  :errors:
+  - backports
+  :errors_with_suggestions:
+    backports: back ports
+- :file: lib/bundler/rubygems_integration.rb
+  :object: Bundler::RubygemsIntegration::AlmostModern#preserve_paths
+  :location: !ruby/range
+    begin: 704
+    end: 706
+    excl: false
+  :errors:
+  - dir
+  - sudo
+  :errors_with_suggestions:
+    dir: deer
+    sudo: suds
+- :file: lib/bundler/rubygems_integration.rb
+  :object: Bundler::RubygemsIntegration::MoreFuture#binstubs_call_gem?
+  :location: !ruby/range
+    begin: 863
+    end: 863
+    excl: false
+  :errors:
+  - binstubs
+  :errors_with_suggestions:
+    binstubs: bin stubs
+- :file: lib/bundler/source/git/git_proxy.rb
+  :object: Bundler::Source::Git::GitProxy#git_null
+  :location: !ruby/range
+    begin: 151
+    end: 155
+    excl: false
+  :errors:
+  - dev
+  - open3
+  - stderr
+  :errors_with_suggestions:
+    dev: deb
+    open3: open
+    stderr: std err
+- :file: lib/bundler/source/git/git_proxy.rb
+  :object: Bundler::Source::Git::GitProxy#capture_and_filter_stderr
+  :location: !ruby/range
+    begin: 238
+    end: 242
+    excl: false
+  :errors:
+  - Open3
+  - Tempfile
+  - bundler
+  - stderr
+  - stdout
+  :errors_with_suggestions:
+    Open3: Open
+    Tempfile: Temp file
+    bundler: bundle
+    stderr: std err
+    stdout: stout
+- :file: lib/bundler/vendor/thor/lib/thor.rb
+  :object: Bundler::Thor.default_command
+  :location: !ruby/range
+    begin: 16
+    end: 20
+    excl: false
+  :errors:
+  - thor
+  :errors_with_suggestions:
+    thor: Thor
+- :file: lib/bundler/vendor/thor/lib/thor.rb
+  :object: Bundler::Thor.register
+  :location: !ruby/range
+    begin: 30
+    end: 36
+    excl: false
+  :errors:
+  - klass
+  :errors_with_suggestions:
+    klass: lass
+- :file: lib/bundler/vendor/thor/lib/thor.rb
+  :object: Bundler::Thor.check_unknown_options?
+  :location: !ruby/range
+    begin: 262
+    end: 262
+    excl: false
+  :errors:
+  - subcommands
+  :errors_with_suggestions:
+    subcommands: sub commands
+- :file: lib/bundler/vendor/thor/lib/thor.rb
+  :object: Bundler::Thor.dispatch
+  :location: !ruby/range
+    begin: 353
+    end: 353
+    excl: false
+  :errors:
+  - args
+  :errors_with_suggestions:
+    args: rags
+- :file: lib/bundler/vendor/thor/lib/thor.rb
+  :object: Bundler::Thor.banner
+  :location: !ruby/range
+    begin: 390
+    end: 394
+    excl: false
+  :errors:
+  - boolean
+  - namespace
+  - thor
+  :errors_with_suggestions:
+    boolean: Boolean
+    namespace: name space
+    thor: Thor
+- :file: lib/bundler/vendor/thor/lib/thor.rb
+  :object: Bundler::Thor.retrieve_command_name
+  :location: !ruby/range
+    begin: 434
+    end: 434
+    excl: false
+  :errors:
+  - args
+  :errors_with_suggestions:
+    args: rags
+- :file: lib/bundler/vendor/thor/lib/thor.rb
+  :object: Bundler::Thor.normalize_command_name
+  :location: !ruby/range
+    begin: 441
+    end: 447
+    excl: false
+  :errors:
+  - substring
+  :errors_with_suggestions:
+    substring: sub string
+- :file: lib/bundler/vendor/thor/lib/thor.rb
+  :object: Bundler::Thor.find_command_possibilities
+  :location: !ruby/range
+    begin: 466
+    end: 468
+    excl: false
+  :errors:
+  - substrings
+  :errors_with_suggestions:
+    substrings: sub strings
+- :file: lib/bundler/endpoint_specification.rb
+  :object: Bundler::EndpointSpecification
+  :location: !ruby/range
+    begin: 4
+    end: 4
+    excl: false
+  :errors:
+  - Gemcutter
+  :errors_with_suggestions:
+    Gemcutter: Gem cutter
+- :file: lib/bundler/endpoint_specification.rb
+  :object: Bundler::EndpointSpecification#require_paths
+  :location: !ruby/range
+    begin: 29
+    end: 30
+    excl: false
+  :errors:
+  - gemspec
+  :errors_with_suggestions:
+    gemspec: gem spec
+- :file: lib/bundler/endpoint_specification.rb
+  :object: Bundler::EndpointSpecification#executables
+  :location: !ruby/range
+    begin: 51
+    end: 51
+    excl: false
+  :errors:
+  - binstubs
+  :errors_with_suggestions:
+    binstubs: bin stubs
+- :file: lib/bundler/vendor/thor/lib/thor/base.rb
+  :object: Bundler::Thor::Base#initialize
+  :location: !ruby/range
+    begin: 28
+    end: 43
+    excl: false
+  :errors:
+  - args
+  :errors_with_suggestions:
+    args: rags
+- :file: lib/bundler/vendor/thor/lib/thor/base.rb
+  :object: Bundler::Thor::Base.subclass_files
+  :location: !ruby/range
+    begin: 106
+    end: 110
+    excl: false
+  :errors:
+  - subclasses
+  :errors_with_suggestions:
+    subclasses: sub classes
+- :file: lib/bundler/vendor/thor/lib/thor/base.rb
+  :object: Bundler::Thor::Base::ClassMethods#strict_args_position!
+  :location: !ruby/range
+    begin: 182
+    end: 184
+    excl: false
+  :errors:
+  - args
+  - thor
+  :errors_with_suggestions:
+    args: rags
+    thor: Thor
+- :file: lib/bundler/vendor/thor/lib/thor/base.rb
+  :object: Bundler::Thor::Base::ClassMethods#argument
+  :location: !ruby/range
+    begin: 197
+    end: 231
+    excl: false
+  :errors:
+  - accessor
+  :errors_with_suggestions:
+    accessor: accessory
+- :file: lib/bundler/vendor/thor/lib/thor/base.rb
+  :object: Bundler::Thor::Base::ClassMethods#remove_argument
+  :location: !ruby/range
+    begin: 303
+    end: 313
+    excl: false
+  :errors:
+  - accessors
+  - undefine
+  :errors_with_suggestions:
+    accessors: accessory
+    undefine: undefined
+- :file: lib/bundler/vendor/thor/lib/thor/base.rb
+  :object: Bundler::Thor::Base::ClassMethods#group
+  :location: !ruby/range
+    begin: 339
+    end: 344
+    excl: false
+  :errors:
+  - pre
+  - thor
+  :errors_with_suggestions:
+    pre: per
+    thor: Thor
+- :file: lib/bundler/vendor/thor/lib/thor/base.rb
+  :object: Bundler::Thor::Base::ClassMethods#all_commands
+  :location: !ruby/range
+    begin: 364
+    end: 369
+    excl: false
+  :errors:
+  - subclasses
+  :errors_with_suggestions:
+    subclasses: sub classes
+- :file: lib/bundler/vendor/thor/lib/thor/base.rb
+  :object: Bundler::Thor::Base::ClassMethods#namespace
+  :location: !ruby/range
+    begin: 426
+    end: 447
+    excl: false
+  :errors:
+  - namespace
+  :errors_with_suggestions:
+    namespace: name space
+- :file: lib/bundler/vendor/thor/lib/thor/base.rb
+  :object: Bundler::Thor::Base::ClassMethods#start
+  :location: !ruby/range
+    begin: 456
+    end: 463
+    excl: false
+  :errors:
+  - args
+  :errors_with_suggestions:
+    args: rags
+- :file: lib/bundler/vendor/thor/lib/thor/base.rb
+  :object: Bundler::Thor::Base::ClassMethods#find_and_refresh_command
+  :location: !ruby/range
+    begin: 583
+    end: 585
+    excl: false
+  :errors:
+  - dup
+  :errors_with_suggestions:
+    dup: pud
+- :file: lib/bundler/vendor/thor/lib/thor/base.rb
+  :object: Bundler::Thor::Base::ClassMethods#inherited
+  :location: !ruby/range
+    begin: 597
+    end: 598
+    excl: false
+  :errors:
+  - Everytime
+  - baseclass
+  - klass
+  :errors_with_suggestions:
+    Everytime: Every time
+    baseclass: base class
+    klass: lass
+- :file: lib/bundler/vendor/thor/lib/thor/base.rb
+  :object: Bundler::Thor::Base::ClassMethods#from_superclass
+  :location: !ruby/range
+    begin: 624
+    end: 625
+    excl: false
+  :errors:
+  - baseclass
+  - superclass
+  :errors_with_suggestions:
+    baseclass: base class
+    superclass: super class
+- :file: lib/bundler/vendor/thor/lib/thor/base.rb
+  :object: Bundler::Thor::Base::ClassMethods#basename
+  :location: !ruby/range
+    begin: 650
+    end: 652
+    excl: false
+  :errors:
+  - basename
+  - thor
+  :errors_with_suggestions:
+    basename: base name
+    thor: Thor
+- :file: lib/bundler/vendor/thor/lib/thor/base.rb
+  :object: Bundler::Thor::Base::ClassMethods#baseclass
+  :location: !ruby/range
+    begin: 657
+    end: 658
+    excl: false
+  :errors:
+  - baseclass
+  - superclass
+  :errors_with_suggestions:
+    baseclass: base class
+    superclass: super class
+- :file: lib/bundler/vendor/thor/lib/thor/util.rb
+  :object: Bundler::Thor::Util
+  :location: !ruby/range
+    begin: 7
+    end: 16
+    excl: false
+  :errors:
+  - namespaces
+  - thor
+  :errors_with_suggestions:
+    namespaces: name spaces
+    thor: Thor
+- :file: lib/bundler/vendor/thor/lib/thor/util.rb
+  :object: Bundler::Thor::Util.find_by_namespace
+  :location: !ruby/range
+    begin: 19
+    end: 23
+    excl: false
+  :errors:
+  - namespace
+  - subclasses
+  :errors_with_suggestions:
+    namespace: name space
+    subclasses: sub classes
+- :file: lib/bundler/vendor/thor/lib/thor/util.rb
+  :object: Bundler::Thor::Util.namespace_from_thor_class
+  :location: !ruby/range
+    begin: 29
+    end: 42
+    excl: false
+  :errors:
+  - namespace
+  :errors_with_suggestions:
+    namespace: name space
+- :file: lib/bundler/vendor/thor/lib/thor/util.rb
+  :object: Bundler::Thor::Util.namespaces_in_content
+  :location: !ruby/range
+    begin: 49
+    end: 57
+    excl: false
+  :errors:
+  - namespaces
+  :errors_with_suggestions:
+    namespaces: name spaces
+- :file: lib/bundler/vendor/thor/lib/thor/util.rb
+  :object: Bundler::Thor::Util.thor_classes_in
+  :location: !ruby/range
+    begin: 72
+    end: 73
+    excl: false
+  :errors:
+  - thor
+  :errors_with_suggestions:
+    thor: Thor
+- :file: lib/bundler/vendor/thor/lib/thor/util.rb
+  :object: Bundler::Thor::Util.find_class_and_command_by_namespace
+  :location: !ruby/range
+    begin: 109
+    end: 130
+    excl: false
+  :errors:
+  - namespace
+  :errors_with_suggestions:
+    namespace: name space
+- :file: lib/bundler/vendor/thor/lib/thor/util.rb
+  :object: Bundler::Thor::Util.load_thorfile
+  :location: !ruby/range
+    begin: 149
+    end: 151
+    excl: false
+  :errors:
+  - namespacing
+  - thor
+  :errors_with_suggestions:
+    namespacing: name spacing
+    thor: Thor
+- :file: lib/bundler/vendor/thor/lib/thor/util.rb
+  :object: Bundler::Thor::Util.thor_root
+  :location: !ruby/range
+    begin: 189
+    end: 190
+    excl: false
+  :errors:
+  - thor
+  :errors_with_suggestions:
+    thor: Thor
+- :file: lib/bundler/vendor/thor/lib/thor/util.rb
+  :object: Bundler::Thor::Util.thor_root_glob
+  :location: !ruby/range
+    begin: 195
+    end: 201
+    excl: false
+  :errors:
+  - thor
+  :errors_with_suggestions:
+    thor: Thor
+- :file: lib/bundler/vendor/thor/lib/thor/error.rb
+  :object: Bundler::Thor::Error
+  :location: !ruby/range
+    begin: 2
+    end: 7
+    excl: false
+  :errors:
+  - backtrace
+  - thor
+  :errors_with_suggestions:
+    backtrace: backtrack
+    thor: Thor
+- :file: lib/bundler/vendor/thor/lib/thor/group.rb
+  :object: Bundler::Thor::Group.desc
+  :location: !ruby/range
+    begin: 9
+    end: 15
+    excl: false
+  :errors:
+  - superclass
+  :errors_with_suggestions:
+    superclass: super class
+- :file: lib/bundler/vendor/thor/lib/thor/group.rb
+  :object: Bundler::Thor::Group.invocations
+  :location: !ruby/range
+    begin: 37
+    end: 38
+    excl: false
+  :errors:
+  - superclass
+  :errors_with_suggestions:
+    superclass: super class
+- :file: lib/bundler/vendor/thor/lib/thor/group.rb
+  :object: Bundler::Thor::Group.invoke
+  :location: !ruby/range
+    begin: 49
+    end: 55
+    excl: false
+  :errors:
+  - klass
+  - namespace
+  :errors_with_suggestions:
+    klass: lass
+    namespace: name space
+- :file: lib/bundler/vendor/thor/lib/thor/group.rb
+  :object: Bundler::Thor::Group.invoke_from_option
+  :location: !ruby/range
+    begin: 80
+    end: 109
+    excl: false
+  :errors:
+  - klass
+  - thor
+  :errors_with_suggestions:
+    klass: lass
+    thor: Thor
+- :file: lib/bundler/vendor/thor/lib/thor/group.rb
+  :object: Bundler::Thor::Group.dispatch
+  :location: !ruby/range
+    begin: 216
+    end: 216
+    excl: false
+  :errors:
+  - args
+  :errors_with_suggestions:
+    args: rags
+- :file: lib/bundler/vendor/thor/lib/thor/group.rb
+  :object: Bundler::Thor::Group.banner
+  :location: !ruby/range
+    begin: 236
+    end: 237
+    excl: false
+  :errors:
+  - thor
+  :errors_with_suggestions:
+    thor: Thor
+- :file: lib/bundler/vendor/thor/lib/thor/shell.rb
+  :object: Bundler::Thor::Shell#initialize
+  :location: !ruby/range
+    begin: 31
+    end: 43
+    excl: false
+  :errors:
+  - config
+  :errors_with_suggestions:
+    config: con fig
+- :file: lib/bundler/vendor/thor/lib/thor/runner.rb
+  :object: Bundler::Thor::Runner#save_yaml
+  :location: !ruby/range
+    begin: 192
+    end: 193
+    excl: false
+  :errors:
+  - thor
+  - yaml
+  :errors_with_suggestions:
+    thor: Thor
+    yaml: yam
+- :file: lib/bundler/vendor/thor/lib/thor/runner.rb
+  :object: Bundler::Thor::Runner#initialize_thorfiles
+  :location: !ruby/range
+    begin: 207
+    end: 213
+    excl: false
+  :errors:
+  - thorfiles
+  :errors_with_suggestions:
+    thorfiles: thorniness
+- :file: lib/bundler/vendor/thor/lib/thor/runner.rb
+  :object: Bundler::Thor::Runner#thorfiles
+  :location: !ruby/range
+    begin: 220
+    end: 241
+    excl: false
+  :errors:
+  - dev
+  - james
+  - thor
+  - wycats
+  :errors_with_suggestions:
+    dev: deb
+    james: James
+    thor: Thor
+    wycats: copycats
+- :file: lib/bundler/vendor/thor/lib/thor/runner.rb
+  :object: Bundler::Thor::Runner#thorfiles_relevant_to
+  :location: !ruby/range
+    begin: 261
+    end: 264
+    excl: false
+  :errors:
+  - namespaces
+  - thor
+  - yaml
+  :errors_with_suggestions:
+    namespaces: name spaces
+    thor: Thor
+    yaml: yam
+- :file: lib/bundler/vendor/thor/lib/thor/runner.rb
+  :object: Bundler::Thor::Runner#display_klasses
+  :location: !ruby/range
+    begin: 275
+    end: 277
+    excl: false
+  :errors:
+  - klasses
+  - yaml
+  :errors_with_suggestions:
+    klasses: lasses
+    yaml: yam
+- :file: lib/bundler/installer/parallel_installer.rb
+  :object: Bundler::ParallelInstaller::SpecInstallation#ready_to_enqueue?
+  :location: !ruby/range
+    begin: 34
+    end: 34
+    excl: false
+  :errors:
+  - enqueued
+  :errors_with_suggestions:
+    enqueued: en queued
+- :file: lib/bundler/installer/parallel_installer.rb
+  :object: Bundler::ParallelInstaller#process_specs
+  :location: !ruby/range
+    begin: 175
+    end: 179
+    excl: false
+  :errors:
+  - Dequeue
+  - dequeue
+  - enqueue
+  :errors_with_suggestions:
+    Dequeue: Queue
+    dequeue: queue
+    enqueue: en queue
+- :file: lib/bundler/installer/parallel_installer.rb
+  :object: Bundler::ParallelInstaller#enqueue_specs
+  :location: !ruby/range
+    begin: 213
+    end: 217
+    excl: false
+  :errors:
+  - enqueue
+  :errors_with_suggestions:
+    enqueue: en queue
+- :file: lib/bundler/vendor/thor/lib/thor/actions.rb
+  :object: Bundler::Thor::Actions::ClassMethods#add_runtime_options!
+  :location: !ruby/range
+    begin: 47
+    end: 48
+    excl: false
+  :errors:
+  - runtime
+  :errors_with_suggestions:
+    runtime: run time
+- :file: lib/bundler/vendor/thor/lib/thor/actions.rb
+  :object: Bundler::Thor::Actions#initialize
+  :location: !ruby/range
+    begin: 64
+    end: 72
+    excl: false
+  :errors:
+  - initializer
+  :errors_with_suggestions:
+    initializer: initialize
+- :file: lib/bundler/vendor/thor/lib/thor/actions.rb
+  :object: Bundler::Thor::Actions#action
+  :location: !ruby/range
+    begin: 88
+    end: 89
+    excl: false
+  :errors:
+  - thor
+  :errors_with_suggestions:
+    thor: Thor
+- :file: lib/bundler/vendor/thor/lib/thor/actions.rb
+  :object: Bundler::Thor::Actions#destination_root
+  :location: !ruby/range
+    begin: 98
+    end: 99
+    excl: false
+  :errors:
+  - thor
+  :errors_with_suggestions:
+    thor: Thor
+- :file: lib/bundler/vendor/thor/lib/thor/actions.rb
+  :object: Bundler::Thor::Actions#destination_root=
+  :location: !ruby/range
+    begin: 104
+    end: 106
+    excl: false
+  :errors:
+  - thor
+  :errors_with_suggestions:
+    thor: Thor
+- :file: lib/bundler/vendor/thor/lib/thor/actions.rb
+  :object: Bundler::Thor::Actions#relative_to_original_destination_root
+  :location: !ruby/range
+    begin: 112
+    end: 114
+    excl: false
+  :errors:
+  - ie
+  :errors_with_suggestions:
+    ie: IE
+- :file: lib/bundler/vendor/thor/lib/thor/actions.rb
+  :object: Bundler::Thor::Actions#inside
+  :location: !ruby/range
+    begin: 158
+    end: 166
+    excl: false
+  :errors:
+  - dir
+  - subfolder
+  :errors_with_suggestions:
+    dir: deer
+    subfolder: sub folder
+- :file: lib/bundler/vendor/thor/lib/thor/actions.rb
+  :object: Bundler::Thor::Actions#thor
+  :location: !ruby/range
+    begin: 271
+    end: 288
+    excl: false
+  :errors:
+  - thor
+  :errors_with_suggestions:
+    thor: Thor
+- :file: lib/bundler/vendor/thor/lib/thor/command.rb
+  :object: Bundler::Thor::Command#run
+  :location: !ruby/range
+    begin: 18
+    end: 19
+    excl: false
+  :errors:
+  - thor
+  :errors_with_suggestions:
+    thor: Thor
+- :file: lib/bundler/vendor/thor/lib/thor/command.rb
+  :object: Bundler::Thor::HiddenCommand
+  :location: !ruby/range
+    begin: 112
+    end: 112
+    excl: false
+  :errors:
+  - invocable
+  :errors_with_suggestions:
+    invocable: in vocable
+- :file: lib/bundler/vendor/fileutils/lib/fileutils.rb
+  :object: Bundler::FileUtils
+  :location: !ruby/range
+    begin: 2
+    end: 86
+    excl: false
+  :errors:
+  - Aoki
+  - Minero
+  - Namespace
+  - honours
+  :errors_with_suggestions:
+    Aoki: Loki
+    Minero: Miner
+    Namespace: Name space
+    honours: honors
+- :file: lib/bundler/vendor/fileutils/lib/fileutils.rb
+  :object: Bundler::FileUtils#cd
+  :location: !ruby/range
+    begin: 106
+    end: 117
+    excl: false
+  :errors:
+  - dir
+  :errors_with_suggestions:
+    dir: deer
+- :file: lib/bundler/vendor/fileutils/lib/fileutils.rb
+  :object: Bundler::FileUtils.cd
+  :location: 
+  :errors:
+  - dir
+  :errors_with_suggestions:
+    dir: deer
+- :file: lib/bundler/vendor/fileutils/lib/fileutils.rb
+  :object: Bundler::FileUtils.chdir
+  :location: 
+  :errors:
+  - dir
+  :errors_with_suggestions:
+    dir: deer
+- :file: lib/bundler/vendor/fileutils/lib/fileutils.rb
+  :object: Bundler::FileUtils#ln
+  :location: !ruby/range
+    begin: 262
+    end: 282
+    excl: false
+  :errors:
+  - dir
+  :errors_with_suggestions:
+    dir: deer
+- :file: lib/bundler/vendor/fileutils/lib/fileutils.rb
+  :object: Bundler::FileUtils.ln
+  :location: 
+  :errors:
+  - dir
+  :errors_with_suggestions:
+    dir: deer
+- :file: lib/bundler/vendor/fileutils/lib/fileutils.rb
+  :object: Bundler::FileUtils.link
+  :location: 
+  :errors:
+  - dir
+  :errors_with_suggestions:
+    dir: deer
+- :file: lib/bundler/vendor/fileutils/lib/fileutils.rb
+  :object: Bundler::FileUtils#ln_s
+  :location: !ruby/range
+    begin: 296
+    end: 315
+    excl: false
+  :errors:
+  - dir
+  :errors_with_suggestions:
+    dir: deer
+- :file: lib/bundler/vendor/fileutils/lib/fileutils.rb
+  :object: Bundler::FileUtils.ln_s
+  :location: 
+  :errors:
+  - dir
+  :errors_with_suggestions:
+    dir: deer
+- :file: lib/bundler/vendor/fileutils/lib/fileutils.rb
+  :object: Bundler::FileUtils.symlink
+  :location: 
+  :errors:
+  - dir
+  :errors_with_suggestions:
+    dir: deer
+- :file: lib/bundler/vendor/fileutils/lib/fileutils.rb
+  :object: Bundler::FileUtils#cp
+  :location: !ruby/range
+    begin: 342
+    end: 352
+    excl: false
+  :errors:
+  - dest
+  - src
+  :errors_with_suggestions:
+    dest: fest
+    src: arc
+- :file: lib/bundler/vendor/fileutils/lib/fileutils.rb
+  :object: Bundler::FileUtils.cp
+  :location: 
+  :errors:
+  - dest
+  - src
+  :errors_with_suggestions:
+    dest: fest
+    src: arc
+- :file: lib/bundler/vendor/fileutils/lib/fileutils.rb
+  :object: Bundler::FileUtils.copy
+  :location: 
+  :errors:
+  - dest
+  - src
+  :errors_with_suggestions:
+    dest: fest
+    src: arc
+- :file: lib/bundler/vendor/fileutils/lib/fileutils.rb
+  :object: Bundler::FileUtils#cp_r
+  :location: !ruby/range
+    begin: 365
+    end: 385
+    excl: false
+  :errors:
+  - dest
+  - src
+  :errors_with_suggestions:
+    dest: fest
+    src: arc
+- :file: lib/bundler/vendor/fileutils/lib/fileutils.rb
+  :object: Bundler::FileUtils.cp_r
+  :location: 
+  :errors:
+  - dest
+  - src
+  :errors_with_suggestions:
+    dest: fest
+    src: arc
+- :file: lib/bundler/vendor/fileutils/lib/fileutils.rb
+  :object: Bundler::FileUtils#copy_entry
+  :location: !ruby/range
+    begin: 396
+    end: 411
+    excl: false
+  :errors:
+  - dereference
+  - dest
+  - src
+  - symlink
+  :errors_with_suggestions:
+    dereference: preference
+    dest: fest
+    src: arc
+    symlink: symbolic
+- :file: lib/bundler/vendor/fileutils/lib/fileutils.rb
+  :object: Bundler::FileUtils.copy_entry
+  :location: 
+  :errors:
+  - dereference
+  - dest
+  - src
+  - symlink
+  :errors_with_suggestions:
+    dereference: preference
+    dest: fest
+    src: arc
+    symlink: symbolic
+- :file: lib/bundler/vendor/fileutils/lib/fileutils.rb
+  :object: Bundler::FileUtils#copy_file
+  :location: !ruby/range
+    begin: 424
+    end: 427
+    excl: false
+  :errors:
+  - dest
+  - src
+  :errors_with_suggestions:
+    dest: fest
+    src: arc
+- :file: lib/bundler/vendor/fileutils/lib/fileutils.rb
+  :object: Bundler::FileUtils.copy_file
+  :location: 
+  :errors:
+  - dest
+  - src
+  :errors_with_suggestions:
+    dest: fest
+    src: arc
+- :file: lib/bundler/vendor/fileutils/lib/fileutils.rb
+  :object: Bundler::FileUtils#copy_stream
+  :location: !ruby/range
+    begin: 435
+    end: 439
+    excl: false
+  :errors:
+  - dest
+  - src
+  :errors_with_suggestions:
+    dest: fest
+    src: arc
+- :file: lib/bundler/vendor/fileutils/lib/fileutils.rb
+  :object: Bundler::FileUtils.copy_stream
+  :location: 
+  :errors:
+  - dest
+  - src
+  :errors_with_suggestions:
+    dest: fest
+    src: arc
+- :file: lib/bundler/vendor/fileutils/lib/fileutils.rb
+  :object: Bundler::FileUtils#mv
+  :location: !ruby/range
+    begin: 445
+    end: 454
+    excl: false
+  :errors:
+  - dest
+  - src
+  :errors_with_suggestions:
+    dest: fest
+    src: arc
+- :file: lib/bundler/vendor/fileutils/lib/fileutils.rb
+  :object: Bundler::FileUtils.mv
+  :location: 
+  :errors:
+  - dest
+  - src
+  :errors_with_suggestions:
+    dest: fest
+    src: arc
+- :file: lib/bundler/vendor/fileutils/lib/fileutils.rb
+  :object: Bundler::FileUtils.move
+  :location: 
+  :errors:
+  - dest
+  - src
+  :errors_with_suggestions:
+    dest: fest
+    src: arc
+- :file: lib/bundler/vendor/fileutils/lib/fileutils.rb
+  :object: Bundler::FileUtils#rm_r
+  :location: !ruby/range
+    begin: 528
+    end: 546
+    excl: false
+  :errors:
+  - tmp
+  :errors_with_suggestions:
+    tmp: mp
+- :file: lib/bundler/vendor/fileutils/lib/fileutils.rb
+  :object: Bundler::FileUtils.rm_r
+  :location: 
+  :errors:
+  - tmp
+  :errors_with_suggestions:
+    tmp: mp
+- :file: lib/bundler/vendor/fileutils/lib/fileutils.rb
+  :object: Bundler::FileUtils#remove_entry_secure
+  :location: !ruby/range
+    begin: 577
+    end: 608
+    excl: false
+  :errors:
+  - chmod
+  - chown
+  - fileutils
+  - preprocess
+  - rb
+  - untrusted
+  :errors_with_suggestions:
+    chmod: ch mod
+    chown: sown
+    fileutils: filenames
+    preprocess: reprocess
+    rb: Rb
+    untrusted: entrusted
+- :file: lib/bundler/vendor/fileutils/lib/fileutils.rb
+  :object: Bundler::FileUtils.remove_entry_secure
+  :location: 
+  :errors:
+  - chmod
+  - chown
+  - fileutils
+  - preprocess
+  - rb
+  - untrusted
+  :errors_with_suggestions:
+    chmod: ch mod
+    chown: sown
+    fileutils: filenames
+    preprocess: reprocess
+    rb: Rb
+    untrusted: entrusted
+- :file: lib/bundler/vendor/fileutils/lib/fileutils.rb
+  :object: Bundler::FileUtils#remove_dir
+  :location: !ruby/range
+    begin: 710
+    end: 713
+    excl: false
+  :errors:
+  - dir
+  :errors_with_suggestions:
+    dir: deer
+- :file: lib/bundler/vendor/fileutils/lib/fileutils.rb
+  :object: Bundler::FileUtils.remove_dir
+  :location: 
+  :errors:
+  - dir
+  :errors_with_suggestions:
+    dir: deer
+- :file: lib/bundler/vendor/fileutils/lib/fileutils.rb
+  :object: Bundler::FileUtils#install
+  :location: !ruby/range
+    begin: 756
+    end: 763
+    excl: false
+  :errors:
+  - dest
+  - src
+  :errors_with_suggestions:
+    dest: fest
+    src: arc
+- :file: lib/bundler/vendor/fileutils/lib/fileutils.rb
+  :object: Bundler::FileUtils.install
+  :location: 
+  :errors:
+  - dest
+  - src
+  :errors_with_suggestions:
+    dest: fest
+    src: arc
+- :file: lib/bundler/vendor/fileutils/lib/fileutils.rb
+  :object: Bundler::FileUtils#chmod
+  :location: !ruby/range
+    begin: 883
+    end: 912
+    excl: false
+  :errors:
+  - gid
+  - uid
+  :errors_with_suggestions:
+    gid: geed
+    uid: yid
+- :file: lib/bundler/vendor/fileutils/lib/fileutils.rb
+  :object: Bundler::FileUtils.chmod
+  :location: 
+  :errors:
+  - gid
+  - uid
+  :errors_with_suggestions:
+    gid: geed
+    uid: yid
+- :file: lib/bundler/vendor/fileutils/lib/fileutils.rb
+  :object: Bundler::FileUtils#touch
+  :location: !ruby/range
+    begin: 1035
+    end: 1041
+    excl: false
+  :errors:
+  - atime
+  - mtime
+  :errors_with_suggestions:
+    atime: time
+    mtime: mime
+- :file: lib/bundler/vendor/fileutils/lib/fileutils.rb
+  :object: Bundler::FileUtils.touch
+  :location: 
+  :errors:
+  - atime
+  - mtime
+  :errors_with_suggestions:
+    atime: time
+    mtime: mime
+- :file: lib/bundler/vendor/thor/lib/thor/invocation.rb
+  :object: Bundler::Thor::Invocation#initialize
+  :location: !ruby/range
+    begin: 21
+    end: 21
+    excl: false
+  :errors:
+  - args
+  - initializer
+  :errors_with_suggestions:
+    args: rags
+    initializer: initialize
+- :file: lib/bundler/vendor/thor/lib/thor/invocation.rb
+  :object: Bundler::Thor::Invocation#invoke
+  :location: !ruby/range
+    begin: 33
+    end: 100
+    excl: false
+  :errors:
+  - invoker
+  - rspec
+  :errors_with_suggestions:
+    invoker: invoke
+    rspec: spec
+- :file: lib/bundler/vendor/thor/lib/thor/invocation.rb
+  :object: Bundler::Thor::Invocation#invoke_command
+  :location: !ruby/range
+    begin: 120
+    end: 120
+    excl: false
+  :errors:
+  - args
+  :errors_with_suggestions:
+    args: rags
+- :file: lib/bundler/vendor/thor/lib/thor/invocation.rb
+  :object: Bundler::Thor::Invocation#_parse_initialization_options
+  :location: !ruby/range
+    begin: 164
+    end: 164
+    excl: false
+  :errors:
+  - klass
+  :errors_with_suggestions:
+    klass: lass
+- :file: lib/bundler/vendor/thor/lib/thor/shell/html.rb
+  :object: Bundler::Thor::Shell::HTML#set_color
+  :location: !ruby/range
+    begin: 46
+    end: 50
+    excl: false
+  :errors:
+  - Highline
+  :errors_with_suggestions:
+    Highline: High line
+- :file: lib/bundler/vendor/thor/lib/thor/rake_compat.rb
+  :object: Bundler::Thor::RakeCompat
+  :location: !ruby/range
+    begin: 5
+    end: 19
+    excl: false
+  :errors:
+  - rspec
+  :errors_with_suggestions:
+    rspec: spec
+- :file: lib/bundler/vendor/thor/lib/thor/shell/basic.rb
+  :object: Bundler::Thor::Shell::Basic#ask
+  :location: !ruby/range
+    begin: 46
+    end: 69
+    excl: false
+  :errors:
+  - Neopolitan
+  - stdin
+  :errors_with_suggestions:
+    Neopolitan: Neapolitan
+    stdin: stein
+- :file: lib/bundler/vendor/thor/lib/thor/shell/basic.rb
+  :object: Bundler::Thor::Shell::Basic#say
+  :location: !ruby/range
+    begin: 81
+    end: 87
+    excl: false
+  :errors:
+  - Highline
+  - whitespace
+  :errors_with_suggestions:
+    Highline: High line
+    whitespace: white space
+- :file: lib/bundler/vendor/thor/lib/thor/shell/basic.rb
+  :object: Bundler::Thor::Shell::Basic#print_wrapped
+  :location: !ruby/range
+    begin: 210
+    end: 218
+    excl: false
+  :errors:
+  - heredocs
+  :errors_with_suggestions:
+    heredocs: here docs
+- :file: lib/bundler/vendor/thor/lib/thor/shell/basic.rb
+  :object: Bundler::Thor::Shell::Basic#terminal_width
+  :location: !ruby/range
+    begin: 276
+    end: 277
+    excl: false
+  :errors:
+  - Weirich
+  :errors_with_suggestions:
+    Weirich: Wei rich
+- :file: lib/bundler/vendor/thor/lib/thor/shell/color.rb
+  :object: Bundler::Thor::Shell::Color#set_color
+  :location: !ruby/range
+    begin: 48
+    end: 78
+    excl: false
+  :errors:
+  - Highline
+  :errors_with_suggestions:
+    Highline: High line
+- :file: lib/bundler/vendor/thor/lib/thor/parser/option.rb
+  :object: Bundler::Thor::Option.parse
+  :location: !ruby/range
+    begin: 17
+    end: 43
+    excl: false
+  :errors:
+  - booleans
+  :errors_with_suggestions:
+    booleans: boo leans
+- :file: lib/bundler/vendor/thor/lib/thor/parser/options.rb
+  :object: Bundler::Thor::Options::SHORT_SQ_RE
+  :location: !ruby/range
+    begin: 6
+    end: 6
+    excl: false
+  :errors:
+  - args
+  :errors_with_suggestions:
+    args: rags
+- :file: lib/bundler/vendor/thor/lib/thor/parser/options.rb
+  :object: Bundler::Thor::Options#current_is_switch?
+  :location: !ruby/range
+    begin: 130
+    end: 133
+    excl: false
+  :errors:
+  - booleans
+  :errors_with_suggestions:
+    booleans: boo leans
+- :file: lib/bundler/vendor/thor/lib/thor/parser/options.rb
+  :object: Bundler::Thor::Options#parse_boolean
+  :location: !ruby/range
+    begin: 181
+    end: 182
+    excl: false
+  :errors:
+  - boolean
+  :errors_with_suggestions:
+    boolean: Boolean
+- :file: lib/bundler/vendor/molinillo/lib/molinillo/errors.rb
+  :object: Bundler::Molinillo::CircularDependencyError
+  :location: !ruby/range
+    begin: 35
+    end: 39
+    excl: false
+  :errors:
+  - fulfil
+  :errors_with_suggestions:
+    fulfil: fulfill
+- :file: lib/bundler/vendor/thor/lib/thor/parser/arguments.rb
+  :object: Bundler::Thor::Arguments.split
+  :location: !ruby/range
+    begin: 5
+    end: 7
+    excl: false
+  :errors:
+  - args
+  :errors_with_suggestions:
+    args: rags
+- :file: lib/bundler/vendor/thor/lib/thor/parser/arguments.rb
+  :object: Bundler::Thor::Arguments#parse_numeric
+  :location: !ruby/range
+    begin: 125
+    end: 128
+    excl: false
+  :errors:
+  - enum
+  :errors_with_suggestions:
+    enum: menu
+- :file: lib/bundler/vendor/thor/lib/thor/parser/arguments.rb
+  :object: Bundler::Thor::Arguments#parse_string
+  :location: !ruby/range
+    begin: 145
+    end: 149
+    excl: false
+  :errors:
+  - arg
+  - enum
+  :errors_with_suggestions:
+    arg: rag
+    enum: menu
+- :file: lib/bundler/vendor/thor/lib/thor/actions/directory.rb
+  :object: Bundler::Thor::Actions#directory
+  :location: !ruby/range
+    begin: 5
+    end: 48
+    excl: false
+  :errors:
+  - tt
+  :errors_with_suggestions:
+    tt: rt
+- :file: lib/bundler/vendor/molinillo/lib/molinillo/resolution.rb
+  :object: Bundler::Molinillo::Resolver::Resolution::UnwindDetails#<=>
+  :location: !ruby/range
+    begin: 74
+    end: 82
+    excl: false
+  :errors:
+  - behaviour
+  :errors_with_suggestions:
+    behaviour: behavior
+- :file: lib/bundler/vendor/thor/lib/thor/actions/empty_directory.rb
+  :object: Bundler::Thor::Actions::EmptyDirectory
+  :location: !ruby/range
+    begin: 17
+    end: 22
+    excl: false
+  :errors:
+  - Klishin
+  - Nicklas
+  - Templater
+  :errors_with_suggestions:
+    Klishin: Publishing
+    Nicklas: Nickolas
+    Templater: Template
+- :file: lib/bundler/vendor/thor/lib/thor/actions/empty_directory.rb
+  :object: Bundler::Thor::Actions::EmptyDirectory#destination=
+  :location: !ruby/range
+    begin: 71
+    end: 84
+    excl: false
+  :errors:
+  - dest
+  :errors_with_suggestions:
+    dest: fest
+- :file: lib/bundler/vendor/net-http-persistent/lib/net/http/faster.rb
+  :object: Net::BufferedIO
+  :location: !ruby/range
+    begin: 3
+    end: 7
+    excl: false
+  :errors:
+  - github
+  - monkeypatch
+  :errors_with_suggestions:
+    github: git hub
+    monkeypatch: monkey patch
+- :file: lib/bundler/vendor/thor/lib/thor/actions/file_manipulation.rb
+  :object: Bundler::Thor::Actions#get
+  :location: !ruby/range
+    begin: 59
+    end: 75
+    excl: false
+  :errors:
+  - url
+  :errors_with_suggestions:
+    url: URL
+- :file: lib/bundler/vendor/thor/lib/thor/actions/file_manipulation.rb
+  :object: Bundler::Thor::Actions#template
+  :location: !ruby/range
+    begin: 97
+    end: 111
+    excl: false
+  :errors:
+  - tt
+  :errors_with_suggestions:
+    tt: rt
+- :file: lib/bundler/vendor/thor/lib/thor/actions/file_manipulation.rb
+  :object: Bundler::Thor::Actions#prepend_to_file
+  :location: !ruby/range
+    begin: 149
+    end: 163
+    excl: false
+  :errors:
+  - Prepend
+  :errors_with_suggestions:
+    Prepend: Pretend
+- :file: lib/bundler/vendor/thor/lib/thor/actions/file_manipulation.rb
+  :object: Bundler::Thor::Actions#uncomment_lines
+  :location: !ruby/range
+    begin: 269
+    end: 281
+    excl: false
+  :errors:
+  - Uncomment
+  :errors_with_suggestions:
+    Uncomment: Uncommon
+- :file: lib/bundler/vendor/molinillo/lib/molinillo/dependency_graph.rb
+  :object: Bundler::Molinillo::DependencyGraph
+  :location: !ruby/range
+    begin: 10
+    end: 10
+    excl: false
+  :errors:
+  - acyclic
+  :errors_with_suggestions:
+    acyclic: cyclic
+- :file: lib/bundler/vendor/net-http-persistent/lib/net/http/persistent.rb
+  :object: Bundler::Persistent::Net::HTTP::Persistent
+  :location: !ruby/range
+    begin: 18
+    end: 189
+    excl: false
+  :errors:
+  - params
+  :errors_with_suggestions:
+    params: paras
+- :file: lib/bundler/vendor/net-http-persistent/lib/net/http/persistent.rb
+  :object: Bundler::Persistent::Net::HTTP::Persistent::HAVE_OPENSSL
+  :location: !ruby/range
+    begin: 198
+    end: 199
+    excl: false
+  :errors:
+  - autoload
+  :errors_with_suggestions:
+    autoload: auto load
+- :file: lib/bundler/vendor/net-http-persistent/lib/net/http/persistent.rb
+  :object: Bundler::Persistent::Net::HTTP::Persistent.detect_idle_timeout
+  :location: !ruby/range
+    begin: 230
+    end: 241
+    excl: false
+  :errors:
+  - uri
+  :errors_with_suggestions:
+    uri: uric
+- :file: lib/bundler/vendor/net-http-persistent/lib/net/http/persistent.rb
+  :object: Bundler::Persistent::Net::HTTP::Persistent#name
+  :location: !ruby/range
+    begin: 351
+    end: 353
+    excl: false
+  :errors:
+  - else's
+  :errors_with_suggestions:
+    else's: ease's
+- :file: lib/bundler/vendor/net-http-persistent/lib/net/http/persistent.rb
+  :object: Bundler::Persistent::Net::HTTP::Persistent#proxy_uri
+  :location: !ruby/range
+    begin: 375
+    end: 376
+    excl: false
+  :errors:
+  - proxied
+  :errors_with_suggestions:
+    proxied: proxies
+- :file: lib/bundler/vendor/net-http-persistent/lib/net/http/persistent.rb
+  :object: Bundler::Persistent::Net::HTTP::Persistent#no_proxy
+  :location: !ruby/range
+    begin: 380
+    end: 381
+    excl: false
+  :errors:
+  - proxied
+  :errors_with_suggestions:
+    proxied: proxies
+- :file: lib/bundler/vendor/net-http-persistent/lib/net/http/persistent.rb
+  :object: Bundler::Persistent::Net::HTTP::Persistent#initialize
+  :location: !ruby/range
+    begin: 465
+    end: 480
+    excl: false
+  :errors:
+  - else's
+  :errors_with_suggestions:
+    else's: ease's
+- :file: lib/bundler/vendor/net-http-persistent/lib/net/http/persistent.rb
+  :object: Bundler::Persistent::Net::HTTP::Persistent#connection_for
+  :location: !ruby/range
+    begin: 585
+    end: 586
+    excl: false
+  :errors:
+  - uri
+  :errors_with_suggestions:
+    uri: uric
+- :file: lib/bundler/vendor/net-http-persistent/lib/net/http/persistent.rb
+  :object: Bundler::Persistent::Net::HTTP::Persistent#http_version
+  :location: !ruby/range
+    begin: 737
+    end: 738
+    excl: false
+  :errors:
+  - uri
+  :errors_with_suggestions:
+    uri: uric
+- :file: lib/bundler/vendor/net-http-persistent/lib/net/http/persistent.rb
+  :object: Bundler::Persistent::Net::HTTP::Persistent#idempotent?
+  :location: !ruby/range
+    begin: 744
+    end: 745
+    excl: false
+  :errors:
+  - req
+  :errors_with_suggestions:
+    req: re
+- :file: lib/bundler/vendor/net-http-persistent/lib/net/http/persistent.rb
+  :object: Bundler::Persistent::Net::HTTP::Persistent#can_retry?
+  :location: !ruby/range
+    begin: 755
+    end: 759
+    excl: false
+  :errors:
+  - req
+  :errors_with_suggestions:
+    req: re
+- :file: lib/bundler/vendor/net-http-persistent/lib/net/http/persistent.rb
+  :object: Bundler::Persistent::Net::HTTP::Persistent#normalize_uri
+  :location: !ruby/range
+    begin: 808
+    end: 809
+    excl: false
+  :errors:
+  - uri
+  :errors_with_suggestions:
+    uri: uric
+- :file: lib/bundler/vendor/net-http-persistent/lib/net/http/persistent.rb
+  :object: Bundler::Persistent::Net::HTTP::Persistent#pipeline
+  :location: !ruby/range
+    begin: 815
+    end: 824
+    excl: false
+  :errors:
+  - html
+  - http
+  - seattlerb
+  - uri
+  :errors_with_suggestions:
+    html: HTML
+    http: HTTP
+    seattlerb: Seattle
+    uri: uric
+- :file: lib/bundler/vendor/net-http-persistent/lib/net/http/persistent.rb
+  :object: Bundler::Persistent::Net::HTTP::Persistent#proxy=
+  :location: !ruby/range
+    begin: 844
+    end: 856
+    excl: false
+  :errors:
+  - hostname
+  :errors_with_suggestions:
+    hostname: host name
+- :file: lib/bundler/vendor/net-http-persistent/lib/net/http/persistent.rb
+  :object: Bundler::Persistent::Net::HTTP::Persistent#proxy_from_env
+  :location: !ruby/range
+    begin: 887
+    end: 903
+    excl: false
+  :errors:
+  - hostname
+  :errors_with_suggestions:
+    hostname: host name
+- :file: lib/bundler/vendor/net-http-persistent/lib/net/http/persistent.rb
+  :object: Bundler::Persistent::Net::HTTP::Persistent#reconnect
+  :location: !ruby/range
+    begin: 944
+    end: 945
+    excl: false
+  :errors:
+  - reconnection
+  :errors_with_suggestions:
+    reconnection: re connection
+- :file: lib/bundler/vendor/net-http-persistent/lib/net/http/persistent.rb
+  :object: Bundler::Persistent::Net::HTTP::Persistent#reconnect_ssl
+  :location: !ruby/range
+    begin: 951
+    end: 952
+    excl: false
+  :errors:
+  - reconnection
+  :errors_with_suggestions:
+    reconnection: re connection
+- :file: lib/bundler/vendor/net-http-persistent/lib/net/http/persistent.rb
+  :object: Bundler::Persistent::Net::HTTP::Persistent#request
+  :location: !ruby/range
+    begin: 978
+    end: 988
+    excl: false
+  :errors:
+  - req
+  - uri
+  :errors_with_suggestions:
+    req: re
+    uri: uric
+- :file: lib/bundler/vendor/net-http-persistent/lib/net/http/persistent/ssl_reuse.rb
+  :object: Bundler::Persistent::Net::HTTP::Persistent::SSLReuse#connect
+  :location: !ruby/range
+    begin: 84
+    end: 86
+    excl: false
+  :errors:
+  - lang
+  - r29865
+  - redmine
+  :errors_with_suggestions:
+    lang: Lang
+    r29865: 
+    redmine: red mine
+- :file: lib/bundler/vendor/molinillo/lib/molinillo/modules/specification_provider.rb
+  :object: Bundler::Molinillo::SpecificationProvider
+  :location: !ruby/range
+    begin: 4
+    end: 9
+    excl: false
+  :errors:
+  - specifcations
+  :errors_with_suggestions:
+    specifcations: specifications
+

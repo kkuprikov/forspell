@@ -1,0 +1,120 @@
+---
+- :file: lib/reform/form.rb
+  :object: Reform::Form::Deserialize
+  :location: !ruby/range
+    begin: 12
+    end: 13
+    excl: false
+  :errors:
+  - deserialize
+  - params
+  :errors_with_suggestions:
+    deserialize: serialize
+    params: paras
+- :file: lib/reform/result.rb
+  :object: Reform::Contract::Result::Pointer
+  :location: !ruby/range
+    begin: 28
+    end: 31
+    excl: false
+  :errors:
+  - br
+  :errors_with_suggestions:
+    br: BR
+- :file: lib/reform/contract.rb
+  :object: Reform::Contract.clone
+  :location: !ruby/range
+    begin: 63
+    end: 63
+    excl: false
+  :errors:
+  - suboperation
+  :errors_with_suggestions:
+    suboperation: sub operation
+- :file: lib/reform/form/dry.rb
+  :object: Reform::Form::Dry::Validations::Group#input_hash
+  :location: !ruby/range
+    begin: 74
+    end: 74
+    excl: false
+  :errors:
+  - get's
+  :errors_with_suggestions:
+    get's: gets
+- :file: lib/reform/form/dry.rb
+  :object: Reform::Form::Dry::Validations::Group#symbolize_hash
+  :location: !ruby/range
+    begin: 80
+    end: 81
+    excl: false
+  :errors:
+  - Representers
+  :errors_with_suggestions:
+    Representers: Re presenters
+- :file: lib/reform/form/validate.rb
+  :object: Reform::Form::Validate#input_params
+  :location: !ruby/range
+    begin: 26
+    end: 26
+    excl: false
+  :errors:
+  - params
+  :errors_with_suggestions:
+    params: paras
+- :file: lib/reform/form/validate.rb
+  :object: Reform::Form::Validate#deserialize!
+  :location: !ruby/range
+    begin: 35
+    end: 35
+    excl: false
+  :errors:
+  - params
+  - representer
+  :errors_with_suggestions:
+    params: paras
+    representer: represented
+- :file: lib/reform/form/validate.rb
+  :object: Reform::Form::Validate#deserializer!
+  :location: !ruby/range
+    begin: 44
+    end: 45
+    excl: false
+  :errors:
+  - deserializer
+  :errors_with_suggestions:
+    deserializer: serialize
+- :file: lib/reform/form/populator.rb
+  :object: Reform::Form::Populator
+  :location: !ruby/range
+    begin: 1
+    end: 6
+    excl: false
+  :errors:
+  - deserialised
+  :errors_with_suggestions:
+    deserialised: serialized
+- :file: lib/reform/form/populator.rb
+  :object: Reform::Form::Populator::External
+  :location: !ruby/range
+    begin: 93
+    end: 102
+    excl: false
+  :errors:
+  - deserializer's
+  - deserializing
+  - representer
+  :errors_with_suggestions:
+    deserializer's: serializes
+    deserializing: serializing
+    representer: represented
+- :file: lib/reform/form/prepopulate.rb
+  :object: Reform::Form::Prepopulate
+  :location: !ruby/range
+    begin: 1
+    end: 2
+    excl: false
+  :errors:
+  - prepopulate
+  :errors_with_suggestions:
+    prepopulate: repopulate
+

@@ -48,7 +48,7 @@ class YardocLoader < BaseLoader
         object: object.path, 
         location: object.docstring.line_range, 
         words: filter_code_objects(extract_text(object.docstring)) 
-      } unless object.docstring.empty?
+      } unless (object.docstring.empty? || skip_method?(object))
     end.compact
 
     self
@@ -60,5 +60,14 @@ class YardocLoader < BaseLoader
     @format_class.parse(docstring).parts
       .select{ |part| part.is_a?(RDoc::Markup::Paragraph) }
       .map(&:parts).flatten.join(' ')
+  end
+
+  def skip_method?(object)
+    return false unless object.is_a? YARD::CodeObjects::MethodObject
+
+    result = object.is_alias? || 
+             result = object.reader? && object.docstring.to_s =~ /^Returns the value of attribute #{ object.name.to_s }$/ ||
+             object.writer? && object.docstring.to_s =~ /^Sets the attribute #{ object.name.to_s.chop }$/
+    result ? true : false
   end
 end

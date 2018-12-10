@@ -19,7 +19,7 @@ module CodeObjectsFilter
     apostrophed_words.each do |word|
       fixed_word = word[1..-1] if word.start_with?("'")
       fixed_word = word.chop if !word.end_with?("s'") && word.end_with?("'")
-      result << fixed_word
+      result << (fixed_word || word)
     end
     result
   end
