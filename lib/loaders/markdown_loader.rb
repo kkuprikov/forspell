@@ -9,7 +9,7 @@ class MarkdownLoader < BaseLoader
   def initialize input = nil, file: nil, parser: 'GFM'
     @custom_dictionary = []
     @input = input || IO.read(file)
-    @result = {}
+    @result = []
     @parser = parser
   end
 
@@ -26,11 +26,15 @@ class MarkdownLoader < BaseLoader
       if child[:children]
         extract_values(child)
       else
-        if @result[ child[:location] ].nil?
-          @result[ child[:location] ] = sanitize_value(child[:value])
-        else
-          @result[ child[:location] ] += sanitize_value(child[:value])
-        end
+        # if @result[ child[:location] ].nil?
+        #   @result[ child[:location] ] = sanitize_value(child[:value])
+        # else
+        #   @result[ child[:location] ] += sanitize_value(child[:value])
+        # end
+        @result << {
+          location: child[:location],
+          words: sanitize_value(child[:value])
+        }
       end
     end
   end

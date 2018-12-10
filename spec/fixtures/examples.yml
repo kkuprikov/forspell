@@ -1,0 +1,12 @@
+1:
+  paragraph: 'These are some params'
+  words: ['These', 'are', 'some', 'params']
+  errors: []
+2:
+  paragraph: "Checking words with apostrohes like doesn't, haven't, don't"
+  words: ["Checking", 'words', 'with', 'apostrohes', 'like', "doesn't", "haven't", "don't"]
+  errors: ['apostrohes']
+3:
+  paragraph: "example with <tt>need to filter that</tt> tags <p>*.asd</p> <dd>!@$#%@%SDF413ef#$&%&</dd>"
+  words: ['example', 'with', 'tags']
+  errors: []

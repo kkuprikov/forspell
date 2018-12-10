@@ -29,8 +29,13 @@ class Forspell
   end
 
   def process
-    inputs_with_location = @loader_class.new(file: @file).process.result
-    @result =  inputs_with_location.transform_values { |v| check_spelling(v) }.delete_if{ |k, v| v.empty? }
+    data = @loader_class.new(file: @file).process.result
+
+    @result = data.map do |part| 
+      part[:errors] = check_spelling(part[:words])
+      part.delete(:words)
+      part 
+    end.reject{ |part| part[:errors].empty? }
 
     pretty_print(result) if @logger
     self
@@ -45,6 +50,6 @@ class Forspell
 
   def pretty_print result_hash
     @logger.info 'Spellchecking result:'
-    result_hash.each_pair { |object, errors| @logger.info "#{ object }: #{ errors.join(', ') }" }
+    result_hash.each { |object| @logger.info object.to_s }
   end
 end

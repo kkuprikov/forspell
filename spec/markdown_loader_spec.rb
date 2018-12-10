@@ -3,7 +3,7 @@ require 'pry'
 
 RSpec.describe MarkdownLoader do
   describe 'git flavored markdown parsing' do
-    subject { described_class.new(file: filepath, parser: 'GFM').process.result.values.flatten }
+    subject { described_class.new(file: filepath, parser: 'GFM').process.result.first[:words] }
     
     context 'with code blocks' do
       let(:filepath) { 'spec/fixtures/markdown_with_code_blocks.md' }
