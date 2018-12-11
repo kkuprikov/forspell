@@ -1,0 +1,12 @@
+# Logfile created on 2018-12-11 13:15:09 +0300 by logger.rb/56815
+{:file=>"lib/reform/form.rb", :object=>"Reform::Form::Deserialize", :location=>12..13, :errors=>["deserialize", "params"], :errors_with_suggestions=>{"deserialize"=>"serialize", "params"=>"paras"}}
+{:file=>"lib/reform/result.rb", :object=>"Reform::Contract::Result::Pointer", :location=>28..31, :errors=>["br"], :errors_with_suggestions=>{"br"=>"BR"}}
+{:file=>"lib/reform/contract.rb", :object=>"Reform::Contract.clone", :location=>63..63, :errors=>["suboperation"], :errors_with_suggestions=>{"suboperation"=>"sub operation"}}
+{:file=>"lib/reform/form/dry.rb", :object=>"Reform::Form::Dry::Validations::Group#input_hash", :location=>74..74, :errors=>["get's"], :errors_with_suggestions=>{"get's"=>"gets"}}
+{:file=>"lib/reform/form/dry.rb", :object=>"Reform::Form::Dry::Validations::Group#symbolize_hash", :location=>80..81, :errors=>["Representers"], :errors_with_suggestions=>{"Representers"=>"Re presenters"}}
+{:file=>"lib/reform/form/validate.rb", :object=>"Reform::Form::Validate#input_params", :location=>26..26, :errors=>["params"], :errors_with_suggestions=>{"params"=>"paras"}}
+{:file=>"lib/reform/form/validate.rb", :object=>"Reform::Form::Validate#deserialize!", :location=>35..35, :errors=>["params", "representer"], :errors_with_suggestions=>{"params"=>"paras", "representer"=>"represented"}}
+{:file=>"lib/reform/form/validate.rb", :object=>"Reform::Form::Validate#deserializer!", :location=>44..45, :errors=>["deserializer"], :errors_with_suggestions=>{"deserializer"=>"serialize"}}
+{:file=>"lib/reform/form/populator.rb", :object=>"Reform::Form::Populator", :location=>1..6, :errors=>["deserialised"], :errors_with_suggestions=>{"deserialised"=>"serialized"}}
+{:file=>"lib/reform/form/populator.rb", :object=>"Reform::Form::Populator::External", :location=>93..102, :errors=>["deserializer's", "deserializing", "representer"], :errors_with_suggestions=>{"deserializer's"=>"serializes", "deserializing"=>"serializing", "representer"=>"represented"}}
+{:file=>"lib/reform/form/prepopulate.rb", :object=>"Reform::Form::Prepopulate", :location=>1..2, :errors=>["prepopulate"], :errors_with_suggestions=>{"prepopulate"=>"repopulate"}}

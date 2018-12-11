@@ -1,0 +1,3 @@
+# Logfile created on 2018-12-11 13:03:24 +0300 by logger.rb/56815
+{:file=>"lib/cocoon/view_helpers.rb", :object=>"Cocoon::ViewHelpers#link_to_remove_association", :location=>5..14, :errors=>["html"], :errors_with_suggestions=>{"html"=>"HTML"}}
+{:file=>"lib/cocoon/view_helpers.rb", :object=>"Cocoon::ViewHelpers#link_to_add_association", :location=>56..69, :errors=>["formtastic", "html"], :errors_with_suggestions=>{"formtastic"=>"fantastical", "html"=>"HTML"}}
