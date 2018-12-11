@@ -11,10 +11,11 @@ class Forspell
 
   attr_reader :dictionary, :result
 
-  def initialize(dictionary_name: 'en_US', logfile: STDOUT, file: nil, no_output: false)
+  def initialize(dictionary_name: 'en_US', logfile: STDOUT, file: nil, no_output: false, format: 'json')
     @dictionary = FFI::Hunspell.dict(dictionary_name)
     @file = file
     @loader_class = loader_class(@file)
+    @format = format
 
     unless no_output
       @logger = Logger.new(logfile || STDOUT)
@@ -38,7 +39,7 @@ class Forspell
       part 
     end.reject{ |part| part[:errors].empty? }
 
-    pretty_print(result) if @logger
+    pretty_print(result, @format) if @logger
     self
   end
 
@@ -49,8 +50,12 @@ class Forspell
     FORMATS_TO_LOADERS_MAP[File.extname(file)] || YardocLoader
   end
 
-  def pretty_print result_hash
-    # result_hash.each { |object| @logger.info object.to_s }
-    @logger.info result_hash.to_yaml
+  def pretty_print result_hash, format
+    case format
+    when 'json'
+      result_hash.each { |object| @logger.info object.to_s }
+    when 'yaml', 'yml'
+      @logger.info result_hash.to_yaml
+    end
   end 
 end
