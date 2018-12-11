@@ -10,6 +10,9 @@
 - paragraph: "fake apostrophed words like 'text/javascript'"
   words: ['fake', 'apostrophed', 'words', 'like', 'text', 'javascript']
   errors: ['apostrophed', 'javascript']
+- paragraph: "words surrounded by quotes like 'like', 'these' 'ones"
+  words: ['words', 'surrounded', 'by', 'quotes', 'like', 'like', 'these', 'ones']
+  errors: []
 - paragraph: "# Compares the +other+ MIME::Type based on how reliable it is before doing a normal <=> comparison. "
   words: ['Compares', 'the', 'other', 'based', 'on', 'how', 'reliable', 'it', 'is', 'before', 'doing', 'a', 'normal', 'comparison']
   errors: []
