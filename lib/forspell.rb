@@ -58,12 +58,9 @@ class Forspell
     when 'yaml', 'yml'
       @logger.info result.to_yaml
     when 'readable'
-      result.group_by {|object| object[:file]}.each_pair do |file, objects| 
-        @logger.info "In #{ file }"
-        objects.each do |object|
-          object[:errors_with_suggestions].each_pair do |error, suggestion|
-            @logger.info "  at #{ object[:location] }: '#{ error }' is incorrect, possible suggestion is '#{ suggestion }'"
-          end
+      result.each do |object| 
+        object[:errors_with_suggestions].each_pair do |error, suggestion|
+          @logger.info "#{object[:file]}:#{ object[:location] }: '#{ error }' is incorrect, possible suggestion is '#{ suggestion }'"
         end
       end
     end

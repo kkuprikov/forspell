@@ -1,14 +1,11 @@
-In lib/bullet/rack.rb
-  at 39: 'Proc' is incorrect, possible suggestion is 'Prof'
-In lib/bullet/detector/association.rb
-  at 43: 'preload' is incorrect, possible suggestion is 'reload'
-  at 43: 'unpreload' is incorrect, possible suggestion is 'unprecedented'
-  at 52: 'preload' is incorrect, possible suggestion is 'reload'
-  at 60: 'inversed' is incorrect, possible suggestion is 'unversed'
-  at 67: 'preloaded' is incorrect, possible suggestion is 'reloaded'
-In lib/bullet/detector/n_plus_one_query.rb
-  at 10: 'assocations' is incorrect, possible suggestion is 'associations'
-  at 10: 'unpreload' is incorrect, possible suggestion is 'unprecedented'
-  at 58: 'unpreloaded' is incorrect, possible suggestion is 'freeloaded'
-In lib/bullet/detector/unused_eager_loading.rb
-  at 10: 'preload' is incorrect, possible suggestion is 'reload'
+# Logfile created on 2018-12-11 15:28:35 +0300 by logger.rb/56815
+lib/bullet/rack.rb:39: 'Proc' is incorrect, possible suggestion is 'Prof'
+lib/bullet/detector/association.rb:43: 'preload' is incorrect, possible suggestion is 'reload'
+lib/bullet/detector/association.rb:43: 'unpreload' is incorrect, possible suggestion is 'unprecedented'
+lib/bullet/detector/association.rb:52: 'preload' is incorrect, possible suggestion is 'reload'
+lib/bullet/detector/association.rb:60: 'inversed' is incorrect, possible suggestion is 'unversed'
+lib/bullet/detector/association.rb:67: 'preloaded' is incorrect, possible suggestion is 'reloaded'
+lib/bullet/detector/n_plus_one_query.rb:10: 'assocations' is incorrect, possible suggestion is 'associations'
+lib/bullet/detector/n_plus_one_query.rb:10: 'unpreload' is incorrect, possible suggestion is 'unprecedented'
+lib/bullet/detector/n_plus_one_query.rb:58: 'unpreloaded' is incorrect, possible suggestion is 'freeloaded'
+lib/bullet/detector/unused_eager_loading.rb:10: 'preload' is incorrect, possible suggestion is 'reload'

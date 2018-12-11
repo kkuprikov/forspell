@@ -1,4 +1,4 @@
-In lib/cocoon/view_helpers.rb
-  at 5: 'html' is incorrect, possible suggestion is 'HTML'
-  at 56: 'formtastic' is incorrect, possible suggestion is 'fantastical'
-  at 56: 'html' is incorrect, possible suggestion is 'HTML'
+# Logfile created on 2018-12-11 15:28:45 +0300 by logger.rb/56815
+lib/cocoon/view_helpers.rb:5: 'html' is incorrect, possible suggestion is 'HTML'
+lib/cocoon/view_helpers.rb:56: 'formtastic' is incorrect, possible suggestion is 'fantastical'
+lib/cocoon/view_helpers.rb:56: 'html' is incorrect, possible suggestion is 'HTML'

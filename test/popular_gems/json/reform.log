@@ -1,22 +1,16 @@
-In lib/reform/form.rb
-  at 12: 'deserialize' is incorrect, possible suggestion is 'serialize'
-  at 12: 'params' is incorrect, possible suggestion is 'paras'
-In lib/reform/result.rb
-  at 28: 'br' is incorrect, possible suggestion is 'BR'
-In lib/reform/contract.rb
-  at 63: 'suboperation' is incorrect, possible suggestion is 'sub operation'
-In lib/reform/form/dry.rb
-  at 74: 'get's' is incorrect, possible suggestion is 'gets'
-  at 80: 'Representers' is incorrect, possible suggestion is 'Re presenters'
-In lib/reform/form/validate.rb
-  at 26: 'params' is incorrect, possible suggestion is 'paras'
-  at 35: 'params' is incorrect, possible suggestion is 'paras'
-  at 35: 'representer' is incorrect, possible suggestion is 'represented'
-  at 44: 'deserializer' is incorrect, possible suggestion is 'serialize'
-In lib/reform/form/populator.rb
-  at 1: 'deserialised' is incorrect, possible suggestion is 'serialized'
-  at 93: 'deserializer's' is incorrect, possible suggestion is 'serializes'
-  at 93: 'deserializing' is incorrect, possible suggestion is 'serializing'
-  at 93: 'representer' is incorrect, possible suggestion is 'represented'
-In lib/reform/form/prepopulate.rb
-  at 1: 'prepopulate' is incorrect, possible suggestion is 'repopulate'
+# Logfile created on 2018-12-11 15:28:56 +0300 by logger.rb/56815
+lib/reform/form.rb:12: 'deserialize' is incorrect, possible suggestion is 'serialize'
+lib/reform/form.rb:12: 'params' is incorrect, possible suggestion is 'paras'
+lib/reform/result.rb:28: 'br' is incorrect, possible suggestion is 'BR'
+lib/reform/contract.rb:63: 'suboperation' is incorrect, possible suggestion is 'sub operation'
+lib/reform/form/dry.rb:74: 'get's' is incorrect, possible suggestion is 'gets'
+lib/reform/form/dry.rb:80: 'Representers' is incorrect, possible suggestion is 'Re presenters'
+lib/reform/form/validate.rb:26: 'params' is incorrect, possible suggestion is 'paras'
+lib/reform/form/validate.rb:35: 'params' is incorrect, possible suggestion is 'paras'
+lib/reform/form/validate.rb:35: 'representer' is incorrect, possible suggestion is 'represented'
+lib/reform/form/validate.rb:44: 'deserializer' is incorrect, possible suggestion is 'serialize'
+lib/reform/form/populator.rb:1: 'deserialised' is incorrect, possible suggestion is 'serialized'
+lib/reform/form/populator.rb:93: 'deserializer's' is incorrect, possible suggestion is 'serializes'
+lib/reform/form/populator.rb:93: 'deserializing' is incorrect, possible suggestion is 'serializing'
+lib/reform/form/populator.rb:93: 'representer' is incorrect, possible suggestion is 'represented'
+lib/reform/form/prepopulate.rb:1: 'prepopulate' is incorrect, possible suggestion is 'repopulate'
