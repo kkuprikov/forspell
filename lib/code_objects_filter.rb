@@ -2,6 +2,7 @@ require 'sanitize'
 
 module CodeObjectsFilter
   CODE_MARKERS = %w(_ # :).freeze
+  URI_REGEX = %r"((?:(?:[^ :/?#]+):)(?://(?:[^ /?#]*))(?:[^ ?#]*)(?:\?(?:[^ #]*))?(?:#(?:[^ ]*))?)".freeze
 
   def filter_code_objects input
     split(sanitize_html(input)).reject do |word|
@@ -26,6 +27,6 @@ module CodeObjectsFilter
   end
 
   def sanitize_html input
-    CGI.unescapeHTML Sanitize.fragment(input, elements: [], remove_contents: true)
+    CGI.unescapeHTML Sanitize.fragment(input.gsub(URI_REGEX, ''), elements: [], remove_contents: true)
   end
 end

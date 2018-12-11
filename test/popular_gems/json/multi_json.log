@@ -1,12 +1,7 @@
-# Logfile created on 2018-12-11 15:28:49 +0300 by logger.rb/56815
+# Logfile created on 2018-12-11 15:52:41 +0300 by logger.rb/56815
 lib/multi_json/adapters/oj.rb:12: 'subclasses' is incorrect, possible suggestion is 'sub classes'
 lib/multi_json/adapters/gson.rb:7: 'gson' is incorrect, possible suggestion is 'son'
 lib/multi_json/adapters/gson.rb:7: 'rb' is incorrect, possible suggestion is 'Rb'
-lib/multi_json/vendor/okjson.rb:28: 'golang' is incorrect, possible suggestion is 'Golan'
-lib/multi_json/vendor/okjson.rb:28: 'json' is incorrect, possible suggestion is 'son'
-lib/multi_json/vendor/okjson.rb:28: 'src' is incorrect, possible suggestion is 'arc'
-lib/multi_json/vendor/okjson.rb:28: 'unicode' is incorrect, possible suggestion is 'Unicode'
-lib/multi_json/vendor/okjson.rb:28: 'utf8' is incorrect, possible suggestion is 'Utah'
 lib/multi_json/vendor/okjson.rb:36: 'json' is incorrect, possible suggestion is 'son'
 lib/multi_json/vendor/okjson.rb:54: 'Proc' is incorrect, possible suggestion is 'Prof'
 lib/multi_json/vendor/okjson.rb:54: 'json' is incorrect, possible suggestion is 'son'

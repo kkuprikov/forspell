@@ -1,4 +1,4 @@
-# Logfile created on 2018-12-11 15:28:45 +0300 by logger.rb/56815
+# Logfile created on 2018-12-11 15:52:37 +0300 by logger.rb/56815
 lib/i18n/backend/cache.rb:3: 'Rubinius' is incorrect, possible suggestion is 'Rubinstein'
 lib/i18n/backend/cache.rb:3: 'backend' is incorrect, possible suggestion is 'backed'
 lib/i18n/backend/cache.rb:3: 'jRuby' is incorrect, possible suggestion is 'j Ruby'
@@ -40,7 +40,6 @@ lib/i18n/backend/chain.rb:5: 'backends' is incorrect, possible suggestion is 'ba
 lib/i18n/backend/chain.rb:5: 'initializer' is incorrect, possible suggestion is 'initialize'
 lib/i18n/backend/chain.rb:82: 'namespace' is incorrect, possible suggestion is 'name space'
 lib/i18n/core_ext/hash.rb:28: 'Rusterholz' is incorrect, possible suggestion is 'Sisterhood'
-lib/i18n/core_ext/hash.rb:28: 'www' is incorrect, possible suggestion is 'WWW'
 lib/i18n/backend/simple.rb:5: 'backend' is incorrect, possible suggestion is 'backed'
 lib/i18n/backend/simple.rb:5: 'backend's' is incorrect, possible suggestion is 'back end's'
 lib/i18n/backend/flatten.rb:5: 'backends' is incorrect, possible suggestion is 'back ends'

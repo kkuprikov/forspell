@@ -1,4 +1,4 @@
-# Logfile created on 2018-12-11 15:28:57 +0300 by logger.rb/56815
+# Logfile created on 2018-12-11 15:52:48 +0300 by logger.rb/56815
 lib/mime/types/deprecations.rb:7: 'namespace' is incorrect, possible suggestion is 'name space'
 lib/mime/type.rb:32: 'subtype' is incorrect, possible suggestion is 'sub type'
 lib/mime/type.rb:76: 'applicaton' is incorrect, possible suggestion is 'application'

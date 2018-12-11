@@ -1,4 +1,4 @@
-# Logfile created on 2018-12-11 15:28:47 +0300 by logger.rb/56815
+# Logfile created on 2018-12-11 15:52:39 +0300 by logger.rb/56815
 lib/json/common.rb:32: 'namespace' is incorrect, possible suggestion is 'name space'
 lib/json/common.rb:126: 'unparser' is incorrect, possible suggestion is 'sparser'
 lib/json/common.rb:131: 'iconv' is incorrect, possible suggestion is 'icon'
@@ -39,11 +39,5 @@ lib/json/pure/generator.rb:324: 'unparsed' is incorrect, possible suggestion is 
 lib/json/pure/generator.rb:390: 'endian' is incorrect, possible suggestion is 'Indian'
 lib/json/pure/generator.rb:407: 'extinding' is incorrect, possible suggestion is 'extending'
 lib/json/pure/generator.rb:423: 'unparsed' is incorrect, possible suggestion is 'unpardonable'
-lib/json/pure/generator.rb:442: ''true' is incorrect, possible suggestion is 'true'
-lib/json/pure/generator.rb:447: ''false' is incorrect, possible suggestion is 'false'
-lib/json/pure/generator.rb:452: ''null' is incorrect, possible suggestion is 'null'
 ext/json/ext/generator/generator.c:1014: 'unconfigured' is incorrect, possible suggestion is 'reconfigured'
 ext/json/ext/generator/generator.c:405: 'endian' is incorrect, possible suggestion is 'Indian'
-ext/json/ext/generator/generator.c:462: ''true' is incorrect, possible suggestion is 'true'
-ext/json/ext/generator/generator.c:472: ''false' is incorrect, possible suggestion is 'false'
-ext/json/ext/generator/generator.c:482: ''null' is incorrect, possible suggestion is 'null'

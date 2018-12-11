@@ -16,3 +16,6 @@
 - paragraph: "# Compares the +other+ MIME::Type based on how reliable it is before doing a normal <=> comparison. "
   words: ['Compares', 'the', 'other', 'based', 'on', 'how', 'reliable', 'it', 'is', 'before', 'doing', 'a', 'normal', 'comparison']
   errors: []
+- paragraph: "This should not include urls like http://google.com, https://www.example.com, http://gofishing.com"
+  words: ['This', 'should', 'not', 'include', 'urls', 'like']
+  errors: []

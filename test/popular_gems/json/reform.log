@@ -1,4 +1,4 @@
-# Logfile created on 2018-12-11 15:28:56 +0300 by logger.rb/56815
+# Logfile created on 2018-12-11 15:52:47 +0300 by logger.rb/56815
 lib/reform/form.rb:12: 'deserialize' is incorrect, possible suggestion is 'serialize'
 lib/reform/form.rb:12: 'params' is incorrect, possible suggestion is 'paras'
 lib/reform/result.rb:28: 'br' is incorrect, possible suggestion is 'BR'
