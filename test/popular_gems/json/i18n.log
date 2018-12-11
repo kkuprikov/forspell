@@ -1,44 +1,94 @@
-# Logfile created on 2018-12-11 13:03:05 +0300 by logger.rb/56815
-{:file=>"lib/i18n/backend/cache.rb", :object=>"I18n", :location=>3..17, :errors=>["Rubinius", "backend", "jRuby", "pre"], :errors_with_suggestions=>{"Rubinius"=>"Rubinstein", "backend"=>"backed", "jRuby"=>"j Ruby", "pre"=>"per"}}
-{:file=>"lib/i18n.rb", :object=>"I18n::Base#reload!", :location=>64..66, :errors=>["Backends", "backend"], :errors_with_suggestions=>{"Backends"=>"Back ends", "backend"=>"backed"}}
-{:file=>"lib/i18n.rb", :object=>"I18n::Base#translate", :location=>72..171, :errors=>["backends", "namespaces", "singluar"], :errors_with_suggestions=>{"backends"=>"back ends", "namespaces"=>"name spaces", "singluar"=>"singular"}}
-{:file=>"lib/i18n.rb", :object=>"I18n::Base#transliterate", :location=>205..255, :errors=>["Proc"], :errors_with_suggestions=>{"Proc"=>"Prof"}}
-{:file=>"lib/i18n.rb", :object=>"I18n::Base#handle_exception", :location=>321..338, :errors=>["Proc"], :errors_with_suggestions=>{"Proc"=>"Prof"}}
-{:file=>"lib/i18n/config.rb", :object=>"I18n::Config#backend", :location=>19..19, :errors=>["backend"], :errors_with_suggestions=>{"backend"=>"backed"}}
-{:file=>"lib/i18n/config.rb", :object=>"I18n::Config#backend=", :location=>24..24, :errors=>["backend"], :errors_with_suggestions=>{"backend"=>"backed"}}
-{:file=>"lib/i18n/config.rb", :object=>"I18n::Config#available_locales", :location=>40..42, :errors=>["backend", "explicitely"], :errors_with_suggestions=>{"backend"=>"backed", "explicitely"=>"explicitly"}}
-{:file=>"lib/i18n/config.rb", :object=>"I18n::Config#available_locales_set", :location=>48..49, :errors=>["lookups"], :errors_with_suggestions=>{"lookups"=>"lookup"}}
-{:file=>"lib/i18n/config.rb", :object=>"I18n::Config#missing_interpolation_argument_handler=", :location=>103..113, :errors=>["Proc", "arity", "initializer", "supress"], :errors_with_suggestions=>{"Proc"=>"Prof", "arity"=>"arty", "initializer"=>"initialize", "supress"=>"suppress"}}
-{:file=>"lib/i18n/config.rb", :object=>"I18n::Config#load_path", :location=>118..125, :errors=>["backend", "rb", "yml"], :errors_with_suggestions=>{"backend"=>"backed", "rb"=>"Rb", "yml"=>"ml"}}
-{:file=>"lib/i18n/gettext.rb", :object=>"I18n::Gettext.plural_keys", :location=>13..16, :errors=>["gettext's"], :errors_with_suggestions=>{"gettext's"=>"get text's"}}
-{:file=>"lib/i18n/backend/base.rb", :object=>"I18n::Backend::Base#load_translations", :location=>12..14, :errors=>["json", "rb", "yml"], :errors_with_suggestions=>{"json"=>"son", "rb"=>"Rb", "yml"=>"ml"}}
-{:file=>"lib/i18n/backend/base.rb", :object=>"I18n::Backend::Base#localize", :location=>70..72, :errors=>["strftime"], :errors_with_suggestions=>{"strftime"=>"halftime"}}
-{:file=>"lib/i18n/backend/base.rb", :object=>"I18n::Backend::Base#resolve", :location=>127..130, :errors=>["Proc"], :errors_with_suggestions=>{"Proc"=>"Prof"}}
-{:file=>"lib/i18n/backend/base.rb", :object=>"I18n::Backend::Base#pluralize", :location=>147..154, :errors=>["backends", "subkey"], :errors_with_suggestions=>{"backends"=>"back ends", "subkey"=>"sub key"}}
-{:file=>"lib/i18n/backend/base.rb", :object=>"I18n::Backend::Base#load_rb", :location=>222..223, :errors=>["eval'ing", "toplevel"], :errors_with_suggestions=>{"eval'ing"=>"evaluating", "toplevel"=>"top level"}}
-{:file=>"lib/i18n/backend/base.rb", :object=>"I18n::Backend::Base#load_yml", :location=>228..229, :errors=>["toplevel"], :errors_with_suggestions=>{"toplevel"=>"top level"}}
-{:file=>"lib/i18n/backend/base.rb", :object=>"I18n::Backend::Base#load_json", :location=>239..240, :errors=>["toplevel"], :errors_with_suggestions=>{"toplevel"=>"top level"}}
-{:file=>"lib/i18n/backend/cache.rb", :object=>"I18n::Backend::Cache::USE_INSPECT_HASH", :location=>107..108, :errors=>["colisions"], :errors_with_suggestions=>{"colisions"=>"collisions"}}
-{:file=>"lib/i18n/backend/chain.rb", :object=>"I18n::Backend::Chain", :location=>5..18, :errors=>["backend", "backends", "initializer"], :errors_with_suggestions=>{"backend"=>"backed", "backends"=>"back ends", "initializer"=>"initialize"}}
-{:file=>"lib/i18n/backend/chain.rb", :object=>"I18n::Backend::Chain::Implementation#_deep_merge", :location=>82..85, :errors=>["namespace"], :errors_with_suggestions=>{"namespace"=>"name space"}}
-{:file=>"lib/i18n/core_ext/hash.rb", :object=>"Hash::MERGER", :location=>28..28, :errors=>["Rusterholz", "www"], :errors_with_suggestions=>{"Rusterholz"=>"Sisterhood", "www"=>"WWW"}}
-{:file=>"lib/i18n/backend/simple.rb", :object=>"I18n::Backend::Simple", :location=>5..18, :errors=>["backend", "backend's"], :errors_with_suggestions=>{"backend"=>"backed", "backend's"=>"back end's"}}
-{:file=>"lib/i18n/backend/flatten.rb", :object=>"I18n::Backend::Flatten", :location=>5..12, :errors=>["backends"], :errors_with_suggestions=>{"backends"=>"back ends"}}
-{:file=>"lib/i18n/backend/flatten.rb", :object=>"I18n::Backend::Flatten#flatten_translations", :location=>65..70, :errors=>["subtree"], :errors_with_suggestions=>{"subtree"=>"sub tree"}}
-{:file=>"lib/i18n/backend/gettext.rb", :object=>"I18n::Backend::Gettext", :location=>8..31, :errors=>["backend", "po"], :errors_with_suggestions=>{"backend"=>"backed", "po"=>"PO"}}
-{:file=>"lib/i18n/gettext/helpers.rb", :object=>"I18n::Gettext::Helpers", :location=>7..10, :errors=>["accessors", "namespace"], :errors_with_suggestions=>{"accessors"=>"accessory", "namespace"=>"name space"}}
-{:file=>"lib/i18n/gettext/helpers.rb", :object=>"I18n::Gettext::Helpers#N_", :location=>12..16, :errors=>["gettext"], :errors_with_suggestions=>{"gettext"=>"get text"}}
-{:file=>"lib/i18n/interpolate/ruby.rb", :object=>"I18n.interpolate", :location=>14..15, :errors=>["config"], :errors_with_suggestions=>{"config"=>"con fig"}}
-{:file=>"lib/i18n/backend/fallbacks.rb", :object=>"I18n.fallbacks", :location=>16..16, :errors=>["fallbacks"], :errors_with_suggestions=>{"fallbacks"=>"fallback"}}
-{:file=>"lib/i18n/backend/fallbacks.rb", :object=>"I18n.fallbacks=", :location=>21..21, :errors=>["fallbacks"], :errors_with_suggestions=>{"fallbacks"=>"fallback"}}
-{:file=>"lib/i18n/backend/fallbacks.rb", :object=>"I18n::Backend::Fallbacks#translate", :location=>29..38, :errors=>["Proc", "backend", "de", "fallbacks"], :errors_with_suggestions=>{"Proc"=>"Prof", "backend"=>"backed", "de"=>"DE", "fallbacks"=>"fallback"}}
-{:file=>"lib/i18n/backend/key_value.rb", :object=>"I18n::Backend::KeyValue", :location=>25..68, :errors=>["backend", "backends", "booleans", "filesystem", "subtrees"], :errors_with_suggestions=>{"backend"=>"backed", "backends"=>"back ends", "booleans"=>"boo leans", "filesystem"=>"file system", "subtrees"=>"sub trees"}}
-{:file=>"lib/i18n/backend/cache_file.rb", :object=>"I18n::Backend::CacheFile#path_roots", :location=>9..10, :errors=>["i18n"], :errors_with_suggestions=>{"i18n"=>"Ivan"}}
-{:file=>"lib/i18n/backend/cache_file.rb", :object=>"I18n::Backend::CacheFile#path_roots=", :location=>9..10, :errors=>["i18n"], :errors_with_suggestions=>{"i18n"=>"Ivan"}}
-{:file=>"lib/i18n/backend/cache_file.rb", :object=>"I18n::Backend::CacheFile#load_file", :location=>15..16, :errors=>["i18n"], :errors_with_suggestions=>{"i18n"=>"Ivan"}}
-{:file=>"lib/i18n/backend/cache_file.rb", :object=>"I18n::Backend::CacheFile#normalized_path", :location=>27..27, :errors=>["i18n"], :errors_with_suggestions=>{"i18n"=>"Ivan"}}
-{:file=>"lib/i18n/backend/pluralization.rb", :object=>"I18n::Backend::Pluralization#pluralize", :location=>17..30, :errors=>["backend", "pluralizer"], :errors_with_suggestions=>{"backend"=>"backed", "pluralizer"=>"pluralize"}}
-{:file=>"lib/i18n/backend/transliterator.rb", :object=>"I18n::Backend::Transliterator.get", :location=>18..18, :errors=>["transliterator"], :errors_with_suggestions=>{"transliterator"=>"transl iterator"}}
-{:file=>"lib/i18n/backend/transliterator.rb", :object=>"I18n::Backend::Transliterator::ProcTransliterator", :location=>29..29, :errors=>["Proc", "transliterator"], :errors_with_suggestions=>{"Proc"=>"Prof", "transliterator"=>"transl iterator"}}
-{:file=>"lib/i18n/backend/transliterator.rb", :object=>"I18n::Backend::Transliterator::HashTransliterator", :location=>40..41, :errors=>["transliterator"], :errors_with_suggestions=>{"transliterator"=>"transl iterator"}}
-{:file=>"lib/i18n/backend/interpolation_compiler.rb", :object=>"I18n::Backend::InterpolationCompiler::Compiler#tokenize", :location=>44..44, :errors=>["baz", "buz", "tokenize"], :errors_with_suggestions=>{"baz"=>"bass", "buz"=>"buss", "tokenize"=>"tokenism"}}
+In lib/i18n/backend/cache.rb
+  at 3: 'Rubinius' is incorrect, possible suggestion is 'Rubinstein'
+  at 3: 'backend' is incorrect, possible suggestion is 'backed'
+  at 3: 'jRuby' is incorrect, possible suggestion is 'j Ruby'
+  at 3: 'pre' is incorrect, possible suggestion is 'per'
+  at 107: 'colisions' is incorrect, possible suggestion is 'collisions'
+In lib/i18n.rb
+  at 64: 'Backends' is incorrect, possible suggestion is 'Back ends'
+  at 64: 'backend' is incorrect, possible suggestion is 'backed'
+  at 72: 'backends' is incorrect, possible suggestion is 'back ends'
+  at 72: 'namespaces' is incorrect, possible suggestion is 'name spaces'
+  at 72: 'singluar' is incorrect, possible suggestion is 'singular'
+  at 205: 'Proc' is incorrect, possible suggestion is 'Prof'
+  at 321: 'Proc' is incorrect, possible suggestion is 'Prof'
+In lib/i18n/config.rb
+  at 19: 'backend' is incorrect, possible suggestion is 'backed'
+  at 24: 'backend' is incorrect, possible suggestion is 'backed'
+  at 40: 'backend' is incorrect, possible suggestion is 'backed'
+  at 40: 'explicitely' is incorrect, possible suggestion is 'explicitly'
+  at 48: 'lookups' is incorrect, possible suggestion is 'lookup'
+  at 103: 'Proc' is incorrect, possible suggestion is 'Prof'
+  at 103: 'arity' is incorrect, possible suggestion is 'arty'
+  at 103: 'initializer' is incorrect, possible suggestion is 'initialize'
+  at 103: 'supress' is incorrect, possible suggestion is 'suppress'
+  at 118: 'backend' is incorrect, possible suggestion is 'backed'
+  at 118: 'rb' is incorrect, possible suggestion is 'Rb'
+  at 118: 'yml' is incorrect, possible suggestion is 'ml'
+In lib/i18n/gettext.rb
+  at 13: 'gettext's' is incorrect, possible suggestion is 'get text's'
+In lib/i18n/backend/base.rb
+  at 12: 'json' is incorrect, possible suggestion is 'son'
+  at 12: 'rb' is incorrect, possible suggestion is 'Rb'
+  at 12: 'yml' is incorrect, possible suggestion is 'ml'
+  at 70: 'strftime' is incorrect, possible suggestion is 'halftime'
+  at 127: 'Proc' is incorrect, possible suggestion is 'Prof'
+  at 147: 'backends' is incorrect, possible suggestion is 'back ends'
+  at 147: 'subkey' is incorrect, possible suggestion is 'sub key'
+  at 222: 'eval'ing' is incorrect, possible suggestion is 'evaluating'
+  at 222: 'toplevel' is incorrect, possible suggestion is 'top level'
+  at 228: 'toplevel' is incorrect, possible suggestion is 'top level'
+  at 239: 'toplevel' is incorrect, possible suggestion is 'top level'
+In lib/i18n/backend/chain.rb
+  at 5: 'backend' is incorrect, possible suggestion is 'backed'
+  at 5: 'backends' is incorrect, possible suggestion is 'back ends'
+  at 5: 'initializer' is incorrect, possible suggestion is 'initialize'
+  at 82: 'namespace' is incorrect, possible suggestion is 'name space'
+In lib/i18n/core_ext/hash.rb
+  at 28: 'Rusterholz' is incorrect, possible suggestion is 'Sisterhood'
+  at 28: 'www' is incorrect, possible suggestion is 'WWW'
+In lib/i18n/backend/simple.rb
+  at 5: 'backend' is incorrect, possible suggestion is 'backed'
+  at 5: 'backend's' is incorrect, possible suggestion is 'back end's'
+In lib/i18n/backend/flatten.rb
+  at 5: 'backends' is incorrect, possible suggestion is 'back ends'
+  at 65: 'subtree' is incorrect, possible suggestion is 'sub tree'
+In lib/i18n/backend/gettext.rb
+  at 8: 'backend' is incorrect, possible suggestion is 'backed'
+  at 8: 'po' is incorrect, possible suggestion is 'PO'
+In lib/i18n/gettext/helpers.rb
+  at 7: 'accessors' is incorrect, possible suggestion is 'accessory'
+  at 7: 'namespace' is incorrect, possible suggestion is 'name space'
+  at 12: 'gettext' is incorrect, possible suggestion is 'get text'
+In lib/i18n/interpolate/ruby.rb
+  at 14: 'config' is incorrect, possible suggestion is 'con fig'
+In lib/i18n/backend/fallbacks.rb
+  at 16: 'fallbacks' is incorrect, possible suggestion is 'fallback'
+  at 21: 'fallbacks' is incorrect, possible suggestion is 'fallback'
+  at 29: 'Proc' is incorrect, possible suggestion is 'Prof'
+  at 29: 'backend' is incorrect, possible suggestion is 'backed'
+  at 29: 'de' is incorrect, possible suggestion is 'DE'
+  at 29: 'fallbacks' is incorrect, possible suggestion is 'fallback'
+In lib/i18n/backend/key_value.rb
+  at 25: 'backend' is incorrect, possible suggestion is 'backed'
+  at 25: 'backends' is incorrect, possible suggestion is 'back ends'
+  at 25: 'booleans' is incorrect, possible suggestion is 'boo leans'
+  at 25: 'filesystem' is incorrect, possible suggestion is 'file system'
+  at 25: 'subtrees' is incorrect, possible suggestion is 'sub trees'
+In lib/i18n/backend/cache_file.rb
+  at 9: 'i18n' is incorrect, possible suggestion is 'Ivan'
+  at 9: 'i18n' is incorrect, possible suggestion is 'Ivan'
+  at 15: 'i18n' is incorrect, possible suggestion is 'Ivan'
+  at 27: 'i18n' is incorrect, possible suggestion is 'Ivan'
+In lib/i18n/backend/pluralization.rb
+  at 17: 'backend' is incorrect, possible suggestion is 'backed'
+  at 17: 'pluralizer' is incorrect, possible suggestion is 'pluralize'
+In lib/i18n/backend/transliterator.rb
+  at 18: 'transliterator' is incorrect, possible suggestion is 'transl iterator'
+  at 29: 'Proc' is incorrect, possible suggestion is 'Prof'
+  at 29: 'transliterator' is incorrect, possible suggestion is 'transl iterator'
+  at 40: 'transliterator' is incorrect, possible suggestion is 'transl iterator'
+In lib/i18n/backend/interpolation_compiler.rb
+  at 44: 'baz' is incorrect, possible suggestion is 'bass'
+  at 44: 'buz' is incorrect, possible suggestion is 'buss'
+  at 44: 'tokenize' is incorrect, possible suggestion is 'tokenism'

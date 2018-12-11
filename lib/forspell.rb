@@ -1,4 +1,5 @@
 require 'logger' 
+require 'json'
 require 'ffi/hunspell'
 require_relative 'loaders/yardoc_loader'
 require_relative 'loaders/markdown_loader'
@@ -11,7 +12,7 @@ class Forspell
 
   attr_reader :dictionary, :result
 
-  def initialize(dictionary_name: 'en_US', logfile: STDOUT, file: nil, no_output: false, format: 'json')
+  def initialize(dictionary_name: 'en_US', logfile: STDOUT, file: nil, no_output: false, format: 'readable')
     @dictionary = FFI::Hunspell.dict(dictionary_name)
     @file = file
     @loader_class = loader_class(@file)
@@ -50,12 +51,21 @@ class Forspell
     FORMATS_TO_LOADERS_MAP[File.extname(file)] || YardocLoader
   end
 
-  def pretty_print result_hash, format
+  def pretty_print result, format
     case format
     when 'json'
-      result_hash.each { |object| @logger.info object.to_s }
+      result.each { |object| @logger.info object.to_json }
     when 'yaml', 'yml'
-      @logger.info result_hash.to_yaml
+      @logger.info result.to_yaml
+    when 'readable'
+      result.group_by {|object| object[:file]}.each_pair do |file, objects| 
+        @logger.info "In #{ file }"
+        objects.each do |object|
+          object[:errors_with_suggestions].each_pair do |error, suggestion|
+            @logger.info "  at #{ object[:location] }: '#{ error }' is incorrect, possible suggestion is '#{ suggestion }'"
+          end
+        end
+      end
     end
   end 
 end

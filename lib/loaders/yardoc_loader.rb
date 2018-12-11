@@ -46,7 +46,7 @@ class YardocLoader < BaseLoader
       { 
         file: object.files.flatten.first, 
         object: object.path, 
-        location: object.docstring.line_range, 
+        location: object.docstring.line, 
         words: filter_code_objects(extract_text(object.docstring)) 
       } unless (object.docstring.empty? || skip_method?(object))
     end.compact

@@ -1,43 +1,65 @@
-# Logfile created on 2018-12-11 13:14:18 +0300 by logger.rb/56815
-{:file=>"lib/json/common.rb", :object=>"JSON.deep_const_get", :location=>32..35, :errors=>["namespace"], :errors_with_suggestions=>{"namespace"=>"name space"}}
-{:file=>"lib/json/common.rb", :object=>"JSON::GeneratorError", :location=>126..126, :errors=>["unparser"], :errors_with_suggestions=>{"unparser"=>"sparser"}}
-{:file=>"lib/json/common.rb", :object=>"JSON::MissingUnicodeSupport", :location=>131..132, :errors=>["iconv", "unicode"], :errors_with_suggestions=>{"iconv"=>"icon", "unicode"=>"Unicode"}}
-{:file=>"lib/json/common.rb", :object=>"JSON#load", :location=>nil, :errors=>["serialise", "untrusted"], :errors_with_suggestions=>{"serialise"=>"serialize", "untrusted"=>"entrusted"}}
-{:file=>"lib/json/common.rb", :object=>"JSON.load", :location=>309..322, :errors=>["serialise", "untrusted"], :errors_with_suggestions=>{"serialise"=>"serialize", "untrusted"=>"entrusted"}}
-{:file=>"lib/json/common.rb", :object=>"Class#json_creatable?", :location=>449..452, :errors=>["serialised"], :errors_with_suggestions=>{"serialised"=>"serialized"}}
-{:file=>"lib/json/add/set.rb", :object=>"Set.json_create", :location=>7..9, :errors=>["Marshalled", "marshalling"], :errors_with_suggestions=>{"Marshalled"=>"Marshall ed", "marshalling"=>"marshaling"}}
-{:file=>"lib/json/add/set.rb", :object=>"Set#as_json", :location=>14..16, :errors=>["marshalling"], :errors_with_suggestions=>{"marshalling"=>"marshaling"}}
-{:file=>"lib/json/add/date.rb", :object=>"Date.json_create", :location=>9..10, :errors=>["Deserializes"], :errors_with_suggestions=>{"Deserializes"=>"Serializes"}}
-{:file=>"lib/json/add/time.rb", :object=>"Time.json_create", :location=>8..8, :errors=>["Deserializes"], :errors_with_suggestions=>{"Deserializes"=>"Serializes"}}
-{:file=>"lib/json/add/range.rb", :object=>"Range.json_create", :location=>8..9, :errors=>["Deserializes"], :errors_with_suggestions=>{"Deserializes"=>"Serializes"}}
-{:file=>"lib/json/add/range.rb", :object=>"Range#to_json", :location=>23..25, :errors=>["boolean"], :errors_with_suggestions=>{"boolean"=>"Boolean"}}
-{:file=>"lib/json/add/regexp.rb", :object=>"Regexp.json_create", :location=>8..10, :errors=>["Deserializes"], :errors_with_suggestions=>{"Deserializes"=>"Serializes"}}
-{:file=>"lib/json/add/struct.rb", :object=>"Struct.json_create", :location=>8..9, :errors=>["Deserializes"], :errors_with_suggestions=>{"Deserializes"=>"Serializes"}}
-{:file=>"lib/json/add/struct.rb", :object=>"Struct#to_json", :location=>25..26, :errors=>["structs"], :errors_with_suggestions=>{"structs"=>"struts"}}
-{:file=>"lib/json/add/symbol.rb", :object=>"Symbol.json_create", :location=>21..21, :errors=>["Deserializes"], :errors_with_suggestions=>{"Deserializes"=>"Serializes"}}
-{:file=>"lib/json/add/complex.rb", :object=>"Complex.json_create", :location=>9..10, :errors=>["Deserializes"], :errors_with_suggestions=>{"Deserializes"=>"Serializes"}}
-{:file=>"lib/json/add/ostruct.rb", :object=>"OpenStruct.json_create", :location=>9..10, :errors=>["Deserializes"], :errors_with_suggestions=>{"Deserializes"=>"Serializes"}}
-{:file=>"lib/json/add/ostruct.rb", :object=>"OpenStruct#to_json", :location=>26..27, :errors=>["struct's"], :errors_with_suggestions=>{"struct's"=>"strut's"}}
-{:file=>"lib/json/pure/parser.rb", :object=>"JSON::Pure::Parser::UNESCAPE_MAP", :location=>145..145, :errors=>["Unescape"], :errors_with_suggestions=>{"Unescape"=>"Escapement"}}
-{:file=>"lib/json/add/rational.rb", :object=>"Rational.json_create", :location=>8..9, :errors=>["Deserializes"], :errors_with_suggestions=>{"Deserializes"=>"Serializes"}}
-{:file=>"lib/json/add/date_time.rb", :object=>"DateTime.json_create", :location=>9..11, :errors=>["Deserializes"], :errors_with_suggestions=>{"Deserializes"=>"Serializes"}}
-{:file=>"lib/json/add/exception.rb", :object=>"Exception.json_create", :location=>8..9, :errors=>["Deserializes", "backtrace"], :errors_with_suggestions=>{"Deserializes"=>"Serializes", "backtrace"=>"backtrack"}}
-{:file=>"lib/json/add/exception.rb", :object=>"Exception#to_json", :location=>26..27, :errors=>["backtrace"], :errors_with_suggestions=>{"backtrace"=>"backtrack"}}
-{:file=>"lib/json/add/bigdecimal.rb", :object=>"BigDecimal.json_create", :location=>8..10, :errors=>["Marshalled", "marshalling"], :errors_with_suggestions=>{"Marshalled"=>"Marshall ed", "marshalling"=>"marshaling"}}
-{:file=>"lib/json/add/bigdecimal.rb", :object=>"BigDecimal#as_json", :location=>15..17, :errors=>["marshalling"], :errors_with_suggestions=>{"marshalling"=>"marshaling"}}
-{:file=>"lib/json/pure/generator.rb", :object=>"JSON#utf8_to_json", :location=>40..41, :errors=>["endian"], :errors_with_suggestions=>{"endian"=>"Indian"}}
-{:file=>"lib/json/pure/generator.rb", :object=>"JSON.utf8_to_json", :location=>nil, :errors=>["endian"], :errors_with_suggestions=>{"endian"=>"Indian"}}
-{:file=>"lib/json/pure/generator.rb", :object=>"JSON::Pure::Generator::State.from_state", :location=>86..89, :errors=>["unconfigured"], :errors_with_suggestions=>{"unconfigured"=>"reconfigured"}}
-{:file=>"lib/json/pure/generator.rb", :object=>"JSON::Pure::Generator::GeneratorMethods::Hash#to_json", :location=>275..279, :errors=>["unparsed"], :errors_with_suggestions=>{"unparsed"=>"unpardonable"}}
-{:file=>"lib/json/pure/generator.rb", :object=>"JSON::Pure::Generator::GeneratorMethods::Array#to_json", :location=>324..327, :errors=>["unparsed"], :errors_with_suggestions=>{"unparsed"=>"unpardonable"}}
-{:file=>"lib/json/pure/generator.rb", :object=>"JSON::Pure::Generator::GeneratorMethods::String#to_json", :location=>390..392, :errors=>["endian"], :errors_with_suggestions=>{"endian"=>"Indian"}}
-{:file=>"lib/json/pure/generator.rb", :object=>"JSON::Pure::Generator::GeneratorMethods::String::Extend", :location=>407..408, :errors=>["extinding"], :errors_with_suggestions=>{"extinding"=>"extending"}}
-{:file=>"lib/json/pure/generator.rb", :object=>"JSON::Pure::Generator::GeneratorMethods::String#to_json_raw_object", :location=>423..426, :errors=>["unparsed"], :errors_with_suggestions=>{"unparsed"=>"unpardonable"}}
-{:file=>"lib/json/pure/generator.rb", :object=>"JSON::Pure::Generator::GeneratorMethods::TrueClass#to_json", :location=>442..442, :errors=>["'true"], :errors_with_suggestions=>{"'true"=>"true"}}
-{:file=>"lib/json/pure/generator.rb", :object=>"JSON::Pure::Generator::GeneratorMethods::FalseClass#to_json", :location=>447..447, :errors=>["'false"], :errors_with_suggestions=>{"'false"=>"false"}}
-{:file=>"lib/json/pure/generator.rb", :object=>"JSON::Pure::Generator::GeneratorMethods::NilClass#to_json", :location=>452..452, :errors=>["'null"], :errors_with_suggestions=>{"'null"=>"null"}}
-{:file=>"ext/json/ext/generator/generator.c", :object=>"JSON::Ext::Generator::State.from_state", :location=>1014...1019, :errors=>["unconfigured"], :errors_with_suggestions=>{"unconfigured"=>"reconfigured"}}
-{:file=>"ext/json/ext/generator/generator.c", :object=>"JSON::Ext::Generator::GeneratorMethods::String#to_json", :location=>405...410, :errors=>["endian"], :errors_with_suggestions=>{"endian"=>"Indian"}}
-{:file=>"ext/json/ext/generator/generator.c", :object=>"JSON::Ext::Generator::GeneratorMethods::TrueClass#to_json", :location=>462...465, :errors=>["'true"], :errors_with_suggestions=>{"'true"=>"true"}}
-{:file=>"ext/json/ext/generator/generator.c", :object=>"JSON::Ext::Generator::GeneratorMethods::FalseClass#to_json", :location=>472...475, :errors=>["'false"], :errors_with_suggestions=>{"'false"=>"false"}}
-{:file=>"ext/json/ext/generator/generator.c", :object=>"JSON::Ext::Generator::GeneratorMethods::NilClass#to_json", :location=>482...485, :errors=>["'null"], :errors_with_suggestions=>{"'null"=>"null"}}
+In lib/json/common.rb
+  at 32: 'namespace' is incorrect, possible suggestion is 'name space'
+  at 126: 'unparser' is incorrect, possible suggestion is 'sparser'
+  at 131: 'iconv' is incorrect, possible suggestion is 'icon'
+  at 131: 'unicode' is incorrect, possible suggestion is 'Unicode'
+  at : 'serialise' is incorrect, possible suggestion is 'serialize'
+  at : 'untrusted' is incorrect, possible suggestion is 'entrusted'
+  at 309: 'serialise' is incorrect, possible suggestion is 'serialize'
+  at 309: 'untrusted' is incorrect, possible suggestion is 'entrusted'
+  at 449: 'serialised' is incorrect, possible suggestion is 'serialized'
+In lib/json/add/set.rb
+  at 7: 'Marshalled' is incorrect, possible suggestion is 'Marshall ed'
+  at 7: 'marshalling' is incorrect, possible suggestion is 'marshaling'
+  at 14: 'marshalling' is incorrect, possible suggestion is 'marshaling'
+In lib/json/add/date.rb
+  at 9: 'Deserializes' is incorrect, possible suggestion is 'Serializes'
+In lib/json/add/time.rb
+  at 8: 'Deserializes' is incorrect, possible suggestion is 'Serializes'
+In lib/json/add/range.rb
+  at 8: 'Deserializes' is incorrect, possible suggestion is 'Serializes'
+  at 23: 'boolean' is incorrect, possible suggestion is 'Boolean'
+In lib/json/add/regexp.rb
+  at 8: 'Deserializes' is incorrect, possible suggestion is 'Serializes'
+In lib/json/add/struct.rb
+  at 8: 'Deserializes' is incorrect, possible suggestion is 'Serializes'
+  at 25: 'structs' is incorrect, possible suggestion is 'struts'
+In lib/json/add/symbol.rb
+  at 21: 'Deserializes' is incorrect, possible suggestion is 'Serializes'
+In lib/json/add/complex.rb
+  at 9: 'Deserializes' is incorrect, possible suggestion is 'Serializes'
+In lib/json/add/ostruct.rb
+  at 9: 'Deserializes' is incorrect, possible suggestion is 'Serializes'
+  at 26: 'struct's' is incorrect, possible suggestion is 'strut's'
+In lib/json/pure/parser.rb
+  at 145: 'Unescape' is incorrect, possible suggestion is 'Escapement'
+In lib/json/add/rational.rb
+  at 8: 'Deserializes' is incorrect, possible suggestion is 'Serializes'
+In lib/json/add/date_time.rb
+  at 9: 'Deserializes' is incorrect, possible suggestion is 'Serializes'
+In lib/json/add/exception.rb
+  at 8: 'Deserializes' is incorrect, possible suggestion is 'Serializes'
+  at 8: 'backtrace' is incorrect, possible suggestion is 'backtrack'
+  at 26: 'backtrace' is incorrect, possible suggestion is 'backtrack'
+In lib/json/add/bigdecimal.rb
+  at 8: 'Marshalled' is incorrect, possible suggestion is 'Marshall ed'
+  at 8: 'marshalling' is incorrect, possible suggestion is 'marshaling'
+  at 15: 'marshalling' is incorrect, possible suggestion is 'marshaling'
+In lib/json/pure/generator.rb
+  at 40: 'endian' is incorrect, possible suggestion is 'Indian'
+  at : 'endian' is incorrect, possible suggestion is 'Indian'
+  at 86: 'unconfigured' is incorrect, possible suggestion is 'reconfigured'
+  at 275: 'unparsed' is incorrect, possible suggestion is 'unpardonable'
+  at 324: 'unparsed' is incorrect, possible suggestion is 'unpardonable'
+  at 390: 'endian' is incorrect, possible suggestion is 'Indian'
+  at 407: 'extinding' is incorrect, possible suggestion is 'extending'
+  at 423: 'unparsed' is incorrect, possible suggestion is 'unpardonable'
+  at 442: ''true' is incorrect, possible suggestion is 'true'
+  at 447: ''false' is incorrect, possible suggestion is 'false'
+  at 452: ''null' is incorrect, possible suggestion is 'null'
+In ext/json/ext/generator/generator.c
+  at 1014: 'unconfigured' is incorrect, possible suggestion is 'reconfigured'
+  at 405: 'endian' is incorrect, possible suggestion is 'Indian'
+  at 462: ''true' is incorrect, possible suggestion is 'true'
+  at 472: ''false' is incorrect, possible suggestion is 'false'
+  at 482: ''null' is incorrect, possible suggestion is 'null'

@@ -1,12 +1,22 @@
-# Logfile created on 2018-12-11 13:15:09 +0300 by logger.rb/56815
-{:file=>"lib/reform/form.rb", :object=>"Reform::Form::Deserialize", :location=>12..13, :errors=>["deserialize", "params"], :errors_with_suggestions=>{"deserialize"=>"serialize", "params"=>"paras"}}
-{:file=>"lib/reform/result.rb", :object=>"Reform::Contract::Result::Pointer", :location=>28..31, :errors=>["br"], :errors_with_suggestions=>{"br"=>"BR"}}
-{:file=>"lib/reform/contract.rb", :object=>"Reform::Contract.clone", :location=>63..63, :errors=>["suboperation"], :errors_with_suggestions=>{"suboperation"=>"sub operation"}}
-{:file=>"lib/reform/form/dry.rb", :object=>"Reform::Form::Dry::Validations::Group#input_hash", :location=>74..74, :errors=>["get's"], :errors_with_suggestions=>{"get's"=>"gets"}}
-{:file=>"lib/reform/form/dry.rb", :object=>"Reform::Form::Dry::Validations::Group#symbolize_hash", :location=>80..81, :errors=>["Representers"], :errors_with_suggestions=>{"Representers"=>"Re presenters"}}
-{:file=>"lib/reform/form/validate.rb", :object=>"Reform::Form::Validate#input_params", :location=>26..26, :errors=>["params"], :errors_with_suggestions=>{"params"=>"paras"}}
-{:file=>"lib/reform/form/validate.rb", :object=>"Reform::Form::Validate#deserialize!", :location=>35..35, :errors=>["params", "representer"], :errors_with_suggestions=>{"params"=>"paras", "representer"=>"represented"}}
-{:file=>"lib/reform/form/validate.rb", :object=>"Reform::Form::Validate#deserializer!", :location=>44..45, :errors=>["deserializer"], :errors_with_suggestions=>{"deserializer"=>"serialize"}}
-{:file=>"lib/reform/form/populator.rb", :object=>"Reform::Form::Populator", :location=>1..6, :errors=>["deserialised"], :errors_with_suggestions=>{"deserialised"=>"serialized"}}
-{:file=>"lib/reform/form/populator.rb", :object=>"Reform::Form::Populator::External", :location=>93..102, :errors=>["deserializer's", "deserializing", "representer"], :errors_with_suggestions=>{"deserializer's"=>"serializes", "deserializing"=>"serializing", "representer"=>"represented"}}
-{:file=>"lib/reform/form/prepopulate.rb", :object=>"Reform::Form::Prepopulate", :location=>1..2, :errors=>["prepopulate"], :errors_with_suggestions=>{"prepopulate"=>"repopulate"}}
+In lib/reform/form.rb
+  at 12: 'deserialize' is incorrect, possible suggestion is 'serialize'
+  at 12: 'params' is incorrect, possible suggestion is 'paras'
+In lib/reform/result.rb
+  at 28: 'br' is incorrect, possible suggestion is 'BR'
+In lib/reform/contract.rb
+  at 63: 'suboperation' is incorrect, possible suggestion is 'sub operation'
+In lib/reform/form/dry.rb
+  at 74: 'get's' is incorrect, possible suggestion is 'gets'
+  at 80: 'Representers' is incorrect, possible suggestion is 'Re presenters'
+In lib/reform/form/validate.rb
+  at 26: 'params' is incorrect, possible suggestion is 'paras'
+  at 35: 'params' is incorrect, possible suggestion is 'paras'
+  at 35: 'representer' is incorrect, possible suggestion is 'represented'
+  at 44: 'deserializer' is incorrect, possible suggestion is 'serialize'
+In lib/reform/form/populator.rb
+  at 1: 'deserialised' is incorrect, possible suggestion is 'serialized'
+  at 93: 'deserializer's' is incorrect, possible suggestion is 'serializes'
+  at 93: 'deserializing' is incorrect, possible suggestion is 'serializing'
+  at 93: 'representer' is incorrect, possible suggestion is 'represented'
+In lib/reform/form/prepopulate.rb
+  at 1: 'prepopulate' is incorrect, possible suggestion is 'repopulate'

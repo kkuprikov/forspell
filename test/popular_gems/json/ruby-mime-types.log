@@ -1,16 +1,25 @@
-# Logfile created on 2018-12-11 13:15:20 +0300 by logger.rb/56815
-{:file=>"lib/mime/types/deprecations.rb", :object=>"MIME", :location=>7..7, :errors=>["namespace"], :errors_with_suggestions=>{"namespace"=>"name space"}}
-{:file=>"lib/mime/type.rb", :object=>"MIME::Type::InvalidContentType", :location=>32..33, :errors=>["subtype"], :errors_with_suggestions=>{"subtype"=>"sub type"}}
-{:file=>"lib/mime/type.rb", :object=>"MIME::Type#initialize", :location=>76..88, :errors=>["applicaton", "eruby"], :errors_with_suggestions=>{"applicaton"=>"application", "eruby"=>"ruby"}}
-{:file=>"lib/mime/type.rb", :object=>"MIME::Type#priority_compare", :location=>142..157, :errors=>["Obselete"], :errors_with_suggestions=>{"Obselete"=>"Obsolete"}}
-{:file=>"lib/mime/type.rb", :object=>"MIME::Type#i18n_key", :location=>350..358, :errors=>["I18n"], :errors_with_suggestions=>{"I18n"=>"Ivan"}}
-{:file=>"lib/mime/type.rb", :object=>"MIME::Type#signature", :location=>400..400, :errors=>["Indicateswhether"], :errors_with_suggestions=>{"Indicateswhether"=>"Indicates whether"}}
-{:file=>"lib/mime/type.rb", :object=>"MIME::Type#signature=", :location=>400..400, :errors=>["Indicateswhether"], :errors_with_suggestions=>{"Indicateswhether"=>"Indicates whether"}}
-{:file=>"lib/mime/type.rb", :object=>"MIME::Type.simplified", :location=>492..498, :errors=>["behaviour"], :errors_with_suggestions=>{"behaviour"=>"behavior"}}
-{:file=>"lib/mime/type.rb", :object=>"MIME::Type.i18n_key", :location=>503..504, :errors=>["I18n"], :errors_with_suggestions=>{"I18n"=>"Ivan"}}
-{:file=>"lib/mime/types.rb", :object=>"MIME::Types#add_type", :location=>183..185, :errors=>["truthy"], :errors_with_suggestions=>{"truthy"=>"truth"}}
-{:file=>"lib/mime/types/loader.rb", :object=>"MIME::Types::Loader", :location=>12..22, :errors=>["yaml", "yml"], :errors_with_suggestions=>{"yaml"=>"yam", "yml"=>"ml"}}
-{:file=>"lib/mime/types/logger.rb", :object=>"MIME::Types.logger", :location=>12..13, :errors=>["unformatted"], :errors_with_suggestions=>{"unformatted"=>"formatted"}}
-{:file=>"lib/mime/types/logger.rb", :object=>"MIME::Types.logger=", :location=>12..13, :errors=>["unformatted"], :errors_with_suggestions=>{"unformatted"=>"formatted"}}
-{:file=>"lib/mime/types/_columnar.rb", :object=>"MIME::Types::Columnar", :location=>5..11, :errors=>["Mutex"], :errors_with_suggestions=>{"Mutex"=>"Mute"}}
-{:file=>"lib/mime/types/container.rb", :object=>"MIME::Types::Container", :location=>6..11, :errors=>["resuls", "serializable"], :errors_with_suggestions=>{"resuls"=>"results", "serializable"=>"serialization"}}
+In lib/mime/types/deprecations.rb
+  at 7: 'namespace' is incorrect, possible suggestion is 'name space'
+In lib/mime/type.rb
+  at 32: 'subtype' is incorrect, possible suggestion is 'sub type'
+  at 76: 'applicaton' is incorrect, possible suggestion is 'application'
+  at 76: 'eruby' is incorrect, possible suggestion is 'ruby'
+  at 142: 'Obselete' is incorrect, possible suggestion is 'Obsolete'
+  at 350: 'I18n' is incorrect, possible suggestion is 'Ivan'
+  at 400: 'Indicateswhether' is incorrect, possible suggestion is 'Indicates whether'
+  at 400: 'Indicateswhether' is incorrect, possible suggestion is 'Indicates whether'
+  at 492: 'behaviour' is incorrect, possible suggestion is 'behavior'
+  at 503: 'I18n' is incorrect, possible suggestion is 'Ivan'
+In lib/mime/types.rb
+  at 183: 'truthy' is incorrect, possible suggestion is 'truth'
+In lib/mime/types/loader.rb
+  at 12: 'yaml' is incorrect, possible suggestion is 'yam'
+  at 12: 'yml' is incorrect, possible suggestion is 'ml'
+In lib/mime/types/logger.rb
+  at 12: 'unformatted' is incorrect, possible suggestion is 'formatted'
+  at 12: 'unformatted' is incorrect, possible suggestion is 'formatted'
+In lib/mime/types/_columnar.rb
+  at 5: 'Mutex' is incorrect, possible suggestion is 'Mute'
+In lib/mime/types/container.rb
+  at 6: 'resuls' is incorrect, possible suggestion is 'results'
+  at 6: 'serializable' is incorrect, possible suggestion is 'serialization'

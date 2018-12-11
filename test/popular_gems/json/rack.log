@@ -1,72 +1,190 @@
-# Logfile created on 2018-12-11 13:14:47 +0300 by logger.rb/56815
-{:file=>"lib/rack.rb", :object=>"Rack", :location=>8..12, :errors=>["namespace"], :errors_with_suggestions=>{"namespace"=>"name space"}}
-{:file=>"lib/rack/etag.rb", :object=>"Rack::ETag", :location=>7..15, :errors=>["Etag", "apache", "nginx", "revalidate", "sendfile"], :errors_with_suggestions=>{"Etag"=>"Tag", "apache"=>"Apache", "nginx"=>"engine", "revalidate"=>"re validate", "sendfile"=>"send file"}}
-{:file=>"lib/rack/file.rb", :object=>"Rack::File", :location=>10..16, :errors=>["'passwd", "passwd", "sendfile"], :errors_with_suggestions=>{"'passwd"=>"password", "passwd"=>"passed", "sendfile"=>"send file"}}
-{:file=>"lib/rack/lint.rb", :object=>"Rack::Lint#check_hijack", :location=>514..520, :errors=>["whitespace"], :errors_with_suggestions=>{"whitespace"=>"white space"}}
-{:file=>"lib/rack/lock.rb", :object=>"Rack::Lock", :location=>7..8, :errors=>["mutex"], :errors_with_suggestions=>{"mutex"=>"mute"}}
-{:file=>"lib/rack/mime.rb", :object=>"Rack::Mime::MIME_TYPES", :location=>38..49, :errors=>["webserving"], :errors_with_suggestions=>{"webserving"=>"web serving"}}
-{:file=>"lib/rack/mock.rb", :object=>"Rack::MockRequest.env_for", :location=>90..90, :errors=>["uri"], :errors_with_suggestions=>{"uri"=>"uric"}}
-{:file=>"lib/rack/utils.rb", :object=>"Rack::Utils#unescape_path", :location=>42..43, :errors=>["Unescapes", "unescape", "unescaping"], :errors_with_suggestions=>{"Unescapes"=>"Escapes", "unescape"=>"escapement", "unescaping"=>"uncapping"}}
-{:file=>"lib/rack/utils.rb", :object=>"Rack::Utils.unescape_path", :location=>nil, :errors=>["Unescapes", "unescape", "unescaping"], :errors_with_suggestions=>{"Unescapes"=>"Escapes", "unescape"=>"escapement", "unescaping"=>"uncapping"}}
-{:file=>"lib/rack/utils.rb", :object=>"Rack::Utils#unescape", :location=>50..51, :errors=>["Unescapes"], :errors_with_suggestions=>{"Unescapes"=>"Escapes"}}
-{:file=>"lib/rack/utils.rb", :object=>"Rack::Utils.unescape", :location=>nil, :errors=>["Unescapes"], :errors_with_suggestions=>{"Unescapes"=>"Escapes"}}
-{:file=>"lib/rack/utils.rb", :object=>"Rack::Utils#rfc2109", :location=>314..322, :errors=>["rb", "stdlib", "strptime"], :errors_with_suggestions=>{"rb"=>"Rb", "stdlib"=>"std lib", "strptime"=>"striptease"}}
-{:file=>"lib/rack/utils.rb", :object=>"Rack::Utils.rfc2109", :location=>nil, :errors=>["rb", "stdlib", "strptime"], :errors_with_suggestions=>{"rb"=>"Rb", "stdlib"=>"std lib", "strptime"=>"striptease"}}
-{:file=>"lib/rack/utils.rb", :object=>"Rack::Utils#byte_ranges", :location=>330..332, :errors=>["satisfiable"], :errors_with_suggestions=>{"satisfiable"=>"satisfied"}}
-{:file=>"lib/rack/utils.rb", :object=>"Rack::Utils.byte_ranges", :location=>nil, :errors=>["satisfiable"], :errors_with_suggestions=>{"satisfiable"=>"satisfied"}}
-{:file=>"lib/rack/utils.rb", :object=>"Rack::Utils#secure_compare", :location=>368..373, :errors=>["plaintext"], :errors_with_suggestions=>{"plaintext"=>"plain text"}}
-{:file=>"lib/rack/utils.rb", :object=>"Rack::Utils.secure_compare", :location=>nil, :errors=>["plaintext"], :errors_with_suggestions=>{"plaintext"=>"plain text"}}
-{:file=>"lib/rack/utils.rb", :object=>"Rack::Utils::Context", :location=>385..389, :errors=>["middleware"], :errors_with_suggestions=>{"middleware"=>"middle ware"}}
-{:file=>"lib/rack/utils.rb", :object=>"Rack::Utils::HeaderHash#initialize_copy", :location=>424..424, :errors=>["dup"], :errors_with_suggestions=>{"dup"=>"pud"}}
-{:file=>"lib/rack/events.rb", :object=>"Rack::Events", :location=>7..58, :errors=>["lifecycle", "middleware"], :errors_with_suggestions=>{"lifecycle"=>"life cycle", "middleware"=>"middle ware"}}
-{:file=>"lib/rack/server.rb", :object=>"Rack::Server.start", :location=>150..166, :errors=>["config", "rackup", "ru"], :errors_with_suggestions=>{"config"=>"con fig", "rackup"=>"crackup", "ru"=>"roe"}}
-{:file=>"lib/rack/static.rb", :object=>"Rack::Static", :location=>8..85, :errors=>["css", "html", "ie", "javascript", "middleware", "stylesheets", "url"], :errors_with_suggestions=>{"css"=>"CSS", "html"=>"HTML", "ie"=>"IE", "javascript"=>"java script", "middleware"=>"middle ware", "stylesheets"=>"style sheets", "url"=>"URL"}}
-{:file=>"lib/rack/urlmap.rb", :object=>"Rack::URLMap", :location=>6..16, :errors=>["urls"], :errors_with_suggestions=>{"urls"=>"curls"}}
-{:file=>"lib/rack/builder.rb", :object=>"Rack::Builder", :location=>4..31, :errors=>["iteratively"], :errors_with_suggestions=>{"iteratively"=>"alliteratively"}}
-{:file=>"lib/rack/builder.rb", :object=>"Rack::Builder#use", :location=>76..94, :errors=>["middleware"], :errors_with_suggestions=>{"middleware"=>"middle ware"}}
-{:file=>"lib/rack/builder.rb", :object=>"Rack::Builder#map", :location=>134..152, :errors=>["middleware"], :errors_with_suggestions=>{"middleware"=>"middle ware"}}
-{:file=>"lib/rack/builder.rb", :object=>"Rack::Builder#freeze_app", :location=>158..159, :errors=>["middleware"], :errors_with_suggestions=>{"middleware"=>"middle ware"}}
-{:file=>"lib/rack/chunked.rb", :object=>"Rack::Chunked", :location=>7..8, :errors=>["Middleware"], :errors_with_suggestions=>{"Middleware"=>"Middle ware"}}
-{:file=>"lib/rack/chunked.rb", :object=>"Rack::Chunked#chunkable_version?", :location=>44..45, :errors=>["pre"], :errors_with_suggestions=>{"pre"=>"per"}}
-{:file=>"lib/rack/request.rb", :object=>"Rack::Request", :location=>7..13, :errors=>["env"], :errors_with_suggestions=>{"env"=>"enc"}}
-{:file=>"lib/rack/request.rb", :object=>"Rack::Request::Env#add_header", :location=>83..91, :errors=>["rfc2616", "sec4", "w3", "www"], :errors_with_suggestions=>{"rfc2616"=>"RFC", "sec4"=>"sec", "w3"=>"w", "www"=>"WWW"}}
-{:file=>"lib/rack/request.rb", :object=>"Rack::Request::Helpers::FORM_DATA_MEDIA_TYPES", :location=>113..115, :errors=>["param"], :errors_with_suggestions=>{"param"=>"para"}}
-{:file=>"lib/rack/request.rb", :object=>"Rack::Request::Helpers::PARSEABLE_DATA_MEDIA_TYPES", :location=>121..123, :errors=>["multiparts", "param"], :errors_with_suggestions=>{"multiparts"=>"multipart", "param"=>"para"}}
-{:file=>"lib/rack/request.rb", :object=>"Rack::Request::Helpers#referer", :location=>153..153, :errors=>["referer"], :errors_with_suggestions=>{"referer"=>"referee"}}
-{:file=>"lib/rack/request.rb", :object=>"Rack::Request::Helpers#media_type", :location=>279..284, :errors=>["charset", "rfc2616", "sec3", "subtype", "utf", "w3", "www"], :errors_with_suggestions=>{"charset"=>"char set", "rfc2616"=>"RFC", "sec3"=>"sec", "subtype"=>"sub type", "utf"=>"fut", "w3"=>"w", "www"=>"WWW"}}
-{:file=>"lib/rack/request.rb", :object=>"Rack::Request::Helpers#media_type_params", :location=>289..293, :errors=>["charset", "utf"], :errors_with_suggestions=>{"charset"=>"char set", "utf"=>"fut"}}
-{:file=>"lib/rack/request.rb", :object=>"Rack::Request::Helpers#content_charset", :location=>298..301, :errors=>["charset"], :errors_with_suggestions=>{"charset"=>"char set"}}
-{:file=>"lib/rack/request.rb", :object=>"Rack::Request::Helpers#form_data?", :location=>306..313, :errors=>["urlencoded", "www"], :errors_with_suggestions=>{"urlencoded"=>"encoded", "www"=>"WWW"}}
-{:file=>"lib/rack/request.rb", :object=>"Rack::Request::Helpers#POST", :location=>337..340, :errors=>["urlencoded", "www"], :errors_with_suggestions=>{"urlencoded"=>"encoded", "www"=>"WWW"}}
-{:file=>"lib/rack/request.rb", :object=>"Rack::Request::Helpers#params", :location=>366..368, :errors=>["env", "params"], :errors_with_suggestions=>{"env"=>"enc", "params"=>"paras"}}
-{:file=>"lib/rack/request.rb", :object=>"Rack::Request::Helpers#[]=", :location=>444..446, :errors=>["env", "params"], :errors_with_suggestions=>{"env"=>"enc", "params"=>"paras"}}
-{:file=>"lib/rack/runtime.rb", :object=>"Rack::Runtime", :location=>6..11, :errors=>["middlewares"], :errors_with_suggestions=>{"middlewares"=>"middle wares"}}
-{:file=>"lib/rack/deflater.rb", :object=>"Rack::Deflater", :location=>8..18, :errors=>["http", "middleware"], :errors_with_suggestions=>{"http"=>"HTTP", "middleware"=>"middle ware"}}
-{:file=>"lib/rack/deflater.rb", :object=>"Rack::Deflater#initialize", :location=>20..31, :errors=>["deflater", "middleware"], :errors_with_suggestions=>{"deflater"=>"reflated", "middleware"=>"middle ware"}}
-{:file=>"lib/rack/reloader.rb", :object=>"Rack::Reloader", :location=>11..23, :errors=>["middleware", "performant", "reloader"], :errors_with_suggestions=>{"middleware"=>"middle ware", "performant"=>"perform ant", "reloader"=>"reloaded"}}
-{:file=>"lib/rack/response.rb", :object=>"Rack::Response", :location=>10..21, :errors=>["iteratively"], :errors_with_suggestions=>{"iteratively"=>"alliteratively"}}
-{:file=>"lib/rack/response.rb", :object=>"Rack::Response::Helpers#add_header", :location=>140..148, :errors=>["rfc2616", "sec4", "w3", "www"], :errors_with_suggestions=>{"rfc2616"=>"RFC", "sec4"=>"sec", "w3"=>"w", "www"=>"WWW"}}
-{:file=>"lib/rack/sendfile.rb", :object=>"Rack::Sendfile", :location=>8..101, :errors=>["Accel", "Lighttpd", "Nginx", "backend", "config", "filesystem", "lighttpd", "middleware", "nginx", "redmine", "tn123", "www", "xsendfile"], :errors_with_suggestions=>{"Accel"=>"Accelerate", "Lighttpd"=>"Lightproof", "Nginx"=>"Engine", "backend"=>"backed", "config"=>"con fig", "filesystem"=>"file system", "lighttpd"=>"lightproof", "middleware"=>"middle ware", "nginx"=>"engine", "redmine"=>"red mine", "tn123"=>"tnpk", "www"=>"WWW", "xsendfile"=>"landfill"}}
-{:file=>"lib/rack/directory.rb", :object=>"Rack::Directory", :location=>8..13, :errors=>["env", "html"], :errors_with_suggestions=>{"env"=>"enc", "html"=>"HTML"}}
-{:file=>"lib/rack/directory.rb", :object=>"Rack::Directory::DirectoryBody#DIR_FILE_escape", :location=>53..53, :errors=>["url"], :errors_with_suggestions=>{"url"=>"URL"}}
-{:file=>"lib/rack/directory.rb", :object=>"Rack::Directory::FILESIZE_FORMAT", :location=>164..164, :errors=>["Ramaze"], :errors_with_suggestions=>{"Ramaze"=>"Amaze"}}
-{:file=>"lib/rack/recursive.rb", :object=>"Rack::ForwardRequest", :location=>6..10, :errors=>["url"], :errors_with_suggestions=>{"url"=>"URL"}}
-{:file=>"lib/rack/media_type.rb", :object=>"Rack::MediaType.type", :location=>10..15, :errors=>["charset", "rfc2616", "sec3", "subtype", "utf", "w3", "www"], :errors_with_suggestions=>{"charset"=>"char set", "rfc2616"=>"RFC", "sec3"=>"sec", "subtype"=>"sub type", "utf"=>"fut", "w3"=>"w", "www"=>"WWW"}}
-{:file=>"lib/rack/media_type.rb", :object=>"Rack::MediaType.params", :location=>21..25, :errors=>["charset", "utf"], :errors_with_suggestions=>{"charset"=>"char set", "utf"=>"fut"}}
-{:file=>"lib/rack/content_type.rb", :object=>"Rack::ContentType", :location=>7..12, :errors=>["html"], :errors_with_suggestions=>{"html"=>"HTML"}}
-{:file=>"lib/rack/session/pool.rb", :object=>"Rack::Session::Pool", :location=>13..27, :errors=>["multithreaded"], :errors_with_suggestions=>{"multithreaded"=>"multi threaded"}}
-{:file=>"lib/rack/common_logger.rb", :object=>"Rack::CommonLogger", :location=>6..19, :errors=>["apache", "httpd"], :errors_with_suggestions=>{"apache"=>"Apache", "httpd"=>"HTTP"}}
-{:file=>"lib/rack/common_logger.rb", :object=>"Rack::CommonLogger::FORMAT", :location=>21..25, :errors=>["apache", "httpd"], :errors_with_suggestions=>{"apache"=>"Apache", "httpd"=>"HTTP"}}
-{:file=>"lib/rack/session/cookie.rb", :object=>"Rack::Session::Cookie", :location=>14..48, :errors=>["base64", "marshalled"], :errors_with_suggestions=>{"base64"=>"basely", "marshalled"=>"marshaled"}}
-{:file=>"lib/rack/auth/digest/md5.rb", :object=>"Rack::Auth::Digest::MD5", :location=>12..19, :errors=>["plaintext"], :errors_with_suggestions=>{"plaintext"=>"plain text"}}
-{:file=>"lib/rack/conditional_get.rb", :object=>"Rack::ConditionalGet", :location=>7..18, :errors=>["Etag", "Klishin's", "Merb", "Middleware", "github", "merb", "middleware", "rb", "wycats"], :errors_with_suggestions=>{"Etag"=>"Tag", "Klishin's"=>"Publishing's", "Merb"=>"Herb", "Middleware"=>"Middle ware", "github"=>"git hub", "merb"=>"berm", "middleware"=>"middle ware", "rb"=>"Rb", "wycats"=>"copycats"}}
-{:file=>"lib/rack/show_exceptions.rb", :object=>"Rack::ShowExceptions", :location=>9..15, :errors=>["backtrace", "sourcefile"], :errors_with_suggestions=>{"backtrace"=>"backtrack", "sourcefile"=>"source file"}}
-{:file=>"lib/rack/tempfile_reaper.rb", :object=>"Rack::TempfileReaper", :location=>7..9, :errors=>["Middleware", "Tempfiles", "brK8eh", "devel", "searchin"], :errors_with_suggestions=>{"Middleware"=>"Middle ware", "Tempfiles"=>"Temp files", "brK8eh"=>"Brooke", "devel"=>"delve", "searchin"=>"searching"}}
-{:file=>"lib/rack/rewindable_input.rb", :object=>"Rack::RewindableInput", :location=>8..16, :errors=>["tempfile"], :errors_with_suggestions=>{"tempfile"=>"temp file"}}
-{:file=>"lib/rack/rewindable_input.rb", :object=>"Rack::RewindableInput#close", :location=>44..48, :errors=>["oject"], :errors_with_suggestions=>{"oject"=>"object"}}
-{:file=>"lib/rack/session/memcache.rb", :object=>"Rack::Session::Memcache", :location=>10..22, :errors=>["behaviour", "memcache", "memcache's", "memcached"], :errors_with_suggestions=>{"behaviour"=>"behavior", "memcache"=>"Memcached", "memcache's"=>"Memcached's", "memcached"=>"Memcached"}}
-{:file=>"lib/rack/auth/digest/nonce.rb", :object=>"Rack::Auth::Digest::Nonce", :location=>8..14, :errors=>["nonces"], :errors_with_suggestions=>{"nonces"=>"bonces"}}
-{:file=>"lib/rack/session/abstract/id.rb", :object=>"Rack::Session::Abstract::Persisted", :location=>173..200, :errors=>["sessioning"], :errors_with_suggestions=>{"sessioning"=>"accessioning"}}
-{:file=>"lib/rack/session/abstract/id.rb", :object=>"Rack::Session::Abstract::Persisted#prepare_session", :location=>266..267, :errors=>["options'"], :errors_with_suggestions=>{"options'"=>"option's"}}
-{:file=>"lib/rack/session/abstract/id.rb", :object=>"Rack::Session::Abstract::Persisted#set_cookie", :location=>370..371, :errors=>["sid"], :errors_with_suggestions=>{"sid"=>"seed"}}
-{:file=>"lib/rack/session/abstract/id.rb", :object=>"Rack::Session::Abstract::Persisted#session_class", :location=>380..380, :errors=>["subclasses"], :errors_with_suggestions=>{"subclasses"=>"sub classes"}}
+In lib/rack.rb
+  at 8: 'namespace' is incorrect, possible suggestion is 'name space'
+In lib/rack/etag.rb
+  at 7: 'Etag' is incorrect, possible suggestion is 'Tag'
+  at 7: 'apache' is incorrect, possible suggestion is 'Apache'
+  at 7: 'nginx' is incorrect, possible suggestion is 'engine'
+  at 7: 'revalidate' is incorrect, possible suggestion is 're validate'
+  at 7: 'sendfile' is incorrect, possible suggestion is 'send file'
+In lib/rack/file.rb
+  at 10: ''passwd' is incorrect, possible suggestion is 'password'
+  at 10: 'passwd' is incorrect, possible suggestion is 'passed'
+  at 10: 'sendfile' is incorrect, possible suggestion is 'send file'
+In lib/rack/lint.rb
+  at 514: 'whitespace' is incorrect, possible suggestion is 'white space'
+In lib/rack/lock.rb
+  at 7: 'mutex' is incorrect, possible suggestion is 'mute'
+In lib/rack/mime.rb
+  at 38: 'webserving' is incorrect, possible suggestion is 'web serving'
+In lib/rack/mock.rb
+  at 90: 'uri' is incorrect, possible suggestion is 'uric'
+In lib/rack/utils.rb
+  at 42: 'Unescapes' is incorrect, possible suggestion is 'Escapes'
+  at 42: 'unescape' is incorrect, possible suggestion is 'escapement'
+  at 42: 'unescaping' is incorrect, possible suggestion is 'uncapping'
+  at : 'Unescapes' is incorrect, possible suggestion is 'Escapes'
+  at : 'unescape' is incorrect, possible suggestion is 'escapement'
+  at : 'unescaping' is incorrect, possible suggestion is 'uncapping'
+  at 50: 'Unescapes' is incorrect, possible suggestion is 'Escapes'
+  at : 'Unescapes' is incorrect, possible suggestion is 'Escapes'
+  at 314: 'rb' is incorrect, possible suggestion is 'Rb'
+  at 314: 'stdlib' is incorrect, possible suggestion is 'std lib'
+  at 314: 'strptime' is incorrect, possible suggestion is 'striptease'
+  at : 'rb' is incorrect, possible suggestion is 'Rb'
+  at : 'stdlib' is incorrect, possible suggestion is 'std lib'
+  at : 'strptime' is incorrect, possible suggestion is 'striptease'
+  at 330: 'satisfiable' is incorrect, possible suggestion is 'satisfied'
+  at : 'satisfiable' is incorrect, possible suggestion is 'satisfied'
+  at 368: 'plaintext' is incorrect, possible suggestion is 'plain text'
+  at : 'plaintext' is incorrect, possible suggestion is 'plain text'
+  at 385: 'middleware' is incorrect, possible suggestion is 'middle ware'
+  at 424: 'dup' is incorrect, possible suggestion is 'pud'
+In lib/rack/events.rb
+  at 7: 'lifecycle' is incorrect, possible suggestion is 'life cycle'
+  at 7: 'middleware' is incorrect, possible suggestion is 'middle ware'
+In lib/rack/server.rb
+  at 150: 'config' is incorrect, possible suggestion is 'con fig'
+  at 150: 'rackup' is incorrect, possible suggestion is 'crackup'
+  at 150: 'ru' is incorrect, possible suggestion is 'roe'
+In lib/rack/static.rb
+  at 8: 'css' is incorrect, possible suggestion is 'CSS'
+  at 8: 'html' is incorrect, possible suggestion is 'HTML'
+  at 8: 'ie' is incorrect, possible suggestion is 'IE'
+  at 8: 'javascript' is incorrect, possible suggestion is 'java script'
+  at 8: 'middleware' is incorrect, possible suggestion is 'middle ware'
+  at 8: 'stylesheets' is incorrect, possible suggestion is 'style sheets'
+  at 8: 'url' is incorrect, possible suggestion is 'URL'
+In lib/rack/urlmap.rb
+  at 6: 'urls' is incorrect, possible suggestion is 'curls'
+In lib/rack/builder.rb
+  at 4: 'iteratively' is incorrect, possible suggestion is 'alliteratively'
+  at 76: 'middleware' is incorrect, possible suggestion is 'middle ware'
+  at 134: 'middleware' is incorrect, possible suggestion is 'middle ware'
+  at 158: 'middleware' is incorrect, possible suggestion is 'middle ware'
+In lib/rack/chunked.rb
+  at 7: 'Middleware' is incorrect, possible suggestion is 'Middle ware'
+  at 44: 'pre' is incorrect, possible suggestion is 'per'
+In lib/rack/request.rb
+  at 7: 'env' is incorrect, possible suggestion is 'enc'
+  at 83: 'rfc2616' is incorrect, possible suggestion is 'RFC'
+  at 83: 'sec4' is incorrect, possible suggestion is 'sec'
+  at 83: 'w3' is incorrect, possible suggestion is 'w'
+  at 83: 'www' is incorrect, possible suggestion is 'WWW'
+  at 113: 'param' is incorrect, possible suggestion is 'para'
+  at 121: 'multiparts' is incorrect, possible suggestion is 'multipart'
+  at 121: 'param' is incorrect, possible suggestion is 'para'
+  at 153: 'referer' is incorrect, possible suggestion is 'referee'
+  at 279: 'charset' is incorrect, possible suggestion is 'char set'
+  at 279: 'rfc2616' is incorrect, possible suggestion is 'RFC'
+  at 279: 'sec3' is incorrect, possible suggestion is 'sec'
+  at 279: 'subtype' is incorrect, possible suggestion is 'sub type'
+  at 279: 'utf' is incorrect, possible suggestion is 'fut'
+  at 279: 'w3' is incorrect, possible suggestion is 'w'
+  at 279: 'www' is incorrect, possible suggestion is 'WWW'
+  at 289: 'charset' is incorrect, possible suggestion is 'char set'
+  at 289: 'utf' is incorrect, possible suggestion is 'fut'
+  at 298: 'charset' is incorrect, possible suggestion is 'char set'
+  at 306: 'urlencoded' is incorrect, possible suggestion is 'encoded'
+  at 306: 'www' is incorrect, possible suggestion is 'WWW'
+  at 337: 'urlencoded' is incorrect, possible suggestion is 'encoded'
+  at 337: 'www' is incorrect, possible suggestion is 'WWW'
+  at 366: 'env' is incorrect, possible suggestion is 'enc'
+  at 366: 'params' is incorrect, possible suggestion is 'paras'
+  at 444: 'env' is incorrect, possible suggestion is 'enc'
+  at 444: 'params' is incorrect, possible suggestion is 'paras'
+In lib/rack/runtime.rb
+  at 6: 'middlewares' is incorrect, possible suggestion is 'middle wares'
+In lib/rack/deflater.rb
+  at 8: 'http' is incorrect, possible suggestion is 'HTTP'
+  at 8: 'middleware' is incorrect, possible suggestion is 'middle ware'
+  at 20: 'deflater' is incorrect, possible suggestion is 'reflated'
+  at 20: 'middleware' is incorrect, possible suggestion is 'middle ware'
+In lib/rack/reloader.rb
+  at 11: 'middleware' is incorrect, possible suggestion is 'middle ware'
+  at 11: 'performant' is incorrect, possible suggestion is 'perform ant'
+  at 11: 'reloader' is incorrect, possible suggestion is 'reloaded'
+In lib/rack/response.rb
+  at 10: 'iteratively' is incorrect, possible suggestion is 'alliteratively'
+  at 140: 'rfc2616' is incorrect, possible suggestion is 'RFC'
+  at 140: 'sec4' is incorrect, possible suggestion is 'sec'
+  at 140: 'w3' is incorrect, possible suggestion is 'w'
+  at 140: 'www' is incorrect, possible suggestion is 'WWW'
+In lib/rack/sendfile.rb
+  at 8: 'Accel' is incorrect, possible suggestion is 'Accelerate'
+  at 8: 'Lighttpd' is incorrect, possible suggestion is 'Lightproof'
+  at 8: 'Nginx' is incorrect, possible suggestion is 'Engine'
+  at 8: 'backend' is incorrect, possible suggestion is 'backed'
+  at 8: 'config' is incorrect, possible suggestion is 'con fig'
+  at 8: 'filesystem' is incorrect, possible suggestion is 'file system'
+  at 8: 'lighttpd' is incorrect, possible suggestion is 'lightproof'
+  at 8: 'middleware' is incorrect, possible suggestion is 'middle ware'
+  at 8: 'nginx' is incorrect, possible suggestion is 'engine'
+  at 8: 'redmine' is incorrect, possible suggestion is 'red mine'
+  at 8: 'tn123' is incorrect, possible suggestion is 'tnpk'
+  at 8: 'www' is incorrect, possible suggestion is 'WWW'
+  at 8: 'xsendfile' is incorrect, possible suggestion is 'landfill'
+In lib/rack/directory.rb
+  at 8: 'env' is incorrect, possible suggestion is 'enc'
+  at 8: 'html' is incorrect, possible suggestion is 'HTML'
+  at 53: 'url' is incorrect, possible suggestion is 'URL'
+  at 164: 'Ramaze' is incorrect, possible suggestion is 'Amaze'
+In lib/rack/recursive.rb
+  at 6: 'url' is incorrect, possible suggestion is 'URL'
+In lib/rack/media_type.rb
+  at 10: 'charset' is incorrect, possible suggestion is 'char set'
+  at 10: 'rfc2616' is incorrect, possible suggestion is 'RFC'
+  at 10: 'sec3' is incorrect, possible suggestion is 'sec'
+  at 10: 'subtype' is incorrect, possible suggestion is 'sub type'
+  at 10: 'utf' is incorrect, possible suggestion is 'fut'
+  at 10: 'w3' is incorrect, possible suggestion is 'w'
+  at 10: 'www' is incorrect, possible suggestion is 'WWW'
+  at 21: 'charset' is incorrect, possible suggestion is 'char set'
+  at 21: 'utf' is incorrect, possible suggestion is 'fut'
+In lib/rack/content_type.rb
+  at 7: 'html' is incorrect, possible suggestion is 'HTML'
+In lib/rack/session/pool.rb
+  at 13: 'multithreaded' is incorrect, possible suggestion is 'multi threaded'
+In lib/rack/common_logger.rb
+  at 6: 'apache' is incorrect, possible suggestion is 'Apache'
+  at 6: 'httpd' is incorrect, possible suggestion is 'HTTP'
+  at 21: 'apache' is incorrect, possible suggestion is 'Apache'
+  at 21: 'httpd' is incorrect, possible suggestion is 'HTTP'
+In lib/rack/session/cookie.rb
+  at 14: 'base64' is incorrect, possible suggestion is 'basely'
+  at 14: 'marshalled' is incorrect, possible suggestion is 'marshaled'
+In lib/rack/auth/digest/md5.rb
+  at 12: 'plaintext' is incorrect, possible suggestion is 'plain text'
+In lib/rack/conditional_get.rb
+  at 7: 'Etag' is incorrect, possible suggestion is 'Tag'
+  at 7: 'Klishin's' is incorrect, possible suggestion is 'Publishing's'
+  at 7: 'Merb' is incorrect, possible suggestion is 'Herb'
+  at 7: 'Middleware' is incorrect, possible suggestion is 'Middle ware'
+  at 7: 'github' is incorrect, possible suggestion is 'git hub'
+  at 7: 'merb' is incorrect, possible suggestion is 'berm'
+  at 7: 'middleware' is incorrect, possible suggestion is 'middle ware'
+  at 7: 'rb' is incorrect, possible suggestion is 'Rb'
+  at 7: 'wycats' is incorrect, possible suggestion is 'copycats'
+In lib/rack/show_exceptions.rb
+  at 9: 'backtrace' is incorrect, possible suggestion is 'backtrack'
+  at 9: 'sourcefile' is incorrect, possible suggestion is 'source file'
+In lib/rack/tempfile_reaper.rb
+  at 7: 'Middleware' is incorrect, possible suggestion is 'Middle ware'
+  at 7: 'Tempfiles' is incorrect, possible suggestion is 'Temp files'
+  at 7: 'brK8eh' is incorrect, possible suggestion is 'Brooke'
+  at 7: 'devel' is incorrect, possible suggestion is 'delve'
+  at 7: 'searchin' is incorrect, possible suggestion is 'searching'
+In lib/rack/rewindable_input.rb
+  at 8: 'tempfile' is incorrect, possible suggestion is 'temp file'
+  at 44: 'oject' is incorrect, possible suggestion is 'object'
+In lib/rack/session/memcache.rb
+  at 10: 'behaviour' is incorrect, possible suggestion is 'behavior'
+  at 10: 'memcache' is incorrect, possible suggestion is 'Memcached'
+  at 10: 'memcache's' is incorrect, possible suggestion is 'Memcached's'
+  at 10: 'memcached' is incorrect, possible suggestion is 'Memcached'
+In lib/rack/auth/digest/nonce.rb
+  at 8: 'nonces' is incorrect, possible suggestion is 'bonces'
+In lib/rack/session/abstract/id.rb
+  at 173: 'sessioning' is incorrect, possible suggestion is 'accessioning'
+  at 266: 'options'' is incorrect, possible suggestion is 'option's'
+  at 370: 'sid' is incorrect, possible suggestion is 'seed'
+  at 380: 'subclasses' is incorrect, possible suggestion is 'sub classes'
