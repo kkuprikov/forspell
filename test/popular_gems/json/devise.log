@@ -1,0 +1,439 @@
+---
+- :file: lib/devise/test/integration_helpers.rb
+  :object: Devise::Test
+  :location: 4
+  :errors:
+  - signin
+  :errors_with_suggestions:
+    signin: signing
+- :file: lib/devise.rb
+  :object: Devise::TRUE_VALUES
+  :location: 61
+  :errors:
+  - params
+  :errors_with_suggestions:
+    params: paras
+- :file: lib/devise.rb
+  :object: Devise.setup
+  :location: 304
+  :errors:
+  - initializer
+  :errors_with_suggestions:
+    initializer: initialize
+- :file: lib/devise.rb
+  :object: Devise.add_module
+  :location: 353
+  :errors:
+  - boolean
+  - rb
+  :errors_with_suggestions:
+    boolean: Boolean
+    rb: Rb
+- :file: lib/devise.rb
+  :object: Devise.regenerate_helpers!
+  :location: 459
+  :errors:
+  - url
+  :errors_with_suggestions:
+    url: URL
+- :file: lib/devise.rb
+  :object: Devise.configure_warden!
+  :location: 465
+  :errors:
+  - rb
+  :errors_with_suggestions:
+    rb: Rb
+- :file: lib/devise/models.rb
+  :object: Devise::Models#devise
+  :location: 71
+  :errors:
+  - initializer
+  :errors_with_suggestions:
+    initializer: initialize
+- :file: lib/devise/mailers/helpers.rb
+  :object: Devise::Mailers::Helpers#subject_for
+  :location: 70
+  :errors:
+  - I18n
+  - fallbacks
+  :errors_with_suggestions:
+    I18n: Ivan
+    fallbacks: fallback
+- :file: lib/devise/models/lockable.rb
+  :object: Devise::Models::Lockable
+  :location: 7
+  :errors:
+  - ie
+  :errors_with_suggestions:
+    ie: IE
+- :file: lib/devise/parameter_filter.rb
+  :object: Devise::ParameterFilter#stringify_params
+  :location: 30
+  :errors:
+  - mongoid
+  :errors_with_suggestions:
+    mongoid: mongoloid
+- :file: lib/devise/models/confirmable.rb
+  :object: Devise::Models::Confirmable#send_email_changed_notification?
+  :location: 309
+  :errors:
+  - reconfirmable
+  :errors_with_suggestions:
+    reconfirmable: reconfirm able
+- :file: lib/devise/controllers/helpers.rb
+  :object: Devise::Controllers::Helpers::ClassMethods#devise_group
+  :location: 18
+  :errors:
+  - accessor
+  :errors_with_suggestions:
+    accessor: accessory
+- :file: lib/devise/controllers/helpers.rb
+  :object: Devise::Controllers::Helpers.define_helpers
+  :location: 88
+  :errors:
+  - accessor
+  :errors_with_suggestions:
+    accessor: accessory
+- :file: lib/devise/controllers/helpers.rb
+  :object: Devise::Controllers::Helpers#warden
+  :location: 141
+  :errors:
+  - accessor
+  :errors_with_suggestions:
+    accessor: accessory
+- :file: lib/devise/controllers/helpers.rb
+  :object: Devise::Controllers::Helpers#devise_parameter_sanitizer
+  :location: 155
+  :errors:
+  - param
+  - rb
+  :errors_with_suggestions:
+    param: para
+    rb: Rb
+- :file: lib/devise/controllers/helpers.rb
+  :object: Devise::Controllers::Helpers#allow_params_authentication!
+  :location: 162
+  :errors:
+  - params
+  :errors_with_suggestions:
+    params: paras
+- :file: lib/devise/controllers/helpers.rb
+  :object: Devise::Controllers::Helpers#signed_in_root_path
+  :location: 167
+  :errors:
+  - url
+  :errors_with_suggestions:
+    url: URL
+- :file: lib/devise/controllers/helpers.rb
+  :object: Devise::Controllers::Helpers#after_sign_in_path_for
+  :location: 188
+  :errors:
+  - fallbacks
+  - url
+  :errors_with_suggestions:
+    fallbacks: fallback
+    url: URL
+- :file: lib/devise/controllers/helpers.rb
+  :object: Devise::Controllers::Helpers#sign_in_and_redirect
+  :location: 232
+  :errors:
+  - url
+  :errors_with_suggestions:
+    url: URL
+- :file: lib/devise/controllers/helpers.rb
+  :object: Devise::Controllers::Helpers#sign_out_and_redirect
+  :location: 243
+  :errors:
+  - url
+  :errors_with_suggestions:
+    url: URL
+- :file: lib/devise/models/omniauthable.rb
+  :object: Devise::Models::Omniauthable
+  :location: 7
+  :errors:
+  - Oauthable
+  :errors_with_suggestions:
+    Oauthable: Untouchable
+- :file: lib/devise/models/registerable.rb
+  :object: Devise::Models::Registerable
+  :location: 5
+  :errors:
+  - ie
+  :errors_with_suggestions:
+    ie: IE
+- :file: lib/devise/models/registerable.rb
+  :object: Devise::Models::Registerable::ClassMethods#new_with_session
+  :location: 15
+  :errors:
+  - params
+  :errors_with_suggestions:
+    params: paras
+- :file: lib/devise/models/rememberable.rb
+  :object: Devise::Models::Rememberable
+  :location: 9
+  :errors:
+  - rememberable
+  :errors_with_suggestions:
+    rememberable: remember able
+- :file: app/controllers/devise_controller.rb
+  :object: DeviseController#set_flash_message
+  :location: 137
+  :errors:
+  - I18n
+  - i18n
+  - yml
+  :errors_with_suggestions:
+    I18n: Ivan
+    i18n: Ivan
+    yml: ml
+- :file: lib/devise/models/authenticatable.rb
+  :object: Devise::Models::Authenticatable#serializable_hash
+  :location: 101
+  :errors:
+  - serializable
+  :errors_with_suggestions:
+    serializable: serialization
+- :file: lib/devise/models/authenticatable.rb
+  :object: Devise::Models::Authenticatable#send_devise_notification
+  :location: 134
+  :errors:
+  - resque
+  - sidekiq
+  :errors_with_suggestions:
+    resque: risque
+    sidekiq: sidekick
+- :file: lib/devise/models/authenticatable.rb
+  :object: Devise::Models::Authenticatable::ClassMethods#find_for_authentication
+  :location: 252
+  :errors:
+  - authenticatable
+  - ie
+  - namedscope
+  :errors_with_suggestions:
+    authenticatable: authentication
+    ie: IE
+    namedscope: named scope
+- :file: lib/devise/controllers/sign_in_out.rb
+  :object: Devise::Controllers::SignInOut#sign_in
+  :location: 19
+  :errors:
+  - env
+  - timeoutable
+  :errors_with_suggestions:
+    env: enc
+    timeoutable: timeout able
+- :file: lib/devise/controllers/url_helpers.rb
+  :object: Devise::Controllers::UrlHelpers
+  :location: 5
+  :errors:
+  - param
+  - url
+  :errors_with_suggestions:
+    param: para
+    url: URL
+- :file: lib/devise/strategies/rememberable.rb
+  :object: Devise::Strategies::Rememberable
+  :location: 7
+  :errors:
+  - authenticatable
+  :errors_with_suggestions:
+    authenticatable: authentication
+- :file: lib/devise/strategies/rememberable.rb
+  :object: Devise::Strategies::Rememberable#valid?
+  :location: 12
+  :errors:
+  - rememberable
+  :errors_with_suggestions:
+    rememberable: remember able
+- :file: lib/devise/strategies/rememberable.rb
+  :object: Devise::Strategies::Rememberable#authenticate!
+  :location: 18
+  :errors:
+  - deserialize
+  :errors_with_suggestions:
+    deserialize: serialize
+- :file: lib/devise/strategies/rememberable.rb
+  :object: Devise::Strategies::Rememberable#clean_up_csrf?
+  :location: 36
+  :errors:
+  - csrf
+  - rememberable
+  :errors_with_suggestions:
+    csrf: Cerf
+    rememberable: remember able
+- :file: lib/devise/test/controller_helpers.rb
+  :object: Devise::Test::ControllerHelpers#_catch_warden
+  :location: 99
+  :errors:
+  - middleware
+  :errors_with_suggestions:
+    middleware: middle ware
+- :file: lib/devise/test/integration_helpers.rb
+  :object: Devise::Test::IntegrationHelpers#sign_in
+  :location: 31
+  :errors:
+  - successfull
+  :errors_with_suggestions:
+    successfull: successful
+- :file: lib/devise/controllers/store_location.rb
+  :object: Devise::Controllers::StoreLocation#stored_location_for
+  :location: 11
+  :errors:
+  - url
+  :errors_with_suggestions:
+    url: URL
+- :file: lib/devise/strategies/authenticatable.rb
+  :object: Devise::Strategies::Authenticatable
+  :location: 7
+  :errors:
+  - http
+  - params
+  :errors_with_suggestions:
+    http: HTTP
+    params: paras
+- :file: lib/devise/strategies/authenticatable.rb
+  :object: Devise::Strategies::Authenticatable#remember_me
+  :location: 50
+  :errors:
+  - params
+  :errors_with_suggestions:
+    params: paras
+- :file: lib/devise/strategies/authenticatable.rb
+  :object: Devise::Strategies::Authenticatable#valid_for_http_auth?
+  :location: 60
+  :errors:
+  - http
+  :errors_with_suggestions:
+    http: HTTP
+- :file: lib/devise/strategies/authenticatable.rb
+  :object: Devise::Strategies::Authenticatable#valid_for_params_auth?
+  :location: 70
+  :errors:
+  - params
+  :errors_with_suggestions:
+    params: paras
+- :file: lib/devise/strategies/authenticatable.rb
+  :object: Devise::Strategies::Authenticatable#http_authenticatable?
+  :location: 82
+  :errors:
+  - authenticatable
+  - http
+  :errors_with_suggestions:
+    authenticatable: authentication
+    http: HTTP
+- :file: lib/devise/strategies/authenticatable.rb
+  :object: Devise::Strategies::Authenticatable#params_authenticatable?
+  :location: 87
+  :errors:
+  - authenticatable
+  - params
+  :errors_with_suggestions:
+    authenticatable: authentication
+    params: paras
+- :file: lib/devise/strategies/authenticatable.rb
+  :object: Devise::Strategies::Authenticatable#params_auth_hash
+  :location: 92
+  :errors:
+  - params
+  - subhash
+  :errors_with_suggestions:
+    params: paras
+    subhash: sub hash
+- :file: lib/devise/strategies/authenticatable.rb
+  :object: Devise::Strategies::Authenticatable#http_auth_hash
+  :location: 97
+  :errors:
+  - http
+  - params
+  :errors_with_suggestions:
+    http: HTTP
+    params: paras
+- :file: lib/devise/strategies/authenticatable.rb
+  :object: Devise::Strategies::Authenticatable#valid_params_request?
+  :location: 103
+  :errors:
+  - env
+  :errors_with_suggestions:
+    env: enc
+- :file: lib/devise/strategies/authenticatable.rb
+  :object: Devise::Strategies::Authenticatable#valid_password?
+  :location: 113
+  :errors:
+  - params
+  :errors_with_suggestions:
+    params: paras
+- :file: lib/devise/strategies/authenticatable.rb
+  :object: Devise::Strategies::Authenticatable#authenticatable_name
+  :location: 169
+  :errors:
+  - authenticatable
+  :errors_with_suggestions:
+    authenticatable: authentication
+- :file: app/controllers/devise/unlocks_controller.rb
+  :object: Devise::UnlocksController#show
+  :location: 23
+  :errors:
+  - abcdef
+  :errors_with_suggestions:
+    abcdef: abode
+- :file: lib/devise/models/database_authenticatable.rb
+  :object: Devise::Models::DatabaseAuthenticatable#valid_password?
+  :location: 66
+  :errors:
+  - ie
+  :errors_with_suggestions:
+    ie: IE
+- :file: lib/devise/models/database_authenticatable.rb
+  :object: Devise::Models::DatabaseAuthenticatable#password_digest
+  :location: 195
+  :errors:
+  - bcrypt
+  :errors_with_suggestions:
+    bcrypt: crypt
+- :file: app/controllers/devise/passwords_controller.rb
+  :object: Devise::PasswordsController#edit
+  :location: 25
+  :errors:
+  - abcdef
+  :errors_with_suggestions:
+    abcdef: abode
+- :file: app/controllers/devise/confirmations_controller.rb
+  :object: Devise::ConfirmationsController#show
+  :location: 21
+  :errors:
+  - abcdef
+  :errors_with_suggestions:
+    abcdef: abode
+- :file: app/controllers/devise/confirmations_controller.rb
+  :object: Devise::ConfirmationsController#after_resending_confirmation_instructions_path_for
+  :location: 36
+  :errors:
+  - resending
+  :errors_with_suggestions:
+    resending: reseeding
+- :file: app/controllers/devise/registrations_controller.rb
+  :object: Devise::RegistrationsController#cancel
+  :location: 76
+  :errors:
+  - oauth
+  :errors_with_suggestions:
+    oauth: oath
+- :file: app/controllers/devise/registrations_controller.rb
+  :object: Devise::RegistrationsController#after_update_path_for
+  :location: 127
+  :errors:
+  - url
+  :errors_with_suggestions:
+    url: URL
+- :file: lib/devise/rails/routes.rb
+  :object: ActionDispatch::Routing::Mapper#devise_for
+  :location: 36
+  :errors:
+  - authenticatable
+  - confirmable
+  - namespace
+  :errors_with_suggestions:
+    authenticatable: authentication
+    confirmable: conformable
+    namespace: name space
+

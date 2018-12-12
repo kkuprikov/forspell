@@ -1,0 +1,959 @@
+---
+- :file: lib/em/future.rb
+  :object: EventMachine
+  :location: 1
+  :errors:
+  - Cianfrocca
+  - blackhedd
+  :errors_with_suggestions:
+    Cianfrocca: Oceanfront
+    blackhedd: blackhead
+- :file: lib/em/pool.rb
+  :object: EventMachine::Pool
+  :location: 2
+  :errors:
+  - async
+  - deferrable
+  - enqueued
+  - errback
+  :errors_with_suggestions:
+    async: sync
+    deferrable: deferral
+    enqueued: en queued
+    errback: err back
+- :file: lib/em/pool.rb
+  :object: EventMachine::Pool#on_error
+  :location: 73
+  :errors:
+  - deferrables
+  :errors_with_suggestions:
+    deferrables: deferrals
+- :file: lib/em/pool.rb
+  :object: EventMachine::Pool#perform
+  :location: 83
+  :errors:
+  - deferrable
+  - errback
+  :errors_with_suggestions:
+    deferrable: deferral
+    errback: err back
+- :file: lib/em/pool.rb
+  :object: EventMachine::Pool#num_waiting
+  :location: 106
+  :errors:
+  - enqueued
+  :errors_with_suggestions:
+    enqueued: en queued
+- :file: lib/em/buftok.rb
+  :object: BufferedTokenizer
+  :location: 1
+  :errors:
+  - datagrams
+  - instantiation
+  :errors_with_suggestions:
+    datagrams: data grams
+    instantiation: instantiate
+- :file: lib/em/buftok.rb
+  :object: BufferedTokenizer#extract
+  :location: 22
+  :errors:
+  - datagrams
+  - tokenized
+  :errors_with_suggestions:
+    datagrams: data grams
+    tokenized: tokenism
+- :file: lib/em/future.rb
+  :object: EventMachine::Deferrable.future
+  :location: 34
+  :errors:
+  - arg
+  - deferrable
+  - errback
+  :errors_with_suggestions:
+    arg: rag
+    deferrable: deferral
+    errback: err back
+- :file: lib/em/iterator.rb
+  :object: EventMachine::Iterator
+  :location: 2
+  :errors:
+  - api
+  - async
+  - http
+  - urls
+  :errors_with_suggestions:
+    api: API
+    async: sync
+    http: HTTP
+    urls: curls
+- :file: lib/em/iterator.rb
+  :object: EventMachine::Iterator#initialize
+  :location: 45
+  :errors:
+  - async
+  - proc
+  :errors_with_suggestions:
+    async: sync
+    proc: crop
+- :file: lib/em/iterator.rb
+  :object: EventMachine::Iterator#concurrency=
+  :location: 73
+  :errors:
+  - accomodate
+  :errors_with_suggestions:
+    accomodate: accommodate
+- :file: lib/em/iterator.rb
+  :object: EventMachine::Iterator#each
+  :location: 84
+  :errors:
+  - proc
+  :errors_with_suggestions:
+    proc: crop
+- :file: lib/em/iterator.rb
+  :object: EventMachine::Iterator#spawn_workers
+  :location: 224
+  :errors:
+  - iterator's
+  :errors_with_suggestions:
+    iterator's: iterators
+- :file: lib/em/iterator.rb
+  :object: EventMachine::Iterator#next_item
+  :location: 238
+  :errors:
+  - Procs
+  :errors_with_suggestions:
+    Procs: Crops
+- :file: lib/em/streamer.rb
+  :object: EventMachine::FileStreamer
+  :location: 2
+  :errors:
+  - 16K
+  - eventmachine
+  :errors_with_suggestions:
+    16K: 1ST
+    eventmachine: event machine
+- :file: lib/em/streamer.rb
+  :object: EventMachine::FileStreamer::MappingThreshold
+  :location: 25
+  :errors:
+  - 16k
+  :errors_with_suggestions:
+    16k: 1st
+- :file: lib/em/streamer.rb
+  :object: EventMachine::FileStreamer::BackpressureLevel
+  :location: 27
+  :errors:
+  - 50k
+  :errors_with_suggestions:
+    50k: 5th
+- :file: lib/em/streamer.rb
+  :object: EventMachine::FileStreamer::ChunkSize
+  :location: 29
+  :errors:
+  - 16k
+  :errors_with_suggestions:
+    16k: 1st
+- :file: lib/em/streamer.rb
+  :object: EventMachine::FileStreamer#ensure_mapping_extension_is_present
+  :location: 102
+  :errors:
+  - distro
+  - modularization
+  :errors_with_suggestions:
+    distro: bistro
+    modularization: popularization
+- :file: lib/em/processes.rb
+  :object: EventMachine::DeferrableChildProcess
+  :location: 29
+  :errors:
+  - signalled
+  - stdout
+  :errors_with_suggestions:
+    signalled: signaled
+    stdout: stout
+- :file: lib/em/processes.rb
+  :object: EventMachine.system
+  :location: 89
+  :errors:
+  - pid
+  - popen
+  - proc
+  :errors_with_suggestions:
+    pid: peed
+    popen: pope
+    proc: crop
+- :file: lib/em/protocols.rb
+  :object: EventMachine::Protocols
+  :location: 2
+  :errors:
+  - subdirectory
+  :errors_with_suggestions:
+    subdirectory: sub directory
+- :file: lib/em/spawnable.rb
+  :object: EventMachine.spawn
+  :location: 68
+  :errors:
+  - erlang
+  :errors_with_suggestions:
+    erlang: Erlang
+- :file: lib/eventmachine.rb
+  :object: EventMachine.reactor_thread
+  :location: 75
+  :errors:
+  - endevor
+  - multithreaded
+  :errors_with_suggestions:
+    endevor: endeavor
+    multithreaded: multi threaded
+- :file: lib/eventmachine.rb
+  :object: EventMachine::ERRNOS
+  :location: 89
+  :errors:
+  - errnos
+  :errors_with_suggestions:
+    errnos: err nos
+- :file: lib/eventmachine.rb
+  :object: EventMachine.add_timer
+  :location: 296
+  :errors:
+  - proc
+  :errors_with_suggestions:
+    proc: crop
+- :file: lib/eventmachine.rb
+  :object: EventMachine.start_server
+  :location: 422
+  :errors:
+  - acceptor
+  - instantiation
+  - suppled
+  :errors_with_suggestions:
+    acceptor: accept or
+    instantiation: instantiate
+    suppled: supple
+- :file: lib/eventmachine.rb
+  :object: EventMachine.connect
+  :location: 566
+  :errors:
+  - hostname
+  - lifecycle
+  - md
+  :errors_with_suggestions:
+    hostname: host name
+    lifecycle: life cycle
+    md: MD
+- :file: lib/eventmachine.rb
+  :object: EventMachine.watch
+  :location: 691
+  :errors:
+  - eventloop
+  :errors_with_suggestions:
+    eventloop: event loop
+- :file: lib/eventmachine.rb
+  :object: EventMachine.attach
+  :location: 736
+  :errors:
+  - eventloop
+  - fd
+  :errors_with_suggestions:
+    eventloop: event loop
+    fd: FD
+- :file: lib/eventmachine.rb
+  :object: EventMachine.open_datagram_socket
+  :location: 819
+  :errors:
+  - connectionless
+  - datagram
+  - datagrams
+  :errors_with_suggestions:
+    connectionless: connection less
+    datagram: data gram
+    datagrams: data grams
+- :file: lib/eventmachine.rb
+  :object: EventMachine.run_deferred_callbacks
+  :location: 960
+  :errors:
+  - loopback
+  - responder
+  - signalled
+  :errors_with_suggestions:
+    loopback: loop back
+    responder: responded
+    signalled: signaled
+- :file: lib/eventmachine.rb
+  :object: EventMachine.defer
+  :location: 995
+  :errors:
+  - errback
+  - threadsafe
+  - unhandled
+  :errors_with_suggestions:
+    errback: err back
+    threadsafe: thread safe
+    unhandled: unhanded
+- :file: lib/eventmachine.rb
+  :object: EventMachine.threadpool_size
+  :location: 1108
+  :errors:
+  - threadpool
+  :errors_with_suggestions:
+    threadpool: thread pool
+- :file: lib/eventmachine.rb
+  :object: EventMachine.threadpool_size=
+  :location: 1108
+  :errors:
+  - threadpool
+  :errors_with_suggestions:
+    threadpool: thread pool
+- :file: lib/eventmachine.rb
+  :object: EventMachine.next_tick
+  :location: 1114
+  :errors:
+  - proc
+  :errors_with_suggestions:
+    proc: crop
+- :file: lib/eventmachine.rb
+  :object: EventMachine.set_effective_user
+  :location: 1138
+  :errors:
+  - setuid
+  :errors_with_suggestions:
+    setuid: setup
+- :file: lib/eventmachine.rb
+  :object: EventMachine.watch_file
+  :location: 1246
+  :errors:
+  - Errno
+  - inotify
+  - kqueue
+  :errors_with_suggestions:
+    Errno: Err no
+    inotify: notify
+    kqueue: queue
+- :file: lib/eventmachine.rb
+  :object: EventMachine.watch_process
+  :location: 1322
+  :errors:
+  - kqueue
+  :errors_with_suggestions:
+    kqueue: queue
+- :file: lib/eventmachine.rb
+  :object: EventMachine.enable_proxy
+  :location: 1372
+  :errors:
+  - Propogating
+  - subclasses
+  :errors_with_suggestions:
+    Propogating: Propagating
+    subclasses: sub classes
+- :file: lib/eventmachine.rb
+  :object: EventMachine.disable_proxy
+  :location: 1435
+  :errors:
+  - proxying
+  :errors_with_suggestions:
+    proxying: proxy
+- :file: lib/em/completion.rb
+  :object: EventMachine::Completion
+  :location: 3
+  :errors:
+  - ack
+  - api
+  - applicaiton
+  - errback
+  - explcitly
+  - implementaiton
+  - overrding
+  - stateback
+  - stateful
+  - subclassing
+  - transitionary
+  - unterminated
+  :errors_with_suggestions:
+    ack: ac
+    api: API
+    applicaiton: application
+    errback: err back
+    explcitly: explicitly
+    implementaiton: implementation
+    overrding: overriding
+    stateback: state back
+    stateful: tasteful
+    subclassing: sub classing
+    transitionary: transitional
+    unterminated: exterminated
+- :file: lib/em/completion.rb
+  :object: EventMachine::Completion#stateback
+  :location: 195
+  :errors:
+  - Statebacks
+  :errors_with_suggestions:
+    Statebacks: State backs
+- :file: lib/em/completion.rb
+  :object: EventMachine::Completion#errback
+  :location: 213
+  :errors:
+  - Errbacks
+  :errors_with_suggestions:
+    Errbacks: Err backs
+- :file: lib/em/completion.rb
+  :object: EventMachine::Completion#timeout
+  :location: 250
+  :errors:
+  - deferrable
+  :errors_with_suggestions:
+    deferrable: deferral
+- :file: lib/em/completion.rb
+  :object: EventMachine::Completion#cancel_errback
+  :location: 267
+  :errors:
+  - errback
+  - errbacks
+  :errors_with_suggestions:
+    errback: err back
+    errbacks: err backs
+- :file: lib/em/completion.rb
+  :object: EventMachine::Completion#execute_callbacks
+  :location: 280
+  :errors:
+  - statebacks
+  :errors_with_suggestions:
+    statebacks: state backs
+- :file: lib/em/connection.rb
+  :object: EventMachine::Connection.new
+  :location: 44
+  :errors:
+  - subclasses
+  :errors_with_suggestions:
+    subclasses: sub classes
+- :file: lib/em/connection.rb
+  :object: EventMachine::Connection#initialize
+  :location: 64
+  :errors:
+  - superclasses
+  :errors_with_suggestions:
+    superclasses: super classes
+- :file: lib/em/connection.rb
+  :object: EventMachine::Connection#receive_data
+  :location: 84
+  :errors:
+  - intra
+  - stdout
+  :errors_with_suggestions:
+    intra: intro
+    stdout: stout
+- :file: lib/em/connection.rb
+  :object: EventMachine::Connection#unbind
+  :location: 177
+  :errors:
+  - ivar
+  :errors_with_suggestions:
+    ivar: var
+- :file: lib/em/connection.rb
+  :object: EventMachine::Connection#proxy_completed
+  :location: 222
+  :errors:
+  - proxying
+  :errors_with_suggestions:
+    proxying: proxy
+- :file: lib/em/connection.rb
+  :object: EventMachine::Connection#get_proxied_bytes
+  :location: 241
+  :errors:
+  - proxied
+  :errors_with_suggestions:
+    proxied: proxies
+- :file: lib/em/connection.rb
+  :object: EventMachine::Connection#send_data
+  :location: 306
+  :errors:
+  - md
+  :errors_with_suggestions:
+    md: MD
+- :file: lib/em/connection.rb
+  :object: EventMachine::Connection#get_peer_cert
+  :location: 462
+  :errors:
+  - X509
+  :errors_with_suggestions:
+    X509: Xref
+- :file: lib/em/connection.rb
+  :object: EventMachine::Connection#send_datagram
+  :location: 550
+  :errors:
+  - datagram
+  - datagrams
+  :errors_with_suggestions:
+    datagram: data gram
+    datagrams: data grams
+- :file: lib/em/connection.rb
+  :object: EventMachine::Connection#get_peername
+  :location: 580
+  :errors:
+  - peername
+  - sockaddr
+  :errors_with_suggestions:
+    peername: peer name
+    sockaddr: stockade
+- :file: lib/em/connection.rb
+  :object: EventMachine::Connection#get_sockname
+  :location: 600
+  :errors:
+  - sockaddr
+  :errors_with_suggestions:
+    sockaddr: stockade
+- :file: lib/em/connection.rb
+  :object: EventMachine::Connection#get_pid
+  :location: 620
+  :errors:
+  - popen
+  - subprocess
+  :errors_with_suggestions:
+    popen: pope
+    subprocess: sub process
+- :file: lib/em/connection.rb
+  :object: EventMachine::Connection#get_status
+  :location: 629
+  :errors:
+  - popen
+  - subprocess
+  :errors_with_suggestions:
+    popen: pope
+    subprocess: sub process
+- :file: lib/em/connection.rb
+  :object: EventMachine::Connection#comm_inactivity_timeout
+  :location: 642
+  :errors:
+  - datagram
+  :errors_with_suggestions:
+    datagram: data gram
+- :file: lib/em/connection.rb
+  :object: EventMachine::Connection#comm_inactivity_timeout=
+  :location: 651
+  :errors:
+  - datagram
+  :errors_with_suggestions:
+    datagram: data gram
+- :file: lib/em/connection.rb
+  :object: EventMachine::Connection#stream_file_data
+  :location: 703
+  :errors:
+  - errbacks
+  - filesystem
+  :errors_with_suggestions:
+    errbacks: err backs
+    filesystem: file system
+- :file: lib/em/connection.rb
+  :object: EventMachine::Connection#notify_writable=
+  :location: 738
+  :errors:
+  - writeability
+  :errors_with_suggestions:
+    writeability: write ability
+- :file: lib/em/connection.rb
+  :object: EventMachine::Connection#notify_writable?
+  :location: 746
+  :errors:
+  - writability
+  :errors_with_suggestions:
+    writability: writ ability
+- :file: lib/em/deferrable.rb
+  :object: EventMachine::Deferrable#errback
+  :location: 63
+  :errors:
+  - errback
+  :errors_with_suggestions:
+    errback: err back
+- :file: lib/em/deferrable.rb
+  :object: EventMachine::Deferrable#cancel_errback
+  :location: 82
+  :errors:
+  - errback
+  :errors_with_suggestions:
+    errback: err back
+- :file: lib/em/deferrable.rb
+  :object: EventMachine::Deferrable#set_deferred_status
+  :location: 89
+  :errors:
+  - Haines
+  - Implementors
+  - Twisted's
+  - deferrable
+  - errback
+  - errbacks
+  - sugarings
+  - unshift
+  :errors_with_suggestions:
+    Haines: Hines
+    Implementors: Implementations
+    Twisted's: Twister's
+    deferrable: deferral
+    errback: err back
+    errbacks: err backs
+    sugarings: sugaring
+    unshift: downshift
+- :file: lib/em/deferrable.rb
+  :object: EventMachine::Deferrable#timeout
+  :location: 166
+  :errors:
+  - cancelled
+  - errbacks
+  :errors_with_suggestions:
+    cancelled: canceled
+    errbacks: err backs
+- :file: lib/em/file_watch.rb
+  :object: EventMachine::FileWatch#file_modified
+  :location: 42
+  :errors:
+  - subclasses
+  :errors_with_suggestions:
+    subclasses: sub classes
+- :file: lib/em/file_watch.rb
+  :object: EventMachine::FileWatch#file_deleted
+  :location: 48
+  :errors:
+  - subclasses
+  :errors_with_suggestions:
+    subclasses: sub classes
+- :file: lib/em/file_watch.rb
+  :object: EventMachine::FileWatch#file_moved
+  :location: 59
+  :errors:
+  - subclasses
+  :errors_with_suggestions:
+    subclasses: sub classes
+- :file: lib/em/file_watch.rb
+  :object: EventMachine::FileWatch#stop_watching
+  :location: 65
+  :errors:
+  - inotify
+  - kqueue
+  :errors_with_suggestions:
+    inotify: notify
+    kqueue: queue
+- :file: lib/em/process_watch.rb
+  :object: EventMachine::ProcessWatch
+  :location: 3
+  :errors:
+  - subclassed
+  :errors_with_suggestions:
+    subclassed: sub classed
+- :file: lib/em/process_watch.rb
+  :object: EventMachine::ProcessWatch#pid
+  :location: 21
+  :errors:
+  - pid
+  :errors_with_suggestions:
+    pid: peed
+- :file: lib/em/process_watch.rb
+  :object: EventMachine::ProcessWatch#process_forked
+  :location: 26
+  :errors:
+  - pid
+  - prcess
+  :errors_with_suggestions:
+    pid: peed
+    prcess: press
+- :file: lib/em/protocols/socks4.rb
+  :object: EventMachine::Protocols::Socks4
+  :location: 3
+  :errors:
+  - v4
+  :errors_with_suggestions:
+    v4: v
+- :file: lib/em/threaded_resource.rb
+  :object: EventMachine::ThreadedResource
+  :location: 2
+  :errors:
+  - async
+  - cassandra
+  - cpu
+  - ish
+  :errors_with_suggestions:
+    async: sync
+    cassandra: Cassandra
+    cpu: CPU
+    ish: is
+- :file: lib/em/protocols/memcache.rb
+  :object: EventMachine::Protocols::Memcache
+  :location: 3
+  :errors:
+  - memcached
+  - noreply
+  :errors_with_suggestions:
+    memcached: Memcached
+    noreply: no reply
+- :file: lib/em/protocols/memcache.rb
+  :object: EventMachine::Protocols::Memcache.connect
+  :location: 113
+  :errors:
+  - memcached
+  :errors_with_suggestions:
+    memcached: Memcached
+- :file: lib/em/protocols/memcache.rb
+  :object: EventMachine::Protocols::Memcache#receive_data
+  :location: 153
+  :errors:
+  - 19Feb09
+  :errors_with_suggestions:
+    19Feb09: lifeboat
+- :file: lib/em/protocols/saslauth.rb
+  :object: EventMachine::Protocols::SASLauth
+  :location: 30
+  :errors:
+  - auth
+  - authd
+  - chmod
+  - distro
+  - imap
+  - imapd
+  - libs
+  - pipelined
+  - pwcheck
+  - reimplement
+  - saslauthd
+  - sendmail
+  - subclasses
+  :errors_with_suggestions:
+    auth: auto
+    authd: author
+    chmod: ch mod
+    distro: bistro
+    imap: imp
+    imapd: imaged
+    libs: lobs
+    pipelined: pipelines
+    pwcheck: paycheck
+    reimplement: re implement
+    saslauthd: Sasquatch
+    sendmail: send mail
+    subclasses: sub classes
+- :file: lib/em/protocols/saslauth.rb
+  :object: EventMachine::Protocols::SASLauthclient
+  :location: 118
+  :errors:
+  - authd
+  - distro
+  - imapd
+  - libs
+  - pwcheck
+  - saslauthd
+  - sendmail
+  :errors_with_suggestions:
+    authd: author
+    distro: bistro
+    imapd: imaged
+    libs: lobs
+    pwcheck: paycheck
+    saslauthd: Sasquatch
+    sendmail: send mail
+- :file: lib/em/protocols/linetext2.rb
+  :object: EventMachine::Protocols::LineText2#set_line_mode
+  :location: 123
+  :errors:
+  - umprocessed
+  :errors_with_suggestions:
+    umprocessed: unprocessed
+- :file: lib/em/protocols/linetext2.rb
+  :object: EventMachine::Protocols::LineText2#receive_line
+  :location: 160
+  :errors:
+  - subclassed
+  :errors_with_suggestions:
+    subclassed: sub classed
+- :file: lib/em/protocols/linetext2.rb
+  :object: EventMachine::Protocols::LineText2#receive_binary_data
+  :location: 165
+  :errors:
+  - subclassed
+  :errors_with_suggestions:
+    subclassed: sub classed
+- :file: lib/em/protocols/linetext2.rb
+  :object: EventMachine::Protocols::LineText2#receive_end_of_binary_data
+  :location: 170
+  :errors:
+  - subclassed
+  :errors_with_suggestions:
+    subclassed: sub classed
+- :file: lib/em/protocols/postgres3.rb
+  :object: EventMachine::Protocols::Postgres3
+  :location: 54
+  :errors:
+  - Deferrables
+  - Neumann
+  - Postgres
+  - Wire3
+  - boolean
+  - deferrable
+  - errback
+  - evented
+  - monkeypatch
+  - postgres
+  - rb
+  - readbytes
+  :errors_with_suggestions:
+    Deferrables: Deferrals
+    Neumann: Humanness
+    Postgres: Postures
+    Wire3: Wire
+    boolean: Boolean
+    deferrable: deferral
+    errback: err back
+    evented: evened
+    monkeypatch: monkey patch
+    postgres: postures
+    rb: Rb
+    readbytes: read bytes
+- :file: lib/em/protocols/postgres3.rb
+  :object: EventMachine::Protocols::Postgres3#dispatch_conn_message
+  :location: 178
+  :errors:
+  - postgres
+  :errors_with_suggestions:
+    postgres: postures
+- :file: lib/em/protocols/postgres3.rb
+  :object: EventMachine::Protocols::Postgres3#dispatch_query_message
+  :location: 220
+  :errors:
+  - postgres
+  :errors_with_suggestions:
+    postgres: postures
+- :file: lib/em/protocols/smtpserver.rb
+  :object: EventMachine::Protocols::SmtpServer
+  :location: 29
+  :errors:
+  - overridable
+  :errors_with_suggestions:
+    overridable: overridden
+- :file: lib/em/protocols/smtpserver.rb
+  :object: EventMachine::Protocols::SmtpServer::@@parms
+  :location: 143
+  :errors:
+  - Chunksize
+  :errors_with_suggestions:
+    Chunksize: Chunk size
+- :file: lib/em/protocols/smtpserver.rb
+  :object: EventMachine::Protocols::SmtpServer#post_init
+  :location: 172
+  :errors:
+  - parms
+  :errors_with_suggestions:
+    parms: prams
+- :file: lib/em/protocols/smtpserver.rb
+  :object: EventMachine::Protocols::SmtpServer#reset_protocol_state
+  :location: 252
+  :errors:
+  - overridable
+  - pre
+  :errors_with_suggestions:
+    overridable: overridden
+    pre: per
+- :file: lib/em/protocols/smtpserver.rb
+  :object: EventMachine::Protocols::SmtpServer#process_ehlo
+  :location: 283
+  :errors:
+  - auth
+  - tls
+  :errors_with_suggestions:
+    auth: auto
+    tls: ts
+- :file: lib/em/protocols/smtpserver.rb
+  :object: EventMachine::Protocols::SmtpServer#process_auth
+  :location: 343
+  :errors:
+  - 3xx
+  - auth
+  :errors_with_suggestions:
+    3xx: xx
+    auth: auto
+- :file: lib/em/protocols/smtpserver.rb
+  :object: EventMachine::Protocols::SmtpServer#process_starttls
+  :location: 428
+  :errors:
+  - parms
+  - pem
+  - ssl
+  :errors_with_suggestions:
+    parms: prams
+    pem: pen
+    ssl: isl
+- :file: lib/em/protocols/smtpserver.rb
+  :object: EventMachine::Protocols::SmtpServer#process_rcpt_to
+  :location: 481
+  :errors:
+  - deferrable
+  :errors_with_suggestions:
+    deferrable: deferral
+- :file: lib/em/protocols/smtpserver.rb
+  :object: EventMachine::Protocols::SmtpServer#process_data_line
+  :location: 526
+  :errors:
+  - behaviour
+  - dup
+  :errors_with_suggestions:
+    behaviour: behavior
+    dup: pud
+- :file: lib/em/protocols/smtpserver.rb
+  :object: EventMachine::Protocols::SmtpServer#receive_ehlo_domain
+  :location: 593
+  :errors:
+  - overridable
+  :errors_with_suggestions:
+    overridable: overridden
+- :file: lib/em/protocols/httpclient2.rb
+  :object: EventMachine::Protocols::HttpClient2::Request#receive_chunk_header
+  :location: 136
+  :errors:
+  - pgh
+  :errors_with_suggestions:
+    pgh: pf
+- :file: lib/em/protocols/httpclient2.rb
+  :object: EventMachine::Protocols::HttpClient2.connect
+  :location: 241
+  :errors:
+  - hostname
+  - ip
+  :errors_with_suggestions:
+    hostname: host name
+    ip: IP
+- :file: lib/em/protocols/httpclient2.rb
+  :object: EventMachine::Protocols::HttpClient2#get
+  :location: 262
+  :errors:
+  - url
+  :errors_with_suggestions:
+    url: URL
+- :file: lib/em/protocols/httpclient2.rb
+  :object: EventMachine::Protocols::HttpClient2#post
+  :location: 275
+  :errors:
+  - url
+  - wtf
+  :errors_with_suggestions:
+    url: URL
+    wtf: wt
+- :file: lib/em/protocols/line_and_text.rb
+  :object: EventMachine::Protocols::LineAndTextProtocol#set_binary_mode
+  :location: 85
+  :errors:
+  - Specifiyng
+  :errors_with_suggestions:
+    Specifiyng: Specifying
+- :file: lib/em/protocols/object_protocol.rb
+  :object: EventMachine::Protocols::ObjectProtocol#serializer
+  :location: 14
+  :errors:
+  - deserializer
+  - serializer
+  :errors_with_suggestions:
+    deserializer: serialize
+    serializer: serialize
+- :file: lib/em/protocols/header_and_content.rb
+  :object: EventMachine::Protocols::HeaderAndContentProtocol
+  :location: 29
+  :errors:
+  - 13Sep08
+  - subclassed
+  :errors_with_suggestions:
+    13Sep08: Josephs
+    subclassed: sub classed
+

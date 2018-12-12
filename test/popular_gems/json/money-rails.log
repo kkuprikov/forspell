@@ -1,0 +1,41 @@
+---
+- :file: lib/money-rails/mongoid/two.rb
+  :object: Money
+  :location: 1
+  :errors:
+  - compat
+  - de
+  - mongoid
+  :errors_with_suggestions:
+    compat: compact
+    de: DE
+    mongoid: mongoloid
+- :file: lib/money-rails/mongoid/two.rb
+  :object: Money#deserialize
+  :location: 8
+  :errors:
+  - Mongo
+  :errors_with_suggestions:
+    Mongo: Mongol
+- :file: lib/money-rails/mongoid/two.rb
+  :object: Money#serialize
+  :location: 16
+  :errors:
+  - Mongo
+  :errors_with_suggestions:
+    Mongo: Mongol
+- :file: lib/money-rails/configuration.rb
+  :object: MoneyRails::Configuration#configure
+  :location: 11
+  :errors:
+  - initializer
+  :errors_with_suggestions:
+    initializer: initialize
+- :file: lib/money-rails/active_model/validator.rb
+  :object: MoneyRails::ActiveModel::MoneyValidator#normalize_raw_value!
+  :location: 116
+  :errors:
+  - whitespaces
+  :errors_with_suggestions:
+    whitespaces: white spaces
+

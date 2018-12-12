@@ -1,19 +1,113 @@
-# Logfile created on 2018-12-11 15:52:48 +0300 by logger.rb/56815
-lib/mime/types/deprecations.rb:7: 'namespace' is incorrect, possible suggestion is 'name space'
-lib/mime/type.rb:32: 'subtype' is incorrect, possible suggestion is 'sub type'
-lib/mime/type.rb:76: 'applicaton' is incorrect, possible suggestion is 'application'
-lib/mime/type.rb:76: 'eruby' is incorrect, possible suggestion is 'ruby'
-lib/mime/type.rb:142: 'Obselete' is incorrect, possible suggestion is 'Obsolete'
-lib/mime/type.rb:350: 'I18n' is incorrect, possible suggestion is 'Ivan'
-lib/mime/type.rb:400: 'Indicateswhether' is incorrect, possible suggestion is 'Indicates whether'
-lib/mime/type.rb:400: 'Indicateswhether' is incorrect, possible suggestion is 'Indicates whether'
-lib/mime/type.rb:492: 'behaviour' is incorrect, possible suggestion is 'behavior'
-lib/mime/type.rb:503: 'I18n' is incorrect, possible suggestion is 'Ivan'
-lib/mime/types.rb:183: 'truthy' is incorrect, possible suggestion is 'truth'
-lib/mime/types/loader.rb:12: 'yaml' is incorrect, possible suggestion is 'yam'
-lib/mime/types/loader.rb:12: 'yml' is incorrect, possible suggestion is 'ml'
-lib/mime/types/logger.rb:12: 'unformatted' is incorrect, possible suggestion is 'formatted'
-lib/mime/types/logger.rb:12: 'unformatted' is incorrect, possible suggestion is 'formatted'
-lib/mime/types/_columnar.rb:5: 'Mutex' is incorrect, possible suggestion is 'Mute'
-lib/mime/types/container.rb:6: 'resuls' is incorrect, possible suggestion is 'results'
-lib/mime/types/container.rb:6: 'serializable' is incorrect, possible suggestion is 'serialization'
+---
+- :file: lib/mime/types/deprecations.rb
+  :object: MIME
+  :location: 7
+  :errors:
+  - namespace
+  :errors_with_suggestions:
+    namespace: name space
+- :file: lib/mime/type.rb
+  :object: MIME::Type::InvalidContentType
+  :location: 32
+  :errors:
+  - subtype
+  :errors_with_suggestions:
+    subtype: sub type
+- :file: lib/mime/type.rb
+  :object: MIME::Type#initialize
+  :location: 76
+  :errors:
+  - applicaton
+  - eruby
+  :errors_with_suggestions:
+    applicaton: application
+    eruby: ruby
+- :file: lib/mime/type.rb
+  :object: MIME::Type#priority_compare
+  :location: 142
+  :errors:
+  - Obselete
+  :errors_with_suggestions:
+    Obselete: Obsolete
+- :file: lib/mime/type.rb
+  :object: MIME::Type#i18n_key
+  :location: 350
+  :errors:
+  - I18n
+  :errors_with_suggestions:
+    I18n: Ivan
+- :file: lib/mime/type.rb
+  :object: MIME::Type#signature
+  :location: 400
+  :errors:
+  - Indicateswhether
+  :errors_with_suggestions:
+    Indicateswhether: Indicates whether
+- :file: lib/mime/type.rb
+  :object: MIME::Type#signature=
+  :location: 400
+  :errors:
+  - Indicateswhether
+  :errors_with_suggestions:
+    Indicateswhether: Indicates whether
+- :file: lib/mime/type.rb
+  :object: MIME::Type.simplified
+  :location: 492
+  :errors:
+  - behaviour
+  :errors_with_suggestions:
+    behaviour: behavior
+- :file: lib/mime/type.rb
+  :object: MIME::Type.i18n_key
+  :location: 503
+  :errors:
+  - I18n
+  :errors_with_suggestions:
+    I18n: Ivan
+- :file: lib/mime/types.rb
+  :object: MIME::Types#add_type
+  :location: 183
+  :errors:
+  - truthy
+  :errors_with_suggestions:
+    truthy: truth
+- :file: lib/mime/types/loader.rb
+  :object: MIME::Types::Loader
+  :location: 12
+  :errors:
+  - yaml
+  - yml
+  :errors_with_suggestions:
+    yaml: yam
+    yml: ml
+- :file: lib/mime/types/logger.rb
+  :object: MIME::Types.logger
+  :location: 12
+  :errors:
+  - unformatted
+  :errors_with_suggestions:
+    unformatted: formatted
+- :file: lib/mime/types/logger.rb
+  :object: MIME::Types.logger=
+  :location: 12
+  :errors:
+  - unformatted
+  :errors_with_suggestions:
+    unformatted: formatted
+- :file: lib/mime/types/_columnar.rb
+  :object: MIME::Types::Columnar
+  :location: 5
+  :errors:
+  - Mutex
+  :errors_with_suggestions:
+    Mutex: Mute
+- :file: lib/mime/types/container.rb
+  :object: MIME::Types::Container
+  :location: 6
+  :errors:
+  - resuls
+  - serializable
+  :errors_with_suggestions:
+    resuls: results
+    serializable: serialization
+

@@ -1,0 +1,553 @@
+---
+- :file: lib/ffi/io.rb
+  :object: FFI
+  :location: 64
+  :errors:
+  - embbed
+  :errors_with_suggestions:
+    embbed: embed
+- :file: lib/ffi/enum.rb
+  :object: FFI::Enum
+  :location: 72
+  :errors:
+  - enum
+  :errors_with_suggestions:
+    enum: menu
+- :file: lib/ffi/enum.rb
+  :object: FFI::Enum#[]
+  :location: 125
+  :errors:
+  - enum
+  :errors_with_suggestions:
+    enum: menu
+- :file: lib/ffi/enum.rb
+  :object: FFI::Bitmask
+  :location: 173
+  :errors:
+  - bitmask
+  - enum
+  - enums
+  :errors_with_suggestions:
+    bitmask: bit mask
+    enum: menu
+    enums: menus
+- :file: lib/ffi/enum.rb
+  :object: FFI::Bitmask#[]
+  :location: 217
+  :errors:
+  - bitmask
+  :errors_with_suggestions:
+    bitmask: bit mask
+- :file: lib/ffi/enum.rb
+  :object: FFI::Bitmask#to_native
+  :location: 251
+  :errors:
+  - bitmask
+  :errors_with_suggestions:
+    bitmask: bit mask
+- :file: lib/ffi/types.rb
+  :object: FFI.find_type
+  :location: 50
+  :errors:
+  - objet
+  :errors_with_suggestions:
+    objet: object
+- :file: lib/ffi/types.rb
+  :object: FFI::StrPtrConverter
+  :location: 151
+  :errors:
+  - typedef
+  :errors_with_suggestions:
+    typedef: type def
+- :file: ext/ffi_c/StructLayout.c
+  :object: FFI::StructLayout
+  :location: 623
+  :errors:
+  - struct
+  :errors_with_suggestions:
+    struct: strict
+- :file: lib/ffi/struct.rb
+  :object: FFI::StructLayout::Enum
+  :location: 53
+  :errors:
+  - enum
+  :errors_with_suggestions:
+    enum: menu
+- :file: lib/ffi/struct.rb
+  :object: FFI::StructLayout::Enum#get
+  :location: 56
+  :errors:
+  - ptr
+  :errors_with_suggestions:
+    ptr: pt
+- :file: lib/ffi/struct.rb
+  :object: FFI::StructLayout::Enum#put
+  :location: 63
+  :errors:
+  - ptr
+  :errors_with_suggestions:
+    ptr: pt
+- :file: ext/ffi_c/Struct.c
+  :object: FFI::Struct
+  :location: 752
+  :errors:
+  - struct
+  :errors_with_suggestions:
+    struct: strict
+- :file: lib/ffi/struct.rb
+  :object: FFI::Struct#size
+  :location: 103
+  :errors:
+  - struct
+  :errors_with_suggestions:
+    struct: strict
+- :file: lib/ffi/struct.rb
+  :object: FFI::Struct#clear
+  :location: 136
+  :errors:
+  - struct
+  :errors_with_suggestions:
+    struct: strict
+- :file: lib/ffi/struct.rb
+  :object: FFI::Struct#to_ptr
+  :location: 143
+  :errors:
+  - struct
+  :errors_with_suggestions:
+    struct: strict
+- :file: lib/ffi/struct.rb
+  :object: FFI::Struct.size
+  :location: 149
+  :errors:
+  - struct
+  :errors_with_suggestions:
+    struct: strict
+- :file: lib/ffi/struct.rb
+  :object: FFI::Struct.size=
+  :location: 155
+  :errors:
+  - struct
+  :errors_with_suggestions:
+    struct: strict
+- :file: lib/ffi/library.rb
+  :object: FFI::Library#attach_function
+  :location: 201
+  :errors:
+  - func
+  :errors_with_suggestions:
+    func: fun
+- :file: lib/ffi/library.rb
+  :object: FFI::Library#attach_variable
+  :location: 306
+  :errors:
+  - cname
+  :errors_with_suggestions:
+    cname: came
+- :file: lib/ffi/library.rb
+  :object: FFI::Library#generic_enum
+  :location: 449
+  :errors:
+  - enum
+  :errors_with_suggestions:
+    enum: menu
+- :file: lib/ffi/library.rb
+  :object: FFI::Library#enum_type
+  :location: 554
+  :errors:
+  - enum
+  :errors_with_suggestions:
+    enum: menu
+- :file: lib/ffi/library.rb
+  :object: FFI::Library#enum_value
+  :location: 561
+  :errors:
+  - enum
+  :errors_with_suggestions:
+    enum: menu
+- :file: ext/ffi_c/Pointer.c
+  :object: FFI::Pointer
+  :location: 470
+  :errors:
+  - autorelease
+  - behaviour
+  :errors_with_suggestions:
+    autorelease: auto release
+    behaviour: behavior
+- :file: lib/ffi/pointer.rb
+  :object: FFI::Pointer#read_string
+  :location: 46
+  :errors:
+  - len
+  :errors_with_suggestions:
+    len: Len
+- :file: lib/ffi/pointer.rb
+  :object: FFI::Pointer#read_string_length
+  :location: 59
+  :errors:
+  - len
+  :errors_with_suggestions:
+    len: Len
+- :file: lib/ffi/pointer.rb
+  :object: FFI::Pointer#write_string_length
+  :location: 78
+  :errors:
+  - len
+  - str
+  :errors_with_suggestions:
+    len: Len
+    str: st
+- :file: lib/ffi/pointer.rb
+  :object: FFI::Pointer#write_string
+  :location: 89
+  :errors:
+  - len
+  - str
+  :errors_with_suggestions:
+    len: Len
+    str: st
+- :file: lib/ffi/pointer.rb
+  :object: FFI::Pointer#write_array_of_type
+  :location: 118
+  :errors:
+  - ary
+  :errors_with_suggestions:
+    ary: ray
+- :file: lib/ffi/platform.rb
+  :object: FFI::Platform.is_os
+  :location: 78
+  :errors:
+  - os
+  :errors_with_suggestions:
+    os: OS
+- :file: lib/ffi/platform.rb
+  :object: FFI::Platform.solaris?
+  :location: 151
+  :errors:
+  - Solaris
+  :errors_with_suggestions:
+    Solaris: Polaris
+- :file: lib/ffi/platform.rb
+  :object: FFI::Platform.unix?
+  :location: 157
+  :errors:
+  - unix
+  :errors_with_suggestions:
+    unix: UNIX
+- :file: lib/ffi/variadic.rb
+  :object: FFI::VariadicInvoker#attach
+  :location: 59
+  :errors:
+  - invoker
+  - mname
+  :errors_with_suggestions:
+    invoker: invoke
+    mname: name
+- :file: lib/ffi/autopointer.rb
+  :object: FFI::AutoPointer#autorelease=
+  :location: 106
+  :errors:
+  - Autorelease
+  - autorelease
+  :errors_with_suggestions:
+    Autorelease: Auto release
+    autorelease: auto release
+- :file: lib/ffi/autopointer.rb
+  :object: FFI::AutoPointer#autorelease?
+  :location: 113
+  :errors:
+  - Autorelease
+  - autorelease
+  :errors_with_suggestions:
+    Autorelease: Auto release
+    autorelease: auto release
+- :file: lib/ffi/autopointer.rb
+  :object: FFI::AutoPointer::Releaser
+  :location: 119
+  :errors:
+  - releaser
+  :errors_with_suggestions:
+    releaser: release
+- :file: lib/ffi/autopointer.rb
+  :object: FFI::AutoPointer::Releaser#call
+  :location: 147
+  :errors:
+  - autorelease
+  :errors_with_suggestions:
+    autorelease: auto release
+- :file: lib/ffi/autopointer.rb
+  :object: FFI::AutoPointer::DefaultReleaser
+  :location: 154
+  :errors:
+  - Proc
+  :errors_with_suggestions:
+    Proc: Prof
+- :file: lib/ffi/autopointer.rb
+  :object: FFI::AutoPointer::DefaultReleaser#release
+  :location: 158
+  :errors:
+  - ptr
+  :errors_with_suggestions:
+    ptr: pt
+- :file: lib/ffi/autopointer.rb
+  :object: FFI::AutoPointer::CallableReleaser
+  :location: 166
+  :errors:
+  - Proc
+  :errors_with_suggestions:
+    Proc: Prof
+- :file: lib/ffi/autopointer.rb
+  :object: FFI::AutoPointer::CallableReleaser#release
+  :location: 169
+  :errors:
+  - Proc
+  - ptr
+  :errors_with_suggestions:
+    Proc: Prof
+    ptr: pt
+- :file: lib/ffi/struct_layout_builder.rb
+  :object: FFI::StructLayoutBuilder
+  :location: 34
+  :errors:
+  - struct
+  :errors_with_suggestions:
+    struct: strict
+- :file: lib/ffi/struct_layout_builder.rb
+  :object: FFI::StructLayoutBuilder#add_struct
+  :location: 148
+  :errors:
+  - struct
+  :errors_with_suggestions:
+    struct: strict
+- :file: lib/ffi/struct_layout_builder.rb
+  :object: FFI::StructLayoutBuilder#build
+  :location: 165
+  :errors:
+  - struct
+  :errors_with_suggestions:
+    struct: strict
+- :file: lib/ffi/tools/const_generator.rb
+  :object: FFI::ConstGenerator#dump_constants
+  :location: 151
+  :errors:
+  - io
+  :errors_with_suggestions:
+    io: oi
+- :file: lib/ffi/tools/const_generator.rb
+  :object: FFI::ConstGenerator::Constant#to_ruby
+  :location: 221
+  :errors:
+  - evaluable
+  :errors_with_suggestions:
+    evaluable: valuable
+- :file: lib/ffi/tools/struct_generator.rb
+  :object: FFI::StructGenerator
+  :location: 5
+  :errors:
+  - struct
+  :errors_with_suggestions:
+    struct: strict
+- :file: ext/ffi_c/Type.c
+  :object: FFI::Type
+  :location: 259
+  :errors:
+  - embbed
+  :errors_with_suggestions:
+    embbed: embed
+- :file: ext/ffi_c/Type.c
+  :object: FFI::NativeType
+  :location: 284
+  :errors:
+  - objets
+  :errors_with_suggestions:
+    objets: objects
+- :file: ext/ffi_c/Buffer.c
+  :object: FFI::Buffer#order
+  :location: 248
+  :errors:
+  - endianness
+  :errors_with_suggestions:
+    endianness: trendiness
+- :file: ext/ffi_c/Pointer.c
+  :object: FFI::Pointer#order
+  :location: 329
+  :errors:
+  - endianness
+  :errors_with_suggestions:
+    endianness: trendiness
+- :file: ext/ffi_c/Pointer.c
+  :object: FFI::Pointer#autorelease=
+  :location: 415
+  :errors:
+  - Autorelease
+  - autorelease
+  :errors_with_suggestions:
+    Autorelease: Auto release
+    autorelease: auto release
+- :file: ext/ffi_c/Pointer.c
+  :object: FFI::Pointer#autorelease?
+  :location: 432
+  :errors:
+  - Autorelease
+  - autorelease
+  :errors_with_suggestions:
+    Autorelease: Auto release
+    autorelease: auto release
+- :file: ext/ffi_c/Function.c
+  :object: FFI::Function#initialize
+  :location: 191
+  :errors:
+  - Proc
+  :errors_with_suggestions:
+    Proc: Prof
+- :file: ext/ffi_c/Function.c
+  :object: FFI::Function#autorelease=
+  :location: 415
+  :errors:
+  - autorelease
+  :errors_with_suggestions:
+    autorelease: auto release
+- :file: ext/ffi_c/Function.c
+  :object: FFI::Function#autorelease
+  :location: 978
+  :errors:
+  - autorelease
+  :errors_with_suggestions:
+    autorelease: auto release
+- :file: ext/ffi_c/Function.c
+  :object: FFI::Function#autorelease?
+  :location: 985
+  :errors:
+  - autorelease
+  :errors_with_suggestions:
+    autorelease: auto release
+- :file: ext/ffi_c/LastError.c
+  :object: FFI::LastError
+  :location: 168
+  :errors:
+  - errno
+  :errors_with_suggestions:
+    errno: err no
+- :file: ext/ffi_c/LastError.c
+  :object: FFI::LastError#error
+  :location: 
+  :errors:
+  - errno
+  :errors_with_suggestions:
+    errno: err no
+- :file: ext/ffi_c/LastError.c
+  :object: FFI::LastError.error
+  :location: 118
+  :errors:
+  - errno
+  :errors_with_suggestions:
+    errno: err no
+- :file: ext/ffi_c/LastError.c
+  :object: FFI::LastError#error=
+  :location: 
+  :errors:
+  - errno
+  :errors_with_suggestions:
+    errno: err no
+- :file: ext/ffi_c/LastError.c
+  :object: FFI::LastError.error=
+  :location: 130
+  :errors:
+  - errno
+  :errors_with_suggestions:
+    errno: err no
+- :file: ext/ffi_c/StructLayout.c
+  :object: FFI::StructLayout::Function#put
+  :location: 270
+  :errors:
+  - Proc
+  - proc
+  :errors_with_suggestions:
+    Proc: Prof
+    proc: crop
+- :file: ext/ffi_c/DataConverter.c
+  :object: FFI::DataConverter
+  :location: 76
+  :errors:
+  - overriden
+  - somes
+  :errors_with_suggestions:
+    overriden: override
+    somes: domes
+- :file: 
+  :object: FFI::AbstractMemory#put_array_of_float32
+  :location: 884
+  :errors:
+  - ary
+  :errors_with_suggestions:
+    ary: ray
+- :file: 
+  :object: FFI::AbstractMemory#write_array_of_float
+  :location: 902
+  :errors:
+  - ary
+  :errors_with_suggestions:
+    ary: ray
+- :file: 
+  :object: FFI::AbstractMemory#put_array_of_float64
+  :location: 966
+  :errors:
+  - ary
+  :errors_with_suggestions:
+    ary: ray
+- :file: 
+  :object: FFI::AbstractMemory#write_array_of_double
+  :location: 984
+  :errors:
+  - ary
+  :errors_with_suggestions:
+    ary: ray
+- :file: ext/ffi_c/AbstractMemory.c
+  :object: FFI::AbstractMemory#[]
+  :location: 646
+  :errors:
+  - accessor
+  :errors_with_suggestions:
+    accessor: accessory
+- :file: ext/ffi_c/DynamicLibrary.c
+  :object: FFI::NativeLibrary
+  :location: 289
+  :errors:
+  - compat
+  :errors_with_suggestions:
+    compat: compact
+- :file: ext/ffi_c/StructByReference.c
+  :object: FFI::StructByReference#from_native
+  :location: 154
+  :errors:
+  - struct
+  :errors_with_suggestions:
+    struct: strict
+- :file: ext/ffi_c/Struct.c
+  :object: StructClass#layout
+  :location: 448
+  :errors:
+  - Struct's
+  :errors_with_suggestions:
+    Struct's: Strut's
+- :file: ext/ffi_c/Struct.c
+  :object: StructClass#layout=
+  :location: 424
+  :errors:
+  - Struct's
+  :errors_with_suggestions:
+    Struct's: Strut's
+- :file: ext/ffi_c/Struct.c
+  :object: StructClass#[]
+  :location: 302
+  :errors:
+  - Acces
+  :errors_with_suggestions:
+    Acces: Aces
+- :file: ext/ffi_c/Struct.c
+  :object: StructClass#null?
+  :location: 463
+  :errors:
+  - Struct's
+  :errors_with_suggestions:
+    Struct's: Strut's
+

@@ -1,0 +1,321 @@
+---
+- :file: lib/faraday.rb
+  :object: Faraday
+  :location: 6
+  :errors:
+  - namespace
+  :errors_with_suggestions:
+    namespace: name space
+- :file: lib/faraday.rb
+  :object: Faraday.lib_path
+  :location: 24
+  :errors:
+  - libs
+  :errors_with_suggestions:
+    libs: lobs
+- :file: lib/faraday.rb
+  :object: Faraday.lib_path=
+  :location: 24
+  :errors:
+  - libs
+  :errors_with_suggestions:
+    libs: lobs
+- :file: lib/faraday.rb
+  :object: Faraday.ignore_env_proxy
+  :location: 37
+  :errors:
+  - faraday
+  :errors_with_suggestions:
+    faraday: Faraday
+- :file: lib/faraday.rb
+  :object: Faraday.ignore_env_proxy=
+  :location: 37
+  :errors:
+  - faraday
+  :errors_with_suggestions:
+    faraday: Faraday
+- :file: lib/faraday.rb
+  :object: Faraday.new
+  :location: 40
+  :errors:
+  - url
+  :errors_with_suggestions:
+    url: URL
+- :file: lib/faraday.rb
+  :object: Faraday::MiddlewareRegistry
+  :location: 137
+  :errors:
+  - middleware
+  :errors_with_suggestions:
+    middleware: middle ware
+- :file: lib/faraday.rb
+  :object: Faraday::MiddlewareRegistry#register_middleware
+  :location: 140
+  :errors:
+  - middleware
+  :errors_with_suggestions:
+    middleware: middle ware
+- :file: lib/faraday.rb
+  :object: Faraday::MiddlewareRegistry#lookup_middleware
+  :location: 173
+  :errors:
+  - middleware
+  :errors_with_suggestions:
+    middleware: middle ware
+- :file: lib/faraday/utils.rb
+  :object: Faraday::Utils::Headers#initialize_copy
+  :location: 29
+  :errors:
+  - dup
+  :errors_with_suggestions:
+    dup: pud
+- :file: lib/faraday/utils.rb
+  :object: Faraday::Utils::ParamsHash
+  :location: 135
+  :errors:
+  - stringified
+  :errors_with_suggestions:
+    stringified: stringiness
+- :file: lib/faraday/utils.rb
+  :object: Faraday::Utils#URI
+  :location: 266
+  :errors:
+  - url
+  :errors_with_suggestions:
+    url: URL
+- :file: lib/faraday/options.rb
+  :object: Faraday::Options
+  :location: 2
+  :errors:
+  - Struct
+  - Subclasses
+  :errors_with_suggestions:
+    Struct: Strict
+    Subclasses: Sub classes
+- :file: lib/faraday/request.rb
+  :object: Faraday::Request
+  :location: 2
+  :errors:
+  - params
+  - urls
+  :errors_with_suggestions:
+    params: paras
+    urls: curls
+- :file: lib/faraday/request.rb
+  :object: Faraday::Request#params=
+  :location: 30
+  :errors:
+  - params
+  :errors_with_suggestions:
+    params: paras
+- :file: lib/faraday/autoload.rb
+  :object: Faraday::AutoloadHelper
+  :location: 2
+  :errors:
+  - autoloadable
+  :errors_with_suggestions:
+    autoloadable: auto loadable
+- :file: lib/faraday/autoload.rb
+  :object: Faraday::AutoloadHelper#load_autoloaded_constants
+  :location: 31
+  :errors:
+  - Mutex
+  - autoloaded
+  :errors_with_suggestions:
+    Mutex: Mute
+    autoloaded: auto loaded
+- :file: lib/faraday/autoload.rb
+  :object: Faraday::AutoloadHelper#all_loaded_constants
+  :location: 41
+  :errors:
+  - autoloaded
+  :errors_with_suggestions:
+    autoloaded: auto loaded
+- :file: lib/faraday/response.rb
+  :object: Faraday::Response::Middleware
+  :location: 5
+  :errors:
+  - middleware
+  :errors_with_suggestions:
+    middleware: middle ware
+- :file: lib/faraday/response.rb
+  :object: Faraday::Response#marshal_dump
+  :location: 77
+  :errors:
+  - marshalled
+  :errors_with_suggestions:
+    marshalled: marshaled
+- :file: lib/faraday/response.rb
+  :object: Faraday::Response#apply_request
+  :location: 89
+  :errors:
+  - env
+  - marshalled
+  - params
+  :errors_with_suggestions:
+    env: enc
+    marshalled: marshaled
+    params: paras
+- :file: lib/faraday/connection.rb
+  :object: Faraday::Connection
+  :location: 2
+  :errors:
+  - middleware
+  :errors_with_suggestions:
+    middleware: middle ware
+- :file: lib/faraday/connection.rb
+  :object: Faraday::Connection#params
+  :location: 17
+  :errors:
+  - unencoded
+  :errors_with_suggestions:
+    unencoded: encoded
+- :file: lib/faraday/connection.rb
+  :object: Faraday::Connection#headers
+  :location: 20
+  :errors:
+  - unencoded
+  :errors_with_suggestions:
+    unencoded: encoded
+- :file: lib/faraday/connection.rb
+  :object: Faraday::Connection#initialize
+  :location: 45
+  :errors:
+  - url
+  :errors_with_suggestions:
+    url: URL
+- :file: lib/faraday/connection.rb
+  :object: Faraday::Connection#params=
+  :location: 94
+  :errors:
+  - unencoded
+  :errors_with_suggestions:
+    unencoded: encoded
+- :file: lib/faraday/connection.rb
+  :object: Faraday::Connection#headers=
+  :location: 99
+  :errors:
+  - unencoded
+  :errors_with_suggestions:
+    unencoded: encoded
+- :file: lib/faraday/connection.rb
+  :object: Faraday::Connection#basic_auth
+  :location: 180
+  :errors:
+  - base64
+  :errors_with_suggestions:
+    base64: basely
+- :file: lib/faraday/connection.rb
+  :object: Faraday::Connection#default_parallel_manager
+  :location: 236
+  :errors:
+  - middleware
+  :errors_with_suggestions:
+    middleware: middle ware
+- :file: lib/faraday/connection.rb
+  :object: Faraday::Connection#url_prefix=
+  :location: 298
+  :errors:
+  - url
+  :errors_with_suggestions:
+    url: URL
+- :file: lib/faraday/connection.rb
+  :object: Faraday::Connection#build_url
+  :location: 342
+  :errors:
+  - url
+  :errors_with_suggestions:
+    url: URL
+- :file: lib/faraday/connection.rb
+  :object: Faraday::Connection#run_request
+  :location: 363
+  :errors:
+  - unencoded
+  - url
+  :errors_with_suggestions:
+    unencoded: encoded
+    url: URL
+- :file: lib/faraday/connection.rb
+  :object: Faraday::Connection#build_exclusive_url
+  :location: 402
+  :errors:
+  - params
+  - url
+  :errors_with_suggestions:
+    params: paras
+    url: URL
+- :file: lib/faraday/rack_builder.rb
+  :object: Faraday::RackBuilder
+  :location: 2
+  :errors:
+  - middleware
+  :errors_with_suggestions:
+    middleware: middle ware
+- :file: lib/faraday/rack_builder.rb
+  :object: Faraday::RackBuilder#lock!
+  :location: 73
+  :errors:
+  - middleware
+  :errors_with_suggestions:
+    middleware: middle ware
+- :file: lib/faraday/rack_builder.rb
+  :object: Faraday::RackBuilder#build_response
+  :location: 133
+  :errors:
+  - middleware
+  :errors_with_suggestions:
+    middleware: middle ware
+- :file: lib/faraday/rack_builder.rb
+  :object: Faraday::RackBuilder#app
+  :location: 146
+  :errors:
+  - middleware
+  :errors_with_suggestions:
+    middleware: middle ware
+- :file: lib/faraday/request/retry.rb
+  :object: Faraday::Request::Retry
+  :location: 2
+  :errors:
+  - backoff
+  :errors_with_suggestions:
+    backoff: back off
+- :file: lib/faraday/request/retry.rb
+  :object: Faraday::Request::Retry#initialize
+  :location: 81
+  :errors:
+  - env
+  - middleware
+  - retry's
+  :errors_with_suggestions:
+    env: enc
+    middleware: middle ware
+    retry's: terry's
+- :file: lib/faraday/request/retry.rb
+  :object: Faraday::Request::Retry#build_exception_matcher
+  :location: 150
+  :errors:
+  - matcher
+  :errors_with_suggestions:
+    matcher: marcher
+- :file: lib/faraday/adapter/em_http.rb
+  :object: Faraday::Adapter::EMHttp#perform_single_request
+  :location: 139
+  :errors:
+  - pipelining
+  :errors_with_suggestions:
+    pipelining: pipe lining
+- :file: test/adapters/integration.rb
+  :object: Adapters::Integration
+  :location: 6
+  :errors:
+  - middleware
+  :errors_with_suggestions:
+    middleware: middle ware
+- :file: test/middleware_stack_test.rb
+  :object: MiddlewareStackTest#build_stack
+  :location: 161
+  :errors:
+  - middleware
+  :errors_with_suggestions:
+    middleware: middle ware
+

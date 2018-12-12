@@ -1,0 +1,252 @@
+---
+- :file: lib/tilt.rb
+  :object: Tilt::Cache
+  :location: 73
+  :errors:
+  - hashable
+  :errors_with_suggestions:
+    hashable: washable
+- :file: lib/tilt/haml.rb
+  :object: Tilt::HamlTemplate
+  :location: 5
+  :errors:
+  - Haml
+  :errors_with_suggestions:
+    Haml: Ham
+- :file: lib/tilt/haml.rb
+  :object: Tilt::HamlTemplate#prepare
+  :location: 36
+  :errors:
+  - Haml
+  :errors_with_suggestions:
+    Haml: Ham
+- :file: lib/tilt/haml.rb
+  :object: Tilt::HamlTemplate#precompiled_template
+  :location: 52
+  :errors:
+  - Haml
+  - Precompiled
+  :errors_with_suggestions:
+    Haml: Ham
+    Precompiled: Recompiled
+- :file: lib/tilt/less.rb
+  :object: Tilt::LessTemplate
+  :location: 5
+  :errors:
+  - Lessscss
+  :errors_with_suggestions:
+    Lessscss: Lessees
+- :file: lib/tilt/rdoc.rb
+  :object: Tilt::RDocTemplate
+  :location: 7
+  :errors:
+  - rdoc
+  :errors_with_suggestions:
+    rdoc: doc
+- :file: lib/tilt/sass.rb
+  :object: Tilt::ScssTemplate
+  :location: 41
+  :errors:
+  - scss
+  :errors_with_suggestions:
+    scss: sass
+- :file: lib/tilt/yajl.rb
+  :object: Tilt::YajlTemplate
+  :location: 6
+  :errors:
+  - Yajl
+  :errors_with_suggestions:
+    Yajl: Yawl
+- :file: lib/tilt/yajl.rb
+  :object: Tilt::YajlTemplate#decorate
+  :location: 67
+  :errors:
+  - json
+  :errors_with_suggestions:
+    json: son
+- :file: lib/tilt/dummy.rb
+  :object: Tilt::Dummy
+  :location: 1
+  :errors:
+  - autoloading
+  :errors_with_suggestions:
+    autoloading: auto loading
+- :file: lib/tilt/erubi.rb
+  :object: Tilt::ErubiTemplate
+  :location: 5
+  :errors:
+  - Erubi
+  - Erubis
+  :errors_with_suggestions:
+    Erubi: Cherubim
+    Erubis: Rubies
+- :file: lib/tilt/sigil.rb
+  :object: Tilt::SigilTemplate
+  :location: 5
+  :errors:
+  - interpolator
+  :errors_with_suggestions:
+    interpolator: interpolation
+- :file: lib/tilt/erubis.rb
+  :object: Tilt::ErubisTemplate
+  :location: 5
+  :errors:
+  - Erubis
+  :errors_with_suggestions:
+    Erubis: Rubies
+- :file: lib/tilt/liquid.rb
+  :object: Tilt::LiquidTemplate
+  :location: 5
+  :errors:
+  - execuatable
+  - threfore
+  :errors_with_suggestions:
+    execuatable: executable
+    threfore: therefore
+- :file: lib/tilt/maruku.rb
+  :object: Tilt::MarukuTemplate
+  :location: 5
+  :errors:
+  - Maruku
+  :errors_with_suggestions:
+    Maruku: Markup
+- :file: lib/tilt/pandoc.rb
+  :object: Tilt::PandocTemplate
+  :location: 5
+  :errors:
+  - Pandoc
+  :errors_with_suggestions:
+    Pandoc: Pan doc
+- :file: lib/tilt/pandoc.rb
+  :object: Tilt::PandocTemplate#pandoc_options
+  :location: 18
+  :errors:
+  - pandoc
+  :errors_with_suggestions:
+    pandoc: pan doc
+- :file: lib/tilt/mapping.rb
+  :object: Tilt::Mapping
+  :location: 4
+  :errors:
+  - bluecloth
+  - constantize
+  - rdiscount
+  :errors_with_suggestions:
+    bluecloth: blue cloth
+    constantize: Constantine
+    rdiscount: discount
+- :file: lib/tilt/mapping.rb
+  :object: Tilt::Mapping#constant_defined?
+  :location: 265
+  :errors:
+  - autoload
+  :errors_with_suggestions:
+    autoload: auto load
+- :file: lib/tilt/markaby.rb
+  :object: Tilt::MarkabyTemplate
+  :location: 5
+  :errors:
+  - Markaby
+  :errors_with_suggestions:
+    Markaby: Markab
+- :file: lib/tilt/asciidoc.rb
+  :object: Tilt::AsciidoctorTemplate
+  :location: 6
+  :errors:
+  - Asciidoctor
+  :errors_with_suggestions:
+    Asciidoctor: Postdoctoral
+- :file: lib/tilt/kramdown.rb
+  :object: Tilt::KramdownTemplate
+  :location: 5
+  :errors:
+  - Kramdown
+  :errors_with_suggestions:
+    Kramdown: Kramer
+- :file: lib/tilt/nokogiri.rb
+  :object: Tilt::NokogiriTemplate
+  :location: 5
+  :errors:
+  - Nokogiri
+  :errors_with_suggestions:
+    Nokogiri: Nonrigid
+- :file: lib/tilt/template.rb
+  :object: Tilt::Template
+  :location: 18
+  :errors:
+  - Subclasses
+  :errors_with_suggestions:
+    Subclasses: Sub classes
+- :file: lib/tilt/template.rb
+  :object: Tilt::Template#basename
+  :location: 114
+  :errors:
+  - basename
+  :errors_with_suggestions:
+    basename: base name
+- :file: lib/tilt/template.rb
+  :object: Tilt::Template#name
+  :location: 119
+  :errors:
+  - basename
+  :errors_with_suggestions:
+    basename: base name
+- :file: lib/tilt/template.rb
+  :object: Tilt::Template#eval_file
+  :location: 124
+  :errors:
+  - backtraces
+  :errors_with_suggestions:
+    backtraces: backtracks
+- :file: lib/tilt/template.rb
+  :object: Tilt::Template#default_encoding
+  :location: 143
+  :errors:
+  - data's
+  :errors_with_suggestions:
+    data's: date's
+- :file: lib/tilt/template.rb
+  :object: Tilt::Template#prepare
+  :location: 151
+  :errors:
+  - Subclasses
+  :errors_with_suggestions:
+    Subclasses: Sub classes
+- :file: lib/tilt/template.rb
+  :object: Tilt::Template#evaluate
+  :location: 160
+  :errors:
+  - Subclasses
+  :errors_with_suggestions:
+    Subclasses: Sub classes
+- :file: lib/tilt/template.rb
+  :object: Tilt::Template#precompiled
+  :location: 173
+  :errors:
+  - postamble
+  - subclasses
+  :errors_with_suggestions:
+    postamble: post amble
+    subclasses: sub classes
+- :file: lib/tilt/redcarpet.rb
+  :object: Tilt::Redcarpet1Template
+  :location: 5
+  :errors:
+  - Redcarpet
+  :errors_with_suggestions:
+    Redcarpet: Red carpet
+- :file: lib/tilt/redcarpet.rb
+  :object: Tilt::Redcarpet2Template
+  :location: 34
+  :errors:
+  - Redcarpet
+  :errors_with_suggestions:
+    Redcarpet: Red carpet
+- :file: lib/tilt/rst-pandoc.rb
+  :object: Tilt::RstPandocTemplate
+  :location: 5
+  :errors:
+  - Pandoc
+  :errors_with_suggestions:
+    Pandoc: Pan doc
+

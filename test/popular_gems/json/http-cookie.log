@@ -1,0 +1,178 @@
+---
+- :file: lib/http/cookie.rb
+  :object: HTTP::Cookie#initialize
+  :location: 108
+  :errors:
+  - 0's
+  - downcased
+  :errors_with_suggestions:
+    0's: E's
+    downcased: down cased
+- :file: lib/http/cookie.rb
+  :object: HTTP::Cookie.cookie_value
+  :location: 329
+  :errors:
+  - name1
+  - name2
+  - value2
+  :errors_with_suggestions:
+    name1: name
+    name2: name
+    value2: value
+- :file: lib/http/cookie.rb
+  :object: HTTP::Cookie#httponly
+  :location: 473
+  :errors:
+  - http
+  :errors_with_suggestions:
+    http: HTTP
+- :file: lib/http/cookie.rb
+  :object: HTTP::Cookie#httponly=
+  :location: 473
+  :errors:
+  - http
+  :errors_with_suggestions:
+    http: HTTP
+- :file: lib/http/cookie.rb
+  :object: HTTP::Cookie#acceptable_from_uri?
+  :location: 548
+  :errors:
+  - uri
+  :errors_with_suggestions:
+    uri: uric
+- :file: lib/http/cookie.rb
+  :object: HTTP::Cookie#valid_for_uri?
+  :location: 582
+  :errors:
+  - uri
+  :errors_with_suggestions:
+    uri: uric
+- :file: lib/http/cookie.rb
+  :object: HTTP::Cookie#to_yaml_properties
+  :location: 653
+  :errors:
+  - Syck
+  :errors_with_suggestions:
+    Syck: Eyck
+- :file: lib/http/cookie.rb
+  :object: HTTP::Cookie#init_with
+  :location: 665
+  :errors:
+  - Syck
+  - deserialization
+  :errors_with_suggestions:
+    Syck: Eyck
+    deserialization: serialization
+- :file: lib/http/cookie.rb
+  :object: HTTP::Cookie#yaml_initialize
+  :location: 670
+  :errors:
+  - deserialization
+  :errors_with_suggestions:
+    deserialization: serialization
+- :file: lib/http/cookie_jar.rb
+  :object: HTTP::CookieJar#initialize
+  :location: 54
+  :errors:
+  - initializer
+  :errors_with_suggestions:
+    initializer: initialize
+- :file: lib/http/cookie_jar.rb
+  :object: HTTP::CookieJar#initialize_copy
+  :location: 77
+  :errors:
+  - backend
+  :errors_with_suggestions:
+    backend: backed
+- :file: lib/http/cookie_jar.rb
+  :object: HTTP::CookieJar#cookies
+  :location: 127
+  :errors:
+  - url
+  :errors_with_suggestions:
+    url: URL
+- :file: lib/http/cookie_jar.rb
+  :object: HTTP::CookieJar#empty?
+  :location: 134
+  :errors:
+  - url
+  :errors_with_suggestions:
+    url: URL
+- :file: lib/http/cookie_jar.rb
+  :object: HTTP::CookieJar#each
+  :location: 145
+  :errors:
+  - uri
+  :errors_with_suggestions:
+    uri: uric
+- :file: lib/http/cookie/scanner.rb
+  :object: HTTP::Cookie::Scanner::RE_WSP
+  :location: 6
+  :errors:
+  - Whitespace
+  :errors_with_suggestions:
+    Whitespace: White space
+- :file: lib/http/cookie/scanner.rb
+  :object: HTTP::Cookie::Scanner::RE_NAME
+  :location: 9
+  :errors:
+  - whitespace
+  :errors_with_suggestions:
+    whitespace: white space
+- :file: lib/http/cookie_jar/abstract_saver.rb
+  :object: HTTP::CookieJar::AbstractSaver
+  :location: 3
+  :errors:
+  - superclass
+  :errors_with_suggestions:
+    superclass: super class
+- :file: lib/http/cookie_jar/abstract_saver.rb
+  :object: HTTP::CookieJar::AbstractSaver.implementation
+  :location: 8
+  :errors:
+  - http
+  :errors_with_suggestions:
+    http: HTTP
+- :file: lib/http/cookie_jar/abstract_store.rb
+  :object: HTTP::CookieJar::AbstractStore
+  :location: 4
+  :errors:
+  - superclass
+  :errors_with_suggestions:
+    superclass: super class
+- :file: lib/http/cookie_jar/abstract_store.rb
+  :object: HTTP::CookieJar::AbstractStore.implementation
+  :location: 11
+  :errors:
+  - http
+  :errors_with_suggestions:
+    http: HTTP
+- :file: lib/http/cookie_jar/abstract_store.rb
+  :object: HTTP::CookieJar::AbstractStore#each
+  :location: 74
+  :errors:
+  - uri
+  :errors_with_suggestions:
+    uri: uric
+- :file: lib/http/cookie_jar/cookiestxt_saver.rb
+  :object: HTTP::CookieJar::CookiestxtSaver
+  :location: 4
+  :errors:
+  - txt
+  :errors_with_suggestions:
+    txt: text
+- :file: lib/http/cookie_jar/cookiestxt_saver.rb
+  :object: HTTP::CookieJar::CookiestxtSaver#cookie_to_record
+  :location: 55
+  :errors:
+  - txt
+  :errors_with_suggestions:
+    txt: text
+- :file: lib/http/cookie_jar/cookiestxt_saver.rb
+  :object: HTTP::CookieJar::CookiestxtSaver#parse_record
+  :location: 70
+  :errors:
+  - txt
+  :errors_with_suggestions:
+    txt: text
+

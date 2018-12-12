@@ -1,0 +1,1029 @@
+---
+- :file: lib/nokogiri.rb
+  :object: Nokogiri
+  :location: 1
+  :errors:
+  - css
+  - nokogiri
+  - rex
+  - tokenizer
+  :errors_with_suggestions:
+    css: CSS
+    nokogiri: nonrigid
+    rex: Rex
+    tokenizer: tokenism
+- :file: lib/nokogiri.rb
+  :object: "#Nokogiri"
+  :location: 132
+  :errors:
+  - args
+  :errors_with_suggestions:
+    args: rags
+- :file: lib/nokogiri/xml.rb
+  :object: Nokogiri::XML::XML_C14N_1_0
+  :location: 40
+  :errors:
+  - canonicalization
+  :errors_with_suggestions:
+    canonicalization: radicalization
+- :file: lib/nokogiri/xml.rb
+  :object: Nokogiri::XML::XML_C14N_EXCLUSIVE_1_0
+  :location: 42
+  :errors:
+  - canonicalization
+  :errors_with_suggestions:
+    canonicalization: radicalization
+- :file: lib/nokogiri/xml.rb
+  :object: Nokogiri::XML::XML_C14N_1_1
+  :location: 44
+  :errors:
+  - canonicalization
+  :errors_with_suggestions:
+    canonicalization: radicalization
+- :file: lib/nokogiri/xml.rb
+  :object: Nokogiri::XML.Reader
+  :location: 47
+  :errors:
+  - mor
+  :errors_with_suggestions:
+    mor: nor
+- :file: lib/nokogiri/xslt.rb
+  :object: Nokogiri.XSLT
+  :location: 5
+  :errors:
+  - stylesheet
+  :errors_with_suggestions:
+    stylesheet: style sheet
+- :file: lib/nokogiri/xslt.rb
+  :object: Nokogiri::XSLT.parse
+  :location: 22
+  :errors:
+  - stylesheet
+  :errors_with_suggestions:
+    stylesheet: style sheet
+- :file: lib/nokogiri/xslt.rb
+  :object: Nokogiri::XSLT.quote_params
+  :location: 36
+  :errors:
+  - params
+  - stylesheet
+  :errors_with_suggestions:
+    params: paras
+    stylesheet: style sheet
+- :file: lib/nokogiri/version.rb
+  :object: Nokogiri::VERSION_INFO
+  :location: 99
+  :errors:
+  - libxml
+  :errors_with_suggestions:
+    libxml: Librium
+- :file: lib/nokogiri/css/node.rb
+  :object: Nokogiri::CSS::Node#to_xpath
+  :location: 22
+  :errors:
+  - xpath
+  :errors_with_suggestions:
+    xpath: path
+- :file: lib/nokogiri/xml/node.rb
+  :object: Nokogiri::XML::Node
+  :location: 7
+  :errors:
+  - irb
+  - subtree
+  :errors_with_suggestions:
+    irb: rib
+    subtree: sub tree
+- :file: lib/nokogiri/xml/node.rb
+  :object: Nokogiri::XML::Node#add_child
+  :location: 130
+  :errors:
+  - reparented
+  :errors_with_suggestions:
+    reparented: re parented
+- :file: lib/nokogiri/xml/node.rb
+  :object: Nokogiri::XML::Node#prepend_child
+  :location: 147
+  :errors:
+  - reparented
+  :errors_with_suggestions:
+    reparented: re parented
+- :file: lib/nokogiri/xml/node.rb
+  :object: Nokogiri::XML::Node#wrap
+  :location: 165
+  :errors:
+  - html
+  :errors_with_suggestions:
+    html: HTML
+- :file: lib/nokogiri/xml/node.rb
+  :object: Nokogiri::XML::Node#<<
+  :location: 176
+  :errors:
+  - child1
+  - child2
+  :errors_with_suggestions:
+    child1: child
+    child2: child
+- :file: lib/nokogiri/xml/node.rb
+  :object: Nokogiri::XML::Node#add_previous_sibling
+  :location: 188
+  :errors:
+  - reparented
+  :errors_with_suggestions:
+    reparented: re parented
+- :file: lib/nokogiri/xml/node.rb
+  :object: Nokogiri::XML::Node#add_next_sibling
+  :location: 201
+  :errors:
+  - reparented
+  :errors_with_suggestions:
+    reparented: re parented
+- :file: lib/nokogiri/xml/node.rb
+  :object: Nokogiri::XML::Node#inner_html=
+  :location: 238
+  :errors:
+  - html
+  :errors_with_suggestions:
+    html: HTML
+- :file: lib/nokogiri/xml/node.rb
+  :object: Nokogiri::XML::Node#children=
+  :location: 250
+  :errors:
+  - html
+  - reparented
+  :errors_with_suggestions:
+    html: HTML
+    reparented: re parented
+- :file: lib/nokogiri/xml/node.rb
+  :object: Nokogiri::XML::Node#replace
+  :location: 268
+  :errors:
+  - reparented
+  :errors_with_suggestions:
+    reparented: re parented
+- :file: lib/nokogiri/xml/node.rb
+  :object: Nokogiri::XML::Node#attributes
+  :location: 333
+  :errors:
+  - namespace
+  - namespaces
+  :errors_with_suggestions:
+    namespace: name space
+    namespaces: name spaces
+- :file: lib/nokogiri/xml/node.rb
+  :object: Nokogiri::XML::Node#classes
+  :location: 365
+  :errors:
+  - deduplication
+  :errors_with_suggestions:
+    deduplication: reduplication
+- :file: lib/nokogiri/xml/node.rb
+  :object: Nokogiri::XML::Node#namespaces
+  :location: 497
+  :errors:
+  - namespace
+  - namespaces
+  - xmlns
+  :errors_with_suggestions:
+    namespace: name space
+    namespaces: name spaces
+    xmlns: XML
+- :file: lib/nokogiri/xml/node.rb
+  :object: Nokogiri::XML::Node#to_s
+  :location: 579
+  :errors:
+  - html
+  :errors_with_suggestions:
+    html: HTML
+- :file: lib/nokogiri/xml/node.rb
+  :object: Nokogiri::XML::Node#default_namespace=
+  :location: 622
+  :errors:
+  - href
+  - namespace
+  - url
+  - xmlns
+  :errors_with_suggestions:
+    href: ref
+    namespace: name space
+    url: URL
+    xmlns: XML
+- :file: lib/nokogiri/xml/node.rb
+  :object: Nokogiri::XML::Node#namespace=
+  :location: 633
+  :errors:
+  - namespace
+  - ns
+  - xmlns
+  :errors_with_suggestions:
+    namespace: name space
+    ns: NS
+    xmlns: XML
+- :file: lib/nokogiri/xml/node.rb
+  :object: Nokogiri::XML::Node#write_to
+  :location: 735
+  :errors:
+  - io
+  :errors_with_suggestions:
+    io: oi
+- :file: lib/nokogiri/xml/node.rb
+  :object: Nokogiri::XML::Node#write_html_to
+  :location: 770
+  :errors:
+  - io
+  :errors_with_suggestions:
+    io: oi
+- :file: lib/nokogiri/xml/node.rb
+  :object: Nokogiri::XML::Node#write_xhtml_to
+  :location: 778
+  :errors:
+  - io
+  :errors_with_suggestions:
+    io: oi
+- :file: lib/nokogiri/xml/node.rb
+  :object: Nokogiri::XML::Node#write_xml_to
+  :location: 786
+  :errors:
+  - io
+  :errors_with_suggestions:
+    io: oi
+- :file: lib/nokogiri/xml/node.rb
+  :object: Nokogiri::XML::Node#do_xinclude
+  :location: 806
+  :errors:
+  - subtree
+  - xinclude
+  :errors_with_suggestions:
+    subtree: sub tree
+    xinclude: include
+- :file: lib/nokogiri/xml/reader.rb
+  :object: Nokogiri::XML::Reader::TYPE_WHITESPACE
+  :location: 58
+  :errors:
+  - Whitespace
+  :errors_with_suggestions:
+    Whitespace: White space
+- :file: lib/nokogiri/xml/reader.rb
+  :object: Nokogiri::XML::Reader::TYPE_SIGNIFICANT_WHITESPACE
+  :location: 60
+  :errors:
+  - Whitespace
+  :errors_with_suggestions:
+    Whitespace: White space
+- :file: lib/nokogiri/xml/schema.rb
+  :object: Nokogiri::XML::Schema
+  :location: 12
+  :errors:
+  - xsd
+  :errors_with_suggestions:
+    xsd: XS
+- :file: lib/nokogiri/xml/builder.rb
+  :object: Nokogiri::XML::Builder
+  :location: 3
+  :errors:
+  - Namespaces
+  - namespaces
+  - xml
+  - xmlns
+  :errors_with_suggestions:
+    Namespaces: Name spaces
+    namespaces: name spaces
+    xml: XML
+    xmlns: XML
+- :file: lib/nokogiri/xml/builder.rb
+  :object: Nokogiri::XML::Builder#[]
+  :location: 317
+  :errors:
+  - namespace
+  - ns
+  :errors_with_suggestions:
+    namespace: name space
+    ns: NS
+- :file: lib/nokogiri/html/builder.rb
+  :object: Nokogiri::HTML::Builder
+  :location: 3
+  :errors:
+  - onload
+  :errors_with_suggestions:
+    onload: unload
+- :file: lib/nokogiri/xml/document.rb
+  :object: Nokogiri::XML::Document::NCNAME_START_CHAR
+  :location: 12
+  :errors:
+  - unicode
+  :errors_with_suggestions:
+    unicode: Unicode
+- :file: lib/nokogiri/xml/document.rb
+  :object: Nokogiri::XML::Document.parse
+  :location: 18
+  :errors:
+  - untrusted
+  :errors_with_suggestions:
+    untrusted: entrusted
+- :file: lib/nokogiri/xml/document.rb
+  :object: Nokogiri::XML::Document#collect_namespaces
+  :location: 137
+  :errors:
+  - namespaces
+  - subtree
+  - xmlns
+  - xpath
+  :errors_with_suggestions:
+    namespaces: name spaces
+    subtree: sub tree
+    xmlns: XML
+    xpath: path
+- :file: lib/nokogiri/xml/document.rb
+  :object: Nokogiri::XML::Document#slop!
+  :location: 188
+  :errors:
+  - irb
+  :errors_with_suggestions:
+    irb: rib
+- :file: lib/nokogiri/xml/document.rb
+  :object: Nokogiri::XML::Document#namespaces
+  :location: 226
+  :errors:
+  - namespaces
+  :errors_with_suggestions:
+    namespaces: name spaces
+- :file: lib/nokogiri/xml/document.rb
+  :object: Nokogiri::XML::Document.wrap
+  :location: 254
+  :errors:
+  - dom
+  - w3c
+  :errors_with_suggestions:
+    dom: mod
+    w3c: Wac
+- :file: lib/nokogiri/xml/document.rb
+  :object: Nokogiri::XML::Document#to_java
+  :location: 262
+  :errors:
+  - dom
+  - w3c
+  :errors_with_suggestions:
+    dom: mod
+    w3c: Wac
+- :file: lib/nokogiri/xml/node_set.rb
+  :object: Nokogiri::XML::NodeSet#css
+  :location: 72
+  :errors:
+  - css
+  - namespace
+  :errors_with_suggestions:
+    css: CSS
+    namespace: name space
+- :file: lib/nokogiri/xml/node_set.rb
+  :object: Nokogiri::XML::NodeSet#xpath
+  :location: 88
+  :errors:
+  - namespace
+  - xpath
+  :errors_with_suggestions:
+    namespace: name space
+    xpath: path
+- :file: lib/nokogiri/xml/node_set.rb
+  :object: Nokogiri::XML::NodeSet#at
+  :location: 110
+  :errors:
+  - namespace
+  - xpath
+  :errors_with_suggestions:
+    namespace: name space
+    xpath: path
+- :file: lib/nokogiri/xml/node_set.rb
+  :object: Nokogiri::XML::NodeSet#filter
+  :location: 131
+  :errors:
+  - expr
+  :errors_with_suggestions:
+    expr: exp
+- :file: lib/nokogiri/xml/node_set.rb
+  :object: Nokogiri::XML::NodeSet#attr
+  :location: 173
+  :errors:
+  - blk
+  :errors_with_suggestions:
+    blk: bl
+- :file: lib/nokogiri/xml/node_set.rb
+  :object: Nokogiri::XML::NodeSet#inner_html
+  :location: 227
+  :errors:
+  - html
+  :errors_with_suggestions:
+    html: HTML
+- :file: lib/nokogiri/xml/node_set.rb
+  :object: Nokogiri::XML::NodeSet#wrap
+  :location: 233
+  :errors:
+  - html
+  :errors_with_suggestions:
+    html: HTML
+- :file: lib/nokogiri/xml/node_set.rb
+  :object: Nokogiri::XML::NodeSet#inspect
+  :location: 324
+  :errors:
+  - formated
+  :errors_with_suggestions:
+    formated: formatted
+- :file: lib/nokogiri/html/document.rb
+  :object: Nokogiri::HTML::Document#meta_encoding=
+  :location: 16
+  :errors:
+  - html
+  - libxml2
+  :errors_with_suggestions:
+    html: HTML
+    libxml2: Librium
+- :file: lib/nokogiri/html/document.rb
+  :object: Nokogiri::HTML::Document#title=
+  :location: 72
+  :errors:
+  - charset
+  - html
+  :errors_with_suggestions:
+    charset: char set
+    html: HTML
+- :file: lib/xsd/xmlparser/nokogiri.rb
+  :object: XSD::XMLParser::Nokogiri
+  :location: 5
+  :errors:
+  - nokogiri
+  - soap4r
+  - xmlparser
+  - xsd
+  :errors_with_suggestions:
+    nokogiri: nonrigid
+    soap4r: soapbox
+    xmlparser: sparser
+    xsd: XS
+- :file: lib/xsd/xmlparser/nokogiri.rb
+  :object: XSD::XMLParser::Nokogiri#start_element
+  :location: 40
+  :errors:
+  - attrs
+  :errors_with_suggestions:
+    attrs: attracts
+- :file: lib/xsd/xmlparser/nokogiri.rb
+  :object: XSD::XMLParser::Nokogiri#error
+  :location: 52
+  :errors:
+  - msg
+  :errors_with_suggestions:
+    msg: MSG
+- :file: lib/nokogiri/xml/sax/document.rb
+  :object: Nokogiri::XML::SAX
+  :location: 3
+  :errors:
+  - Parsers
+  - parsers
+  :errors_with_suggestions:
+    Parsers: Parser
+    parsers: parser
+- :file: lib/nokogiri/xml/sax/parser.rb
+  :object: Nokogiri::XML::SAX::Parser
+  :location: 4
+  :errors:
+  - parsers
+  :errors_with_suggestions:
+    parsers: parser
+- :file: lib/nokogiri/xml/sax/parser.rb
+  :object: Nokogiri::XML::SAX::Parser::ENCODINGS
+  :location: 36
+  :errors:
+  - Encodinds
+  :errors_with_suggestions:
+    Encodinds: Encodes
+- :file: lib/nokogiri/xml/sax/parser.rb
+  :object: Nokogiri::XML::SAX::Parser#parse
+  :location: 76
+  :errors:
+  - xml
+  :errors_with_suggestions:
+    xml: XML
+- :file: lib/nokogiri/xml/sax/parser.rb
+  :object: Nokogiri::XML::SAX::Parser#parse_io
+  :location: 87
+  :errors:
+  - io
+  :errors_with_suggestions:
+    io: oi
+- :file: lib/nokogiri/xml/searchable.rb
+  :object: Nokogiri::XML::Searchable#search
+  :location: 15
+  :errors:
+  - namespace
+  - xpath
+  :errors_with_suggestions:
+    namespace: name space
+    xpath: path
+- :file: lib/nokogiri/xml/searchable.rb
+  :object: Nokogiri::XML::Searchable#at
+  :location: 59
+  :errors:
+  - namespace
+  - xpath
+  :errors_with_suggestions:
+    namespace: name space
+    xpath: path
+- :file: lib/nokogiri/xml/searchable.rb
+  :object: Nokogiri::XML::Searchable#css
+  :location: 71
+  :errors:
+  - H1
+  - css
+  - h1
+  - namespace
+  :errors_with_suggestions:
+    H1: H
+    css: CSS
+    h1: h
+    namespace: name space
+- :file: lib/nokogiri/xml/searchable.rb
+  :object: Nokogiri::XML::Searchable#at_css
+  :location: 110
+  :errors:
+  - css
+  - namespace
+  :errors_with_suggestions:
+    css: CSS
+    namespace: name space
+- :file: lib/nokogiri/xml/searchable.rb
+  :object: Nokogiri::XML::Searchable#xpath
+  :location: 121
+  :errors:
+  - namespace
+  - xpath
+  :errors_with_suggestions:
+    namespace: name space
+    xpath: path
+- :file: lib/nokogiri/xml/searchable.rb
+  :object: Nokogiri::XML::Searchable#at_xpath
+  :location: 157
+  :errors:
+  - namespace
+  - xpath
+  :errors_with_suggestions:
+    namespace: name space
+    xpath: path
+- :file: lib/nokogiri/html/sax/parser.rb
+  :object: Nokogiri::HTML::SAX
+  :location: 3
+  :errors:
+  - parsers
+  :errors_with_suggestions:
+    parsers: parser
+- :file: lib/nokogiri/html/sax/parser.rb
+  :object: Nokogiri::HTML::SAX::Parser
+  :location: 12
+  :errors:
+  - parsers
+  :errors_with_suggestions:
+    parsers: parser
+- :file: lib/nokogiri/html/sax/parser.rb
+  :object: Nokogiri::HTML::SAX::Parser#parse_memory
+  :location: 29
+  :errors:
+  - html
+  :errors_with_suggestions:
+    html: HTML
+- :file: lib/nokogiri/html/sax/parser.rb
+  :object: Nokogiri::HTML::SAX::Parser#parse_io
+  :location: 39
+  :errors:
+  - io
+  :errors_with_suggestions:
+    io: oi
+- :file: lib/nokogiri/xslt/stylesheet.rb
+  :object: Nokogiri::XSLT::Stylesheet#apply_to
+  :location: 16
+  :errors:
+  - stylesheet
+  :errors_with_suggestions:
+    stylesheet: style sheet
+- :file: lib/nokogiri/xml/sax/document.rb
+  :object: Nokogiri::XML::SAX::Document#cdata_block
+  :location: 156
+  :errors:
+  - cdata
+  :errors_with_suggestions:
+    cdata: data
+- :file: lib/nokogiri/css/parser_extras.rb
+  :object: Nokogiri::CSS::Parser.[]
+  :location: 16
+  :errors:
+  - css
+  :errors_with_suggestions:
+    css: CSS
+- :file: lib/nokogiri/css/parser_extras.rb
+  :object: Nokogiri::CSS::Parser.[]=
+  :location: 22
+  :errors:
+  - css
+  :errors_with_suggestions:
+    css: CSS
+- :file: lib/nokogiri/css/parser_extras.rb
+  :object: Nokogiri::CSS::Parser#initialize
+  :location: 53
+  :errors:
+  - namespaces
+  :errors_with_suggestions:
+    namespaces: name spaces
+- :file: lib/nokogiri/css/parser_extras.rb
+  :object: Nokogiri::CSS::Parser#xpath_for
+  :location: 69
+  :errors:
+  - xpath
+  :errors_with_suggestions:
+    xpath: path
+- :file: lib/nokogiri/xml/parse_options.rb
+  :object: Nokogiri::XML::ParseOptions
+  :location: 3
+  :errors:
+  - bitwise
+  :errors_with_suggestions:
+    bitwise: bit wise
+- :file: lib/nokogiri/xml/parse_options.rb
+  :object: Nokogiri::XML::ParseOptions::NONET
+  :location: 52
+  :errors:
+  - untrusted
+  :errors_with_suggestions:
+    untrusted: entrusted
+- :file: lib/nokogiri/xml/parse_options.rb
+  :object: Nokogiri::XML::ParseOptions::NSCLEAN
+  :location: 56
+  :errors:
+  - namespaces
+  :errors_with_suggestions:
+    namespaces: name spaces
+- :file: lib/nokogiri/xml/parse_options.rb
+  :object: Nokogiri::XML::ParseOptions::NOBASEFIX
+  :location: 66
+  :errors:
+  - fixup
+  - uris
+  :errors_with_suggestions:
+    fixup: fix up
+    uris: Uris
+- :file: lib/nokogiri/xml/parse_options.rb
+  :object: Nokogiri::XML::ParseOptions::HUGE
+  :location: 68
+  :errors:
+  - hardcoded
+  :errors_with_suggestions:
+    hardcoded: hard coded
+- :file: lib/nokogiri/xml/xpath_context.rb
+  :object: Nokogiri::XML::XPathContext#register_namespaces
+  :location: 5
+  :errors:
+  - namespaces
+  :errors_with_suggestions:
+    namespaces: name spaces
+- :file: lib/nokogiri/xml/element_content.rb
+  :object: Nokogiri::XML::ElementContent
+  :location: 3
+  :errors:
+  - div1
+  :errors_with_suggestions:
+    div1: div
+- :file: lib/nokogiri/xml/document_fragment.rb
+  :object: Nokogiri::XML::DocumentFragment#to_html
+  :location: 51
+  :errors:
+  - html
+  :errors_with_suggestions:
+    html: HTML
+- :file: lib/nokogiri/xml/document_fragment.rb
+  :object: Nokogiri::XML::DocumentFragment#to_xhtml
+  :location: 65
+  :errors:
+  - xhtml
+  :errors_with_suggestions:
+    xhtml: HTML
+- :file: lib/nokogiri/xml/document_fragment.rb
+  :object: Nokogiri::XML::DocumentFragment#to_xml
+  :location: 79
+  :errors:
+  - xml
+  :errors_with_suggestions:
+    xml: XML
+- :file: lib/nokogiri/xml/document_fragment.rb
+  :object: Nokogiri::XML::DocumentFragment#css
+  :location: 86
+  :errors:
+  - css
+  - namespace
+  :errors_with_suggestions:
+    css: CSS
+    namespace: name space
+- :file: lib/nokogiri/xml/document_fragment.rb
+  :object: Nokogiri::XML::DocumentFragment#search
+  :location: 106
+  :errors:
+  - namespace
+  - xpath
+  :errors_with_suggestions:
+    namespace: name space
+    xpath: path
+- :file: lib/nokogiri/xml/node/save_options.rb
+  :object: Nokogiri::XML::Node::SaveOptions::FORMAT
+  :location: 7
+  :errors:
+  - xml
+  :errors_with_suggestions:
+    xml: XML
+- :file: lib/nokogiri/xml/sax/parser_context.rb
+  :object: Nokogiri::XML::SAX::ParserContext
+  :location: 4
+  :errors:
+  - parsers
+  :errors_with_suggestions:
+    parsers: parser
+- :file: lib/nokogiri/html/sax/parser_context.rb
+  :object: Nokogiri::HTML::SAX::ParserContext
+  :location: 4
+  :errors:
+  - parsers
+  :errors_with_suggestions:
+    parsers: parser
+- :file: ext/nokogiri/xml_attr.c
+  :object: Nokogiri::XML::Attr#value=
+  :location: 3
+  :errors:
+  - boolean
+  :errors_with_suggestions:
+    boolean: Boolean
+- :file: ext/nokogiri/xml_node.c
+  :object: Nokogiri::XML::Node.new
+  :location: 1381
+  :errors:
+  - lifecycle
+  :errors_with_suggestions:
+    lifecycle: life cycle
+- :file: ext/nokogiri/xml_node.c
+  :object: Nokogiri::XML::Node#add_namespace_definition
+  :location: 1338
+  :errors:
+  - Namespaces
+  - href
+  - namespace
+  - xmlns
+  :errors_with_suggestions:
+    Namespaces: Name spaces
+    href: ref
+    namespace: name space
+    xmlns: XML
+- :file: ext/nokogiri/xml_node.c
+  :object: Nokogiri::XML::Node#namespaced_key?
+  :location: 838
+  :errors:
+  - namespace
+  :errors_with_suggestions:
+    namespace: name space
+- :file: ext/nokogiri/xml_node.c
+  :object: Nokogiri::XML::Node#attribute_with_ns
+  :location: 978
+  :errors:
+  - namespace
+  :errors_with_suggestions:
+    namespace: name space
+- :file: ext/nokogiri/xml_node.c
+  :object: Nokogiri::XML::Node#namespace
+  :location: 1017
+  :errors:
+  - namespace
+  :errors_with_suggestions:
+    namespace: name space
+- :file: ext/nokogiri/xml_node.c
+  :object: Nokogiri::XML::Node#namespace_definitions
+  :location: 1036
+  :errors:
+  - namespace
+  - namespaces
+  - xmlns
+  :errors_with_suggestions:
+    namespace: name space
+    namespaces: name spaces
+    xmlns: XML
+- :file: ext/nokogiri/xml_node.c
+  :object: Nokogiri::XML::Node#namespace_scopes
+  :location: 1065
+  :errors:
+  - namespaces
+  - xmlns
+  :errors_with_suggestions:
+    namespaces: name spaces
+    xmlns: XML
+- :file: ext/nokogiri/xml_node.c
+  :object: Nokogiri::XML::Node#unlink
+  :location: 575
+  :errors:
+  - Unlink
+  :errors_with_suggestions:
+    Unlink: Unlike
+- :file: ext/nokogiri/xml_node.c
+  :object: Nokogiri::XML::Node#process_xincludes
+  :location: 1452
+  :errors:
+  - xinclude
+  :errors_with_suggestions:
+    xinclude: include
+- :file: ext/nokogiri/xml_node.c
+  :object: Nokogiri::XML::Node#dump_html
+  :location: 1415
+  :errors:
+  - html
+  :errors_with_suggestions:
+    html: HTML
+- :file: ext/nokogiri/xml_node.c
+  :object: Nokogiri::XML::Node#native_write_to
+  :location: 1283
+  :errors:
+  - io
+  :errors_with_suggestions:
+    io: oi
+- :file: ext/nokogiri/xml_node.c
+  :object: Nokogiri::XML::Node#set_namespace
+  :location: 939
+  :errors:
+  - namespace
+  :errors_with_suggestions:
+    namespace: name space
+- :file: ext/nokogiri/xml_reader.c
+  :object: Nokogiri::XML::Reader.from_io
+  :location: 562
+  :errors:
+  - io
+  :errors_with_suggestions:
+    io: oi
+- :file: ext/nokogiri/xml_reader.c
+  :object: Nokogiri::XML::Reader#inner_xml
+  :location: 468
+  :errors:
+  - utf
+  :errors_with_suggestions:
+    utf: fut
+- :file: ext/nokogiri/xml_reader.c
+  :object: Nokogiri::XML::Reader#outer_xml
+  :location: 494
+  :errors:
+  - utf
+  :errors_with_suggestions:
+    utf: fut
+- :file: ext/nokogiri/xml_reader.c
+  :object: Nokogiri::XML::Reader#name
+  :location: 373
+  :errors:
+  - utf
+  :errors_with_suggestions:
+    utf: fut
+- :file: ext/nokogiri/xml_reader.c
+  :object: Nokogiri::XML::Reader#namespace_uri
+  :location: 337
+  :errors:
+  - namespace
+  :errors_with_suggestions:
+    namespace: name space
+- :file: ext/nokogiri/xml_reader.c
+  :object: Nokogiri::XML::Reader#prefix
+  :location: 319
+  :errors:
+  - namespace
+  :errors_with_suggestions:
+    namespace: name space
+- :file: ext/nokogiri/xml_reader.c
+  :object: Nokogiri::XML::Reader#value
+  :location: 301
+  :errors:
+  - utf
+  :errors_with_suggestions:
+    utf: fut
+- :file: ext/nokogiri/xml_reader.c
+  :object: Nokogiri::XML::Reader#namespaces
+  :location: 122
+  :errors:
+  - namespaces
+  :errors_with_suggestions:
+    namespaces: name spaces
+- :file: ext/nokogiri/xml_document.c
+  :object: Nokogiri::XML::Document#canonicalize
+  :location: 485
+  :errors:
+  - Canonicalize
+  - canonicalized
+  :errors_with_suggestions:
+    Canonicalize: Canonical
+    canonicalized: canonical
+- :file: ext/nokogiri/xml_document.c
+  :object: Nokogiri::XML::Document#url
+  :location: 94
+  :errors:
+  - url
+  :errors_with_suggestions:
+    url: URL
+- :file: ext/nokogiri/xml_document.c
+  :object: Nokogiri::XML::Document#remove_namespaces!
+  :location: 367
+  :errors:
+  - namespaces
+  :errors_with_suggestions:
+    namespaces: name spaces
+- :file: ext/nokogiri/xml_node_set.c
+  :object: Nokogiri::XML::NodeSet#unlink
+  :location: 339
+  :errors:
+  - Unlink
+  :errors_with_suggestions:
+    Unlink: Unlike
+- :file: ext/nokogiri/xml_node_set.c
+  :object: Nokogiri::XML::NodeSet#delete
+  :location: 104
+  :errors:
+  - Nodeset
+  :errors_with_suggestions:
+    Nodeset: Node set
+- :file: ext/nokogiri/html_document.c
+  :object: Nokogiri::HTML::Document.read_memory
+  :location: 92
+  :errors:
+  - url
+  :errors_with_suggestions:
+    url: URL
+- :file: ext/nokogiri/html_document.c
+  :object: Nokogiri::HTML::Document.read_io
+  :location: 29
+  :errors:
+  - io
+  - url
+  :errors_with_suggestions:
+    io: oi
+    url: URL
+- :file: ext/nokogiri/xml_namespace.c
+  :object: Nokogiri::XML::Namespace#prefix
+  :location: 27
+  :errors:
+  - namespace
+  :errors_with_suggestions:
+    namespace: name space
+- :file: ext/nokogiri/xml_namespace.c
+  :object: Nokogiri::XML::Namespace#href
+  :location: 43
+  :errors:
+  - href
+  - namespace
+  :errors_with_suggestions:
+    href: ref
+    namespace: name space
+- :file: ext/nokogiri/xslt_stylesheet.c
+  :object: Nokogiri::XSLT::Stylesheet.parse_stylesheet_doc
+  :location: 58
+  :errors:
+  - stylesheet
+  :errors_with_suggestions:
+    stylesheet: style sheet
+- :file: ext/nokogiri/xslt_stylesheet.c
+  :object: Nokogiri::XSLT::Stylesheet#serialize
+  :location: 90
+  :errors:
+  - xml
+  :errors_with_suggestions:
+    xml: XML
+- :file: ext/nokogiri/xslt_stylesheet.c
+  :object: Nokogiri::XSLT::Stylesheet#transform
+  :location: 116
+  :errors:
+  - stylesheet
+  :errors_with_suggestions:
+    stylesheet: style sheet
+- :file: ext/nokogiri/xml_element_decl.c
+  :object: Nokogiri::XML::ElementDecl#prefix
+  :location: 37
+  :errors:
+  - namespace
+  :errors_with_suggestions:
+    namespace: name space
+- :file: ext/nokogiri/xml_xpath_context.c
+  :object: Nokogiri::XML::XPathContext#register_ns
+  :location: 12
+  :errors:
+  - namespace
+  - uri
+  :errors_with_suggestions:
+    namespace: name space
+    uri: uric
+- :file: ext/nokogiri/xml_element_content.c
+  :object: Nokogiri::XML::ElementContent#prefix
+  :location: 80
+  :errors:
+  - namespace
+  :errors_with_suggestions:
+    namespace: name space
+- :file: ext/nokogiri/xml_sax_parser_context.c
+  :object: Nokogiri::XML::SAX::ParserContext.io
+  :location: 16
+  :errors:
+  - io
+  :errors_with_suggestions:
+    io: oi
+

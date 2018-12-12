@@ -1,0 +1,240 @@
+---
+- :file: lib/sinatra/base.rb
+  :object: Sinatra::ExtendedRack
+  :location: 187
+  :errors:
+  - middleware
+  :errors_with_suggestions:
+    middleware: middle ware
+- :file: lib/sinatra/base.rb
+  :object: Sinatra::CommonLogger
+  :location: 220
+  :errors:
+  - middleware
+  :errors_with_suggestions:
+    middleware: middle ware
+- :file: lib/sinatra/base.rb
+  :object: Sinatra::Helpers#stream
+  :location: 449
+  :errors:
+  - evented
+  :errors_with_suggestions:
+    evented: evened
+- :file: lib/sinatra/base.rb
+  :object: Sinatra::Helpers#etag
+  :location: 544
+  :errors:
+  - etag
+  - validator
+  :errors_with_suggestions:
+    etag: eta
+    validator: validation
+- :file: lib/sinatra/base.rb
+  :object: Sinatra::Helpers#informational?
+  :location: 583
+  :errors:
+  - 1xx
+  :errors_with_suggestions:
+    1xx: xx
+- :file: lib/sinatra/base.rb
+  :object: Sinatra::Helpers#success?
+  :location: 588
+  :errors:
+  - 2xx
+  :errors_with_suggestions:
+    2xx: xx
+- :file: lib/sinatra/base.rb
+  :object: Sinatra::Helpers#redirect?
+  :location: 593
+  :errors:
+  - 3xx
+  :errors_with_suggestions:
+    3xx: xx
+- :file: lib/sinatra/base.rb
+  :object: Sinatra::Helpers#client_error?
+  :location: 598
+  :errors:
+  - 4xx
+  :errors_with_suggestions:
+    4xx: xx
+- :file: lib/sinatra/base.rb
+  :object: Sinatra::Helpers#server_error?
+  :location: 603
+  :errors:
+  - 5xx
+  :errors_with_suggestions:
+    5xx: xx
+- :file: lib/sinatra/base.rb
+  :object: Sinatra::Templates
+  :location: 652
+  :errors:
+  - myview
+  - subdirectories
+  :errors_with_suggestions:
+    myview: my view
+    subdirectories: sub directories
+- :file: lib/sinatra/base.rb
+  :object: Sinatra::Templates#render_ruby
+  :location: 803
+  :errors:
+  - nokogiri
+  :errors_with_suggestions:
+    nokogiri: nonrigid
+- :file: lib/sinatra/base.rb
+  :object: Sinatra::Base
+  :location: 893
+  :errors:
+  - middleware
+  :errors_with_suggestions:
+    middleware: middle ware
+- :file: lib/sinatra/base.rb
+  :object: Sinatra::Base#forward
+  :location: 968
+  :errors:
+  - middleware
+  :errors_with_suggestions:
+    middleware: middle ware
+- :file: lib/sinatra/base.rb
+  :object: Sinatra::Base#filter!
+  :location: 980
+  :errors:
+  - superclasses
+  :errors_with_suggestions:
+    superclasses: super classes
+- :file: lib/sinatra/base.rb
+  :object: Sinatra::Base#route!
+  :location: 986
+  :errors:
+  - superclasses
+  :errors_with_suggestions:
+    superclasses: super classes
+- :file: lib/sinatra/base.rb
+  :object: Sinatra::Base#process_route
+  :location: 1014
+  :errors:
+  - params
+  :errors_with_suggestions:
+    params: paras
+- :file: lib/sinatra/base.rb
+  :object: Sinatra::Base#route_missing
+  :location: 1049
+  :errors:
+  - Subclasses
+  - middleware
+  :errors_with_suggestions:
+    Subclasses: Sub classes
+    middleware: middle ware
+- :file: lib/sinatra/base.rb
+  :object: Sinatra::Base.reset!
+  :location: 1184
+  :errors:
+  - middleware
+  - superclass
+  :errors_with_suggestions:
+    middleware: middle ware
+    superclass: super class
+- :file: lib/sinatra/base.rb
+  :object: Sinatra::Base.extensions
+  :location: 1202
+  :errors:
+  - superclasses
+  :errors_with_suggestions:
+    superclasses: super classes
+- :file: lib/sinatra/base.rb
+  :object: Sinatra::Base.middleware
+  :location: 1211
+  :errors:
+  - Middleware
+  - superclasses
+  :errors_with_suggestions:
+    Middleware: Middle ware
+    superclasses: super classes
+- :file: lib/sinatra/base.rb
+  :object: Sinatra::Base.set
+  :location: 1220
+  :errors:
+  - proc
+  :errors_with_suggestions:
+    proc: crop
+- :file: lib/sinatra/base.rb
+  :object: Sinatra::Base.use
+  :location: 1429
+  :errors:
+  - middleware
+  :errors_with_suggestions:
+    middleware: middle ware
+- :file: lib/sinatra/base.rb
+  :object: Sinatra::Base#new!
+  :location: 1480
+  :errors:
+  - middleware
+  :errors_with_suggestions:
+    middleware: middle ware
+- :file: lib/sinatra/base.rb
+  :object: Sinatra::Base.new
+  :location: 1483
+  :errors:
+  - middleware
+  :errors_with_suggestions:
+    middleware: middle ware
+- :file: lib/sinatra/base.rb
+  :object: Sinatra::Base.build
+  :location: 1491
+  :errors:
+  - middleware
+  :errors_with_suggestions:
+    middleware: middle ware
+- :file: lib/sinatra/base.rb
+  :object: Sinatra::Base.user_agent
+  :location: 1571
+  :errors:
+  - params
+  :errors_with_suggestions:
+    params: paras
+- :file: lib/sinatra/base.rb
+  :object: Sinatra::Base.provides
+  :location: 1585
+  :errors:
+  - mimetypes
+  :errors_with_suggestions:
+    mimetypes: mime types
+- :file: lib/sinatra/base.rb
+  :object: Sinatra::Application
+  :location: 1897
+  :errors:
+  - Subclassing
+  - subclassed
+  :errors_with_suggestions:
+    Subclassing: Sub classing
+    subclassed: sub classed
+- :file: lib/sinatra/base.rb
+  :object: Sinatra::Delegator
+  :location: 1917
+  :errors:
+  - mixin
+  :errors_with_suggestions:
+    mixin: mixing
+- :file: lib/sinatra/base.rb
+  :object: Sinatra.use
+  :location: 1982
+  :errors:
+  - middleware
+  :errors_with_suggestions:
+    middleware: middle ware
+- :file: lib/sinatra/show_exceptions.rb
+  :object: Sinatra::ShowExceptions
+  :location: 6
+  :errors:
+  - backtrace
+  - sourcefile
+  :errors_with_suggestions:
+    backtrace: backtrack
+    sourcefile: source file
+- :file: lib/sinatra/indifferent_hash.rb
+  :object: Sinatra::IndifferentHash
+  :location: 11
+  :errors:
+  - params
+  :errors_with_suggestions:
+    params: paras
+

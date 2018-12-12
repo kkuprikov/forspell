@@ -1,0 +1,488 @@
+---
+- :file: lib/capybara.rb
+  :object: Capybara.configure
+  :location: 60
+  :errors:
+  - prepended
+  :errors_with_suggestions:
+    prepended: pretended
+- :file: lib/capybara.rb
+  :object: Capybara.run_default_server
+  :location: 232
+  :errors:
+  - Capybara's
+  :errors_with_suggestions:
+    Capybara's: Cascara's
+- :file: lib/capybara.rb
+  :object: Capybara.HTML
+  :location: 364
+  :errors:
+  - Nokogiri
+  - html
+  - textarea
+  :errors_with_suggestions:
+    Nokogiri: Nonrigid
+    html: HTML
+    textarea: text area
+- :file: lib/capybara/config.rb
+  :object: Capybara::Config#server
+  :location: 36
+  :errors:
+  - ip
+  - proc
+  :errors_with_suggestions:
+    ip: IP
+    proc: crop
+- :file: lib/capybara/window.rb
+  :object: Capybara::Window#close
+  :location: 56
+  :errors:
+  - shouldn
+  :errors_with_suggestions:
+    shouldn: should
+- :file: lib/capybara/window.rb
+  :object: Capybara::Window#size
+  :location: 71
+  :errors:
+  - shouldn
+  :errors_with_suggestions:
+    shouldn: should
+- :file: lib/capybara/window.rb
+  :object: Capybara::Window#resize_to
+  :location: 81
+  :errors:
+  - shouldn
+  :errors_with_suggestions:
+    shouldn: should
+- :file: lib/capybara/window.rb
+  :object: Capybara::Window#maximize
+  :location: 92
+  :errors:
+  - shouldn
+  :errors_with_suggestions:
+    shouldn: should
+- :file: lib/capybara/window.rb
+  :object: Capybara::Window#fullscreen
+  :location: 104
+  :errors:
+  - Fullscreen
+  - fullscreen
+  - shouldn
+  :errors_with_suggestions:
+    Fullscreen: Full screen
+    fullscreen: full screen
+    shouldn: should
+- :file: lib/capybara/helpers.rb
+  :object: Capybara::Helpers#normalize_whitespace
+  :location: 
+  :errors:
+  - whitespace
+  :errors_with_suggestions:
+    whitespace: white space
+- :file: lib/capybara/helpers.rb
+  :object: Capybara::Helpers.normalize_whitespace
+  :location: 8
+  :errors:
+  - whitespace
+  :errors_with_suggestions:
+    whitespace: white space
+- :file: lib/capybara/session.rb
+  :object: Capybara::Session
+  :location: 7
+  :errors:
+  - capybara
+  - dsl
+  - initializer
+  - threadsafe
+  :errors_with_suggestions:
+    capybara: capillary
+    dsl: isl
+    initializer: initialize
+    threadsafe: thread safe
+- :file: lib/capybara/session.rb
+  :object: Capybara::Session#visit
+  :location: 219
+  :errors:
+  - behaviour
+  :errors_with_suggestions:
+    behaviour: behavior
+- :file: lib/capybara/session.rb
+  :object: Capybara::Session#within
+  :location: 293
+  :errors:
+  - behaviour
+  :errors_with_suggestions:
+    behaviour: behavior
+- :file: lib/capybara/session.rb
+  :object: Capybara::Session#within_fieldset
+  :location: 339
+  :errors:
+  - fieldset
+  :errors_with_suggestions:
+    fieldset: field set
+- :file: lib/capybara/session.rb
+  :object: Capybara::Session#within_frame
+  :location: 401
+  :errors:
+  - iframe
+  :errors_with_suggestions:
+    iframe: frame
+- :file: lib/capybara/session.rb
+  :object: Capybara::Session#execute_script
+  :location: 554
+  :errors:
+  - jQuery
+  :errors_with_suggestions:
+    jQuery: j Query
+- :file: lib/capybara/session.rb
+  :object: Capybara::Session#evaluate_script
+  :location: 568
+  :errors:
+  - jQuery
+  :errors_with_suggestions:
+    jQuery: j Query
+- :file: lib/capybara/session.rb
+  :object: Capybara::Session#configure
+  :location: 769
+  :errors:
+  - threadsafe
+  :errors_with_suggestions:
+    threadsafe: thread safe
+- :file: lib/capybara/minitest.rb
+  :object: Capybara::Minitest::Assertions#refute_xpath
+  :location: 
+  :errors:
+  - xpath
+  :errors_with_suggestions:
+    xpath: path
+- :file: lib/capybara/minitest.rb
+  :object: Capybara::Minitest::Assertions#refute_css
+  :location: 
+  :errors:
+  - css
+  :errors_with_suggestions:
+    css: CSS
+- :file: lib/capybara/node/base.rb
+  :object: Capybara::Node::Base
+  :location: 5
+  :errors:
+  - matchers
+  :errors_with_suggestions:
+    matchers: marchers
+- :file: lib/capybara/node/base.rb
+  :object: Capybara::Node::Base#reload
+  :location: 37
+  :errors:
+  - subclasses
+  :errors_with_suggestions:
+    subclasses: sub classes
+- :file: lib/capybara/node/base.rb
+  :object: Capybara::Node::Base#synchronize
+  :location: 42
+  :errors:
+  - Capybara's
+  - asynchronicity
+  - behaviour
+  - defence
+  :errors_with_suggestions:
+    Capybara's: Cascara's
+    asynchronicity: synchronicity
+    behaviour: behavior
+    defence: defense
+- :file: lib/capybara/node/simple.rb
+  :object: Capybara::Node::Simple
+  :location: 5
+  :errors:
+  - Capybara's
+  - matchers
+  :errors_with_suggestions:
+    Capybara's: Cascara's
+    matchers: marchers
+- :file: lib/capybara/node/actions.rb
+  :object: Capybara::Node::Actions#uncheck
+  :location: 151
+  :errors:
+  - uncheck
+  :errors_with_suggestions:
+    uncheck: unchecked
+- :file: lib/capybara/node/actions.rb
+  :object: Capybara::Node::Actions#select
+  :location: 179
+  :errors:
+  - datalist
+  :errors_with_suggestions:
+    datalist: fatalist
+- :file: lib/capybara/node/actions.rb
+  :object: Capybara::Node::Actions#unselect
+  :location: 207
+  :errors:
+  - unselect
+  :errors_with_suggestions:
+    unselect: selection
+- :file: lib/capybara/node/element.rb
+  :object: Capybara::Node::Element#text
+  :location: 44
+  :errors:
+  - behaviour
+  :errors_with_suggestions:
+    behaviour: behavior
+- :file: lib/capybara/node/element.rb
+  :object: Capybara::Node::Element#unselect_option
+  :location: 134
+  :errors:
+  - Unselect
+  :errors_with_suggestions:
+    Unselect: Selection
+- :file: lib/capybara/node/element.rb
+  :object: Capybara::Node::Element#readonly?
+  :location: 323
+  :errors:
+  - readonly
+  :errors_with_suggestions:
+    readonly: read only
+- :file: lib/capybara/node/element.rb
+  :object: Capybara::Node::Element#trigger
+  :location: 353
+  :errors:
+  - mouseover
+  :errors_with_suggestions:
+    mouseover: mouse over
+- :file: lib/capybara/node/element.rb
+  :object: Capybara::Node::Element#execute_script
+  :location: 384
+  :errors:
+  - jQuery
+  :errors_with_suggestions:
+    jQuery: j Query
+- :file: lib/capybara/node/element.rb
+  :object: Capybara::Node::Element#evaluate_script
+  :location: 401
+  :errors:
+  - jQuery
+  :errors_with_suggestions:
+    jQuery: j Query
+- :file: lib/capybara/node/finders.rb
+  :object: Capybara::Node::Finders#all
+  :location: 195
+  :errors:
+  - Capybara's
+  :errors_with_suggestions:
+    Capybara's: Cascara's
+- :file: lib/capybara/node/matchers.rb
+  :object: Capybara::Node::Matchers#has_field?
+  :location: 373
+  :errors:
+  - textarea
+  - textareas
+  - url
+  :errors_with_suggestions:
+    textarea: text area
+    textareas: text areas
+    url: URL
+- :file: lib/capybara/node/matchers.rb
+  :object: Capybara::Node::Matchers#has_no_text?
+  :location: 701
+  :errors:
+  - whitespace
+  :errors_with_suggestions:
+    whitespace: white space
+- :file: lib/capybara/rack_test/form.rb
+  :object: Capybara::RackTest::Form::NilUploadedFile
+  :location: 4
+  :errors:
+  - enctype
+  :errors_with_suggestions:
+    enctype: enc type
+- :file: lib/capybara/rspec/matchers.rb
+  :object: Capybara::RSpecMatchers#have_selector
+  :location: 13
+  :errors:
+  - matcher
+  :errors_with_suggestions:
+    matcher: marcher
+- :file: lib/capybara/rspec/matchers.rb
+  :object: Capybara::RSpecMatchers#have_all_of_selectors
+  :location: 19
+  :errors:
+  - matcher
+  :errors_with_suggestions:
+    matcher: marcher
+- :file: lib/capybara/rspec/matchers.rb
+  :object: Capybara::RSpecMatchers#have_none_of_selectors
+  :location: 25
+  :errors:
+  - matcher
+  :errors_with_suggestions:
+    matcher: marcher
+- :file: lib/capybara/rspec/matchers.rb
+  :object: Capybara::RSpecMatchers#have_any_of_selectors
+  :location: 31
+  :errors:
+  - matcher
+  :errors_with_suggestions:
+    matcher: marcher
+- :file: lib/capybara/rspec/matchers.rb
+  :object: Capybara::RSpecMatchers#match_selector
+  :location: 37
+  :errors:
+  - matcher
+  :errors_with_suggestions:
+    matcher: marcher
+- :file: lib/capybara/rspec/matchers.rb
+  :object: Capybara::RSpecMatchers#have_xpath
+  :location: 
+  :errors:
+  - matcher
+  - xpath
+  :errors_with_suggestions:
+    matcher: marcher
+    xpath: path
+- :file: lib/capybara/rspec/matchers.rb
+  :object: Capybara::RSpecMatchers#have_css
+  :location: 
+  :errors:
+  - css
+  - matcher
+  :errors_with_suggestions:
+    css: CSS
+    matcher: marcher
+- :file: lib/capybara/rspec/matchers.rb
+  :object: Capybara::RSpecMatchers#match_xpath
+  :location: 
+  :errors:
+  - matcher
+  - xpath
+  :errors_with_suggestions:
+    matcher: marcher
+    xpath: path
+- :file: lib/capybara/rspec/matchers.rb
+  :object: Capybara::RSpecMatchers#match_css
+  :location: 
+  :errors:
+  - css
+  - matcher
+  :errors_with_suggestions:
+    css: CSS
+    matcher: marcher
+- :file: lib/capybara/rspec/matchers.rb
+  :object: Capybara::RSpecMatchers#have_link
+  :location: 
+  :errors:
+  - matcher
+  :errors_with_suggestions:
+    matcher: marcher
+- :file: lib/capybara/rspec/matchers.rb
+  :object: Capybara::RSpecMatchers#have_button
+  :location: 
+  :errors:
+  - matcher
+  :errors_with_suggestions:
+    matcher: marcher
+- :file: lib/capybara/rspec/matchers.rb
+  :object: Capybara::RSpecMatchers#have_field
+  :location: 
+  :errors:
+  - matcher
+  :errors_with_suggestions:
+    matcher: marcher
+- :file: lib/capybara/rspec/matchers.rb
+  :object: Capybara::RSpecMatchers#have_select
+  :location: 
+  :errors:
+  - matcher
+  :errors_with_suggestions:
+    matcher: marcher
+- :file: lib/capybara/rspec/matchers.rb
+  :object: Capybara::RSpecMatchers#have_table
+  :location: 
+  :errors:
+  - matcher
+  :errors_with_suggestions:
+    matcher: marcher
+- :file: lib/capybara/rspec/matchers.rb
+  :object: Capybara::RSpecMatchers#have_checked_field
+  :location: 
+  :errors:
+  - matcher
+  :errors_with_suggestions:
+    matcher: marcher
+- :file: lib/capybara/rspec/matchers.rb
+  :object: Capybara::RSpecMatchers#have_unchecked_field
+  :location: 
+  :errors:
+  - matcher
+  :errors_with_suggestions:
+    matcher: marcher
+- :file: lib/capybara/rspec/matchers.rb
+  :object: Capybara::RSpecMatchers#have_text
+  :location: 109
+  :errors:
+  - matcher
+  :errors_with_suggestions:
+    matcher: marcher
+- :file: lib/capybara/rspec/matchers.rb
+  :object: Capybara::RSpecMatchers#have_current_path
+  :location: 120
+  :errors:
+  - matcher
+  :errors_with_suggestions:
+    matcher: marcher
+- :file: lib/capybara/rspec/matchers.rb
+  :object: Capybara::RSpecMatchers#match_style
+  :location: 126
+  :errors:
+  - matcher
+  :errors_with_suggestions:
+    matcher: marcher
+- :file: lib/capybara/session/config.rb
+  :object: Capybara::SessionConfig#test_id=
+  :location: 99
+  :errors:
+  - attribue
+  :errors_with_suggestions:
+    attribue: attribute
+- :file: lib/capybara/session/matchers.rb
+  :object: Capybara::SessionMatchers#assert_current_path
+  :location: 5
+  :errors:
+  - url
+  :errors_with_suggestions:
+    url: URL
+- :file: lib/capybara/session/matchers.rb
+  :object: Capybara::SessionMatchers#assert_no_current_path
+  :location: 28
+  :errors:
+  - url
+  :errors_with_suggestions:
+    url: URL
+- :file: lib/capybara/session/matchers.rb
+  :object: Capybara::SessionMatchers#has_current_path?
+  :location: 44
+  :errors:
+  - url
+  :errors_with_suggestions:
+    url: URL
+- :file: lib/capybara/session/matchers.rb
+  :object: Capybara::SessionMatchers#has_no_current_path?
+  :location: 57
+  :errors:
+  - url
+  :errors_with_suggestions:
+    url: URL
+- :file: lib/capybara/selector/selector.rb
+  :object: Capybara::Selector#xpath
+  :location: 235
+  :errors:
+  - xpath
+  :errors_with_suggestions:
+    xpath: path
+- :file: lib/capybara/selector/selector.rb
+  :object: Capybara::Selector#visible
+  :location: 396
+  :errors:
+  - shouble
+  - visibile
+  :errors_with_suggestions:
+    shouble: shoulder
+    visibile: visible
+

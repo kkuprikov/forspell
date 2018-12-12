@@ -1,0 +1,217 @@
+---
+- :file: lib/restclient.rb
+  :object: RestClient
+  :location: 19
+  :errors:
+  - http
+  :errors_with_suggestions:
+    http: HTTP
+- :file: lib/restclient.rb
+  :object: RestClient.log=
+  :location: 113
+  :errors:
+  - stderr
+  - stdout
+  :errors_with_suggestions:
+    stderr: std err
+    stdout: stout
+- :file: lib/restclient.rb
+  :object: RestClient.create_log
+  :location: 120
+  :errors:
+  - param
+  - stderr
+  - stdout
+  :errors_with_suggestions:
+    param: para
+    stderr: std err
+    stdout: stout
+- :file: lib/restclient.rb
+  :object: RestClient.add_before_execution_proc
+  :location: 167
+  :errors:
+  - Proc
+  - http
+  - params
+  - proc
+  :errors_with_suggestions:
+    Proc: Prof
+    http: HTTP
+    params: paras
+    proc: crop
+- :file: lib/restclient.rb
+  :object: RestClient.reset_before_execution_procs
+  :location: 174
+  :errors:
+  - procs
+  :errors_with_suggestions:
+    procs: crops
+- :file: lib/restclient/utils.rb
+  :object: RestClient::Utils.get_encoding_from_headers
+  :location: 7
+  :errors:
+  - charset
+  :errors_with_suggestions:
+    charset: char set
+- :file: lib/restclient/utils.rb
+  :object: RestClient::Utils.cgi_parse_header
+  :location: 49
+  :errors:
+  - params
+  :errors_with_suggestions:
+    params: paras
+- :file: lib/restclient/utils.rb
+  :object: RestClient::Utils._cgi_parseparam
+  :location: 66
+  :errors:
+  - iteratively
+  :errors_with_suggestions:
+    iteratively: alliteratively
+- :file: lib/restclient/utils.rb
+  :object: RestClient::Utils.deprecated_cgi_parse_header
+  :location: 96
+  :errors:
+  - cgi
+  :errors_with_suggestions:
+    cgi: CGI
+- :file: lib/restclient/utils.rb
+  :object: RestClient::Utils.flatten_params
+  :location: 210
+  :errors:
+  - param
+  :errors_with_suggestions:
+    param: para
+- :file: lib/restclient/request.rb
+  :object: RestClient::Request
+  :location: 14
+  :errors:
+  - ssl
+  - uri
+  :errors_with_suggestions:
+    ssl: isl
+    uri: uric
+- :file: lib/restclient/request.rb
+  :object: RestClient::Request#process_url_params
+  :location: 181
+  :errors:
+  - url
+  :errors_with_suggestions:
+    url: URL
+- :file: lib/restclient/request.rb
+  :object: RestClient::Request#make_headers
+  :location: 363
+  :errors:
+  - stringified
+  :errors_with_suggestions:
+    stringified: stringiness
+- :file: lib/restclient/request.rb
+  :object: RestClient::Request#proxy_uri
+  :location: 418
+  :errors:
+  - falsy
+  :errors_with_suggestions:
+    falsy: flays
+- :file: lib/restclient/request.rb
+  :object: RestClient::Request#normalize_url
+  :location: 472
+  :errors:
+  - http
+  :errors_with_suggestions:
+    http: HTTP
+- :file: lib/restclient/request.rb
+  :object: RestClient::Request.default_ssl_cert_store
+  :location: 487
+  :errors:
+  - certifcates
+  :errors_with_suggestions:
+    certifcates: certificates
+- :file: lib/restclient/request.rb
+  :object: RestClient::Request#parse_url_with_auth!
+  :location: 590
+  :errors:
+  - Netrc
+  - auth
+  - uri
+  - url
+  :errors_with_suggestions:
+    Netrc: Nether
+    auth: auto
+    uri: uric
+    url: URL
+- :file: lib/restclient/request.rb
+  :object: RestClient::Request#normalize_method
+  :location: 630
+  :errors:
+  - falsy
+  :errors_with_suggestions:
+    falsy: flays
+- :file: lib/restclient/platform.rb
+  :object: RestClient::Platform.mac_mri?
+  :location: 5
+  :errors:
+  - darwin
+  - jruby
+  :errors_with_suggestions:
+    darwin: Darwin
+    jruby: ruby
+- :file: lib/restclient/platform.rb
+  :object: RestClient::Platform.jruby?
+  :location: 23
+  :errors:
+  - jruby
+  :errors_with_suggestions:
+    jruby: ruby
+- :file: lib/restclient/resource.rb
+  :object: RestClient::Resource#[]
+  :location: 134
+  :errors:
+  - subresource
+  :errors_with_suggestions:
+    subresource: sub resource
+- :file: lib/restclient/response.rb
+  :object: RestClient::Response.create
+  :location: 41
+  :errors:
+  - initializer
+  :errors_with_suggestions:
+    initializer: initialize
+- :file: lib/restclient/response.rb
+  :object: RestClient::Response.fix_encoding
+  :location: 58
+  :errors:
+  - charset
+  :errors_with_suggestions:
+    charset: char set
+- :file: lib/restclient/exceptions.rb
+  :object: RestClient::Exceptions::EXCEPTIONS_MAP
+  :location: 172
+  :errors:
+  - http
+  :errors_with_suggestions:
+    http: HTTP
+- :file: lib/restclient/raw_response.rb
+  :object: RestClient::RawResponse
+  :location: 2
+  :errors:
+  - Tempfile
+  - occassion
+  :errors_with_suggestions:
+    Tempfile: Temp file
+    occassion: occasion
+- :file: lib/restclient/abstract_response.rb
+  :object: RestClient::AbstractResponse#return!
+  :location: 103
+  :errors:
+  - 20x
+  - 30x
+  :errors_with_suggestions:
+    20x: 2nd
+    30x: 3rd
+- :file: lib/restclient/windows/root_certs.rb
+  :object: RestClient::Windows::RootCerts::CERT_CONTEXT
+  :location: 66
+  :errors:
+  - typedef
+  :errors_with_suggestions:
+    typedef: type def
+

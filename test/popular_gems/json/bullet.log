@@ -1,11 +1,62 @@
-# Logfile created on 2018-12-11 15:52:27 +0300 by logger.rb/56815
-lib/bullet/rack.rb:39: 'Proc' is incorrect, possible suggestion is 'Prof'
-lib/bullet/detector/association.rb:43: 'preload' is incorrect, possible suggestion is 'reload'
-lib/bullet/detector/association.rb:43: 'unpreload' is incorrect, possible suggestion is 'unprecedented'
-lib/bullet/detector/association.rb:52: 'preload' is incorrect, possible suggestion is 'reload'
-lib/bullet/detector/association.rb:60: 'inversed' is incorrect, possible suggestion is 'unversed'
-lib/bullet/detector/association.rb:67: 'preloaded' is incorrect, possible suggestion is 'reloaded'
-lib/bullet/detector/n_plus_one_query.rb:10: 'assocations' is incorrect, possible suggestion is 'associations'
-lib/bullet/detector/n_plus_one_query.rb:10: 'unpreload' is incorrect, possible suggestion is 'unprecedented'
-lib/bullet/detector/n_plus_one_query.rb:58: 'unpreloaded' is incorrect, possible suggestion is 'freeloaded'
-lib/bullet/detector/unused_eager_loading.rb:10: 'preload' is incorrect, possible suggestion is 'reload'
+---
+- :file: lib/bullet/rack.rb
+  :object: Bullet::Rack#empty?
+  :location: 39
+  :errors:
+  - Proc
+  :errors_with_suggestions:
+    Proc: Prof
+- :file: lib/bullet/detector/association.rb
+  :object: Bullet::Detector::Association.object_associations
+  :location: 43
+  :errors:
+  - preload
+  - unpreload
+  :errors_with_suggestions:
+    preload: reload
+    unpreload: unprecedented
+- :file: lib/bullet/detector/association.rb
+  :object: Bullet::Detector::Association.call_object_associations
+  :location: 52
+  :errors:
+  - preload
+  :errors_with_suggestions:
+    preload: reload
+- :file: lib/bullet/detector/association.rb
+  :object: Bullet::Detector::Association.inversed_objects
+  :location: 60
+  :errors:
+  - inversed
+  :errors_with_suggestions:
+    inversed: unversed
+- :file: lib/bullet/detector/association.rb
+  :object: Bullet::Detector::Association.eager_loadings
+  :location: 67
+  :errors:
+  - preloaded
+  :errors_with_suggestions:
+    preloaded: reloaded
+- :file: lib/bullet/detector/n_plus_one_query.rb
+  :object: Bullet::Detector::NPlusOneQuery.call_association
+  :location: 10
+  :errors:
+  - assocations
+  - unpreload
+  :errors_with_suggestions:
+    assocations: associations
+    unpreload: unprecedented
+- :file: lib/bullet/detector/n_plus_one_query.rb
+  :object: Bullet::Detector::NPlusOneQuery.conditions_met?
+  :location: 58
+  :errors:
+  - unpreloaded
+  :errors_with_suggestions:
+    unpreloaded: freeloaded
+- :file: lib/bullet/detector/unused_eager_loading.rb
+  :object: Bullet::Detector::UnusedEagerLoading.check_unused_preload_associations
+  :location: 10
+  :errors:
+  - preload
+  :errors_with_suggestions:
+    preload: reload
+

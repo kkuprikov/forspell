@@ -1,0 +1,23 @@
+---
+- :file: lib/jbuilder/jbuilder_template.rb
+  :object: JbuilderTemplate#cache!
+  :location: 26
+  :errors:
+  - json
+  :errors_with_suggestions:
+    json: son
+- :file: lib/jbuilder/jbuilder_template.rb
+  :object: JbuilderTemplate#cache_root!
+  :location: 46
+  :errors:
+  - json
+  :errors_with_suggestions:
+    json: son
+- :file: lib/jbuilder/jbuilder_template.rb
+  :object: JbuilderTemplate#cache_if!
+  :location: 67
+  :errors:
+  - json
+  :errors_with_suggestions:
+    json: son
+

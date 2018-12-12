@@ -1,0 +1,16 @@
+---
+- :file: lib/pundit.rb
+  :object: Pundit#permitted_attributes
+  :location: 262
+  :errors:
+  - params
+  :errors_with_suggestions:
+    params: paras
+- :file: lib/pundit.rb
+  :object: Pundit#pundit_params_for
+  :location: 283
+  :errors:
+  - params
+  :errors_with_suggestions:
+    params: paras
+

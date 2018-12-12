@@ -1,43 +1,266 @@
-# Logfile created on 2018-12-11 15:52:39 +0300 by logger.rb/56815
-lib/json/common.rb:32: 'namespace' is incorrect, possible suggestion is 'name space'
-lib/json/common.rb:126: 'unparser' is incorrect, possible suggestion is 'sparser'
-lib/json/common.rb:131: 'iconv' is incorrect, possible suggestion is 'icon'
-lib/json/common.rb:131: 'unicode' is incorrect, possible suggestion is 'Unicode'
-lib/json/common.rb:: 'serialise' is incorrect, possible suggestion is 'serialize'
-lib/json/common.rb:: 'untrusted' is incorrect, possible suggestion is 'entrusted'
-lib/json/common.rb:309: 'serialise' is incorrect, possible suggestion is 'serialize'
-lib/json/common.rb:309: 'untrusted' is incorrect, possible suggestion is 'entrusted'
-lib/json/common.rb:449: 'serialised' is incorrect, possible suggestion is 'serialized'
-lib/json/add/set.rb:7: 'Marshalled' is incorrect, possible suggestion is 'Marshall ed'
-lib/json/add/set.rb:7: 'marshalling' is incorrect, possible suggestion is 'marshaling'
-lib/json/add/set.rb:14: 'marshalling' is incorrect, possible suggestion is 'marshaling'
-lib/json/add/date.rb:9: 'Deserializes' is incorrect, possible suggestion is 'Serializes'
-lib/json/add/time.rb:8: 'Deserializes' is incorrect, possible suggestion is 'Serializes'
-lib/json/add/range.rb:8: 'Deserializes' is incorrect, possible suggestion is 'Serializes'
-lib/json/add/range.rb:23: 'boolean' is incorrect, possible suggestion is 'Boolean'
-lib/json/add/regexp.rb:8: 'Deserializes' is incorrect, possible suggestion is 'Serializes'
-lib/json/add/struct.rb:8: 'Deserializes' is incorrect, possible suggestion is 'Serializes'
-lib/json/add/struct.rb:25: 'structs' is incorrect, possible suggestion is 'struts'
-lib/json/add/symbol.rb:21: 'Deserializes' is incorrect, possible suggestion is 'Serializes'
-lib/json/add/complex.rb:9: 'Deserializes' is incorrect, possible suggestion is 'Serializes'
-lib/json/add/ostruct.rb:9: 'Deserializes' is incorrect, possible suggestion is 'Serializes'
-lib/json/add/ostruct.rb:26: 'struct's' is incorrect, possible suggestion is 'strut's'
-lib/json/pure/parser.rb:145: 'Unescape' is incorrect, possible suggestion is 'Escapement'
-lib/json/add/rational.rb:8: 'Deserializes' is incorrect, possible suggestion is 'Serializes'
-lib/json/add/date_time.rb:9: 'Deserializes' is incorrect, possible suggestion is 'Serializes'
-lib/json/add/exception.rb:8: 'Deserializes' is incorrect, possible suggestion is 'Serializes'
-lib/json/add/exception.rb:8: 'backtrace' is incorrect, possible suggestion is 'backtrack'
-lib/json/add/exception.rb:26: 'backtrace' is incorrect, possible suggestion is 'backtrack'
-lib/json/add/bigdecimal.rb:8: 'Marshalled' is incorrect, possible suggestion is 'Marshall ed'
-lib/json/add/bigdecimal.rb:8: 'marshalling' is incorrect, possible suggestion is 'marshaling'
-lib/json/add/bigdecimal.rb:15: 'marshalling' is incorrect, possible suggestion is 'marshaling'
-lib/json/pure/generator.rb:40: 'endian' is incorrect, possible suggestion is 'Indian'
-lib/json/pure/generator.rb:: 'endian' is incorrect, possible suggestion is 'Indian'
-lib/json/pure/generator.rb:86: 'unconfigured' is incorrect, possible suggestion is 'reconfigured'
-lib/json/pure/generator.rb:275: 'unparsed' is incorrect, possible suggestion is 'unpardonable'
-lib/json/pure/generator.rb:324: 'unparsed' is incorrect, possible suggestion is 'unpardonable'
-lib/json/pure/generator.rb:390: 'endian' is incorrect, possible suggestion is 'Indian'
-lib/json/pure/generator.rb:407: 'extinding' is incorrect, possible suggestion is 'extending'
-lib/json/pure/generator.rb:423: 'unparsed' is incorrect, possible suggestion is 'unpardonable'
-ext/json/ext/generator/generator.c:1014: 'unconfigured' is incorrect, possible suggestion is 'reconfigured'
-ext/json/ext/generator/generator.c:405: 'endian' is incorrect, possible suggestion is 'Indian'
+---
+- :file: lib/json/common.rb
+  :object: JSON.deep_const_get
+  :location: 32
+  :errors:
+  - namespace
+  :errors_with_suggestions:
+    namespace: name space
+- :file: lib/json/common.rb
+  :object: JSON::GeneratorError
+  :location: 126
+  :errors:
+  - unparser
+  :errors_with_suggestions:
+    unparser: sparser
+- :file: lib/json/common.rb
+  :object: JSON::MissingUnicodeSupport
+  :location: 131
+  :errors:
+  - iconv
+  - unicode
+  :errors_with_suggestions:
+    iconv: icon
+    unicode: Unicode
+- :file: lib/json/common.rb
+  :object: JSON#load
+  :location: 
+  :errors:
+  - serialise
+  - untrusted
+  :errors_with_suggestions:
+    serialise: serialize
+    untrusted: entrusted
+- :file: lib/json/common.rb
+  :object: JSON.load
+  :location: 309
+  :errors:
+  - serialise
+  - untrusted
+  :errors_with_suggestions:
+    serialise: serialize
+    untrusted: entrusted
+- :file: lib/json/common.rb
+  :object: Class#json_creatable?
+  :location: 449
+  :errors:
+  - serialised
+  :errors_with_suggestions:
+    serialised: serialized
+- :file: lib/json/add/set.rb
+  :object: Set.json_create
+  :location: 7
+  :errors:
+  - Marshalled
+  - marshalling
+  :errors_with_suggestions:
+    Marshalled: Marshall ed
+    marshalling: marshaling
+- :file: lib/json/add/set.rb
+  :object: Set#as_json
+  :location: 14
+  :errors:
+  - marshalling
+  :errors_with_suggestions:
+    marshalling: marshaling
+- :file: lib/json/add/date.rb
+  :object: Date.json_create
+  :location: 9
+  :errors:
+  - Deserializes
+  :errors_with_suggestions:
+    Deserializes: Serializes
+- :file: lib/json/add/time.rb
+  :object: Time.json_create
+  :location: 8
+  :errors:
+  - Deserializes
+  :errors_with_suggestions:
+    Deserializes: Serializes
+- :file: lib/json/add/range.rb
+  :object: Range.json_create
+  :location: 8
+  :errors:
+  - Deserializes
+  :errors_with_suggestions:
+    Deserializes: Serializes
+- :file: lib/json/add/range.rb
+  :object: Range#to_json
+  :location: 23
+  :errors:
+  - boolean
+  :errors_with_suggestions:
+    boolean: Boolean
+- :file: lib/json/add/regexp.rb
+  :object: Regexp.json_create
+  :location: 8
+  :errors:
+  - Deserializes
+  :errors_with_suggestions:
+    Deserializes: Serializes
+- :file: lib/json/add/struct.rb
+  :object: Struct.json_create
+  :location: 8
+  :errors:
+  - Deserializes
+  :errors_with_suggestions:
+    Deserializes: Serializes
+- :file: lib/json/add/struct.rb
+  :object: Struct#to_json
+  :location: 25
+  :errors:
+  - structs
+  :errors_with_suggestions:
+    structs: struts
+- :file: lib/json/add/symbol.rb
+  :object: Symbol.json_create
+  :location: 21
+  :errors:
+  - Deserializes
+  :errors_with_suggestions:
+    Deserializes: Serializes
+- :file: lib/json/add/complex.rb
+  :object: Complex.json_create
+  :location: 9
+  :errors:
+  - Deserializes
+  :errors_with_suggestions:
+    Deserializes: Serializes
+- :file: lib/json/add/ostruct.rb
+  :object: OpenStruct.json_create
+  :location: 9
+  :errors:
+  - Deserializes
+  :errors_with_suggestions:
+    Deserializes: Serializes
+- :file: lib/json/add/ostruct.rb
+  :object: OpenStruct#to_json
+  :location: 26
+  :errors:
+  - struct's
+  :errors_with_suggestions:
+    struct's: strut's
+- :file: lib/json/pure/parser.rb
+  :object: JSON::Pure::Parser::UNESCAPE_MAP
+  :location: 145
+  :errors:
+  - Unescape
+  :errors_with_suggestions:
+    Unescape: Escapement
+- :file: lib/json/add/rational.rb
+  :object: Rational.json_create
+  :location: 8
+  :errors:
+  - Deserializes
+  :errors_with_suggestions:
+    Deserializes: Serializes
+- :file: lib/json/add/date_time.rb
+  :object: DateTime.json_create
+  :location: 9
+  :errors:
+  - Deserializes
+  :errors_with_suggestions:
+    Deserializes: Serializes
+- :file: lib/json/add/exception.rb
+  :object: Exception.json_create
+  :location: 8
+  :errors:
+  - Deserializes
+  - backtrace
+  :errors_with_suggestions:
+    Deserializes: Serializes
+    backtrace: backtrack
+- :file: lib/json/add/exception.rb
+  :object: Exception#to_json
+  :location: 26
+  :errors:
+  - backtrace
+  :errors_with_suggestions:
+    backtrace: backtrack
+- :file: lib/json/add/bigdecimal.rb
+  :object: BigDecimal.json_create
+  :location: 8
+  :errors:
+  - Marshalled
+  - marshalling
+  :errors_with_suggestions:
+    Marshalled: Marshall ed
+    marshalling: marshaling
+- :file: lib/json/add/bigdecimal.rb
+  :object: BigDecimal#as_json
+  :location: 15
+  :errors:
+  - marshalling
+  :errors_with_suggestions:
+    marshalling: marshaling
+- :file: lib/json/pure/generator.rb
+  :object: JSON#utf8_to_json
+  :location: 40
+  :errors:
+  - endian
+  :errors_with_suggestions:
+    endian: Indian
+- :file: lib/json/pure/generator.rb
+  :object: JSON.utf8_to_json
+  :location: 
+  :errors:
+  - endian
+  :errors_with_suggestions:
+    endian: Indian
+- :file: lib/json/pure/generator.rb
+  :object: JSON::Pure::Generator::State.from_state
+  :location: 86
+  :errors:
+  - unconfigured
+  :errors_with_suggestions:
+    unconfigured: reconfigured
+- :file: lib/json/pure/generator.rb
+  :object: JSON::Pure::Generator::GeneratorMethods::Hash#to_json
+  :location: 275
+  :errors:
+  - unparsed
+  :errors_with_suggestions:
+    unparsed: unpardonable
+- :file: lib/json/pure/generator.rb
+  :object: JSON::Pure::Generator::GeneratorMethods::Array#to_json
+  :location: 324
+  :errors:
+  - unparsed
+  :errors_with_suggestions:
+    unparsed: unpardonable
+- :file: lib/json/pure/generator.rb
+  :object: JSON::Pure::Generator::GeneratorMethods::String#to_json
+  :location: 390
+  :errors:
+  - endian
+  :errors_with_suggestions:
+    endian: Indian
+- :file: lib/json/pure/generator.rb
+  :object: JSON::Pure::Generator::GeneratorMethods::String::Extend
+  :location: 407
+  :errors:
+  - extinding
+  :errors_with_suggestions:
+    extinding: extending
+- :file: lib/json/pure/generator.rb
+  :object: JSON::Pure::Generator::GeneratorMethods::String#to_json_raw_object
+  :location: 423
+  :errors:
+  - unparsed
+  :errors_with_suggestions:
+    unparsed: unpardonable
+- :file: ext/json/ext/generator/generator.c
+  :object: JSON::Ext::Generator::State.from_state
+  :location: 1014
+  :errors:
+  - unconfigured
+  :errors_with_suggestions:
+    unconfigured: reconfigured
+- :file: ext/json/ext/generator/generator.c
+  :object: JSON::Ext::Generator::GeneratorMethods::String#to_json
+  :location: 405
+  :errors:
+  - endian
+  :errors_with_suggestions:
+    endian: Indian
+

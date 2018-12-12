@@ -1,0 +1,843 @@
+---
+- :file: lib/mail.rb
+  :object: Mail
+  :location: 4
+  :errors:
+  - v3
+  :errors_with_suggestions:
+    v3: v
+- :file: lib/mail.rb
+  :object: Mail.eager_autoload!
+  :location: 46
+  :errors:
+  - autoload
+  - explictly
+  :errors_with_suggestions:
+    autoload: auto load
+    explictly: explicitly
+- :file: lib/mail/body.rb
+  :object: Mail::Body#include?
+  :location: 103
+  :errors:
+  - substring
+  :errors_with_suggestions:
+    substring: sub string
+- :file: lib/mail/body.rb
+  :object: Mail::Body#set_sort_order
+  :location: 117
+  :errors:
+  - html
+  :errors_with_suggestions:
+    html: HTML
+- :file: lib/mail/body.rb
+  :object: Mail::Body#encoded
+  :location: 140
+  :errors:
+  - identiy
+  :errors_with_suggestions:
+    identiy: identity
+- :file: lib/mail/mail.rb
+  :object: Mail.defaults
+  :location: 54
+  :errors:
+  - localhost
+  :errors_with_suggestions:
+    localhost: local host
+- :file: lib/mail/mail.rb
+  :object: Mail.unregister_observer
+  :location: 202
+  :errors:
+  - Unregister
+  :errors_with_suggestions:
+    Unregister: Unregistered
+- :file: lib/mail/mail.rb
+  :object: Mail.unregister_interceptor
+  :location: 221
+  :errors:
+  - Unregister
+  :errors_with_suggestions:
+    Unregister: Unregistered
+- :file: lib/mail/part.rb
+  :object: Mail::Part#parse_message
+  :location: 101
+  :errors:
+  - init
+  :errors_with_suggestions:
+    init: unit
+- :file: lib/mail/field.rb
+  :object: Mail::Field::ParseError
+  :location: 78
+  :errors:
+  - ie
+  :errors_with_suggestions:
+    ie: IE
+- :file: lib/mail/header.rb
+  :object: Mail::Header#fields=
+  :location: 71
+  :errors:
+  - Acceps
+  :errors_with_suggestions:
+    Acceps: Accepts
+- :file: lib/mail/message.rb
+  :object: Mail::Message#<=>
+  :location: 320
+  :errors:
+  - al
+  - et
+  :errors_with_suggestions:
+    al: AL
+    et: ET
+- :file: lib/mail/message.rb
+  :object: Mail::Message#==
+  :location: 342
+  :errors:
+  - mail1
+  - mail2
+  :errors_with_suggestions:
+    mail1: mail
+    mail2: mail
+- :file: lib/mail/message.rb
+  :object: Mail::Message#raw_source
+  :location: 389
+  :errors:
+  - parsers
+  :errors_with_suggestions:
+    parsers: parser
+- :file: lib/mail/message.rb
+  :object: Mail::Message#raw_envelope
+  :location: 407
+  :errors:
+  - lindsaar
+  - mikel
+  :errors_with_suggestions:
+    lindsaar: Lindsay
+    mikel: mike
+- :file: lib/mail/message.rb
+  :object: Mail::Message#errors
+  :location: 454
+  :errors:
+  - defence
+  - parsers
+  - reparsed
+  :errors_with_suggestions:
+    defence: defense
+    parsers: parser
+    reparsed: re parsed
+- :file: lib/mail/message.rb
+  :object: Mail::Message#bcc
+  :location: 475
+  :errors:
+  - Bcc
+  :errors_with_suggestions:
+    Bcc: Bk
+- :file: lib/mail/message.rb
+  :object: Mail::Message#bcc=
+  :location: 504
+  :errors:
+  - Bcc
+  :errors_with_suggestions:
+    Bcc: Bk
+- :file: lib/mail/message.rb
+  :object: Mail::Message#resent_bcc
+  :location: 804
+  :errors:
+  - Bcc
+  :errors_with_suggestions:
+    Bcc: Bk
+- :file: lib/mail/message.rb
+  :object: Mail::Message#resent_bcc=
+  :location: 833
+  :errors:
+  - Bcc
+  :errors_with_suggestions:
+    Bcc: Bk
+- :file: lib/mail/message.rb
+  :object: Mail::Message#smtp_envelope_to
+  :location: 1085
+  :errors:
+  - Bcc
+  :errors_with_suggestions:
+    Bcc: Bk
+- :file: lib/mail/message.rb
+  :object: Mail::Message#destinations
+  :location: 1272
+  :errors:
+  - bcc
+  :errors_with_suggestions:
+    bcc: bk
+- :file: lib/mail/message.rb
+  :object: Mail::Message#bcc_addrs
+  :location: 1304
+  :errors:
+  - Bcc
+  :errors_with_suggestions:
+    Bcc: Bk
+- :file: lib/mail/message.rb
+  :object: Mail::Message#method_missing
+  :location: 1338
+  :errors:
+  - al
+  - et
+  :errors_with_suggestions:
+    al: AL
+    et: ET
+- :file: lib/mail/message.rb
+  :object: Mail::Message#add_content_type
+  :location: 1462
+  :errors:
+  - charset
+  :errors_with_suggestions:
+    charset: char set
+- :file: lib/mail/message.rb
+  :object: Mail::Message#add_charset
+  :location: 1469
+  :errors:
+  - charset
+  :errors_with_suggestions:
+    charset: char set
+- :file: lib/mail/message.rb
+  :object: Mail::Message#charset=
+  :location: 1503
+  :errors:
+  - charset
+  :errors_with_suggestions:
+    charset: char set
+- :file: lib/mail/message.rb
+  :object: Mail::Message#attachments
+  :location: 1590
+  :errors:
+  - base64
+  - pre
+  :errors_with_suggestions:
+    base64: basely
+    pre: per
+- :file: lib/mail/message.rb
+  :object: Mail::Message#html_part
+  :location: 1632
+  :errors:
+  - Accessor
+  :errors_with_suggestions:
+    Accessor: Accessory
+- :file: lib/mail/message.rb
+  :object: Mail::Message#text_part
+  :location: 1641
+  :errors:
+  - Accessor
+  :errors_with_suggestions:
+    Accessor: Accessory
+- :file: lib/mail/message.rb
+  :object: Mail::Message#html_part=
+  :location: 1650
+  :errors:
+  - html
+  :errors_with_suggestions:
+    html: HTML
+- :file: lib/mail/encodings.rb
+  :object: Mail::Encodings.register
+  :location: 15
+  :errors:
+  - base64
+  :errors_with_suggestions:
+    base64: basely
+- :file: lib/mail/encodings.rb
+  :object: Mail::Encodings.get_encoding
+  :location: 33
+  :errors:
+  - encodings
+  :errors_with_suggestions:
+    encodings: encoding
+- :file: lib/mail/encodings.rb
+  :object: Mail::Encodings.q_value_decode
+  :location: 263
+  :errors:
+  - E3
+  :errors_with_suggestions:
+    E3: E
+- :file: lib/mail/encodings.rb
+  :object: Mail::Encodings.collapse_adjacent_encodings
+  :location: 282
+  :errors:
+  - unencoded
+  :errors_with_suggestions:
+    unencoded: encoded
+- :file: lib/mail/encodings.rb
+  :object: Mail::Encodings.each_base64_chunk_byterange
+  :location: 307
+  :errors:
+  - multibyte
+  :errors_with_suggestions:
+    multibyte: multi byte
+- :file: lib/mail/encodings.rb
+  :object: Mail::Encodings.each_chunk_byterange
+  :location: 320
+  :errors:
+  - multibyte
+  :errors_with_suggestions:
+    multibyte: multi byte
+- :file: lib/mail/multibyte.rb
+  :object: Mail::Multibyte.proxy_class
+  :location: 11
+  :errors:
+  - accessor
+  - encodings
+  :errors_with_suggestions:
+    accessor: accessory
+    encodings: encoding
+- :file: lib/mail/multibyte.rb
+  :object: Mail::Multibyte.proxy_class=
+  :location: 11
+  :errors:
+  - accessor
+  - encodings
+  :errors_with_suggestions:
+    accessor: accessory
+    encodings: encoding
+- :file: lib/mail/multibyte.rb
+  :object: Mail::Multibyte.mb_chars
+  :location: 23
+  :errors:
+  - behaviour
+  - encapsuled
+  :errors_with_suggestions:
+    behaviour: behavior
+    encapsuled: en capsuled
+- :file: lib/mail/utilities.rb
+  :object: Mail::Utilities#escape_paren
+  :location: 149
+  :errors:
+  - parenthesies
+  :errors_with_suggestions:
+    parenthesies: parenthesis
+- :file: lib/mail/utilities.rb
+  :object: Mail::Utilities.to_lf
+  :location: 287
+  :errors:
+  - 8bit
+  - sendmail
+  :errors_with_suggestions:
+    8bit: bit
+    sendmail: send mail
+- :file: lib/mail/utilities.rb
+  :object: Mail::Utilities.to_crlf
+  :location: 298
+  :errors:
+  - 8bit
+  - base64
+  :errors_with_suggestions:
+    8bit: bit
+    base64: basely
+- :file: lib/mail/field_list.rb
+  :object: Mail::FieldList#insert_field
+  :location: 47
+  :errors:
+  - insort
+  :errors_with_suggestions:
+    insort: insert
+- :file: lib/mail/parts_list.rb
+  :object: Mail::PartsList#encode_with
+  :location: 13
+  :errors:
+  - delegator
+  :errors_with_suggestions:
+    delegator: delegate
+- :file: lib/mail/encodings/7bit.rb
+  :object: Mail::Encodings::SevenBit
+  :location: 7
+  :errors:
+  - 7bit
+  - 8bit
+  :errors_with_suggestions:
+    7bit: bit
+    8bit: bit
+- :file: lib/mail/encodings/7bit.rb
+  :object: Mail::Encodings::SevenBit.compatible_input?
+  :location: 21
+  :errors:
+  - 7bit
+  :errors_with_suggestions:
+    7bit: bit
+- :file: lib/mail/fields/cc_field.rb
+  :object: Mail::CcField
+  :location: 6
+  :errors:
+  - metods
+  :errors_with_suggestions:
+    metods: methods
+- :file: lib/mail/fields/to_field.rb
+  :object: Mail::ToField
+  :location: 6
+  :errors:
+  - metods
+  :errors_with_suggestions:
+    metods: methods
+- :file: lib/mail/multibyte/chars.rb
+  :object: Mail::Multibyte::Chars
+  :location: 7
+  :errors:
+  - encodings
+  - multibyte
+  - proxied
+  :errors_with_suggestions:
+    encodings: encoding
+    multibyte: multi byte
+    proxied: proxies
+- :file: lib/mail/multibyte/chars.rb
+  :object: Mail::Multibyte::Chars#=~
+  :location: 112
+  :errors:
+  - codepoints
+  :errors_with_suggestions:
+    codepoints: code points
+- :file: lib/mail/multibyte/chars.rb
+  :object: Mail::Multibyte::Chars#insert
+  :location: 120
+  :errors:
+  - codepoint
+  :errors_with_suggestions:
+    codepoint: code point
+- :file: lib/mail/multibyte/chars.rb
+  :object: Mail::Multibyte::Chars#index
+  :location: 145
+  :errors:
+  - codepoints
+  :errors_with_suggestions:
+    codepoints: code points
+- :file: lib/mail/multibyte/chars.rb
+  :object: Mail::Multibyte::Chars#rindex
+  :location: 156
+  :errors:
+  - codepoints
+  :errors_with_suggestions:
+    codepoints: code points
+- :file: lib/mail/multibyte/chars.rb
+  :object: Mail::Multibyte::Chars#size
+  :location: 170
+  :errors:
+  - codepoints
+  :errors_with_suggestions:
+    codepoints: code points
+- :file: lib/mail/multibyte/chars.rb
+  :object: Mail::Multibyte::Chars#rstrip
+  :location: 176
+  :errors:
+  - whitespace
+  :errors_with_suggestions:
+    whitespace: white space
+- :file: lib/mail/multibyte/chars.rb
+  :object: Mail::Multibyte::Chars#lstrip
+  :location: 181
+  :errors:
+  - whitespace
+  :errors_with_suggestions:
+    whitespace: white space
+- :file: lib/mail/multibyte/chars.rb
+  :object: Mail::Multibyte::Chars#strip
+  :location: 186
+  :errors:
+  - whitespace
+  :errors_with_suggestions:
+    whitespace: white space
+- :file: lib/mail/multibyte/chars.rb
+  :object: Mail::Multibyte::Chars#ord
+  :location: 191
+  :errors:
+  - codepoint
+  :errors_with_suggestions:
+    codepoint: code point
+- :file: lib/mail/multibyte/chars.rb
+  :object: Mail::Multibyte::Chars#slice
+  :location: 301
+  :errors:
+  - codepoints
+  :errors_with_suggestions:
+    codepoints: code points
+- :file: lib/mail/multibyte/chars.rb
+  :object: Mail::Multibyte::Chars#g_length
+  :location: 401
+  :errors:
+  - grapheme
+  :errors_with_suggestions:
+    grapheme: graphite
+- :file: lib/mail/attachments_list.rb
+  :object: Mail::AttachmentsList#[]
+  :location: 25
+  :errors:
+  - jpg
+  - png
+  :errors_with_suggestions:
+    jpg: jog
+    png: pg
+- :file: lib/mail/fields/bcc_field.rb
+  :object: Mail::BccField
+  :location: 6
+  :errors:
+  - Bcc
+  - bcc
+  - metods
+  :errors_with_suggestions:
+    Bcc: Bk
+    bcc: bk
+    metods: methods
+- :file: lib/mail/fields/bcc_field.rb
+  :object: Mail::BccField#encoded
+  :location: 41
+  :errors:
+  - Bcc
+  :errors_with_suggestions:
+    Bcc: Bk
+- :file: lib/mail/indifferent_hash.rb
+  :object: Mail::IndifferentHash#update
+  :location: 47
+  :errors:
+  - instantized
+  :errors_with_suggestions:
+    instantized: instantiated
+- :file: lib/mail/indifferent_hash.rb
+  :object: Mail::IndifferentHash#merge
+  :location: 100
+  :errors:
+  - instantized
+  :errors_with_suggestions:
+    instantized: instantiated
+- :file: lib/mail/fields/date_field.rb
+  :object: Mail::DateField
+  :location: 6
+  :errors:
+  - excatly
+  :errors_with_suggestions:
+    excatly: exactly
+- :file: lib/mail/fields/from_field.rb
+  :object: Mail::FromField
+  :location: 6
+  :errors:
+  - metods
+  :errors_with_suggestions:
+    metods: methods
+- :file: lib/mail/multibyte/unicode.rb
+  :object: Mail::Multibyte::Unicode::Codepoint
+  :location: 10
+  :errors:
+  - codepoint
+  :errors_with_suggestions:
+    codepoint: code point
+- :file: lib/mail/multibyte/unicode.rb
+  :object: Mail::Multibyte::Unicode#default_normalization_form
+  :location: 32
+  :errors:
+  - normalizations
+  :errors_with_suggestions:
+    normalizations: normalization
+- :file: lib/mail/multibyte/unicode.rb
+  :object: Mail::Multibyte::Unicode#default_normalization_form=
+  :location: 32
+  :errors:
+  - normalizations
+  :errors_with_suggestions:
+    normalizations: normalization
+- :file: lib/mail/multibyte/unicode.rb
+  :object: Mail::Multibyte::Unicode::WHITESPACE
+  :location: 54
+  :errors:
+  - unicode
+  - whitespace
+  :errors_with_suggestions:
+    unicode: Unicode
+    whitespace: white space
+- :file: lib/mail/multibyte/unicode.rb
+  :object: Mail::Multibyte::Unicode::LEADERS_AND_TRAILERS
+  :location: 70
+  :errors:
+  - endian
+  - utf
+  - whitespace
+  :errors_with_suggestions:
+    endian: Indian
+    utf: fut
+    whitespace: white space
+- :file: lib/mail/multibyte/unicode.rb
+  :object: Mail::Multibyte::Unicode.codepoints_to_pattern
+  :location: 74
+  :errors:
+  - codepoints
+  :errors_with_suggestions:
+    codepoints: code points
+- :file: lib/mail/multibyte/unicode.rb
+  :object: Mail::Multibyte::Unicode#u_unpack
+  :location: 81
+  :errors:
+  - codepoints
+  :errors_with_suggestions:
+    codepoints: code points
+- :file: lib/mail/multibyte/unicode.rb
+  :object: Mail::Multibyte::Unicode#in_char_class?
+  :location: 94
+  :errors:
+  - codepoint
+  - grapheme
+  :errors_with_suggestions:
+    codepoint: code point
+    grapheme: graphite
+- :file: lib/mail/multibyte/unicode.rb
+  :object: Mail::Multibyte::Unicode#g_unpack
+  :location: 103
+  :errors:
+  - grapheme
+  :errors_with_suggestions:
+    grapheme: graphite
+- :file: lib/mail/multibyte/unicode.rb
+  :object: Mail::Multibyte::Unicode#reorder_characters
+  :location: 146
+  :errors:
+  - codepoints
+  :errors_with_suggestions:
+    codepoints: code points
+- :file: lib/mail/encodings/identity.rb
+  :object: Mail::Encodings::Identity
+  :location: 7
+  :errors:
+  - encodings
+  :errors_with_suggestions:
+    encodings: encoding
+- :file: lib/mail/fields/sender_field.rb
+  :object: Mail::SenderField
+  :location: 6
+  :errors:
+  - metods
+  :errors_with_suggestions:
+    metods: methods
+- :file: lib/mail/fields/parameter_hash.rb
+  :object: Mail::ParameterHash
+  :location: 8
+  :errors:
+  - blahbleh
+  - bleh
+  - paramaters
+  - un
+  :errors_with_suggestions:
+    blahbleh: blackleg
+    bleh: blah
+    paramaters: parameters
+    un: UN
+- :file: lib/mail/fields/received_field.rb
+  :object: Mail::ReceivedField
+  :location: 6
+  :errors:
+  - addr
+  :errors_with_suggestions:
+    addr: add
+- :file: lib/mail/fields/reply_to_field.rb
+  :object: Mail::ReplyToField
+  :location: 6
+  :errors:
+  - metods
+  :errors_with_suggestions:
+    metods: methods
+- :file: lib/mail/core_extensions/string.rb
+  :object: String#ascii_only?
+  :location: 6
+  :errors:
+  - Backport
+  - ascii
+  :errors_with_suggestions:
+    Backport: Back port
+    ascii: ASCII
+- :file: lib/mail/fields/resent_cc_field.rb
+  :object: Mail::ResentCcField
+  :location: 6
+  :errors:
+  - metods
+  :errors_with_suggestions:
+    metods: methods
+- :file: lib/mail/fields/resent_to_field.rb
+  :object: Mail::ResentToField
+  :location: 6
+  :errors:
+  - metods
+  :errors_with_suggestions:
+    metods: methods
+- :file: lib/mail/fields/references_field.rb
+  :object: Mail::ReferencesField
+  :location: 6
+  :errors:
+  - metods
+  :errors_with_suggestions:
+    metods: methods
+- :file: lib/mail/fields/resent_bcc_field.rb
+  :object: Mail::ResentBccField
+  :location: 6
+  :errors:
+  - Bcc
+  - bcc
+  - metods
+  :errors_with_suggestions:
+    Bcc: Bk
+    bcc: bk
+    metods: methods
+- :file: lib/mail/fields/in_reply_to_field.rb
+  :object: Mail::InReplyToField
+  :location: 6
+  :errors:
+  - metods
+  :errors_with_suggestions:
+    metods: methods
+- :file: lib/mail/fields/resent_from_field.rb
+  :object: Mail::ResentFromField
+  :location: 6
+  :errors:
+  - metods
+  :errors_with_suggestions:
+    metods: methods
+- :file: lib/mail/fields/return_path_field.rb
+  :object: Mail::ReturnPathField
+  :location: 6
+  :errors:
+  - addr
+  :errors_with_suggestions:
+    addr: add
+- :file: lib/mail/version_specific/ruby_1_8.rb
+  :object: Mail::Ruby18.escape_paren
+  :location: 10
+  :errors:
+  - unescape
+  - unescaped
+  :errors_with_suggestions:
+    unescape: escapement
+    unescaped: escaped
+- :file: lib/mail/version_specific/ruby_1_9.rb
+  :object: Mail::Ruby19.escape_paren
+  :location: 47
+  :errors:
+  - unescaped
+  :errors_with_suggestions:
+    unescaped: escaped
+- :file: lib/mail/version_specific/ruby_1_9.rb
+  :object: Mail::Ruby19.encode_utf7
+  :location: 97
+  :errors:
+  - stdlib
+  :errors_with_suggestions:
+    stdlib: std lib
+- :file: lib/mail/version_specific/ruby_1_9.rb
+  :object: Mail::Ruby19.pick_encoding
+  :location: 180
+  :errors:
+  - charset
+  - charsets
+  :errors_with_suggestions:
+    charset: char set
+    charsets: char sets
+- :file: lib/mail/fields/resent_sender_field.rb
+  :object: Mail::ResentSenderField
+  :location: 6
+  :errors:
+  - metods
+  :errors_with_suggestions:
+    metods: methods
+- :file: lib/mail/encodings/transfer_encoding.rb
+  :object: Mail::Encodings::TransferEncoding.can_transport?
+  :location: 10
+  :errors:
+  - 7bit
+  - 8bit
+  - encoding's
+  - superclass
+  :errors_with_suggestions:
+    7bit: bit
+    8bit: bit
+    encoding's: foreboding's
+    superclass: super class
+- :file: lib/mail/encodings/transfer_encoding.rb
+  :object: Mail::Encodings::TransferEncoding.can_encode?
+  :location: 16
+  :errors:
+  - 7bit
+  - subclasses
+  :errors_with_suggestions:
+    7bit: bit
+    subclasses: sub classes
+- :file: lib/mail/network/delivery_methods/exim.rb
+  :object: Mail::Exim
+  :location: 4
+  :errors:
+  - exim
+  - sbin
+  - unix
+  - usr
+  :errors_with_suggestions:
+    exim: exam
+    sbin: sin
+    unix: UNIX
+    usr: use
+- :file: lib/mail/network/delivery_methods/smtp.rb
+  :object: Mail::SMTP
+  :location: 5
+  :errors:
+  - hostname
+  - localhost
+  - postfix
+  - sendmail
+  :errors_with_suggestions:
+    hostname: host name
+    localhost: local host
+    postfix: post fix
+    sendmail: send mail
+- :file: lib/mail/network/delivery_methods/smtp.rb
+  :object: Mail::SMTP#ssl_context
+  :location: 133
+  :errors:
+  - openssl
+  :errors_with_suggestions:
+    openssl: openness
+- :file: lib/mail/fields/resent_message_id_field.rb
+  :object: Mail::ResentMessageIdField
+  :location: 6
+  :errors:
+  - msg
+  :errors_with_suggestions:
+    msg: MSG
+- :file: lib/mail/network/retriever_methods/imap.rb
+  :object: Mail::IMAP
+  :location: 5
+  :errors:
+  - imap
+  :errors_with_suggestions:
+    imap: imp
+- :file: lib/mail/network/retriever_methods/pop3.rb
+  :object: Mail::POP3
+  :location: 5
+  :errors:
+  - Pop3
+  :errors_with_suggestions:
+    Pop3: Pope
+- :file: lib/mail/network/delivery_methods/sendmail.rb
+  :object: Mail::Sendmail
+  :location: 5
+  :errors:
+  - sbin
+  - sendmail
+  - unix
+  - usr
+  :errors_with_suggestions:
+    sbin: sin
+    sendmail: send mail
+    unix: UNIX
+    usr: use
+- :file: lib/mail/network/delivery_methods/file_delivery.rb
+  :object: Mail::FileDelivery
+  :location: 5
+  :errors:
+  - anothertest
+  - fred
+  - joe
+  :errors_with_suggestions:
+    anothertest: another test
+    fred: Fred
+    joe: Joe
+- :file: lib/mail/network/delivery_methods/smtp_connection.rb
+  :object: Mail::SMTPConnection#dot_stuff
+  :location: 58
+  :errors:
+  - unterminated
+  :errors_with_suggestions:
+    unterminated: exterminated
+

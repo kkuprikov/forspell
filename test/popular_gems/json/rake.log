@@ -1,95 +1,575 @@
-# Logfile created on 2018-12-11 15:52:45 +0300 by logger.rb/56815
-lib/rake/task.rb:6: 'Rakefile' is incorrect, possible suggestion is 'Rake file'
-lib/rake/task.rb:26: 'namespaces' is incorrect, possible suggestion is 'name spaces'
-lib/rake/task.rb:34: 'reenable' is incorrect, possible suggestion is 're enable'
-lib/rake/task.rb:117: 'namespace' is incorrect, possible suggestion is 'name space'
-lib/rake/task.rb:141: 'Reenable' is incorrect, possible suggestion is 'Re enable'
-lib/rake/task.rb:337: 'args' is incorrect, possible suggestion is 'rags'
-lib/rake/task.rb:392: 'args' is incorrect, possible suggestion is 'rags'
-lib/rake/scope.rb:15: 'toplevel' is incorrect, possible suggestion is 'top level'
-lib/rake/win32.rb:44: 'win32' is incorrect, possible suggestion is 'windy'
-lib/rake/testtask.rb:57: 'rb' is incorrect, possible suggestion is 'Rb'
-lib/rake/testtask.rb:57: 'rb' is incorrect, possible suggestion is 'Rb'
-lib/rake/cloneable.rb:3: 'Mixin' is incorrect, possible suggestion is 'Mixing'
-lib/rake/cloneable.rb:7: 'dup' is incorrect, possible suggestion is 'pud'
-lib/rake/file_list.rb:88: 'globbable' is incorrect, possible suggestion is 'globalize'
-lib/rake/file_list.rb:246: 'gsub' is incorrect, possible suggestion is 'sub'
-lib/rake/file_list.rb:263: 'gsub' is incorrect, possible suggestion is 'sub'
-lib/rake/file_list.rb:269: 'pathmap' is incorrect, possible suggestion is 'path map'
-lib/rake/file_list.rb:288: 'emacs' is incorrect, possible suggestion is 'Emacs'
-lib/rake/file_list.rb:288: 'filelist' is incorrect, possible suggestion is 'file list'
-lib/rake/file_list.rb:427: 'Pathname' is incorrect, possible suggestion is 'Path name'
-lib/rake/file_utils.rb:15: 'cmd' is incorrect, possible suggestion is 'cm'
-lib/rake/name_space.rb:8: 'namespace' is incorrect, possible suggestion is 'name space'
-lib/rake/name_space.rb:17: 'namespace' is incorrect, possible suggestion is 'name space'
-lib/rake/name_space.rb:24: 'namespace' is incorrect, possible suggestion is 'name space'
-lib/rake/name_space.rb:31: 'namespaces' is incorrect, possible suggestion is 'name spaces'
-lib/rake/application.rb:29: 'rakefile' is incorrect, possible suggestion is 'rake file'
-lib/rake/application.rb:101: 'rakefile' is incorrect, possible suggestion is 'rake file'
-lib/rake/application.rb:149: 'multithreaded' is incorrect, possible suggestion is 'multi threaded'
-lib/rake/application.rb:199: 'subclasses' is incorrect, possible suggestion is 'sub classes'
-lib/rake/application.rb:199: 'unhandled' is incorrect, possible suggestion is 'unhanded'
-lib/rake/application.rb:272: 'rakefile' is incorrect, possible suggestion is 'rake file'
-lib/rake/application.rb:634: 'env' is incorrect, possible suggestion is 'enc'
-lib/rake/application.rb:655: 'rb' is incorrect, possible suggestion is 'Rb'
-lib/rake/application.rb:719: 'rakefiles' is incorrect, possible suggestion is 'rake files'
-lib/rake/application.rb:743: 'args' is incorrect, possible suggestion is 'rags'
-lib/rake/application.rb:743: 'recognised' is incorrect, possible suggestion is 'recognized'
-lib/rake/application.rb:763: 'subclasses' is incorrect, possible suggestion is 'sub classes'
-lib/rake/linked_list.rb:4: 'Polylithic' is incorrect, possible suggestion is 'Paleolithic'
-lib/rake/linked_list.rb:10: 'Polymorphically' is incorrect, possible suggestion is 'Polymorphic ally'
-lib/rake/linked_list.rb:89: 'polymorphically' is incorrect, possible suggestion is 'polymorphic ally'
-lib/rake/packagetask.rb:10: 'distributable' is incorrect, possible suggestion is 'distributional'
-lib/rake/packagetask.rb:55: 'gzipped' is incorrect, possible suggestion is 'zipped'
-lib/rake/packagetask.rb:55: 'tgz' is incorrect, possible suggestion is 'TGIF'
-lib/rake/packagetask.rb:55: 'gzipped' is incorrect, possible suggestion is 'zipped'
-lib/rake/packagetask.rb:55: 'tgz' is incorrect, possible suggestion is 'TGIF'
-lib/rake/packagetask.rb:59: 'gz' is incorrect, possible suggestion is 'g'
-lib/rake/packagetask.rb:59: 'gzipped' is incorrect, possible suggestion is 'zipped'
-lib/rake/packagetask.rb:59: 'gz' is incorrect, possible suggestion is 'g'
-lib/rake/packagetask.rb:59: 'gzipped' is incorrect, possible suggestion is 'zipped'
-lib/rake/packagetask.rb:63: 'bz2' is incorrect, possible suggestion is 'biz'
-lib/rake/packagetask.rb:63: 'bzip2'd' is incorrect, possible suggestion is 'bipedal'
-lib/rake/packagetask.rb:63: 'bz2' is incorrect, possible suggestion is 'biz'
-lib/rake/packagetask.rb:63: 'bzip2'd' is incorrect, possible suggestion is 'bipedal'
-lib/rake/packagetask.rb:67: 'xz' is incorrect, possible suggestion is 'xx'
-lib/rake/packagetask.rb:67: 'xz'd' is incorrect, possible suggestion is 'he'd'
-lib/rake/packagetask.rb:67: 'xz' is incorrect, possible suggestion is 'xx'
-lib/rake/packagetask.rb:67: 'xz'd' is incorrect, possible suggestion is 'he'd'
-lib/rake/packagetask.rb:76: 'bzip2ed' is incorrect, possible suggestion is 'bipedal'
-lib/rake/packagetask.rb:76: 'gzipped' is incorrect, possible suggestion is 'zipped'
-lib/rake/packagetask.rb:76: 'bzip2ed' is incorrect, possible suggestion is 'bipedal'
-lib/rake/packagetask.rb:76: 'gzipped' is incorrect, possible suggestion is 'zipped'
-lib/rake/packagetask.rb:176: 'tgz' is incorrect, possible suggestion is 'TGIF'
-lib/rake/packagetask.rb:182: 'gz' is incorrect, possible suggestion is 'g'
-lib/rake/packagetask.rb:188: 'bz2' is incorrect, possible suggestion is 'biz'
-lib/rake/packagetask.rb:194: 'xz' is incorrect, possible suggestion is 'xx'
-lib/rake/rake_module.rb:27: 'rakefile' is incorrect, possible suggestion is 'rake file'
-lib/rake/rake_module.rb:32: 'rakelib' is incorrect, possible suggestion is 'rake lib'
-lib/rake/rake_module.rb:38: 'rakefiles' is incorrect, possible suggestion is 'rake files'
-lib/rake/thread_pool.rb:25: 'args' is incorrect, possible suggestion is 'rags'
-lib/rake/task_manager.rb:4: 'mixin' is incorrect, possible suggestion is 'mixing'
-lib/rake/task_manager.rb:6: 'Rakefile' is incorrect, possible suggestion is 'Rake file'
-lib/rake/task_manager.rb:6: 'Rakefile' is incorrect, possible suggestion is 'Rake file'
-lib/rake/task_manager.rb:179: 'lookups' is incorrect, possible suggestion is 'lookup'
-lib/rake/task_manager.rb:218: 'namespace' is incorrect, possible suggestion is 'name space'
-lib/rake/task_manager.rb:239: 'dsl' is incorrect, possible suggestion is 'isl'
-lib/rake/task_manager.rb:250: 'namespace' is incorrect, possible suggestion is 'name space'
-lib/rake/task_manager.rb:283: 'procs' is incorrect, possible suggestion is 'crops'
-lib/rake/default_loader.rb:4: 'Rakefile' is incorrect, possible suggestion is 'Rake file'
-lib/rake/default_loader.rb:7: 'fn' is incorrect, possible suggestion is 'f'
-lib/rake/default_loader.rb:7: 'rakefile' is incorrect, possible suggestion is 'rake file'
-lib/rake/dsl_definition.rb:7: 'Rakefile' is incorrect, possible suggestion is 'Rake file'
-lib/rake/dsl_definition.rb:28: 'namespace' is incorrect, possible suggestion is 'name space'
-lib/rake/dsl_definition.rb:116: 'namespace' is incorrect, possible suggestion is 'name space'
-lib/rake/dsl_definition.rb:169: 'Rakefiles' is incorrect, possible suggestion is 'Rake files'
-lib/rake/dsl_definition.rb:169: 'fn' is incorrect, possible suggestion is 'f'
-lib/rake/dsl_definition.rb:169: 'rakelibdir' is incorrect, possible suggestion is 'Bakelite'
-lib/rake/file_utils_ext.rb:67: 'nowrite' is incorrect, possible suggestion is 'no write'
-lib/rake/file_utils_ext.rb:91: 'nowrite' is incorrect, possible suggestion is 'no write'
-lib/rake/file_utils_ext.rb:126: 'stderr' is incorrect, possible suggestion is 'std err'
-lib/rake/private_reader.rb:13: 'accessors' is incorrect, possible suggestion is 'accessory'
-lib/rake/loaders/makefile.rb:4: 'Makefile' is incorrect, possible suggestion is 'Make file'
-lib/rake/loaders/makefile.rb:23: 'fn' is incorrect, possible suggestion is 'f'
-lib/rake/loaders/makefile.rb:23: 'makefile' is incorrect, possible suggestion is 'make file'
-lib/rake/loaders/makefile.rb:36: 'makefile' is incorrect, possible suggestion is 'make file'
+---
+- :file: lib/rake/task.rb
+  :object: Rake::Task
+  :location: 6
+  :errors:
+  - Rakefile
+  :errors_with_suggestions:
+    Rakefile: Rake file
+- :file: lib/rake/task.rb
+  :object: Rake::Task#scope
+  :location: 26
+  :errors:
+  - namespaces
+  :errors_with_suggestions:
+    namespaces: name spaces
+- :file: lib/rake/task.rb
+  :object: Rake::Task#already_invoked
+  :location: 34
+  :errors:
+  - reenable
+  :errors_with_suggestions:
+    reenable: re enable
+- :file: lib/rake/task.rb
+  :object: Rake::Task#name
+  :location: 117
+  :errors:
+  - namespace
+  :errors_with_suggestions:
+    namespace: name space
+- :file: lib/rake/task.rb
+  :object: Rake::Task#reenable
+  :location: 141
+  :errors:
+  - Reenable
+  :errors_with_suggestions:
+    Reenable: Re enable
+- :file: lib/rake/task.rb
+  :object: Rake::Task#set_arg_names
+  :location: 337
+  :errors:
+  - args
+  :errors_with_suggestions:
+    args: rags
+- :file: lib/rake/task.rb
+  :object: Rake::Task.define_task
+  :location: 392
+  :errors:
+  - args
+  :errors_with_suggestions:
+    args: rags
+- :file: lib/rake/scope.rb
+  :object: Rake::Scope#trim
+  :location: 15
+  :errors:
+  - toplevel
+  :errors_with_suggestions:
+    toplevel: top level
+- :file: lib/rake/win32.rb
+  :object: Rake::Win32.normalize
+  :location: 44
+  :errors:
+  - win32
+  :errors_with_suggestions:
+    win32: windy
+- :file: lib/rake/testtask.rb
+  :object: Rake::TestTask#pattern
+  :location: 57
+  :errors:
+  - rb
+  :errors_with_suggestions:
+    rb: Rb
+- :file: lib/rake/testtask.rb
+  :object: Rake::TestTask#pattern=
+  :location: 57
+  :errors:
+  - rb
+  :errors_with_suggestions:
+    rb: Rb
+- :file: lib/rake/cloneable.rb
+  :object: Rake::Cloneable
+  :location: 3
+  :errors:
+  - Mixin
+  :errors_with_suggestions:
+    Mixin: Mixing
+- :file: lib/rake/cloneable.rb
+  :object: Rake::Cloneable#initialize_copy
+  :location: 7
+  :errors:
+  - dup
+  :errors_with_suggestions:
+    dup: pud
+- :file: lib/rake/file_list.rb
+  :object: Rake::FileList#initialize
+  :location: 88
+  :errors:
+  - globbable
+  :errors_with_suggestions:
+    globbable: globalize
+- :file: lib/rake/file_list.rb
+  :object: Rake::FileList#gsub
+  :location: 246
+  :errors:
+  - gsub
+  :errors_with_suggestions:
+    gsub: sub
+- :file: lib/rake/file_list.rb
+  :object: Rake::FileList#gsub!
+  :location: 263
+  :errors:
+  - gsub
+  :errors_with_suggestions:
+    gsub: sub
+- :file: lib/rake/file_list.rb
+  :object: Rake::FileList#pathmap
+  :location: 269
+  :errors:
+  - pathmap
+  :errors_with_suggestions:
+    pathmap: path map
+- :file: lib/rake/file_list.rb
+  :object: Rake::FileList#egrep
+  :location: 288
+  :errors:
+  - emacs
+  - filelist
+  :errors_with_suggestions:
+    emacs: Emacs
+    filelist: file list
+- :file: lib/rake/file_list.rb
+  :object: Rake.from_pathname
+  :location: 427
+  :errors:
+  - Pathname
+  :errors_with_suggestions:
+    Pathname: Path name
+- :file: lib/rake/file_utils.rb
+  :object: FileUtils#sh
+  :location: 15
+  :errors:
+  - cmd
+  :errors_with_suggestions:
+    cmd: cm
+- :file: lib/rake/name_space.rb
+  :object: Rake::NameSpace#initialize
+  :location: 8
+  :errors:
+  - namespace
+  :errors_with_suggestions:
+    namespace: name space
+- :file: lib/rake/name_space.rb
+  :object: Rake::NameSpace#[]
+  :location: 17
+  :errors:
+  - namespace
+  :errors_with_suggestions:
+    namespace: name space
+- :file: lib/rake/name_space.rb
+  :object: Rake::NameSpace#scope
+  :location: 24
+  :errors:
+  - namespace
+  :errors_with_suggestions:
+    namespace: name space
+- :file: lib/rake/name_space.rb
+  :object: Rake::NameSpace#tasks
+  :location: 31
+  :errors:
+  - namespaces
+  :errors_with_suggestions:
+    namespaces: name spaces
+- :file: lib/rake/application.rb
+  :object: Rake::Application#rakefile
+  :location: 29
+  :errors:
+  - rakefile
+  :errors_with_suggestions:
+    rakefile: rake file
+- :file: lib/rake/application.rb
+  :object: Rake::Application#load_rakefile
+  :location: 101
+  :errors:
+  - rakefile
+  :errors_with_suggestions:
+    rakefile: rake file
+- :file: lib/rake/application.rb
+  :object: Rake::Application#thread_pool
+  :location: 149
+  :errors:
+  - multithreaded
+  :errors_with_suggestions:
+    multithreaded: multi threaded
+- :file: lib/rake/application.rb
+  :object: Rake::Application#exit_because_of_exception
+  :location: 199
+  :errors:
+  - subclasses
+  - unhandled
+  :errors_with_suggestions:
+    subclasses: sub classes
+    unhandled: unhanded
+- :file: lib/rake/application.rb
+  :object: Rake::Application#have_rakefile
+  :location: 272
+  :errors:
+  - rakefile
+  :errors_with_suggestions:
+    rakefile: rake file
+- :file: lib/rake/application.rb
+  :object: Rake::Application#handle_options
+  :location: 634
+  :errors:
+  - env
+  :errors_with_suggestions:
+    env: enc
+- :file: lib/rake/application.rb
+  :object: Rake::Application#rake_require
+  :location: 655
+  :errors:
+  - rb
+  :errors_with_suggestions:
+    rb: Rb
+- :file: lib/rake/application.rb
+  :object: Rake::Application#system_dir
+  :location: 719
+  :errors:
+  - rakefiles
+  :errors_with_suggestions:
+    rakefiles: rake files
+- :file: lib/rake/application.rb
+  :object: Rake::Application#collect_command_line_tasks
+  :location: 743
+  :errors:
+  - args
+  - recognised
+  :errors_with_suggestions:
+    args: rags
+    recognised: recognized
+- :file: lib/rake/application.rb
+  :object: Rake::Application#default_task_name
+  :location: 763
+  :errors:
+  - subclasses
+  :errors_with_suggestions:
+    subclasses: sub classes
+- :file: lib/rake/linked_list.rb
+  :object: Rake::LinkedList
+  :location: 4
+  :errors:
+  - Polylithic
+  :errors_with_suggestions:
+    Polylithic: Paleolithic
+- :file: lib/rake/linked_list.rb
+  :object: Rake::LinkedList#conj
+  :location: 10
+  :errors:
+  - Polymorphically
+  :errors_with_suggestions:
+    Polymorphically: Polymorphic ally
+- :file: lib/rake/linked_list.rb
+  :object: Rake::LinkedList::EmptyLinkedList
+  :location: 89
+  :errors:
+  - polymorphically
+  :errors_with_suggestions:
+    polymorphically: polymorphic ally
+- :file: lib/rake/packagetask.rb
+  :object: Rake::PackageTask
+  :location: 10
+  :errors:
+  - distributable
+  :errors_with_suggestions:
+    distributable: distributional
+- :file: lib/rake/packagetask.rb
+  :object: Rake::PackageTask#need_tar
+  :location: 55
+  :errors:
+  - gzipped
+  - tgz
+  :errors_with_suggestions:
+    gzipped: zipped
+    tgz: TGIF
+- :file: lib/rake/packagetask.rb
+  :object: Rake::PackageTask#need_tar=
+  :location: 55
+  :errors:
+  - gzipped
+  - tgz
+  :errors_with_suggestions:
+    gzipped: zipped
+    tgz: TGIF
+- :file: lib/rake/packagetask.rb
+  :object: Rake::PackageTask#need_tar_gz
+  :location: 59
+  :errors:
+  - gz
+  - gzipped
+  :errors_with_suggestions:
+    gz: g
+    gzipped: zipped
+- :file: lib/rake/packagetask.rb
+  :object: Rake::PackageTask#need_tar_gz=
+  :location: 59
+  :errors:
+  - gz
+  - gzipped
+  :errors_with_suggestions:
+    gz: g
+    gzipped: zipped
+- :file: lib/rake/packagetask.rb
+  :object: Rake::PackageTask#need_tar_bz2
+  :location: 63
+  :errors:
+  - bz2
+  - bzip2'd
+  :errors_with_suggestions:
+    bz2: biz
+    bzip2'd: bipedal
+- :file: lib/rake/packagetask.rb
+  :object: Rake::PackageTask#need_tar_bz2=
+  :location: 63
+  :errors:
+  - bz2
+  - bzip2'd
+  :errors_with_suggestions:
+    bz2: biz
+    bzip2'd: bipedal
+- :file: lib/rake/packagetask.rb
+  :object: Rake::PackageTask#need_tar_xz
+  :location: 67
+  :errors:
+  - xz
+  - xz'd
+  :errors_with_suggestions:
+    xz: xx
+    xz'd: he'd
+- :file: lib/rake/packagetask.rb
+  :object: Rake::PackageTask#need_tar_xz=
+  :location: 67
+  :errors:
+  - xz
+  - xz'd
+  :errors_with_suggestions:
+    xz: xx
+    xz'd: he'd
+- :file: lib/rake/packagetask.rb
+  :object: Rake::PackageTask#tar_command
+  :location: 76
+  :errors:
+  - bzip2ed
+  - gzipped
+  :errors_with_suggestions:
+    bzip2ed: bipedal
+    gzipped: zipped
+- :file: lib/rake/packagetask.rb
+  :object: Rake::PackageTask#tar_command=
+  :location: 76
+  :errors:
+  - bzip2ed
+  - gzipped
+  :errors_with_suggestions:
+    bzip2ed: bipedal
+    gzipped: zipped
+- :file: lib/rake/packagetask.rb
+  :object: Rake::PackageTask#tgz_file
+  :location: 176
+  :errors:
+  - tgz
+  :errors_with_suggestions:
+    tgz: TGIF
+- :file: lib/rake/packagetask.rb
+  :object: Rake::PackageTask#tar_gz_file
+  :location: 182
+  :errors:
+  - gz
+  :errors_with_suggestions:
+    gz: g
+- :file: lib/rake/packagetask.rb
+  :object: Rake::PackageTask#tar_bz2_file
+  :location: 188
+  :errors:
+  - bz2
+  :errors_with_suggestions:
+    bz2: biz
+- :file: lib/rake/packagetask.rb
+  :object: Rake::PackageTask#tar_xz_file
+  :location: 194
+  :errors:
+  - xz
+  :errors_with_suggestions:
+    xz: xx
+- :file: lib/rake/rake_module.rb
+  :object: Rake.load_rakefile
+  :location: 27
+  :errors:
+  - rakefile
+  :errors_with_suggestions:
+    rakefile: rake file
+- :file: lib/rake/rake_module.rb
+  :object: Rake.add_rakelib
+  :location: 32
+  :errors:
+  - rakelib
+  :errors_with_suggestions:
+    rakelib: rake lib
+- :file: lib/rake/rake_module.rb
+  :object: Rake.with_application
+  :location: 38
+  :errors:
+  - rakefiles
+  :errors_with_suggestions:
+    rakefiles: rake files
+- :file: lib/rake/thread_pool.rb
+  :object: Rake::ThreadPool#future
+  :location: 25
+  :errors:
+  - args
+  :errors_with_suggestions:
+    args: rags
+- :file: lib/rake/task_manager.rb
+  :object: Rake::TaskManager
+  :location: 4
+  :errors:
+  - mixin
+  :errors_with_suggestions:
+    mixin: mixing
+- :file: lib/rake/task_manager.rb
+  :object: Rake::TaskManager#last_description
+  :location: 6
+  :errors:
+  - Rakefile
+  :errors_with_suggestions:
+    Rakefile: Rake file
+- :file: lib/rake/task_manager.rb
+  :object: Rake::TaskManager#last_description=
+  :location: 6
+  :errors:
+  - Rakefile
+  :errors_with_suggestions:
+    Rakefile: Rake file
+- :file: lib/rake/task_manager.rb
+  :object: Rake::TaskManager#lookup
+  :location: 179
+  :errors:
+  - lookups
+  :errors_with_suggestions:
+    lookups: lookup
+- :file: lib/rake/task_manager.rb
+  :object: Rake::TaskManager#in_namespace
+  :location: 218
+  :errors:
+  - namespace
+  :errors_with_suggestions:
+    namespace: name space
+- :file: lib/rake/task_manager.rb
+  :object: Rake::TaskManager#find_location
+  :location: 239
+  :errors:
+  - dsl
+  :errors_with_suggestions:
+    dsl: isl
+- :file: lib/rake/task_manager.rb
+  :object: Rake::TaskManager#generate_name
+  :location: 250
+  :errors:
+  - namespace
+  :errors_with_suggestions:
+    namespace: name space
+- :file: lib/rake/task_manager.rb
+  :object: Rake::TaskManager#make_sources
+  :location: 283
+  :errors:
+  - procs
+  :errors_with_suggestions:
+    procs: crops
+- :file: lib/rake/default_loader.rb
+  :object: Rake::DefaultLoader
+  :location: 4
+  :errors:
+  - Rakefile
+  :errors_with_suggestions:
+    Rakefile: Rake file
+- :file: lib/rake/default_loader.rb
+  :object: Rake::DefaultLoader#load
+  :location: 7
+  :errors:
+  - fn
+  - rakefile
+  :errors_with_suggestions:
+    fn: f
+    rakefile: rake file
+- :file: lib/rake/dsl_definition.rb
+  :object: Rake::DSL
+  :location: 7
+  :errors:
+  - Rakefile
+  :errors_with_suggestions:
+    Rakefile: Rake file
+- :file: lib/rake/dsl_definition.rb
+  :object: Rake::DSL#task
+  :location: 28
+  :errors:
+  - namespace
+  :errors_with_suggestions:
+    namespace: name space
+- :file: lib/rake/dsl_definition.rb
+  :object: Rake::DSL#namespace
+  :location: 116
+  :errors:
+  - namespace
+  :errors_with_suggestions:
+    namespace: name space
+- :file: lib/rake/dsl_definition.rb
+  :object: Rake::DSL#import
+  :location: 169
+  :errors:
+  - Rakefiles
+  - fn
+  - rakelibdir
+  :errors_with_suggestions:
+    Rakefiles: Rake files
+    fn: f
+    rakelibdir: Bakelite
+- :file: lib/rake/file_utils_ext.rb
+  :object: Rake::FileUtilsExt#nowrite
+  :location: 67
+  :errors:
+  - nowrite
+  :errors_with_suggestions:
+    nowrite: no write
+- :file: lib/rake/file_utils_ext.rb
+  :object: Rake::FileUtilsExt#when_writing
+  :location: 91
+  :errors:
+  - nowrite
+  :errors_with_suggestions:
+    nowrite: no write
+- :file: lib/rake/file_utils_ext.rb
+  :object: Rake::FileUtilsExt#rake_output_message
+  :location: 126
+  :errors:
+  - stderr
+  :errors_with_suggestions:
+    stderr: std err
+- :file: lib/rake/private_reader.rb
+  :object: Rake::PrivateReader::ClassMethods#private_reader
+  :location: 13
+  :errors:
+  - accessors
+  :errors_with_suggestions:
+    accessors: accessory
+- :file: lib/rake/loaders/makefile.rb
+  :object: Rake::MakefileLoader
+  :location: 4
+  :errors:
+  - Makefile
+  :errors_with_suggestions:
+    Makefile: Make file
+- :file: lib/rake/loaders/makefile.rb
+  :object: Rake::MakefileLoader#load
+  :location: 23
+  :errors:
+  - fn
+  - makefile
+  :errors_with_suggestions:
+    fn: f
+    makefile: make file
+- :file: lib/rake/loaders/makefile.rb
+  :object: Rake::MakefileLoader#process_line
+  :location: 36
+  :errors:
+  - makefile
+  :errors_with_suggestions:
+    makefile: make file
+

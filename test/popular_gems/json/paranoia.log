@@ -1,0 +1,9 @@
+---
+- :file: lib/paranoia.rb
+  :object: Paranoia.default_sentinel_value=
+  :location: 10
+  :errors:
+  - initializer
+  :errors_with_suggestions:
+    initializer: initialize
+

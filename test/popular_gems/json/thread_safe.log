@@ -1,0 +1,207 @@
+---
+- :file: lib/thread_safe.rb
+  :object: ThreadSafe::NULL
+  :location: 8
+  :errors:
+  - ness
+  :errors_with_suggestions:
+    ness: sens
+- :file: lib/thread_safe/util/adder.rb
+  :object: ThreadSafe::Util::Adder
+  :location: 3
+  :errors:
+  - jsr166e
+  :errors_with_suggestions:
+    jsr166e: jobshare
+- :file: lib/thread_safe/util/volatile.rb
+  :object: ThreadSafe::Util::Volatile#attr_volatile
+  :location: 4
+  :errors:
+  - accessors
+  :errors_with_suggestions:
+    accessors: accessory
+- :file: lib/thread_safe/util/striped64.rb
+  :object: ThreadSafe::Util::Striped64
+  :location: 3
+  :errors:
+  - 64bit
+  - Atomics
+  - jsr166e
+  - spinlock
+  - subclasses
+  :errors_with_suggestions:
+    64bit: habit
+    Atomics: Atomic
+    jsr166e: jobshare
+    spinlock: spin lock
+    subclasses: sub classes
+- :file: lib/thread_safe/util/striped64.rb
+  :object: ThreadSafe::Util::Striped64::Cell
+  :location: 65
+  :errors:
+  - Optimisation
+  :errors_with_suggestions:
+    Optimisation: Optimization
+- :file: lib/thread_safe/util/striped64.rb
+  :object: ThreadSafe::Util::Striped64#retry_update
+  :location: 95
+  :errors:
+  - modularity
+  :errors_with_suggestions:
+    modularity: modular
+- :file: lib/thread_safe/util/striped64.rb
+  :object: ThreadSafe::Util::Striped64#hash_code
+  :location: 151
+  :errors:
+  - accessor
+  :errors_with_suggestions:
+    accessor: accessory
+- :file: lib/thread_safe/util/cheap_lockable.rb
+  :object: ThreadSafe::Util::CheapLockable
+  :location: 3
+  :errors:
+  - Mutex
+  :errors_with_suggestions:
+    Mutex: Mute
+- :file: lib/thread_safe/util/cheap_lockable.rb
+  :object: ThreadSafe::Util::CheapLockable#cheap_synchronize
+  :location: 83
+  :errors:
+  - reentrant
+  :errors_with_suggestions:
+    reentrant: re entrant
+- :file: lib/thread_safe/util/cheap_lockable.rb
+  :object: ThreadSafe::Util::CheapLockable#cheap_wait
+  :location: 89
+  :errors:
+  - wakeup
+  :errors_with_suggestions:
+    wakeup: makeup
+- :file: lib/thread_safe/util/volatile_tuple.rb
+  :object: ThreadSafe::Util::VolatileTuple
+  :location: 3
+  :errors:
+  - getters
+  :errors_with_suggestions:
+    getters: fetters
+- :file: lib/thread_safe/util/xor_shift_random.rb
+  :object: ThreadSafe::Util::XorShiftRandom
+  :location: 3
+  :errors:
+  - Fixnum
+  - xorshift
+  :errors_with_suggestions:
+    Fixnum: Fixture
+    xorshift: xor shift
+- :file: lib/thread_safe/util/xor_shift_random.rb
+  :object: ThreadSafe::Util::XorShiftRandom#get
+  :location: 18
+  :errors:
+  - Fixnum
+  :errors_with_suggestions:
+    Fixnum: Fixture
+- :file: lib/thread_safe/util/xor_shift_random.rb
+  :object: ThreadSafe::Util::XorShiftRandom#xorshift
+  :location: 32
+  :errors:
+  - yˆ
+  :errors_with_suggestions:
+    yˆ: y
+- :file: lib/thread_safe/synchronized_delegator.rb
+  :object: SynchronizedDelegator
+  :location: 4
+  :errors:
+  - Delegator
+  - stdlib
+  :errors_with_suggestions:
+    Delegator: Delegate
+    stdlib: std lib
+- :file: lib/thread_safe/synchronized_cache_backend.rb
+  :object: ThreadSafe::SynchronizedCacheBackend#[]
+  :location: 5
+  :errors:
+  - reentrant
+  :errors_with_suggestions:
+    reentrant: re entrant
+- :file: lib/thread_safe/non_concurrent_cache_backend.rb
+  :object: ThreadSafe::NonConcurrentCacheBackend#initialize
+  :location: 3
+  :errors:
+  - backend
+  - mutex
+  - perfomance
+  - reentrant
+  :errors_with_suggestions:
+    backend: backed
+    mutex: mute
+    perfomance: performance
+    reentrant: re entrant
+- :file: lib/thread_safe/atomic_reference_cache_backend.rb
+  :object: ThreadSafe::AtomicReferenceCacheBackend
+  :location: 2
+  :errors:
+  - Herlihy
+  - Shavit
+  - Traverser
+  - collectable
+  - eql
+  - initializer
+  - jsr166e
+  - lookups
+  - nullness
+  - putAll
+  - signalling
+  - tradeoff
+  - traversable
+  :errors_with_suggestions:
+    Herlihy: Hyperlink
+    Shavit: Shaving
+    Traverser: Traverse
+    collectable: collectible
+    eql: eel
+    initializer: initialize
+    jsr166e: jobshare
+    lookups: lookup
+    nullness: dullness
+    putAll: put All
+    signalling: signaling
+    tradeoff: trade off
+    traversable: traversal
+- :file: lib/thread_safe/atomic_reference_cache_backend.rb
+  :object: ThreadSafe::AtomicReferenceCacheBackend::Node::MOVED
+  :location: 233
+  :errors:
+  - Encodings
+  :errors_with_suggestions:
+    Encodings: Encoding
+- :file: lib/thread_safe/atomic_reference_cache_backend.rb
+  :object: ThreadSafe::AtomicReferenceCacheBackend::Node#try_await_lock
+  :location: 251
+  :errors:
+  - signalling
+  - unlockers
+  :errors_with_suggestions:
+    signalling: signaling
+    unlockers: unlocks
+- :file: lib/thread_safe/atomic_reference_cache_backend.rb
+  :object: ThreadSafe::AtomicReferenceCacheBackend::MOVED
+  :location: 332
+  :errors:
+  - shorthands
+  :errors_with_suggestions:
+    shorthands: shorthand
+- :file: lib/thread_safe/atomic_reference_cache_backend.rb
+  :object: ThreadSafe::AtomicReferenceCacheBackend#get_and_set
+  :location: 460
+  :errors:
+  - internalPut
+  :errors_with_suggestions:
+    internalPut: internal Put
+- :file: lib/thread_safe/atomic_reference_cache_backend.rb
+  :object: ThreadSafe::AtomicReferenceCacheBackend#check_for_resize
+  :location: 776
+  :errors:
+  - resizings
+  :errors_with_suggestions:
+    resizings: resizing
+

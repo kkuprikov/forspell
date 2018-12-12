@@ -1,20 +1,105 @@
-# Logfile created on 2018-12-11 15:52:41 +0300 by logger.rb/56815
-lib/multi_json/adapters/oj.rb:12: 'subclasses' is incorrect, possible suggestion is 'sub classes'
-lib/multi_json/adapters/gson.rb:7: 'gson' is incorrect, possible suggestion is 'son'
-lib/multi_json/adapters/gson.rb:7: 'rb' is incorrect, possible suggestion is 'Rb'
-lib/multi_json/vendor/okjson.rb:36: 'json' is incorrect, possible suggestion is 'son'
-lib/multi_json/vendor/okjson.rb:54: 'Proc' is incorrect, possible suggestion is 'Prof'
-lib/multi_json/vendor/okjson.rb:54: 'json' is incorrect, possible suggestion is 'son'
-lib/multi_json/vendor/okjson.rb:95: 'json' is incorrect, possible suggestion is 'son'
-lib/multi_json/vendor/okjson.rb:95: 'valparse' is incorrect, possible suggestion is 'val parse'
-lib/multi_json/vendor/okjson.rb:213: 'json' is incorrect, possible suggestion is 'son'
-lib/multi_json/vendor/okjson.rb:231: 'lexeme' is incorrect, possible suggestion is 'lexer'
-lib/multi_json/vendor/okjson.rb:302: 'eval' is incorrect, possible suggestion is 'veal'
-lib/multi_json/vendor/okjson.rb:302: 'json' is incorrect, possible suggestion is 'son'
-lib/multi_json/vendor/okjson.rb:374: 'unicode' is incorrect, possible suggestion is 'Unicode'
-lib/multi_json/vendor/okjson.rb:501: 'Ustrerr' is incorrect, possible suggestion is 'Upstream'
-lib/multi_json/vendor/okjson.rb:501: 'ucharcopy' is incorrect, possible suggestion is 'charcoal'
-lib/multi_json/vendor/okjson.rb:596: 'unicode' is incorrect, possible suggestion is 'Unicode'
-lib/multi_json/vendor/okjson.rb:597: 'unicode' is incorrect, possible suggestion is 'Unicode'
-lib/multi_json/adapters/jr_jackson.rb:6: 'jrjackson' is incorrect, possible suggestion is 'Jacksonian'
-lib/multi_json/adapters/jr_jackson.rb:6: 'rb' is incorrect, possible suggestion is 'Rb'
+---
+- :file: lib/multi_json/adapters/oj.rb
+  :object: MultiJson::Adapters::Oj::ParseError
+  :location: 12
+  :errors:
+  - subclasses
+  :errors_with_suggestions:
+    subclasses: sub classes
+- :file: lib/multi_json/adapters/gson.rb
+  :object: MultiJson::Adapters::Gson
+  :location: 7
+  :errors:
+  - gson
+  - rb
+  :errors_with_suggestions:
+    gson: son
+    rb: Rb
+- :file: lib/multi_json/vendor/okjson.rb
+  :object: MultiJson::OkJson#decode
+  :location: 36
+  :errors:
+  - json
+  :errors_with_suggestions:
+    json: son
+- :file: lib/multi_json/vendor/okjson.rb
+  :object: MultiJson::OkJson#encode
+  :location: 54
+  :errors:
+  - Proc
+  - json
+  :errors_with_suggestions:
+    Proc: Prof
+    json: son
+- :file: lib/multi_json/vendor/okjson.rb
+  :object: MultiJson::OkJson#textparse
+  :location: 95
+  :errors:
+  - json
+  - valparse
+  :errors_with_suggestions:
+    json: son
+    valparse: val parse
+- :file: lib/multi_json/vendor/okjson.rb
+  :object: MultiJson::OkJson#lex
+  :location: 213
+  :errors:
+  - json
+  :errors_with_suggestions:
+    json: son
+- :file: lib/multi_json/vendor/okjson.rb
+  :object: MultiJson::OkJson#tok
+  :location: 231
+  :errors:
+  - lexeme
+  :errors_with_suggestions:
+    lexeme: lexer
+- :file: lib/multi_json/vendor/okjson.rb
+  :object: MultiJson::OkJson#unquote
+  :location: 302
+  :errors:
+  - eval
+  - json
+  :errors_with_suggestions:
+    eval: veal
+    json: son
+- :file: lib/multi_json/vendor/okjson.rb
+  :object: MultiJson::OkJson#ucharenc
+  :location: 374
+  :errors:
+  - unicode
+  :errors_with_suggestions:
+    unicode: Unicode
+- :file: lib/multi_json/vendor/okjson.rb
+  :object: MultiJson::OkJson#ucharcopy
+  :location: 501
+  :errors:
+  - Ustrerr
+  - ucharcopy
+  :errors_with_suggestions:
+    Ustrerr: Upstream
+    ucharcopy: charcoal
+- :file: lib/multi_json/vendor/okjson.rb
+  :object: MultiJson::OkJson::Ucharerr
+  :location: 596
+  :errors:
+  - unicode
+  :errors_with_suggestions:
+    unicode: Unicode
+- :file: lib/multi_json/vendor/okjson.rb
+  :object: MultiJson::OkJson::Ustrerr
+  :location: 597
+  :errors:
+  - unicode
+  :errors_with_suggestions:
+    unicode: Unicode
+- :file: lib/multi_json/adapters/jr_jackson.rb
+  :object: MultiJson::Adapters::JrJackson
+  :location: 6
+  :errors:
+  - jrjackson
+  - rb
+  :errors_with_suggestions:
+    jrjackson: Jacksonian
+    rb: Rb
+
