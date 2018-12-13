@@ -18,4 +18,7 @@
   errors: []
 - paragraph: "This should not include urls like http://google.com, https://www.example.com, http://gofishing.com"
   words: ['This', 'should', 'not', 'include', 'urls', 'like']
+  errors: ['urls']
+- paragraph: "This should not include files like test.yml, example.rb. Another_example.rb and any asd.qwe also."
+  words: ['This', 'should', 'not', 'include', 'files', 'like', 'and', 'any', 'also']
   errors: []

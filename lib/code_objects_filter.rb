@@ -13,9 +13,12 @@ module CodeObjectsFilter
   end
 
   def split input
-    result = input.split(/[^[[:word:]]_#:\']+/)
+    result = input.split(/[^[[:word:]]_#:\'\.]+/)
     apostrophed_words = result.select{ |word| word[0] == "'" || word[-1] == "'" }
+    dotted_words = result.select{ |word| word.chars.include?('.') }
+
     result -= apostrophed_words
+    result -= dotted_words
     
     apostrophed_words.each do |word|
       fixed_word = word[1..-1] if  word.start_with?("'")
@@ -23,6 +26,11 @@ module CodeObjectsFilter
       fixed_word = word.chop   if !word.start_with?("'") && word.end_with?("'")
       result << (fixed_word || word)
     end
+
+    dotted_words.each do |word|
+      result << word.chop if word.end_with?(".") && word.chars.count('.') == 1 # exclude 'example.yml.' in the end of sentence
+    end
+
     result
   end
 

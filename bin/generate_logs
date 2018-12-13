@@ -1,0 +1,8 @@
+#!/bin/bash
+cd ~/forspell
+rm ./test/popular_gems/json/*.log
+
+for var in $(ls ../gem_src/)
+do
+  ./bin/forspell ../gem_src/$var test/popular_gems/json/$var.log
+done

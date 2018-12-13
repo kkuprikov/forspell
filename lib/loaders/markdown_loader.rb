@@ -26,11 +26,6 @@ class MarkdownLoader < BaseLoader
       if child[:children]
         extract_values(child)
       else
-        # if @result[ child[:location] ].nil?
-        #   @result[ child[:location] ] = sanitize_value(child[:value])
-        # else
-        #   @result[ child[:location] ] += sanitize_value(child[:value])
-        # end
         @result << {
           location: child[:location],
           words: sanitize_value(child[:value])
@@ -40,7 +35,6 @@ class MarkdownLoader < BaseLoader
   end
 
   def sanitize_value value
-    # TODO: delete raw URLs or something else
     filter_code_objects(value)
   end
 end
