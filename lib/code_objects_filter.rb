@@ -1,7 +1,7 @@
 require 'sanitize'
 
 module CodeObjectsFilter
-  CODE_MARKERS = %w(_ # :).freeze
+  CODE_MARKERS = %w(_ #).freeze
   URI_REGEX = %r"((?:(?:[^ :/?#]+):)(?://(?:[^ /?#]*))(?:[^ ?#]*)(?:\?(?:[^ #]*))?(?:#(?:[^ ]*))?)".freeze
 
   def filter_code_objects input
@@ -16,9 +16,11 @@ module CodeObjectsFilter
     result = input.split(/[^[[:word:]]_#:\'\.]+/)
     apostrophed_words = result.select{ |word| word[0] == "'" || word[-1] == "'" }
     dotted_words = result.select{ |word| word.chars.include?('.') }
+    semicolon_words = result.select{ |word| word.chars.include?(':') }
 
     result -= apostrophed_words
     result -= dotted_words
+    result -= semicolon_words
     
     apostrophed_words.each do |word|
       fixed_word = word[1..-1] if  word.start_with?("'")
@@ -29,6 +31,10 @@ module CodeObjectsFilter
 
     dotted_words.each do |word|
       result << word.chop if word.end_with?(".") && word.chars.count('.') == 1 # exclude 'example.yml.' in the end of sentence
+    end
+
+    semicolon_words.each do |word|
+      result << word.chop if word.end_with?(":") && word.chars.count(':') == 1
     end
 
     result

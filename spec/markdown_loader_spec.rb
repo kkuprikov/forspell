@@ -16,7 +16,7 @@ RSpec.describe MarkdownLoader do
     context 'with inline code' do
       let(:filepath) { 'spec/fixtures/markdown_with_inline_code.md' }
       
-      specify { is_expected.not_to include 'code' }
+      specify { is_expected.not_to include 'spaghetti' }
     end
 
     describe 'mixed inline code and blocks' do
