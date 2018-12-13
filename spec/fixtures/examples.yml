@@ -22,6 +22,6 @@
 - paragraph: "This should not include files like test.yml, example.rb. Another_example.rb and any asd.qwe also."
   words: ['This', 'should', 'not', 'include', 'files', 'like', 'and', 'any', 'also']
   errors: []
-- paragraph: 'Ruby words: Gemfile, Rakefile, whitespace, boolean'
+- paragraph: 'Ruby words: Gemfile, Rakefile, whitespace, boolean. No::semicolon words::permitted'
   words: ['Ruby', 'words', 'Gemfile', 'Rakefile', 'whitespace', 'boolean']
   errors: []
