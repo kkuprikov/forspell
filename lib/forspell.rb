@@ -16,7 +16,13 @@ class Forspell
   def initialize(dictionary_name: 'en_US', logfile: STDOUT, file: nil, no_output: false, format: 'readable', custom_dictionary_path: 'lib/ruby.dict')
     begin
       @dictionary = FFI::Hunspell.dict(dictionary_name)
-      IO.read(custom_dictionary_path).split("\n").each{ |word| @dictionary.add(word) }
+      
+      IO.read(custom_dictionary_path).split("\n").each do |line| 
+        next if line.strip.start_with?('#')
+        word = line.split(':').first.strip
+        affix = line.split(':')[1]&.split('#')&.first&.strip
+        affix ? @dictionary.add_with_affix(word, affix) : @dictionary.add(word)
+      end
     rescue Errno::ENOENT
     rescue ArgumentError
       fail "Unable to find the dictionary #{ dictionary_name } in any of the directories"

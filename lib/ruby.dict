@@ -1,75 +1,105 @@
-namespace
-namespaces
-subclass
-subclasses
-initializer
-initializers
+namespace: example
+Namespace: example
+subclass: class
+Subclass: class
+initializer: example
+Initializer: example
 args
-param
-params
+Args
+param: example
+Param: example
 proc
-accessor
-accessors
-config
-backtrace
-backtraces
-boolean
-booleans
-whitespace
-whitespaces
 Proc
+accessor: example
+Accessor: example
+config
+Config
+backtrace: example
+Backtrace: example
+boolean: example
+Boolean: example
+whitespace: example
+Whitespace: example
+Proc
+proc
 pre
+Pre
 stderr
+Stderr
 stdout
-superclass
-superclasses
+Stdout
+superclass: class
+Superclass: class
 subclassing
-lifecycle
-lifecycles
+Subclassing
+lifecycle: example
+Lifecycle: example
 middleware
-backend
-backends
+Middleware
+backend: example
+Backend: example
 enum
-charset
-charsets
+Enum
+charset: example
+Charset: example
 stdlib
-Subclasses
+Stdlib
 unicode
-lib
-libs
-runtime
-runtimes
-mutex
-mutexes
+Unicode
+lib: rib
+Lib: rib
+runtime: example
+Runtime: example
+mutex: class
+Mutex: class
 i18n
+I18n
 monkeypatching
-monkeypatch
+Monkeypatching
+monkeypatch: patch
+Monkeypatch: patch
 multithreaded
+Multithreaded
 multithreading
-formatter
-formatters
+Multithreading
+formatter: example
+Formatter: example
 io
-parsers
-encodings
+Io
+parser: example
+Parser: example
+encoding: example
+Encoding: example
 async
-fallbacks
-overridable
-overriden
-prepend
+Async
+fallback: example
+Fallback: example
+override: ride
+Override: ride
+prepend: append
+Prepend: append
 deserialization
-attrs
-attr
-subtype
-subtypes
+Deserialization
+attr: example
+Attr: example
+subtype: example
+Subtype: example
 bitwise
-Gemfile
-Deserializes
+Bitwise
+Gemfile: example
+deserialize: rise
+Deserialize: rise
 bundler
+Bundler
+memoization
+Memoization
 memoized
-stylesheet
-stylesheets
+Memoized
+stylesheet: sheet
 Rakefile
-dataset
-datasets
+dataset: set
+Dataset: set
 geospatial
+Geospatial
 composable
+Composable
