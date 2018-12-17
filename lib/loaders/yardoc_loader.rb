@@ -17,11 +17,12 @@ class YardocLoader < BaseLoader
 
   attr_reader :result
 
-  def initialize markup: nil, file: nil
+  def initialize markup: nil, file: nil, exclude_path: nil
     @format_class = markup ? RDOC_FORMATS[markup] : RDoc::RD
     fail "Unsupported markup format: #{ markup }" unless @format_class
     @custom_dictionary = []
     @path = file
+    @exclude_path = exclude_path
   end
 
   def process
@@ -44,11 +45,11 @@ class YardocLoader < BaseLoader
 
     @result = YARD::Registry.all.map do |object|
       { 
-        file: object.files.flatten.first, 
+        file: object.file, 
         object: object.path, 
         location: object.docstring.line, 
         words: filter_code_objects(extract_text(object.docstring)) 
-      } unless (object.docstring.empty? || skip_method?(object))
+      } unless (object.docstring.empty? || skip_method?(object) || skip_by_path?(object))
     end.compact
 
     self
@@ -62,12 +63,17 @@ class YardocLoader < BaseLoader
       .map(&:parts).flatten.join(' ')
   end
 
-  def skip_method?(object)
+  def skip_method? object
     return false unless object.is_a? YARD::CodeObjects::MethodObject
 
     result = object.is_alias? || 
              result = object.reader? && object.docstring.to_s =~ /^Returns the value of attribute #{ object.name.to_s }$/ ||
              object.writer? && object.docstring.to_s =~ /^Sets the attribute #{ object.name.to_s.chop }$/
     result ? true : false
+  end
+
+  def skip_by_path? object
+    return false unless @exclude_path
+    Dir.glob("#{ @exclude_path }/**/#{ object.file.split('/').last }").size > 0
   end
 end

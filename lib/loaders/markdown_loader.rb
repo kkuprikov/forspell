@@ -6,7 +6,7 @@ require_relative'../kramdown/converter/filtered_hash'
 class MarkdownLoader < BaseLoader
   attr_reader :result
 
-  def initialize input = nil, file: nil, parser: 'GFM'
+  def initialize input = nil, file: nil, parser: 'GFM', exclude_path: nil
     @custom_dictionary = []
     @input = input || IO.read(file)
     @result = []

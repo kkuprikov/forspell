@@ -1,105 +1,53 @@
 namespace: example
-Namespace: example
 subclass: class
-Subclass: class
 initializer: example
-Initializer: example
 args
-Args
 param: example
-Param: example
 proc
-Proc
 accessor: example
-Accessor: example
 config
-Config
 backtrace: example
-Backtrace: example
 boolean: example
-Boolean: example
 whitespace: example
-Whitespace: example
-Proc
-proc
 pre
-Pre
 stderr
-Stderr
 stdout
-Stdout
 superclass: class
-Superclass: class
 subclassing
-Subclassing
 lifecycle: example
-Lifecycle: example
 middleware
-Middleware
 backend: example
-Backend: example
 enum
-Enum
 charset: example
-Charset: example
 stdlib
-Stdlib
 unicode
-Unicode
 lib: rib
-Lib: rib
 runtime: example
-Runtime: example
 mutex: class
-Mutex: class
 i18n
-I18n
 monkeypatching
-Monkeypatching
 monkeypatch: patch
-Monkeypatch: patch
 multithreaded
-Multithreaded
 multithreading
-Multithreading
 formatter: example
-Formatter: example
 io
-Io
 parser: example
-Parser: example
 encoding: example
-Encoding: example
 async
-Async
 fallback: example
-Fallback: example
 override: ride
-Override: ride
 prepend: append
-Prepend: append
 deserialization
-Deserialization
 attr: example
-Attr: example
 subtype: example
-Subtype: example
 bitwise
-Bitwise
 Gemfile: example
 deserialize: rise
-Deserialize: rise
 bundler
-Bundler
 memoization
-Memoization
 memoized
-Memoized
 stylesheet: sheet
 Rakefile
 dataset: set
-Dataset: set
 geospatial
-Geospatial
 composable
-Composable

@@ -4,7 +4,7 @@ require_relative '../lib/forspell'
 require_relative '../lib/loaders/markdown_loader'
 
 RSpec.describe Forspell do
-  let(:checker) { described_class.new } # with default en-Us dictionary
+  let(:checker) { described_class.new(path: '') } # with default en-Us dictionary
 
   describe '#check_spelling' do
     it 'should work if the spelling of each word is correct' do
@@ -18,7 +18,7 @@ RSpec.describe Forspell do
 
     describe 'checking readme-s errors' do
       # let(:filtered_input) { MarkdownLoader.new(file: filepath, parser: 'GFM').process.result }
-      let(:checker) { described_class.new(file: filepath, no_output: true) }
+      let(:checker) { described_class.new(path: filepath, no_output: true) }
       subject { checker.process.result.map{ |res| res[:errors] }.flatten }
 
       describe 'devise readme' do
@@ -45,7 +45,7 @@ RSpec.describe Forspell do
     end
 
     context 'with fixtured grouped examples' do
-      subject { described_class.new.check_spelling(input) }
+      subject { described_class.new(path: '').check_spelling(input) }
 
       data = YAML.load_file 'spec/fixtures/examples.yml'
       data.each_with_index do |spec_hash, index|

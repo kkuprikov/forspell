@@ -1,4 +1,27 @@
 #!/usr/bin/env ruby
+require 'optimist'
+require 'pry'
 require_relative '../lib/forspell'
 
-Forspell.new(file: ARGV.first, logfile: ARGV[1], format: 'yml').process
+OPTION_KEYS = %i(
+  exclude_path
+  dictionary_name
+  custom_dictionary
+  format
+  logfile
+  no_output
+)
+
+opts = Optimist::options do
+  opt :exclude_path, 'Exclude some subdirectory', type: :string
+  opt :dictionary_name, 'Use another hunspell dictionary', default: 'en_US', type: :string
+  opt :custom_dictionary, 'Add your custom dictionary', type: :string
+  opt :format, 'Formats: readable, YAML, JSON', default: 'readable', type: :string
+  opt :logfile, 'Log to file', type: :string
+  opt :no_output, ''
+end
+
+fail 'Please specify working directory or file' if ARGV.empty?
+binding.pry
+
+Forspell.new(opts.slice(*OPTION_KEYS).merge(path: ARGV.first)).process
