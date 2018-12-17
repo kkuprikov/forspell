@@ -1,6 +1,5 @@
 #!/usr/bin/env ruby
 require 'optimist'
-require 'pry'
 require_relative '../lib/forspell'
 
 OPTION_KEYS = %i(
@@ -22,6 +21,5 @@ opts = Optimist::options do
 end
 
 fail 'Please specify working directory or file' if ARGV.empty?
-binding.pry
 
 Forspell.new(opts.slice(*OPTION_KEYS).merge(path: ARGV.first)).process
