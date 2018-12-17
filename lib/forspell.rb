@@ -24,6 +24,7 @@ class Forspell
     ruby_dictionary_path: 'lib/ruby.dict')
 
     fail 'Please specify working directory or file' unless path
+    return if path == exclude_path
 
     begin
       @dictionaries = [FFI::Hunspell.dict(dictionary_name)]
