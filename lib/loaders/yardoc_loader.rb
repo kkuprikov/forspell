@@ -1,5 +1,6 @@
 require 'rdoc'
 require 'yard'
+require 'pry'
 require_relative'./base_loader'
 
 class YardocLoader < BaseLoader

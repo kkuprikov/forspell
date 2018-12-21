@@ -26,7 +26,11 @@ module CodeObjectsFilter
       fixed_word = word[1..-1] if  word.start_with?("'")
       fixed_word = word[1..-2] if  word.start_with?("'") && word.end_with?("'")
       fixed_word = word.chop   if !word.start_with?("'") && word.end_with?("'")
-      result << (fixed_word || word)
+      if fixed_word
+        result += split(fixed_word) 
+      else
+        result << word
+      end
     end
 
     dotted_words.each do |word|

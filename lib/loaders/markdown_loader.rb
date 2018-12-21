@@ -6,7 +6,8 @@ require_relative'../kramdown/converter/filtered_hash'
 class MarkdownLoader < BaseLoader
   attr_reader :result
 
-  def initialize input = nil, file: nil, parser: 'GFM', exclude_path: nil
+  def initialize input: nil, file: nil, parser: 'GFM', exclude_path: nil
+    @file = file
     @custom_dictionary = []
     @input = input || IO.read(file)
     @result = []
@@ -27,6 +28,7 @@ class MarkdownLoader < BaseLoader
         extract_values(child)
       else
         @result << {
+          file: @file,
           location: child[:location],
           words: sanitize_value(child[:value])
         }

@@ -4,10 +4,12 @@ require 'ffi/hunspell'
 require 'fileutils'
 require_relative 'loaders/yardoc_loader'
 require_relative 'loaders/markdown_loader'
+require_relative 'loaders/ruby_doc_loader'
+require_relative 'loaders/file_loader'
 
 class Forspell
-  FORMATS_TO_LOADERS_MAP = {
-    '.rb' => YardocLoader,
+  EXT_TO_PARSER_CLASS = {
+    '.rb' => RubyDocLoader,
     '.md' => MarkdownLoader
   }
 
@@ -17,14 +19,15 @@ class Forspell
     dictionary_name: 'en_US', 
     logfile: nil, 
     path: nil, 
-    exclude_path: nil,
+    exclude_paths: [],
+    include_paths: [],
     custom_dictionary: nil,
     no_output: false, 
     format: 'readable', 
-    ruby_dictionary_path: 'lib/ruby.dict')
+    ruby_dictionary_path: "#{ __FILE__.split('/')[0..-2].join('/') }/ruby.dict")
 
     fail 'Please specify working directory or file' unless path
-    return if path == exclude_path
+    return if exclude_paths.include?(path)
 
     begin
       @dictionaries = [FFI::Hunspell.dict(dictionary_name)]
@@ -37,15 +40,14 @@ class Forspell
         .each do |word, example| 
           example ? @dictionaries.first.add_with_affix(word, example) : @dictionaries.first.add(word)
         end
-    rescue Errno::ENOENT
     rescue ArgumentError
       fail "Unable to find the dictionary #{ dictionary_name } in any of the directories"
     end
 
-    @file = path
-    @loader_class = loader_class(@file)
+    @path = path
     @format = format
-    @exclude_path = exclude_path
+    @include_paths = include_paths
+    @exclude_paths = exclude_paths
 
     unless no_output
       FileUtils.touch(logfile) if logfile.is_a?(String)
@@ -61,9 +63,7 @@ class Forspell
   end
 
   def process
-    data = @loader_class.new(file: @file, exclude_path: @exclude_path).process.result
-
-    @result = data.map do |part| 
+    @result = load_words_from_files.flatten.map do |part| 
       part[:errors] = check_spelling(part[:words])
       part[:errors_with_suggestions] = part[:errors].map{ |word| [word, dictionaries.map{ |dict| dict.suggest(word) }.flatten.first(3)] }.to_h
       part.delete(:words)
@@ -76,9 +76,12 @@ class Forspell
 
   private
 
-  def loader_class file
-    return YardocLoader unless file
-    FORMATS_TO_LOADERS_MAP[File.extname(file)] || YardocLoader
+  def load_words_from_files
+    files = File.extname(@path).empty? ? FileLoader.new(path: @path, include_paths: @include_paths, exclude_paths: @exclude_paths).process.result
+      : [@path]
+    files.map do |file|
+      EXT_TO_PARSER_CLASS[File.extname(file)].new(file: file).process.result
+    end
   end
 
   def pretty_print result, format
@@ -90,7 +93,7 @@ class Forspell
     when 'readable'
       result.each do |object| 
         object[:errors_with_suggestions].each_pair do |error, suggestion|
-          @logger.info "#{object[:file]}:#{ object[:location] }: '#{ error }' is incorrect, possible suggestion is '#{ suggestion }'"
+          @logger.info "#{object[:file]}:#{ object[:location] }: '#{ error }' is incorrect, possible suggestions are: #{ suggestion.map{|s| '\'' + s + '\''}.join(', ') }"
         end
       end
     end

@@ -1,9 +1,11 @@
 #!/usr/bin/env ruby
 require 'optimist'
+require 'backports/2.5.0/hash/slice'
 require_relative '../lib/forspell'
 
 OPTION_KEYS = %i(
-  exclude_path
+  include_paths
+  exclude_paths
   dictionary_name
   custom_dictionary
   format
@@ -12,7 +14,8 @@ OPTION_KEYS = %i(
 )
 
 opts = Optimist::options do
-  opt :exclude_path, 'Exclude some subdirectory', type: :string
+  opt :include_path, 'Include additional directories, default: lib, app', type: :strings
+  opt :exclude_path, 'Specify subdirectories to exclude', type: :strings
   opt :dictionary_name, 'Use another hunspell dictionary', default: 'en_US', type: :string
   opt :custom_dictionary, 'Add your custom dictionary', type: :string
   opt :format, 'Formats: readable, YAML, JSON', default: 'readable', type: :string

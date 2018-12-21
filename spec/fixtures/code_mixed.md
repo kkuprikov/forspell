@@ -1,4 +1,9 @@
-plain text `code1`:
+plain text `code`:
 ```
-code2
+code
+```
+```ruby
+def true
+  return false
+end
 ```

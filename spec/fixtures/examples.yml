@@ -19,9 +19,12 @@
 - paragraph: "This should not include urls like http://google.com, https://www.example.com, http://gofishing.com"
   words: ['This', 'should', 'not', 'include', 'urls', 'like']
   errors: ['urls']
-- paragraph: "This should not include files like test.yml, example.rb. Another_example.rb and any asd.qwe also."
+- paragraph: "This should not include files like test.yml, example.rb, asd.qwe.zxc. Another_example.rb and any asd.qwe also."
   words: ['This', 'should', 'not', 'include', 'files', 'like', 'and', 'any', 'also']
   errors: []
-- paragraph: 'Ruby words: Gemfile, Rakefile, whitespace, boolean. No::semicolon words::permitted'
-  words: ['Ruby', 'words', 'Gemfile', 'Rakefile', 'whitespace', 'boolean']
+- paragraph: 'Ruby words: Gemfile, Rakefile, whitespace, boolean, namespace. No::semicolon words::permitted'
+  words: ['Ruby', 'words', 'Gemfile', 'Rakefile', 'whitespace', 'boolean', 'namespace']
   errors: []
+- paragraph: "Combo apostrophed and dotted word: 'qwe.rty.asd'"
+  words: ['Combo', 'apostrophed', 'and', 'dotted', 'word']
+  errors: ['apostrophed']

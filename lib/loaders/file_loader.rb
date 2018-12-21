@@ -19,11 +19,11 @@ class FileLoader
   def process
     files_to_include = @include_paths.map do |include_path| 
       generate_file_paths @path, include_path
-    end.reduce(:+)
+    end.reduce(:+) || []
 
     files_to_exclude = @exclude_paths.map do |exclude_path| 
       generate_file_paths @path, exclude_path
-    end.reduce(:+)
+    end.reduce(:+) || []
 
     @result = files_to_include.empty? ? Dir.glob("#{ @path }/**/*.{#{ EXTENSION_GLOBS.join(',') }}") : files_to_include
     @result -= files_to_exclude
