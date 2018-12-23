@@ -38,7 +38,7 @@ class RubyDocLoader
       input[:parsed].each do |parsed_part|
         @result << {
           file: @file,
-          location: input[:start] + parsed_part[:location],
+          location: input[:start] + parsed_part[:location] - 1,
           words: parsed_part[:words]
         }
       end
