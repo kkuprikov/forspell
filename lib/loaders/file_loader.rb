@@ -1,5 +1,3 @@
-require 'pry'
-
 class FileLoader
   EXTENSION_GLOBS = %w(
     rb

@@ -5,11 +5,15 @@ require 'fileutils'
 require_relative 'loaders/yardoc_loader'
 require_relative 'loaders/markdown_loader'
 require_relative 'loaders/ruby_doc_loader'
+require_relative 'loaders/c_doc_loader'
 require_relative 'loaders/file_loader'
 
 class Forspell
   EXT_TO_PARSER_CLASS = {
     '.rb' => RubyDocLoader,
+    '.c' => CDocLoader,
+    '.cpp' => CDocLoader,
+    '.cxx' => CDocLoader,
     '.md' => MarkdownLoader
   }
 
