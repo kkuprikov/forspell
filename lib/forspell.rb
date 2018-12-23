@@ -31,7 +31,6 @@ class Forspell
     ruby_dictionary_path: "#{ __FILE__.split('/')[0..-2].join('/') }/ruby.dict")
 
     fail 'Please specify working directory or file' unless path
-    return if exclude_paths.include?(path)
 
     begin
       @dictionaries = [FFI::Hunspell.dict(dictionary_name)]
@@ -50,8 +49,8 @@ class Forspell
 
     @path = path
     @format = format
-    @include_paths = include_paths
-    @exclude_paths = exclude_paths
+    @include_paths = include_paths || []
+    @exclude_paths = exclude_paths || []
 
     unless no_output
       FileUtils.touch(logfile) if logfile.is_a?(String)
@@ -84,6 +83,7 @@ class Forspell
     files = File.extname(@path).empty? ? FileLoader.new(path: @path, include_paths: @include_paths, exclude_paths: @exclude_paths).process.result
       : [@path]
     files.map do |file|
+      @logger.info "Processing #{file}"
       EXT_TO_PARSER_CLASS[File.extname(file)].new(file: file).process.result
     end
   end

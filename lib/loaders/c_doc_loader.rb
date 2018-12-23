@@ -7,7 +7,10 @@ class CDocLoader < RubyDocLoader
   end
 
   def load_comments
-    @comments = @parser_class.new(File.read(@file), @file).parse
+    input = File.read(@file)
+    input = input.encode("UTF-8", :invalid=>:replace, :replace=>"?") unless input.valid_encoding?
+
+    @comments = @parser_class.new(input, @file).parse
       .grep(YARD::Parser::C::Comment)
       .map{ |comment| [:comment, comment.source, [comment.line]] }
   end

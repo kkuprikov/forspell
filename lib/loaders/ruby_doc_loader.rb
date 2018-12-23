@@ -36,9 +36,12 @@ class RubyDocLoader
 
     inputs.each do |input|
       input[:parsed].each do |parsed_part|
+        location = input[:start].to_i + parsed_part[:location].to_i
+        location -= 1 if input[:start] && parsed_part[:location]
+
         @result << {
           file: @file,
-          location: input[:start] + parsed_part[:location] - 1,
+          location: location,
           words: parsed_part[:words]
         }
       end
