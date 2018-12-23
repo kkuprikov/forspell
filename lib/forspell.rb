@@ -83,7 +83,7 @@ class Forspell
     files = File.extname(@path).empty? ? FileLoader.new(path: @path, include_paths: @include_paths, exclude_paths: @exclude_paths).process.result
       : [@path]
     files.map do |file|
-      @logger.info "Processing #{file}"
+      @logger.info "Processing #{file}" if @logger
       EXT_TO_PARSER_CLASS[File.extname(file)].new(file: file).process.result
     end
   end
