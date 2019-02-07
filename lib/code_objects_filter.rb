@@ -1,4 +1,5 @@
 require 'sanitize'
+require 'pry'
 
 module CodeObjectsFilter
   CODE_MARKERS = %w(_ #).freeze
@@ -8,7 +9,8 @@ module CodeObjectsFilter
     split(sanitize_html(input)).reject do |word|
       CODE_MARKERS.any? { |marker| word.chars.include?(marker) } ||
       word.count(('A'..'Z').to_a.join) > 1 ||
-      @custom_dictionary.include?(word)
+      @custom_dictionary.include?(word) ||
+      word.empty? || word.nil?
     end
   end
 

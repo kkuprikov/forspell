@@ -25,7 +25,7 @@ class Forspell
     path: nil, 
     exclude_paths: [],
     include_paths: [],
-    custom_dictionary: nil,
+    custom_dictionary_path: nil,
     no_output: false, 
     format: 'readable', 
     ruby_dictionary_path: "#{ __FILE__.split('/')[0..-2].join('/') }/ruby.dict")
@@ -34,9 +34,10 @@ class Forspell
 
     begin
       @dictionaries = [FFI::Hunspell.dict(dictionary_name)]
-      @dictionaries << FFI::Hunspell.dict(custom_dictionary) if custom_dictionary
+      dictionary_inputs = File.read(ruby_dictionary_path)&.split("\n")
+      dictionary_inputs += File.read(custom_dictionary_path)&.split("\n") if custom_dictionary_path
 
-      File.read(ruby_dictionary_path).split("\n")
+      dictionary_inputs.compact
         .map{ |line| line.gsub(/\s*\#.*$/, '') }
         .reject(&:empty?)
         .map{ |line| line.split(/\s*:\s*/, 2) }
@@ -66,7 +67,7 @@ class Forspell
   end
 
   def process
-    @result = load_words_from_files.flatten.map do |part| 
+    @result = load_words_from_files.flatten.map do |part|
       part[:errors] = check_spelling(part[:words])
       part[:errors_with_suggestions] = part[:errors].map{ |word| [word, dictionaries.map{ |dict| dict.suggest(word) }.flatten.first(3)] }.to_h
       part.delete(:words)
@@ -83,12 +84,14 @@ class Forspell
     files = File.extname(@path).empty? ? FileLoader.new(path: @path, include_paths: @include_paths, exclude_paths: @exclude_paths).process.result
       : [@path]
     files.map do |file|
-      @logger.info "Processing #{file}" if @logger
+      @logger.info "Processing #{file.gsub('//', '/')}" if @logger
       EXT_TO_PARSER_CLASS[File.extname(file)].new(file: file).process.result
     end
   end
 
   def pretty_print result, format
+    total_errors = result.map{ |obj| obj[:errors].size }.reduce(:+)
+
     case format
     when 'json'
       result.each { |object| @logger.info object.to_json }
@@ -97,9 +100,31 @@ class Forspell
     when 'readable'
       result.each do |object| 
         object[:errors_with_suggestions].each_pair do |error, suggestion|
-          @logger.info "#{object[:file]}:#{ object[:location] }: '#{ error }' is incorrect, possible suggestions are: #{ suggestion.map{|s| '\'' + s + '\''}.join(', ') }"
+          @logger.info "#{object[:file]}:#{ object[:location] }: '#{ error }' (suggestions: #{ suggestion.map{|s| '\'' + s + '\''}.join(', ') })"
         end
       end
+
+      print_summary(total_files: result.size, total_errors: total_errors)
+
+    when 'dictionary'
+      tmp_hash = {}
+      result.each do |object|
+        object[:errors].each do |error|
+          tmp_hash[error] ||= []
+          tmp_hash[error] += "\##{object[:file]}:#{ object[:location] }"
+        end
+      end
+
+      tmp_hash.each_pair do |error, locations|
+        locations.map { |loc| @logger.info loc }
+        @logger.info error
+      end
+      print_summary(total_files: result.size, total_errors: total_errors)
     end
-  end 
+  end
+
+  def print_summary total_files: 0, total_errors: 0
+    @logger.info 'Forspell inspects *.rb, *.c, *.cpp, *.md files'
+    @logger.info "#{total_files} inspected, #{total_errors} detected"
+  end
 end

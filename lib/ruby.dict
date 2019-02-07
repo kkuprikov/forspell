@@ -15,7 +15,7 @@ stdout
 superclass: class
 subclassing
 lifecycle: example
-middleware
+middleware: software
 backend: example
 enum
 charset: example
@@ -51,3 +51,27 @@ Rakefile
 dataset: set
 geospatial
 composable
+builtin
+inline
+regex
+regexp
+timestamp: stamp
+filesystem: system
+plugin: penguin
+backport: port
+mixin: toxin
+lexer: example
+tokenizer: example
+refactor
+refactoring
+codepoint: example
+username: example
+unescape
+stdin
+rubygems
+admin: example
+truthy
+dir
+metadata
+repo
+parens

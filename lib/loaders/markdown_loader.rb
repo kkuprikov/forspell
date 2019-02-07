@@ -11,12 +11,25 @@ class MarkdownLoader < BaseLoader
     @custom_dictionary = []
     @input = input || IO.read(file)
     @result = []
+    @values = []
     @parser = parser
   end
 
   def process
     tree = Kramdown::Document.new(@input, input: @parser).to_filtered_hash
     extract_values(tree)
+    
+    locations_with_words = @values.group_by{ |res| res[:location] }.transform_values do |v|
+      filter_code_objects(v.map{|e| e[:value]}.reduce(:+))
+    end
+
+    locations_with_words.each_pair do |location, words|
+      @result << {
+        file: @file,
+        location: location,
+        words: words
+      } unless words.empty?
+    end
     self
   end
 
@@ -27,16 +40,18 @@ class MarkdownLoader < BaseLoader
       if child[:children]
         extract_values(child)
       else
-        @result << {
-          file: @file,
+        @values << {
+          # file: @file,
           location: child[:location],
-          words: sanitize_value(child[:value])
+          value: sanitize_value(child[:value])
         }
       end
     end
   end
 
   def sanitize_value value
-    filter_code_objects(value)
+    return "'" if %i(lsquo rsquo).include?(value) 
+    return '"' if %i(ldquo rdquo).include?(value) 
+    value
   end
 end
