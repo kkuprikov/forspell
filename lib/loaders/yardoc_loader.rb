@@ -1,10 +1,10 @@
 require 'rdoc'
 require 'yard'
 require 'pry'
-require_relative'./base_loader'
+require_relative './base_loader'
 
 class YardocLoader < BaseLoader
-  YARDOC_OPTIONS = %w(--no-output --no-progress --no-stats).freeze
+  YARDOC_OPTIONS = %w[--no-output --no-progress --no-stats].freeze
 
   RDOC_FORMATS = {
     'rd' => RDoc::RD,
@@ -14,13 +14,14 @@ class YardocLoader < BaseLoader
   DICTIONARY_CLASSES = [
     YARD::CodeObjects::ClassObject,
     YARD::CodeObjects::NamespaceObject
-  ]
+  ].freeze
 
   attr_reader :result
 
-  def initialize markup: nil, file: nil, exclude_path: nil
+  def initialize(markup: nil, file: nil, exclude_path: nil)
     @format_class = markup ? RDOC_FORMATS[markup] : RDoc::RD
-    fail "Unsupported markup format: #{ markup }" unless @format_class
+    raise "Unsupported markup format: #{markup}" unless @format_class
+
     @custom_dictionary = []
     @path = file
     @exclude_path = exclude_path
@@ -28,7 +29,7 @@ class YardocLoader < BaseLoader
 
   def process
     if @path && !File.directory?(@path)
-     YARD::Registry.load([@path], true) 
+      YARD::Registry.load([@path], true)
     elsif !@path
       YARD::CLI::Yardoc.new.run(*YARDOC_OPTIONS)
       YARD::Registry.load!
@@ -37,20 +38,22 @@ class YardocLoader < BaseLoader
       Dir.chdir @path
       YARD::CLI::Yardoc.new.run(*YARDOC_OPTIONS)
       Dir.chdir current_dir
-      YARD::Registry.load!("#{ @path }/.yardoc")
+      YARD::Registry.load!("#{@path}/.yardoc")
     end
 
     DICTIONARY_CLASSES.each do |yard_class|
-      @custom_dictionary += YARD::Registry.all.grep(yard_class).map{|object| object.name(prefix: true)}
-    end    
+      @custom_dictionary += YARD::Registry.all.grep(yard_class).map { |object| object.name(prefix: true) }
+    end
 
     @result = YARD::Registry.all.map do |object|
-      { 
-        file: object.file, 
-        object: object.path, 
-        location: object.docstring.line, 
-        words: filter_code_objects(extract_text(object.docstring)) 
-      } unless (object.docstring.empty? || skip_method?(object) || skip_by_path?(object))
+      next if object.docstring.empty? || skip_method?(object) || skip_by_path?(object)
+
+      {
+        file: object.file,
+        object: object.path,
+        location: object.docstring.line,
+        words: filter_code_objects(extract_text(object.docstring))
+      }
     end.compact
 
     self
@@ -58,23 +61,24 @@ class YardocLoader < BaseLoader
 
   private
 
-  def extract_text docstring
+  def extract_text(docstring)
     @format_class.parse(docstring).parts
-      .select{ |part| part.is_a?(RDoc::Markup::Paragraph) }
-      .map(&:parts).flatten.join(' ')
+                 .select { |part| part.is_a?(RDoc::Markup::Paragraph) }
+                 .map(&:parts).flatten.join(' ')
   end
 
-  def skip_method? object
+  def skip_method?(object)
     return false unless object.is_a? YARD::CodeObjects::MethodObject
 
-    result = object.is_alias? || 
+    result = object.is_alias? ||
              result = object.reader? && object.docstring.to_s =~ /^Returns the value of attribute #{ object.name.to_s }$/ ||
-             object.writer? && object.docstring.to_s =~ /^Sets the attribute #{ object.name.to_s.chop }$/
+                      object.writer? && object.docstring.to_s =~ /^Sets the attribute #{ object.name.to_s.chop }$/
     result ? true : false
   end
 
-  def skip_by_path? object
+  def skip_by_path?(object)
     return false unless @exclude_path
-    Dir.glob("#{ @exclude_path }/**/#{ object.file.split('/').last }").size > 0
+
+    !Dir.glob("#{@exclude_path}/**/#{object.file.split('/').last}").empty?
   end
 end

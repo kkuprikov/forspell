@@ -1,5 +1,5 @@
-- paragraph: 'These are some params filesystem'
-  words: ['These', 'are', 'some', 'params', 'filesystem']
+- paragraph: 'These are some params filesystem middlewares'
+  words: ['These', 'are', 'some', 'params', 'filesystem', 'middlewares']
   errors: []
 - paragraph: "Checking words with apostrohes like doesn't, haven't, don't"
   words: ["Checking", 'words', 'with', 'apostrohes', 'like', "doesn't", "haven't", "don't"]

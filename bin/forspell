@@ -4,17 +4,17 @@ require 'pry'
 require 'backports/2.5.0/hash/slice'
 require_relative '../lib/forspell'
 
-OPTION_KEYS = %i(
+OPTION_KEYS = %i[
   include_paths
   exclude_paths
   dictionary_name
-  custom_dictionary
+  custom_dictionary_path
   format
   logfile
   no_output
-)
+].freeze
 
-opts = Optimist::options do
+opts = Optimist.options do
   opt :include_paths, 'Include additional directories, default: lib, app', type: :strings
   opt :exclude_paths, 'Specify subdirectories to exclude', type: :strings
   opt :dictionary_name, 'Use another hunspell dictionary', default: 'en_US', type: :string
@@ -24,6 +24,6 @@ opts = Optimist::options do
   opt :no_output, ''
 end
 
-fail 'Please specify working directory or file' if ARGV.empty?
+raise 'Please specify working directory or file' if ARGV.empty?
 
 Forspell.new(opts.slice(*OPTION_KEYS).merge(path: ARGV.first)).process

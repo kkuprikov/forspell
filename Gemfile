@@ -1,15 +1,17 @@
 source 'https://rubygems.org'
-ruby '>= 2.3.8'
 
-gem 'ffi-hunspell'
-gem 'kramdown'
-gem 'yard'
-gem 'sanitize'
-gem 'optimist'
 gem 'backports'
+gem 'ffi-hunspell'
+gem 'kramdown', '~> 2.0'
+gem 'kramdown-parser-gfm'
+gem 'optimist'
 gem 'parser'
+gem 'rb-readline'
+gem 'sanitize'
+gem 'yard'
+gem 'colorize'
 
 group :test, :development do
-  gem 'rspec'
   gem 'pry'
+  gem 'rspec'
 end

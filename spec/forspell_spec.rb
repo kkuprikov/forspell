@@ -8,24 +8,24 @@ RSpec.describe Forspell do
 
   describe '#check_spelling' do
     it 'should work if the spelling of each word is correct' do
-      input = %w(Richard Of York Gave Battle In Vain)
+      input = %w[Richard Of York Gave Battle In Vain]
       expect(checker.check_spelling(input)).to be_empty
     end
 
     it 'should return words with incorrect spelling' do
-      expect(checker.check_spelling(%w(s0me r4ndom stuff))).to contain_exactly('s0me', 'r4ndom')
+      expect(checker.check_spelling(%w[s0me r4ndom stuff])).to contain_exactly('s0me', 'r4ndom')
     end
 
     describe 'checking readme-s errors' do
       # let(:filtered_input) { MarkdownLoader.new(file: filepath, parser: 'GFM').process.result }
       let(:checker) { described_class.new(path: filepath, no_output: true) }
-      subject { checker.process.result.map{ |res| res[:errors] }.flatten }
+      subject { checker.process.result.map { |res| res[:errors] }.flatten }
 
       describe 'devise readme' do
         let(:filepath) { 'spec/fixtures/devise_readme.md' }
-        specify { 
-          # binding.pry
-          is_expected.to include('behaviour') }
+        specify do
+          is_expected.to include('behaviour')
+        end
       end
 
       describe 'sidekiq readme' do
@@ -49,13 +49,11 @@ RSpec.describe Forspell do
 
       data = YAML.load_file 'spec/fixtures/examples.yml'
       data.each_with_index do |spec_hash, index|
-        describe "example #{ index }" do
+        describe "example #{index}" do
           let(:input) { spec_hash['words'] }
           specify { is_expected.to contain_exactly(*spec_hash['errors']) }
         end
       end
     end
   end
-
-  
 end

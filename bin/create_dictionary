@@ -4,10 +4,9 @@ require 'pry'
 require 'csv'
 
 class DictionaryCreator
-
   attr_reader :result
 
-  def initialize path: '../test/popular_gems/json/'
+  def initialize(path: '../test/popular_gems/json/')
     @path = path
     @data = {}
     @result = {}
@@ -16,18 +15,19 @@ class DictionaryCreator
   def process
     (Dir.entries(@path) - ['.', '..']).each do |filename|
       # binding.pry
-      @data[filename] = YAML.load_file("#{ @path }#{filename}")
+      @data[filename] = YAML.load_file("#{@path}#{filename}")
     end
 
     @data.each_pair do |log_filename, data|
       next if data == false
+
       gem_name = log_filename.split('.').first
       data.each do |data_entry|
         data_entry[:errors].each do |error|
-          if @result[error] 
-            @result[error] = @result[error].merge(count: @result.dig(error, :count) + 1, gems: (@result.dig(error, :gems) + [gem_name]).uniq) 
+          if @result[error]
+            @result[error] = @result[error].merge(count: @result.dig(error, :count) + 1, gems: (@result.dig(error, :gems) + [gem_name]).uniq)
           else
-            @result[error] = {count: 1, gems: [gem_name]}
+            @result[error] = { count: 1, gems: [gem_name] }
           end
         end
       end
@@ -35,12 +35,11 @@ class DictionaryCreator
 
     self
   end
-
 end
 
- # DictionaryCreator.new.process.result
+# DictionaryCreator.new.process.result
 
-CSV.open("../ruby_dict.csv", "wb") do |csv|
+CSV.open('../ruby_dict.csv', 'wb') do |csv|
   csv << ['word', 'count', 'gems', 'should_include?']
   DictionaryCreator.new.process.result.each_pair do |word, data|
     csv << [word, data[:count], data[:gems].join(', '), nil]

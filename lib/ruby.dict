@@ -9,13 +9,13 @@ config
 backtrace: example
 boolean: example
 whitespace: example
+middleware: example
 pre
 stderr
 stdout
 superclass: class
 subclassing
 lifecycle: example
-middleware: software
 backend: example
 enum
 charset: example

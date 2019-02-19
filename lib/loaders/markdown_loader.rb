@@ -1,4 +1,5 @@
 require 'kramdown'
+require 'kramdown-parser-gfm'
 
 require_relative'./base_loader'
 require_relative'../kramdown/converter/filtered_hash'
@@ -6,7 +7,7 @@ require_relative'../kramdown/converter/filtered_hash'
 class MarkdownLoader < BaseLoader
   attr_reader :result
 
-  def initialize input: nil, file: nil, parser: 'GFM', exclude_path: nil
+  def initialize(input: nil, file: nil, parser: 'GFM')
     @file = file
     @custom_dictionary = []
     @input = input || IO.read(file)
@@ -17,26 +18,30 @@ class MarkdownLoader < BaseLoader
 
   def process
     tree = Kramdown::Document.new(@input, input: @parser).to_filtered_hash
+    return self unless tree
+
     extract_values(tree)
-    
-    locations_with_words = @values.group_by{ |res| res[:location] }.transform_values do |v|
-      filter_code_objects(v.map{|e| e[:value]}.reduce(:+))
+
+    locations_with_words = @values.group_by { |res| res[:location] }.transform_values do |v|
+      filter_code_objects(v.map { |e| e[:value] }.reduce(:+))
     end
 
     locations_with_words.each_pair do |location, words|
+      next if words.empty?
+
       @result << {
         file: @file,
         location: location,
         words: words
-      } unless words.empty?
+      }
     end
     self
   end
 
   private
 
-  def extract_values tree
-    tree[:children].grep(Hash).map do |child| 
+  def extract_values(tree)
+    tree[:children].grep(Hash).map do |child|
       if child[:children]
         extract_values(child)
       else
@@ -49,9 +54,10 @@ class MarkdownLoader < BaseLoader
     end
   end
 
-  def sanitize_value value
-    return "'" if %i(lsquo rsquo).include?(value) 
-    return '"' if %i(ldquo rdquo).include?(value) 
+  def sanitize_value(value)
+    return "'" if %i[lsquo rsquo].include?(value)
+    return '"' if %i[ldquo rdquo].include?(value)
+
     value
   end
 end

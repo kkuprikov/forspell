@@ -2,6 +2,7 @@ require 'logger'
 require 'json'
 require 'ffi/hunspell'
 require 'fileutils'
+require 'colorize'
 require_relative 'loaders/yardoc_loader'
 require_relative 'loaders/markdown_loader'
 require_relative 'loaders/ruby_doc_loader'
@@ -67,64 +68,68 @@ class Forspell
   end
 
   def process
-    @result = load_words_from_files.flatten.map do |part|
-      part[:errors] = check_spelling(part[:words])
-      part[:errors_with_suggestions] = part[:errors].map{ |word| [word, dictionaries.map{ |dict| dict.suggest(word) }.flatten.first(3)] }.to_h
-      part.delete(:words)
-      part 
-    end.reject{ |part| part[:errors].empty? }
+    @result = load_words_from_files.flatten.reject{ |part| part[:errors].empty? }
+    
+    pretty_print(result, @format) if @logger && @format == 'dictionary'
+    
+    total_errors = result.map{ |obj| obj[:errors].size }.reduce(:+) || 0
+    print_summary(total_files: @files.size, total_errors: total_errors) if @logger
 
-    pretty_print(result, @format) if @logger
     self
   end
 
   private
 
   def load_words_from_files
-    files = File.extname(@path).empty? ? FileLoader.new(path: @path, include_paths: @include_paths, exclude_paths: @exclude_paths).process.result
+    @files = File.extname(@path).empty? ? FileLoader.new(path: @path, include_paths: @include_paths, exclude_paths: @exclude_paths).process.result
       : [@path]
-    files.map do |file|
-      @logger.info "Processing #{file.gsub('//', '/')}" if @logger
-      EXT_TO_PARSER_CLASS[File.extname(file)].new(file: file).process.result
+    @files.map do |file|
+      file = file.gsub('//', '/')
+      @logger.info "Processing #{file}" if @logger
+      parsed_file = EXT_TO_PARSER_CLASS[File.extname(file)].new(file: file).process.result
+      parsed_file.map do |part|
+        part[:errors] = check_spelling(part[:words])
+        part[:errors_with_suggestions] = part[:errors].map{ |word| [word, dictionaries.map{ |dict| dict.suggest(word) }.flatten.first(3)] }.to_h
+        part.delete(:words)
+        pretty_print([part], @format) if @logger && @format != 'dictionary'
+        part
+      end
     end
   end
 
   def pretty_print result, format
-    total_errors = result.map{ |obj| obj[:errors].size }.reduce(:+)
-
     case format
     when 'json'
       result.each { |object| @logger.info object.to_json }
     when 'yaml', 'yml'
       @logger.info result.to_yaml
     when 'readable'
-      result.each do |object| 
+      result.each do |object|
+        @logger.info "#{'PARSING ERROR'.red} #{object[:file]}:#{ object[:location] }\n#{object[:error_desc]}" if object[:parsing_error]
         object[:errors_with_suggestions].each_pair do |error, suggestion|
-          @logger.info "#{object[:file]}:#{ object[:location] }: '#{ error }' (suggestions: #{ suggestion.map{|s| '\'' + s + '\''}.join(', ') })"
+          @logger.info "#{object[:file]}:#{ object[:location] }: '#{ error.to_s.red }' (suggestions: #{ suggestion.map{|s| '\'' + s + '\''}.join(', ') })"
         end
       end
-
-      print_summary(total_files: result.size, total_errors: total_errors)
 
     when 'dictionary'
       tmp_hash = {}
       result.each do |object|
         object[:errors].each do |error|
           tmp_hash[error] ||= []
-          tmp_hash[error] += "\##{object[:file]}:#{ object[:location] }"
+          tmp_hash[error] << "\# #{object[:file]}:#{ object[:location] }"
         end
       end
 
       tmp_hash.each_pair do |error, locations|
         locations.map { |loc| @logger.info loc }
-        @logger.info error
+        @logger.info error.red
       end
-      print_summary(total_files: result.size, total_errors: total_errors)
     end
   end
 
   def print_summary total_files: 0, total_errors: 0
     @logger.info 'Forspell inspects *.rb, *.c, *.cpp, *.md files'
-    @logger.info "#{total_files} inspected, #{total_errors} detected"
+    total_errors_colorized = total_errors.to_s.public_send(total_errors.positive? ? :red : :green)
+    @logger.info "#{total_files} files inspected, #{total_errors_colorized} errors detected"
   end
 end

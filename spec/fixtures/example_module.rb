@@ -1,28 +1,27 @@
 # frozen_string_literal: true
+
 require 'time'
 require 'logger'
 require 'fcntl'
 
 module Sidekiq
   module Logging
-
     # erraccessor
     attr_accessor :test
 
     attr_accessor :wont_show
-    alias_method :wont_show?, :wont_show
+    alias wont_show? wont_show
 
     # erralias
-    alias_method :test?, :test
+    alias test? test
 
     def self.job_hash_context(job_hash)
       # If we're using a wrapper class, like ActiveJob, use the "wrapped"
       # attribute to expose the underlying thing.
-      klass = job_hash['wrapped'] || job_hash["class"]
+      klass = job_hash['wrapped'] || job_hash['class']
       bid = job_hash['bid']
       "#{klass} JID-#{job_hash['jid']}#{" BID-#{bid}" if bid}"
     end
-    
 
     # This reopens ALL logfiles in the process that have been rotated
     # using logrotate(8) (without copytruncate) or similar tools.
@@ -48,8 +47,8 @@ module Sidekiq
       to_reopen.each do |fp|
         orig_st = begin
           fp.stat
-        rescue IOError, Errno::EBADF
-          next
+                  rescue IOError, Errno::EBADF
+                    next
         end
 
         begin
