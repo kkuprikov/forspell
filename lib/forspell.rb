@@ -18,7 +18,7 @@ class Forspell
     '.md' => MarkdownLoader
   }
 
-  attr_reader :dictionaries, :result
+  attr_reader :dictionaries, :result, :total_errors
 
   def initialize(
     dictionary_name: 'en_US', 
@@ -30,8 +30,6 @@ class Forspell
     no_output: false, 
     format: 'readable', 
     ruby_dictionary_path: "#{ __FILE__.split('/')[0..-2].join('/') }/ruby.dict")
-
-    fail 'Please specify working directory or file' unless paths
 
     begin
       @dictionaries = [FFI::Hunspell.dict(dictionary_name)]
@@ -46,10 +44,11 @@ class Forspell
           example ? @dictionaries.first.add_with_affix(word, example) : @dictionaries.first.add(word)
         end
     rescue ArgumentError
-      fail "Unable to find the dictionary #{ dictionary_name } in any of the directories"
+      puts "Unable to find the dictionary #{ dictionary_name } in any of the directories"
+      exit(2)
     end
 
-    @paths = paths
+    @paths = paths.is_a?(Array) ? paths : [paths]
     @format = format
     @include_paths = include_paths || []
     @exclude_paths = exclude_paths || []
@@ -72,8 +71,8 @@ class Forspell
     
     pretty_print(result, @format) if @logger && @format == 'dictionary'
     
-    total_errors = result.map{ |obj| obj[:errors].size }.reduce(:+) || 0
-    print_summary(total_files: @files.size, total_errors: total_errors) if @logger
+    @total_errors = result.map{ |obj| obj[:errors].size }.reduce(:+) || 0
+    print_summary(total_files: @files.size, total_errors: @total_errors) if @logger
 
     self
   end
@@ -85,7 +84,7 @@ class Forspell
       File.extname(path).empty? ? FileLoader.new(path: path, include_paths: @include_paths, exclude_paths: @exclude_paths).process.result
       : [path]
     end.reduce(:+)
-    
+
     @files.map do |file|
       file = file.gsub('//', '/')
       @logger.info "Processing #{file}" if @logger

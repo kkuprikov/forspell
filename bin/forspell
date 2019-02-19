@@ -4,6 +4,8 @@ require 'pry'
 require 'backports/2.5.0/hash/slice'
 require_relative '../lib/forspell'
 
+puts 'Type --help for available options'
+
 OPTION_KEYS = %i[
   include_paths
   exclude_paths
@@ -24,6 +26,9 @@ opts = Optimist.options do
   opt :no_output, ''
 end
 
-raise 'Please specify working directory or file' if ARGV.empty?
+if ARGV.empty?
+  puts 'Please, specify working directory or file'
+  exit(2)
+end
 
-Forspell.new(opts.slice(*OPTION_KEYS).merge(paths: ARGV)).process
+Forspell.new(opts.slice(*OPTION_KEYS).merge(paths: ARGV)).process.total_errors.positive? ? exit(1) : exit(0)
