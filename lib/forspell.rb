@@ -23,7 +23,7 @@ class Forspell
   def initialize(
     dictionary_name: 'en_US', 
     logfile: nil, 
-    path: nil, 
+    paths: nil, 
     exclude_paths: [],
     include_paths: [],
     custom_dictionary_path: nil,
@@ -31,7 +31,7 @@ class Forspell
     format: 'readable', 
     ruby_dictionary_path: "#{ __FILE__.split('/')[0..-2].join('/') }/ruby.dict")
 
-    fail 'Please specify working directory or file' unless path
+    fail 'Please specify working directory or file' unless paths
 
     begin
       @dictionaries = [FFI::Hunspell.dict(dictionary_name)]
@@ -49,7 +49,7 @@ class Forspell
       fail "Unable to find the dictionary #{ dictionary_name } in any of the directories"
     end
 
-    @path = path
+    @paths = paths
     @format = format
     @include_paths = include_paths || []
     @exclude_paths = exclude_paths || []
@@ -81,8 +81,11 @@ class Forspell
   private
 
   def load_words_from_files
-    @files = File.extname(@path).empty? ? FileLoader.new(path: @path, include_paths: @include_paths, exclude_paths: @exclude_paths).process.result
-      : [@path]
+    @files = @paths.map do |path|
+      File.extname(path).empty? ? FileLoader.new(path: path, include_paths: @include_paths, exclude_paths: @exclude_paths).process.result
+      : [path]
+    end.reduce(:+)
+    
     @files.map do |file|
       file = file.gsub('//', '/')
       @logger.info "Processing #{file}" if @logger

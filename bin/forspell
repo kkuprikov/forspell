@@ -26,4 +26,4 @@ end
 
 raise 'Please specify working directory or file' if ARGV.empty?
 
-Forspell.new(opts.slice(*OPTION_KEYS).merge(path: ARGV.first)).process
+Forspell.new(opts.slice(*OPTION_KEYS).merge(paths: ARGV)).process
