@@ -10,6 +10,8 @@ require_relative 'loaders/c_doc_loader'
 require_relative 'loaders/file_loader'
 
 class Forspell
+  HUNSPELL_DIRS = [ "#{__dir__}/dictionaries" ]
+
   EXT_TO_PARSER_CLASS = {
     '.rb' => RubyDocLoader,
     '.c' => CDocLoader,
@@ -32,6 +34,7 @@ class Forspell
     ruby_dictionary_path: "#{ __FILE__.split('/')[0..-2].join('/') }/ruby.dict")
 
     begin
+      FFI::Hunspell.directories = HUNSPELL_DIRS
       @dictionaries = [FFI::Hunspell.dict(dictionary_name)]
       dictionary_inputs = File.read(ruby_dictionary_path)&.split("\n")
       if custom_dictionary_paths
