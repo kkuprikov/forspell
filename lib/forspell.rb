@@ -26,7 +26,7 @@ class Forspell
     paths: nil, 
     exclude_paths: [],
     include_paths: [],
-    custom_dictionary_path: nil,
+    custom_dictionary_paths: nil,
     no_output: false, 
     format: 'readable', 
     ruby_dictionary_path: "#{ __FILE__.split('/')[0..-2].join('/') }/ruby.dict")
@@ -34,7 +34,11 @@ class Forspell
     begin
       @dictionaries = [FFI::Hunspell.dict(dictionary_name)]
       dictionary_inputs = File.read(ruby_dictionary_path)&.split("\n")
-      dictionary_inputs += File.read(custom_dictionary_path)&.split("\n") if custom_dictionary_path
+      if custom_dictionary_paths
+        dictionary_inputs += custom_dictionary_paths.map do |path|
+          File.read(path)&.split("\n")
+        end.flatten
+      end
 
       dictionary_inputs.compact
         .map{ |line| line.gsub(/\s*\#.*$/, '') }

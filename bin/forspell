@@ -4,23 +4,26 @@ require 'pry'
 require 'backports/2.5.0/hash/slice'
 require_relative '../lib/forspell'
 
-puts 'Type --help for available options'
+CONFIG_PATH = "#{Dir.pwd}/.forspell"
+DEFAULT_CUSTOM_DICT = "#{Dir.pwd}/.forspell.dict"
 
 OPTION_KEYS = %i[
   include_paths
   exclude_paths
   dictionary_name
-  custom_dictionary_path
+  custom_dictionary_paths
   format
   logfile
   no_output
 ].freeze
 
+puts 'Type --help for available options'
+
 opts = Optimist.options do
   opt :include_paths, 'Include additional directories, default: lib, app', type: :strings
   opt :exclude_paths, 'Specify subdirectories to exclude', type: :strings
   opt :dictionary_name, 'Use another hunspell dictionary', default: 'en_US', type: :string
-  opt :custom_dictionary_path, 'Add your custom dictionary by specifying path', type: :string
+  opt :custom_dictionary_paths, 'Add your custom dictionaries by specifying paths', type: :strings, default: []
   opt :format, 'Formats: readable, YAML, JSON', default: 'readable', type: :string
   opt :logfile, 'Log to file', type: :string
   opt :no_output, ''
@@ -31,4 +34,20 @@ if ARGV.empty?
   exit(2)
 end
 
-Forspell.new(opts.slice(*OPTION_KEYS).merge(paths: ARGV)).process.total_errors.positive? ? exit(1) : exit(0)
+
+if File.exist?(CONFIG_PATH)
+  file_opts = File.read(CONFIG_PATH).split("\n").map do |option|
+    option.gsub('--', '').split(' ')
+  end.to_h
+
+  file_opts.keys.each do |key|
+    file_opts[(key.to_sym rescue key) || key] = file_opts.delete(key)
+  end
+
+  opts.merge!(file_opts)
+end
+
+opts[:custom_dictionary_paths] << DEFAULT_CUSTOM_DICT if File.exist?(DEFAULT_CUSTOM_DICT)
+
+Forspell.new(opts.slice(*OPTION_KEYS).merge(paths: ARGV)).process
+  .total_errors.positive? ? exit(1) : exit(0)

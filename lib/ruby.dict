@@ -1,77 +1,77 @@
-namespace: example
-subclass: class
-initializer: example
-args
-param: example
-proc
-accessor: example
-config
-backtrace: example
-boolean: example
-whitespace: example
-middleware: example
-pre
-stderr
-stdout
-superclass: class
-subclassing
-lifecycle: example
-backend: example
-enum
-charset: example
-stdlib
-unicode
-lib: rib
-runtime: example
-mutex: class
-i18n
-monkeypatching
-monkeypatch: patch
-multithreaded
-multithreading
-formatter: example
-io
-parser: example
-encoding: example
-async
-fallback: example
-override: ride
-prepend: append
-deserialization
-attr: example
-subtype: example
-bitwise
 Gemfile: example
-deserialize: rise
+Rakefile
+accessor: example
+admin: example
+args
+async
+attr: example
+backend: example
+backport: port
+backtrace: example
+bitwise
+boolean: example
+builtin
 bundler
+charset: example
+codepoint: example
+composable
+config
+dataset: set
+deserialization
+deserialize: rise
+dir
+encoding: example
+enum
+fallback: example
+filesystem: system
+formatter: example
+geospatial
+i18n
+initializer: example
+inline
+io
+lexer: example
+lib: rib
+lifecycle: example
 memoization
 memoized
-stylesheet: sheet
-Rakefile
-dataset: set
-geospatial
-composable
-builtin
-inline
-regex
-regexp
-timestamp: stamp
-filesystem: system
-plugin: penguin
-backport: port
+metadata
+middleware: example
 mixin: toxin
-lexer: example
-tokenizer: example
+monkeypatch: patch
+monkeypatching
+multithreaded
+multithreading
+mutex: class
+namespace: example
+override: ride
+param: example
+parens
+parser: example
+plugin: penguin
+pre
+prepend: append
+proc
 refactor
 refactoring
-codepoint: example
-username: example
-unescape
-stdin
-rubygems
-admin: example
-truthy
-dir
-metadata
+regex
+regexp
 repo
-parens
+rubygems
+runtime: example
+stderr
+stdin
+stdlib
+stdout
+stylesheet: sheet
+subclass: class
+subclassing
+subtype: example
+superclass: class
+timestamp: stamp
+tokenizer: example
+truthy
+unescape
+unicode
+username: example
+whitespace: example
