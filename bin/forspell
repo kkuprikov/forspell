@@ -1,6 +1,5 @@
 #!/usr/bin/env ruby
 require 'optimist'
-require 'pry'
 require 'backports/2.5.0/hash/slice'
 require_relative '../lib/forspell'
 
