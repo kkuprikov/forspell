@@ -84,7 +84,9 @@ class Forspell
   def process
     @result = load_words_from_files.flatten.reject { |part| part[:errors].empty? }
 
-    pretty_print(result, 'group') if @logger && @group
+    print_file(result, 'group') if @logger && @group
+    print_file(result, @format) if @logger && !@group && @format != 'readable'
+
 
     @total_errors = result.map { |obj| obj[:errors].size }.reduce(:+) || 0
     print_summary(total_files: @files.size, total_errors: @total_errors) if @logger && @format == 'readable' && !@group
@@ -108,42 +110,44 @@ class Forspell
         part[:errors] = check_spelling(part[:words])
         part[:errors_with_suggestions] = part[:errors].map { |word| [word, dictionaries.map { |dict| dict.suggest(word) }.flatten.first(3)] }.to_h
         part.delete(:words)
-        pretty_print([part], @format) if @logger && !@group
+        print_part([part], @format) if @logger && @format == 'readable'
         part
       end
     end
   end
 
-  def pretty_print(result, format)
+  def print_part(result, format)
+    result.each do |object|
+      @logger.info "#{@pastel.red('PARSING ERROR')} #{object[:file]}:#{object[:location]}\n#{object[:error_desc]}" if object[:parsing_error]
+      object[:errors_with_suggestions].each_pair do |error, suggestion|
+        @logger.info "#{object[:file]}:#{object[:location]}: #{@pastel.red(error)} (suggestions: #{suggestion.join(', ')})"
+      end
+    end
+  end
+
+  def print_file(result, format)
+    formatted = []
     case format
     when 'json'
       result.each do |object|
         object[:errors_with_suggestions].each_pair do |err, suggestions|
-          json = { file: object[:file],
+          formatted << { file: object[:file],
                    line: object[:location],
                    error: err,
-                   suggestions: suggestions }.to_json
-          @logger.info json
+                   suggestions: suggestions }
         end
       end
+      @logger.info formatted.to_json
     when 'yaml'
       result.each do |object|
         object[:errors_with_suggestions].each_pair do |err, suggestions|
-          yaml = { 'file' => object[:file],
+          formatted << { 'file' => object[:file],
                    'line' => object[:location],
                    'error' => err,
-                   'suggestions' => suggestions }.to_yaml
-          @logger.info yaml
+                   'suggestions' => suggestions }
         end
       end
-    when 'readable'
-      result.each do |object|
-        @logger.info "#{@pastel.red('PARSING ERROR')} #{object[:file]}:#{object[:location]}\n#{object[:error_desc]}" if object[:parsing_error]
-        object[:errors_with_suggestions].each_pair do |error, suggestion|
-          @logger.info "#{object[:file]}:#{object[:location]}: #{@pastel.red(error)} (suggestions: #{suggestion.join(', ')})"
-        end
-      end
-
+      @logger.info formatted.to_yaml
     when 'group'
       tmp_hash = {}
       result.each do |object|
