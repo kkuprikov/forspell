@@ -3,6 +3,7 @@ require 'json'
 require 'ffi/hunspell'
 require 'fileutils'
 require 'colorize'
+require 'pry'
 require_relative 'loaders/yardoc_loader'
 require_relative 'loaders/markdown_loader'
 require_relative 'loaders/ruby_doc_loader'
@@ -31,7 +32,8 @@ class Forspell
     custom_dictionary_paths: nil,
     no_output: false,
     verbose: false,
-    format: 'readable', 
+    format: 'readable',
+    group: false,
     ruby_dictionary_path: "#{ __FILE__.split('/')[0..-2].join('/') }/ruby.dict")
 
     begin
@@ -59,6 +61,7 @@ class Forspell
     @paths = paths.is_a?(Array) ? paths : [paths]
     @format = format
     @verbose = verbose
+    @group = group
     @include_paths = include_paths || []
     @exclude_paths = exclude_paths || []
 
@@ -78,10 +81,10 @@ class Forspell
   def process
     @result = load_words_from_files.flatten.reject{ |part| part[:errors].empty? }
     
-    pretty_print(result, @format) if @logger && @format == 'dictionary'
+    pretty_print(result, 'group') if @logger && @group
     
     @total_errors = result.map{ |obj| obj[:errors].size }.reduce(:+) || 0
-    print_summary(total_files: @files.size, total_errors: @total_errors) if @logger
+    print_summary(total_files: @files.size, total_errors: @total_errors) if @logger && @format == 'readable' && !@group
 
     self
   end
@@ -102,7 +105,7 @@ class Forspell
         part[:errors] = check_spelling(part[:words])
         part[:errors_with_suggestions] = part[:errors].map{ |word| [word, dictionaries.map{ |dict| dict.suggest(word) }.flatten.first(3)] }.to_h
         part.delete(:words)
-        pretty_print([part], @format) if @logger && @format != 'dictionary'
+        pretty_print([part], @format) if @logger && !@group
         part
       end
     end
@@ -111,9 +114,25 @@ class Forspell
   def pretty_print result, format
     case format
     when 'json'
-      result.each { |object| @logger.info object.to_json }
-    when 'yaml', 'yml'
-      @logger.info result.to_yaml
+      result.each do |object|
+        object[:errors_with_suggestions].each_pair do |err, suggestions|
+          @logger.info ({ file: object[:file],
+            line: object[:location],
+            error: err,
+            suggestions: suggestions
+          }.to_json)
+        end
+      end
+    when 'yaml'
+      result.each do |object|
+        object[:errors_with_suggestions].each_pair do |err, suggestions|
+          @logger.info ({ 'file' => object[:file],
+            'line' => object[:location],
+            'error' => err,
+            'suggestions' => suggestions
+          }.to_yaml)
+        end
+      end
     when 'readable'
       result.each do |object|
         @logger.info "#{'PARSING ERROR'.red} #{object[:file]}:#{ object[:location] }\n#{object[:error_desc]}" if object[:parsing_error]
@@ -122,12 +141,12 @@ class Forspell
         end
       end
 
-    when 'dictionary'
+    when 'group'
       tmp_hash = {}
       result.each do |object|
         object[:errors].each do |error|
           tmp_hash[error] ||= []
-          tmp_hash[error] << "\# #{object[:file]}:#{ object[:location] }"
+          tmp_hash[error] << "\# #{object[:file]}"
         end
       end
 

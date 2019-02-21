@@ -6,6 +6,9 @@ require_relative '../lib/forspell'
 CONFIG_PATH = "#{Dir.pwd}/.forspell"
 DEFAULT_CUSTOM_DICT = "#{Dir.pwd}/.forspell.dict"
 
+FORMATS = %w(readable yaml YAML json JSON)
+FORMAT_ERR = 'must be one of the following: readable, yaml, json'
+
 OPTION_KEYS = %i[
   include_paths
   exclude_paths
@@ -15,9 +18,9 @@ OPTION_KEYS = %i[
   logfile
   no_output
   verbose
+  group
 ].freeze
 
-puts 'Type --help for available options'
 
 opts = Optimist.options do
   opt :include_paths, 'Include additional directories, default: lib, app', type: :strings
@@ -26,9 +29,11 @@ opts = Optimist.options do
   opt :custom_dictionary_paths, 'Add your custom dictionaries by specifying paths', type: :strings, default: []
   opt :format, 'Formats: readable, YAML, JSON', default: 'readable', type: :string
   opt :logfile, 'Log to file', type: :string
-  opt :no_output, ''
-  opt :verbose, ''
+  opt :no_output, 'Supress output'
+  opt :verbose, 'Show progress'
+  opt :group, 'Group errors in dictionary format'
 end
+Optimist.die :format, FORMAT_ERR unless FORMATS.include?(opts[:format])
 
 if ARGV.empty?
   puts 'Please, specify working directory or file'
@@ -50,5 +55,7 @@ end
 
 opts[:custom_dictionary_paths] << DEFAULT_CUSTOM_DICT if File.exist?(DEFAULT_CUSTOM_DICT)
 
-Forspell.new(opts.slice(*OPTION_KEYS).merge(paths: ARGV)).process
+puts 'Type --help for available options' if opts[:format] == 'readable' && !opts[:group]
+
+Forspell.new(opts.slice(*OPTION_KEYS).merge(paths: ARGV, format: opts[:format].downcase)).process
   .total_errors.positive? ? exit(1) : exit(0)
