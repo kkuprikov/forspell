@@ -9,7 +9,7 @@ gem 'parser'
 gem 'rb-readline'
 gem 'sanitize'
 gem 'yard'
-gem 'colorize'
+gem 'pastel'
 
 group :test, :development do
   gem 'pry'
