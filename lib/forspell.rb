@@ -150,8 +150,8 @@ class Forspell
         end
       end
 
-      tmp_hash.each_pair do |error, locations|
-        locations.map { |loc| @logger.info loc }
+      tmp_hash.keys.sort.each do |error|
+        tmp_hash[error].map { |loc| @logger.info loc }
         @logger.info error.red
       end
     end
