@@ -32,10 +32,12 @@ class FileLoader
   private
 
   def generate_file_paths(root, path)
+    relative_path = path.include?('/') ? path.split('/')[1..-1].join('/') : path
+
     if File.directory?(path)
-      Dir.glob("#{root}/**/#{path}/**/*.{#{EXTENSION_GLOBS.join(',')}}")
+      Dir.glob("#{root}/**/#{relative_path}/**/*.{#{EXTENSION_GLOBS.join(',')}}")
     else
-      Dir.glob("#{root}/**/#{path}")
+      Dir.glob("#{root}/**/#{relative_path}")
     end
   end
 end
