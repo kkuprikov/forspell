@@ -14,6 +14,7 @@ OPTION_KEYS = %i[
   format
   logfile
   no_output
+  verbose
 ].freeze
 
 puts 'Type --help for available options'
@@ -26,6 +27,7 @@ opts = Optimist.options do
   opt :format, 'Formats: readable, YAML, JSON', default: 'readable', type: :string
   opt :logfile, 'Log to file', type: :string
   opt :no_output, ''
+  opt :verbose, ''
 end
 
 if ARGV.empty?

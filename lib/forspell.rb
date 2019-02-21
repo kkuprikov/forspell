@@ -29,7 +29,8 @@ class Forspell
     exclude_paths: [],
     include_paths: [],
     custom_dictionary_paths: nil,
-    no_output: false, 
+    no_output: false,
+    verbose: false,
     format: 'readable', 
     ruby_dictionary_path: "#{ __FILE__.split('/')[0..-2].join('/') }/ruby.dict")
 
@@ -57,6 +58,7 @@ class Forspell
 
     @paths = paths.is_a?(Array) ? paths : [paths]
     @format = format
+    @verbose = verbose
     @include_paths = include_paths || []
     @exclude_paths = exclude_paths || []
 
@@ -94,7 +96,7 @@ class Forspell
 
     @files.map do |file|
       file = file.gsub('//', '/')
-      @logger.info "Processing #{file}" if @logger
+      @logger.info "Processing #{file}" if @logger && @verbose
       parsed_file = EXT_TO_PARSER_CLASS[File.extname(file)].new(file: file).process.result
       parsed_file.map do |part|
         part[:errors] = check_spelling(part[:words])
