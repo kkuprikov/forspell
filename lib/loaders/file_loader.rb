@@ -31,7 +31,11 @@ class FileLoader
 
   private
 
-  def generate_file_paths(root, directory)
-    Dir.glob("#{root}/**/#{directory}/**/*.{#{EXTENSION_GLOBS.join(',')}}")
+  def generate_file_paths(root, path)
+    if File.directory?(path)
+      Dir.glob("#{root}/**/#{path}/**/*.{#{EXTENSION_GLOBS.join(',')}}")
+    else
+      Dir.glob("#{root}/**/#{path}")
+    end
   end
 end
