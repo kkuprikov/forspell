@@ -55,5 +55,5 @@ opts[:custom_dictionary_paths] << DEFAULT_CUSTOM_DICT if File.exist?(DEFAULT_CUS
 
 puts 'Type --help for available options' if opts[:format] == 'readable' && !opts[:group]
 
-Forspell.new(opts.slice(*OPTION_KEYS).merge(paths: ARGV, format: opts[:format].downcase)).process
+Forspell::Runner.new(opts.slice(*OPTION_KEYS).merge(paths: ARGV, format: opts[:format].downcase)).process
   .total_errors.positive? ? exit(1) : exit(0)
