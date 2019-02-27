@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class FileLoader
   EXTENSION_GLOBS = %w[
     rb

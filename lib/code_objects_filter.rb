@@ -1,5 +1,6 @@
+# frozen_string_literal: true
+
 require 'sanitize'
-require 'pry'
 
 module CodeObjectsFilter
   CODE_MARKERS = %w[_ # @].freeze

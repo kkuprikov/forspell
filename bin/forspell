@@ -16,7 +16,6 @@ OPTION_KEYS = %i[
   custom_dictionary_paths
   format
   logfile
-  no_output
   verbose
   group
 ].freeze
@@ -29,7 +28,6 @@ opts = Optimist.options do
   opt :custom_dictionary_paths, 'Add your custom dictionaries by specifying paths', type: :strings, default: []
   opt :format, 'Formats: readable, YAML, JSON', default: 'readable', type: :string
   opt :logfile, 'Log to file', type: :string
-  opt :no_output, 'Supress output'
   opt :verbose, 'Show progress'
   opt :group, 'Group errors in dictionary format'
 end

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative 'ruby_doc_loader'
 
 class CDocLoader < RubyDocLoader

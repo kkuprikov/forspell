@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'kramdown'
 require 'kramdown-parser-gfm'
 
@@ -5,7 +7,7 @@ require_relative'./base_loader'
 require_relative'../kramdown/converter/filtered_hash'
 
 class MarkdownLoader < BaseLoader
-  attr_reader :result
+  attr_reader :result, :errors
 
   def initialize(input: nil, file: nil, parser: 'GFM')
     @file = file
@@ -29,12 +31,11 @@ class MarkdownLoader < BaseLoader
     locations_with_words.each_pair do |location, words|
       next if words.empty?
 
-      @result << {
-        file: @file,
-        location: location,
-        words: words
-      }
+      words.each do |word|
+        @result << Word.new(@file, location, word)
+      end
     end
+
     self
   end
 
@@ -46,7 +47,6 @@ class MarkdownLoader < BaseLoader
         extract_values(child)
       else
         @values << {
-          # file: @file,
           location: child[:location],
           value: sanitize_value(child[:value])
         }
