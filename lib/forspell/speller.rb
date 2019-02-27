@@ -6,7 +6,7 @@ module Forspell
   class Speller
     attr_reader :dictionaries
 
-    HUNSPELL_DIRS = ["#{__dir__}/../dictionaries"].freeze
+    HUNSPELL_DIRS = ["#{__dir__}/dictionaries"].freeze
 
     def initialize(dictionary_name:, custom_dictionary_paths:, ruby_dictionary_path:)
       FFI::Hunspell.directories = HUNSPELL_DIRS
@@ -26,7 +26,6 @@ module Forspell
         example ? @dictionaries.first.add_with_affix(word, example) : @dictionaries.first.add(word)
       end
     rescue ArgumentError
-      binding.pry
       puts "Unable to find the dictionary #{dictionary_name} in any of the directories"
       exit(2)
     end

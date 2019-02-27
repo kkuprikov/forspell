@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Forspell
+module Forspell::Loaders
   class FileLoader
     EXTENSION_GLOBS = %w[
       rb

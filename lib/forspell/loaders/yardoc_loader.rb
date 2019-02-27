@@ -5,7 +5,7 @@ require 'yard'
 require 'pry'
 require_relative './base_loader'
 
-module Forspell
+module Forspell::Loaders
   class YardocLoader < BaseLoader
     YARDOC_OPTIONS = %w[--no-output --no-progress --no-stats].freeze
 

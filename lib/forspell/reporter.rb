@@ -76,10 +76,10 @@ module Forspell
 
     def format(word, suggestions)
       if @format == 'readable'
-        "#{word[:file]}:#{word[:line]}: #{@pastel.red(word[:text])} (suggestions: #{suggestions.join(', ')})"
+        "#{word[:file].gsub('//', '/')}:#{word[:line]}: #{@pastel.red(word[:text])} (suggestions: #{suggestions.join(', ')})"
       else
         {
-          file: word[:file],
+          file: word[:file].gsub('//', '/'),
           line: word[:line],
           error: word[:text],
           suggestions: suggestions

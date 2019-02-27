@@ -2,7 +2,7 @@
 
 require 'yard'
 
-module Forspell
+module Forspell::Loaders
   class RubyDocLoader < BaseLoader
     attr_reader :result, :errors
 

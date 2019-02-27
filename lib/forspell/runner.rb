@@ -9,7 +9,7 @@ module Forspell
       exclude_paths: [],
       include_paths: [],
       custom_dictionary_paths: nil,
-      ruby_dictionary_path: "#{__dir__}/../ruby.dict",
+      ruby_dictionary_path: "#{__dir__}/ruby.dict",
       verbose: false,
       format: 'readable',
       group: false
@@ -57,7 +57,7 @@ module Forspell
     def files
       @paths.map do |path|
         if File.extname(path).empty?
-          FileLoader.new(path: path, include_paths: @include_paths, exclude_paths: @exclude_paths)
+          Loaders::FileLoader.new(path: path, include_paths: @include_paths, exclude_paths: @exclude_paths)
             .process.result
         else
           [path]

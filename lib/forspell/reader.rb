@@ -11,11 +11,11 @@ module Forspell
     attr_accessor :loader
 
     EXT_TO_PARSER_CLASS = {
-      '.rb' => RubyDocLoader,
-      '.c' => CDocLoader,
-      '.cpp' => CDocLoader,
-      '.cxx' => CDocLoader,
-      '.md' => MarkdownLoader
+      '.rb' => Loaders::RubyDocLoader,
+      '.c' => Loaders::CDocLoader,
+      '.cpp' => Loaders::CDocLoader,
+      '.cxx' => Loaders::CDocLoader,
+      '.md' => Loaders::MarkdownLoader
     }.freeze
 
     def initialize; end

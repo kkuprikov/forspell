@@ -2,9 +2,9 @@
 
 require_relative '../code_objects_filter'
 
-module Forspell
+module Forspell::Loaders
   class BaseLoader
-    include CodeObjectsFilter
+    include Forspell::CodeObjectsFilter
     Word = Struct.new(:file, :line, :text)
   end
 end

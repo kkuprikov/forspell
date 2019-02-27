@@ -1,14 +1,14 @@
 # frozen_string_literal: true
 
-module Kramdown
-  module Converter
-    class FilteredHash < HashAst
+module Forspell
+  module Kramdown
+    class FilteredHash
       PERMITTED_TYPES = %i[
         text
         smart_quote
       ].freeze
 
-      def convert(el)
+      def convert(el, options)
         return if !PERMITTED_TYPES.include?(el.type) && el.children.empty?
 
         hash = { type: el.type }
@@ -17,7 +17,7 @@ module Kramdown
         hash[:location] = el.options[:location]
         unless el.children.empty?
           hash[:children] = []
-          el.children.each { |child| hash[:children] << convert(child) }
+          el.children.each { |child| hash[:children] << convert(child, options) }
         end
         hash
       end

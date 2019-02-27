@@ -4,9 +4,9 @@ require 'kramdown'
 require 'kramdown-parser-gfm'
 
 require_relative'./base_loader'
-require_relative'../../kramdown/converter/filtered_hash'
+require_relative'../kramdown/filtered_hash'
 
-module Forspell
+module Forspell::Loaders
   class MarkdownLoader < BaseLoader
     attr_reader :result, :errors
 
@@ -20,7 +20,9 @@ module Forspell
     end
 
     def process
-      tree = Kramdown::Document.new(@input, input: @parser).to_filtered_hash
+      document = Kramdown::Document.new(@input, input: @parser)
+      tree = Forspell::Kramdown::FilteredHash.new.convert(document.root, document.options)
+
       return self unless tree
 
       extract_values(tree)

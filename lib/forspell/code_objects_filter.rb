@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'sanitize'
+require 'cgi'
 
 module Forspell
   module CodeObjectsFilter

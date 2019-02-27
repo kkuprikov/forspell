@@ -2,7 +2,7 @@
 
 require_relative 'ruby_doc_loader'
 
-module Forspell
+module Forspell::Loaders
   class CDocLoader < RubyDocLoader
     def initialize(file: nil)
       super
