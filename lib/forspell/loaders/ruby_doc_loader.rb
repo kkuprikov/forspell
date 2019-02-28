@@ -30,6 +30,7 @@ module Forspell::Loaders
             inputs.delete(paragraph)
             paragraph[:end] = comment.last.first + 1
             paragraph[:text] << comment[1]
+            inputs << paragraph
           else
             inputs << { start: comment.last.first, end: comment.last.first + 1, text: comment[1] }
           end

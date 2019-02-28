@@ -1,3 +1,10 @@
+# frozen_string_literal: true
+
+require_relative 'speller'
+require_relative 'reporter'
+require_relative 'reader'
+require_relative 'loaders/file_loader'
+
 module Forspell
   class Runner
     attr_reader :result, :total_errors
@@ -5,26 +12,20 @@ module Forspell
     def initialize(
       dictionary_name: 'en_US',
       logfile: nil,
-      paths: nil,
-      exclude_paths: [],
-      include_paths: [],
-      custom_dictionary_paths: nil,
-      ruby_dictionary_path: "#{__dir__}/ruby.dict",
+      files:,
+      custom_dictionaries:,
       verbose: false,
       format: 'readable',
       group: false
     )
 
-      @paths = paths.is_a?(Array) ? paths : [paths]
+      @files = files
       @format = format
       @verbose = verbose
       @group = group
-      @include_paths = include_paths || []
-      @exclude_paths = exclude_paths || []
 
       @speller = Speller.new(dictionary_name: dictionary_name,
-                             custom_dictionary_paths: custom_dictionary_paths,
-                             ruby_dictionary_path: ruby_dictionary_path)
+                             custom_dictionaries: custom_dictionaries)
       @reporter = Reporter.new(logfile: logfile,
                                verbose: verbose,
                                format: format,
@@ -34,35 +35,21 @@ module Forspell
     def process
       parsing_errors = []
 
-      files.each do |path|
+      @files.each do |path|
         @reporter.file(path)
         reader = Reader.new.for(path)
         words = reader.read
         errors = reader.parsing_errors || []
         parsing_errors += errors unless errors.empty?
-
         words.each do |word|
           @reporter.error(word, @speller.suggest(word.text)) unless @speller.correct?(word.text)
         end
       end
 
-      @reporter.report(parsing_errors, files.size)
+      @reporter.report(parsing_errors, @files.size)
       @total_errors = @reporter.total_errors
 
       self
-    end
-
-    private
-
-    def files
-      @paths.map do |path|
-        if File.extname(path).empty?
-          Loaders::FileLoader.new(path: path, include_paths: @include_paths, exclude_paths: @exclude_paths)
-            .process.result
-        else
-          [path]
-        end
-      end.reduce(:+)
     end
   end
 end

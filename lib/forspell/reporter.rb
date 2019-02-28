@@ -26,7 +26,7 @@ module Forspell
       @errors = []
     end
 
-    def file path
+    def file(path)
       @logger.info "Processing #{path}" if @verbose
     end
 
