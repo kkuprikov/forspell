@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require_relative 'speller'
-require_relative 'reporter'
 require_relative 'reader'
 require_relative 'loaders/file_loader'
 
@@ -10,29 +8,33 @@ module Forspell
     attr_reader :result, :total_errors
 
     def initialize(
-      dictionary_name: 'en_US',
-      logfile: nil,
+      # dictionary_name: 'en_US',
+      # logfile: nil,
       files:,
-      custom_dictionaries:,
-      verbose: false,
-      format: 'readable',
-      group: false
+      # custom_dictionaries:,
+      # verbose: false,
+      # format: 'readable',
+      # group: false
+      speller:,
+      reporter:
     )
 
       @files = files
-      @format = format
-      @verbose = verbose
-      @group = group
+      # @format = format
+      # @verbose = verbose
+      # @group = group
 
-      @speller = Speller.new(dictionary_name: dictionary_name,
-                             custom_dictionaries: custom_dictionaries)
-      @reporter = Reporter.new(logfile: logfile,
-                               verbose: verbose,
-                               format: format,
-                               group: group)
+      # @speller = Speller.new(dictionary_name: dictionary_name,
+      #                        custom_dictionaries: custom_dictionaries)
+      # @reporter = Reporter.new(logfile: logfile,
+      #                          verbose: verbose,
+      #                          format: format,
+      #                          group: group)
+      @speller = speller
+      @reporter = reporter
     end
 
-    def process
+    def call
       parsing_errors = []
 
       @files.each do |path|

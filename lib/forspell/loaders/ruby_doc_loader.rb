@@ -57,14 +57,14 @@ module Forspell::Loaders
             parsing_error: true
           }
         end
-      rescue YARD::Parser::ParserSyntaxError => e
+      rescue YARD::Parser::ParserSyntaxError, RuntimeError => e
         @errors << {
           file: @file,
           error_desc: e.inspect
         }
+      ensure
+        return self
       end
-
-      self
     end
   end
 end

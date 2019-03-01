@@ -15,6 +15,7 @@ module Forspell::Loaders
       @custom_dictionary = []
       @input = input || IO.read(file)
       @result = []
+      @errors = []
       @values = []
       @parser = parser
     end
@@ -38,8 +39,13 @@ module Forspell::Loaders
           @result << Word.new(@file, location, word)
         end
       end
-
-      self
+    rescue RuntimeError => e
+      @errors << {
+        file: @file,
+        error_desc: e.inspect
+      }
+    ensure
+      return self
     end
 
     private

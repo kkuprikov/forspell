@@ -3,16 +3,18 @@
 require 'optimist'
 require 'backports/2.5.0/hash/slice'
 require_relative 'runner'
+require_relative 'speller'
+require_relative 'reporter'
 require_relative 'loaders/file_loader'
 
 module Forspell
   class CLI
-    CONFIG_PATH = "#{Dir.pwd}/.forspell"
-    DEFAULT_CUSTOM_DICT = "#{Dir.pwd}/.forspell.dict"
-    RUBY_DICT = "#{__dir__}/ruby.dict"
+    ERROR_CODE = 2
+    CONFIG_PATH = File.join(Dir.pwd.to_s, '.forspell')
+    DEFAULT_CUSTOM_DICT = File.join(Dir.pwd.to_s, '.forspell.dict')
 
-    FORMATS = %w[readable yaml YAML json JSON].freeze
-    FORMAT_ERR = 'must be one of the following: readable, yaml, json'
+    FORMATS = %w[readable yaml json].freeze
+    FORMAT_ERR = "must be one of the following: #{FORMATS.join(', ')}"
 
     OPTION_KEYS = %i[
       dictionary_name
@@ -24,8 +26,30 @@ module Forspell
     ].freeze
 
     def self.call
-      @opts = Optimist.options do
-        opt :include_paths, 'Include additional directories, default: lib, app', type: :strings
+      init_options
+      create_files_list
+      init_speller
+      init_reporter
+      run
+    end
+
+    def self.create_files_list
+      @files = ARGV.flat_map do |path|
+        if File.directory?(path)
+          Loaders::FileLoader.new(path: path,
+                                  exclude_paths: @opts[:exclude_paths] || [])
+                             .process.result
+        else
+          [path]
+        end
+      end
+    end
+
+    def self.init_options
+      options = ARGV
+      options += File.read(CONFIG_PATH).tr("\n", ' ').split(' ') if File.exist?(CONFIG_PATH)
+
+      @opts = Optimist.options(options) do
         opt :exclude_paths, 'Specify subdirectories to exclude', type: :strings
         opt :dictionary_name, 'Use another hunspell dictionary', default: 'en_US', type: :string
         opt :custom_dictionaries, 'Add your custom dictionaries by specifying paths', type: :strings, default: []
@@ -34,58 +58,38 @@ module Forspell
         opt :verbose, 'Show progress'
         opt :group, 'Group errors in dictionary format'
       end
+
+      @opts[:format] = @opts[:format].downcase
       Optimist.die :format, FORMAT_ERR unless FORMATS.include?(@opts[:format])
-
-      if ARGV.empty?
-        puts 'Please, specify at least one working directory or file'
-        exit(2)
-      end
-
-      if File.exist?(CONFIG_PATH)
-        file_opts = File.read(CONFIG_PATH).split("\n").map do |option|
-          option.gsub('--', '').split(' ')
-        end.to_h
-
-        file_opts.keys.each do |key|
-          file_opts[(begin
-                       key.to_sym
-                     rescue StandardError
-                       key
-                     end) || key] = file_opts.delete(key)
-        end
-
-        @opts.merge!(file_opts)
-      end
-
-      @opts[:custom_dictionaries] << DEFAULT_CUSTOM_DICT
-      @opts[:custom_dictionaries] << RUBY_DICT
-
-      @opts[:custom_dictionaries].each do |path|
-        unless File.exist?(path)
-          puts "Custom dictionary not found: #{path}"
-          @opts[:custom_dictionaries].delete(path)
-        end
-      end
-
       puts 'Type --help for available options' if @opts[:format] == 'readable' && !@opts[:group]
-
-      Forspell::Runner.new(@opts.slice(*OPTION_KEYS).merge(files: files, format: @opts[:format].downcase)).process
-                      .total_errors.positive? ? exit(1) : exit(0)
     end
 
-    private
+    def self.init_speller
+      @opts[:custom_dictionaries].each do |path|
+        next if File.exist?(path)
 
-    def self.files
-      ARGV.map do |path|
-        if File.extname(path).empty?
-          Loaders::FileLoader.new(path: path,
-                                  include_paths: @opts[:include_paths] || [],
-                                  exclude_paths: @opts[:exclude_paths] || [])
-                             .process.result
-        else
-          [path]
-        end
-      end.reduce(:+)
+        puts "Custom dictionary not found: #{path}"
+        @opts[:custom_dictionaries].delete(path)
+      end
+
+      @opts[:custom_dictionaries] << DEFAULT_CUSTOM_DICT if File.exist?(DEFAULT_CUSTOM_DICT)
+
+      @speller = Speller.new(@opts[:dictionary_name], *@opts[:custom_dictionaries])
+    end
+
+    def self.init_reporter
+      @reporter = Reporter.new(
+        logfile: @opts[:logfile],
+        format: @opts[:format],
+        verbose: @opts[:verbose],
+        group: @opts[:group]
+      )
+    end
+
+    def self.run
+      runner = Forspell::Runner.new(files: @files, speller: @speller, reporter: @reporter)
+      runner.call
+      exit @reporter.finalize
     end
   end
 end

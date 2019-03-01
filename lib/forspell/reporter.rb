@@ -6,6 +6,9 @@ require 'logger'
 
 module Forspell
   class Reporter
+    SUCCESS_CODE = 0
+    ERROR_CODE = 1
+
     attr_reader :total_errors
 
     def initialize(logfile:,
@@ -70,6 +73,10 @@ module Forspell
       when 'yaml'
         @logger.info @errors.to_yaml
       end
+    end
+
+    def finalize
+      total_errors.positive? ? ERROR_CODE : SUCCESS_CODE
     end
 
     private
