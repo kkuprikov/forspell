@@ -7,29 +7,8 @@ module Forspell
   class Runner
     attr_reader :result, :total_errors
 
-    def initialize(
-      # dictionary_name: 'en_US',
-      # logfile: nil,
-      files:,
-      # custom_dictionaries:,
-      # verbose: false,
-      # format: 'readable',
-      # group: false
-      speller:,
-      reporter:
-    )
-
+    def initialize files:, speller:, reporter:
       @files = files
-      # @format = format
-      # @verbose = verbose
-      # @group = group
-
-      # @speller = Speller.new(dictionary_name: dictionary_name,
-      #                        custom_dictionaries: custom_dictionaries)
-      # @reporter = Reporter.new(logfile: logfile,
-      #                          verbose: verbose,
-      #                          format: format,
-      #                          group: group)
       @speller = speller
       @reporter = reporter
     end
