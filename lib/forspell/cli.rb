@@ -22,7 +22,7 @@ module Forspell
       o.string '-f', '--format', 'Formats: readable, YAML, JSON', default: 'readable'
       o.string '-l', '--logfile', 'Log to file'
       o.bool '-v', '--verbose', 'Verbose mode'
-      o.string '-g', '--group', 'Group errors in dictionary format'
+      o.bool '-g', '--group', 'Group errors in dictionary format'
     end
 
     def initialize options

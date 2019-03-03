@@ -8,6 +8,8 @@ require_relative 'loaders/file_loader'
 
 module Forspell
   class Reader
+    class ParsingError < StandardError; end
+
     attr_accessor :loader
 
     EXT_TO_PARSER_CLASS = {
@@ -22,10 +24,6 @@ module Forspell
 
     def read
       loader.process.result
-    end
-
-    def parsing_errors
-      loader.errors
     end
 
     def for(path)

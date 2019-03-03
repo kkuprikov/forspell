@@ -50,7 +50,6 @@ module Forspell::Loaders
           end
 
           next if input[:parsed]
-
           @errors << {
             file: @file,
             location: location,
@@ -58,13 +57,10 @@ module Forspell::Loaders
           }
         end
       rescue YARD::Parser::ParserSyntaxError, RuntimeError => e
-        @errors << {
-          file: @file,
-          error_desc: e.inspect
-        }
-      ensure
-        return self
+        raise Forspell::Reader::ParsingError.new(e.message)
       end
+
+      self
     end
   end
 end

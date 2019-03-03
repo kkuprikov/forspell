@@ -18,8 +18,12 @@ module Forspell
 
       FileUtils.touch(logfile) if logfile.is_a?(String)
       @logger = Logger.new(logfile || STDOUT)
-      @logger.formatter = proc do |_severity, _datetime, _progname, msg|
-        "#{msg}\n"
+      @error_logger = Logger.new(STDERR)
+
+      [@logger, @error_logger].each do |logger|
+        logger.formatter = proc do |_severity, _datetime, _progname, msg|
+          "#{msg}\n"
+        end
       end
 
       @verbose = verbose
@@ -31,6 +35,9 @@ module Forspell
 
     def file(path)
       @logger.info "Processing #{path}" if @verbose
+      @files_count ||= 0
+      @files_count += 1
+      @current_file = path
     end
 
     def error(word, suggestions)
@@ -43,19 +50,20 @@ module Forspell
       end
     end
 
-    def report(parsing_errors, total_files)
+    def parsing_error(error)
+      @error_logger.warn "PARSING ERROR IN #{@current_file}: #{error}"
+    end
+
+    def report
       @total_errors ||= @errors.size
 
       case @format
       when 'readable'
         @logger.info 'Forspell inspects *.rb, *.c, *.cpp, *.md files'
+        color = @total_errors.positive? ? :red : :green
+        total_errors_colorized = @pastel.decorate(total_errors.to_s, color)
 
-        total_errors_colorized = @pastel.decorate(total_errors.to_s, @total_errors.positive? ? :red : :green)
-        parsing_errors.each do |error|
-          @logger.info "PARSING ERROR: #{error.inspect}"
-        end
-
-        @logger.info "#{total_files} files inspected, #{total_errors_colorized} errors detected"
+        @logger.info "#{@files_count} files inspected, #{total_errors_colorized} errors detected"
       when 'group'
         tmp_hash = {}
 
