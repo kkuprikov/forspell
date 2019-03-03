@@ -15,6 +15,15 @@ module Forspell
 
     FORMATS = %w[readable yaml json].freeze
     FORMAT_ERR = "must be one of the following: #{FORMATS.join(', ')}"
+    DEFINITIONS = proc do |o|
+      o.array '-e', '--exclude', 'Specify subdirectories to exclude'
+      o.array '-d', '--dictionary-name', 'Use another hunspell dictionary', default: 'en_US'
+      o.array '-c', '--custom-dictionaries', 'Add your custom dictionaries by specifying paths', default: []
+      o.string '-f', '--format', 'Formats: readable, YAML, JSON', default: 'readable'
+      o.string '-l', '--logfile', 'Log to file'
+      o.bool '-v', '--verbose', 'Verbose mode'
+      o.string '-g', '--group', 'Group errors in dictionary format'
+    end
 
     def initialize options
       @options = options
@@ -38,15 +47,7 @@ module Forspell
     def init_options
       @options += File.read(CONFIG_PATH).tr("\n", ' ').split(' ') if File.exist?(CONFIG_PATH)
 
-      @opts = Slop.parse(@options) do |o|
-        o.array '-e', '--exclude', 'Specify subdirectories to exclude'
-        o.array '-d', '--dictionary-name', 'Use another hunspell dictionary', default: 'en_US'
-        o.array '-c', '--custom-dictionaries', 'Add your custom dictionaries by specifying paths', default: []
-        o.string '-f', '--format', 'Formats: readable, YAML, JSON', default: 'readable'
-        o.string '-l', '--logfile', 'Log to file'
-        o.bool '-v', '--verbose', 'Verbose mode'
-        o.string '-g', '--group', 'Group errors in dictionary format'
-      end
+      @opts = Slop.parse(@options, &DEFINITIONS)
 
       if @opts.arguments.empty?
         puts 'Usage: forspell paths to check [options]'
