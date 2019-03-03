@@ -1,4 +1,4 @@
 #!/usr/bin/env ruby
 require_relative '../lib/forspell/cli'
 
-Forspell::CLI.call
+Forspell::CLI.new(ARGV).call

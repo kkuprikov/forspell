@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require 'optimist'
+require 'slop'
 require 'backports/2.5.0/hash/slice'
 require_relative 'runner'
 require_relative 'speller'
@@ -10,22 +10,17 @@ require_relative 'loaders/file_loader'
 module Forspell
   class CLI
     ERROR_CODE = 2
-    CONFIG_PATH = File.join(Dir.pwd.to_s, '.forspell')
-    DEFAULT_CUSTOM_DICT = File.join(Dir.pwd.to_s, '.forspell.dict')
+    CONFIG_PATH = File.join(Dir.pwd, '.forspell')
+    DEFAULT_CUSTOM_DICT = File.join(Dir.pwd, '.forspell.dict')
 
     FORMATS = %w[readable yaml json].freeze
     FORMAT_ERR = "must be one of the following: #{FORMATS.join(', ')}"
 
-    OPTION_KEYS = %i[
-      dictionary_name
-      custom_dictionaries
-      format
-      logfile
-      verbose
-      group
-    ].freeze
+    def initialize options
+      @options = options
+    end
 
-    def self.call
+    def call
       init_options
       create_files_list
       init_speller
@@ -33,43 +28,41 @@ module Forspell
       run
     end
 
-    def self.create_files_list
-      @files = ARGV.flat_map do |path|
-        if File.directory?(path)
-          Loaders::FileLoader.new(path: path,
-                                  exclude_paths: @opts[:exclude_paths] || [])
-                             .process.result
-        else
-          [path]
-        end
-      end
+    private
+
+    def create_files_list
+      @files = Loaders::FileLoader.new(paths: @opts.arguments, exclude_paths: @opts[:exclude])
+                                  .process.result
     end
 
-    def self.init_options
-      options = ARGV
-      options += File.read(CONFIG_PATH).tr("\n", ' ').split(' ') if File.exist?(CONFIG_PATH)
+    def init_options
+      @options += File.read(CONFIG_PATH).tr("\n", ' ').split(' ') if File.exist?(CONFIG_PATH)
 
-      @opts = Optimist.options(options) do
-        opt :exclude_paths, 'Specify subdirectories to exclude', type: :strings
-        opt :dictionary_name, 'Use another hunspell dictionary', default: 'en_US', type: :string
-        opt :custom_dictionaries, 'Add your custom dictionaries by specifying paths', type: :strings, default: []
-        opt :format, 'Formats: readable, YAML, JSON', default: 'readable', type: :string
-        opt :logfile, 'Log to file', type: :string
-        opt :verbose, 'Show progress'
-        opt :group, 'Group errors in dictionary format'
+      @opts = Slop.parse(@options) do |o|
+        o.array '-e', '--exclude', 'Specify subdirectories to exclude'
+        o.array '-d', '--dictionary-name', 'Use another hunspell dictionary', default: 'en_US'
+        o.array '-c', '--custom-dictionaries', 'Add your custom dictionaries by specifying paths', default: []
+        o.string '-f', '--format', 'Formats: readable, YAML, JSON', default: 'readable'
+        o.string '-l', '--logfile', 'Log to file'
+        o.bool '-v', '--verbose', 'Verbose mode'
+        o.string '-g', '--group', 'Group errors in dictionary format'
       end
 
-      @opts[:format] = @opts[:format].downcase
-      Optimist.die :format, FORMAT_ERR unless FORMATS.include?(@opts[:format])
-      puts 'Type --help for available options' if @opts[:format] == 'readable' && !@opts[:group]
+      if @opts.arguments.empty?
+        puts 'Usage: forspell paths to check [options]'
+        puts 'Type --help for more info'
+        exit(2)
+      end
+
+      @opts[:format] = @opts[:format]&.downcase
     end
 
-    def self.init_speller
+    def init_speller
       @opts[:custom_dictionaries].each do |path|
         next if File.exist?(path)
 
         puts "Custom dictionary not found: #{path}"
-        @opts[:custom_dictionaries].delete(path)
+        exit(2)
       end
 
       @opts[:custom_dictionaries] << DEFAULT_CUSTOM_DICT if File.exist?(DEFAULT_CUSTOM_DICT)
@@ -77,16 +70,11 @@ module Forspell
       @speller = Speller.new(@opts[:dictionary_name], *@opts[:custom_dictionaries])
     end
 
-    def self.init_reporter
-      @reporter = Reporter.new(
-        logfile: @opts[:logfile],
-        format: @opts[:format],
-        verbose: @opts[:verbose],
-        group: @opts[:group]
-      )
+    def init_reporter
+      @reporter = Reporter.new(**@opts.to_hash.slice(:logfile, :format, :verbose, :group))
     end
 
-    def self.run
+    def run
       runner = Forspell::Runner.new(files: @files, speller: @speller, reporter: @reporter)
       runner.call
       exit @reporter.finalize

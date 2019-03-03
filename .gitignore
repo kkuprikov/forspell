@@ -1,3 +1,4 @@
 doc
 .yardoc
 experiments
+.rubocop.yml

@@ -9,30 +9,35 @@ module Forspell::Loaders
       cxx
       md
     ].freeze
+
     attr_reader :result
 
-    def initialize(path: '.', exclude_paths: [])
-      @path = path
+    def initialize(paths:, exclude_paths:)
+      @paths = paths
       @exclude_paths = exclude_paths
     end
 
     def process
-      files_to_exclude = @exclude_paths.flat_map do |exclude_path|
-        generate_file_paths @path, exclude_path
+      to_process = @paths.flat_map do |path|
+        generate_file_paths path
+      end
+
+      to_exclude = @exclude_paths.flat_map do |path|
+        generate_file_paths path
       end || []
 
-      @result = Dir.glob("#{@path}/**/*.{#{EXTENSION_GLOBS.join(',')}}") - files_to_exclude
+      @result = to_process - to_exclude
+
       self
     end
 
     private
 
-    def generate_file_paths(root, path)
-      relative_path = path.include?('/') ? path.split('/')[1..-1].join('/') : path
+    def generate_file_paths(path)
       if File.directory?(path)
-        Dir.glob("#{root}/**/#{relative_path}/**/*.{#{EXTENSION_GLOBS.join(',')}}")
+        Dir.glob("#{path}/**/*.{#{EXTENSION_GLOBS.join(',')}}")
       else
-        Dir.glob("#{root}/**/#{relative_path}")
+        path
       end
     end
   end
