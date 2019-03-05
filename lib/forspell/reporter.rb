@@ -3,6 +3,7 @@
 require 'fileutils'
 require 'pastel'
 require 'logger'
+require 'json'
 
 module Forspell
   class Reporter
