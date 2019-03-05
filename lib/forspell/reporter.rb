@@ -42,7 +42,7 @@ module Forspell
     end
 
     def parsing_error(error)
-      @error_logger.warn "PARSING ERROR IN #{@files.last}: #{error}"
+      @logger.error "PARSING ERROR IN #{@files.last}: #{error}"
     end
 
     def report
