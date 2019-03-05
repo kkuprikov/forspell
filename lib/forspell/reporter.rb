@@ -8,8 +8,7 @@ module Forspell
   class Reporter
     SUCCESS_CODE = 0
     ERROR_CODE = 1
-
-    attr_reader :total_errors
+    FORMAT = '%<file>s:%<line>i: %<text>s (suggestions: %<suggestions>s)'
 
     def initialize(logfile:,
                    verbose:,
@@ -18,88 +17,76 @@ module Forspell
 
       FileUtils.touch(logfile) if logfile.is_a?(String)
       @logger = Logger.new(logfile || STDOUT)
-      @error_logger = Logger.new(STDERR)
+      @logger.level = verbose ? Logger::INFO : Logger::WARN
 
-      [@logger, @error_logger].each do |logger|
-        logger.formatter = proc do |_severity, _datetime, _progname, msg|
-          "#{msg}\n"
-        end
+      @logger.formatter = proc do |_severity, _datetime, _progname, msg|
+        "#{msg}\n"
       end
 
-      @verbose = verbose
       @format = group ? 'group' : format
 
       @pastel = Pastel.new(enabled: $stdout.tty?)
       @errors = []
+      @files = []
     end
 
     def file(path)
-      @logger.info "Processing #{path}" if @verbose
-      @files_count ||= 0
-      @files_count += 1
-      @current_file = path
+      @logger.info "Processing #{path}"
+      @files << path
     end
 
     def error(word, suggestions)
-      if @format != 'readable'
-        @errors << format(word, suggestions)
-      else
-        @total_errors ||= 0
-        @total_errors += 1
-        @logger.info format(word, suggestions)
-      end
+      @errors << [word, suggestions]
+      puts readable(word, suggestions) if @format == 'readable'
     end
 
     def parsing_error(error)
-      @error_logger.warn "PARSING ERROR IN #{@current_file}: #{error}"
+      @error_logger.warn "PARSING ERROR IN #{@files.last}: #{error}"
     end
 
     def report
-      @total_errors ||= @errors.size
-
       case @format
       when 'readable'
-        @logger.info 'Forspell inspects *.rb, *.c, *.cpp, *.md files'
-        color = @total_errors.positive? ? :red : :green
-        total_errors_colorized = @pastel.decorate(total_errors.to_s, color)
+        err_count = @errors.size
 
-        @logger.info "#{@files_count} files inspected, #{total_errors_colorized} errors detected"
+        color = err_count.positive? ? :red : :green
+        total_errors_colorized = @pastel.decorate(err_count.to_s, color)
+
+        puts 'Forspell inspects *.rb, *.c, *.cpp, *.md files'
+        puts "#{@files.size} files inspected, #{total_errors_colorized} errors detected"
       when 'group'
-        tmp_hash = {}
-
-        @errors.each do |error|
-          tmp_hash[error[:error]] ||= []
-          tmp_hash[error[:error]] << "\# #{error[:file]}"
+        @errors.flat_map(&:first)
+               .group_by { |word| word[:text] }
+               .transform_values { |v| v.map { |word| word[:file] }.uniq }
+               .sort_by { |key| key.first.downcase }
+               .each do |errors| # [word, [files]]
+          errors.last.each { |file| puts "\# #{file}" }
+          puts @pastel.decorate(errors.first, :red)
         end
-
-        tmp_hash.keys.sort.each do |error|
-          tmp_hash[error].uniq.map { |loc| @logger.info loc }
-          @logger.info @pastel.red(error)
-        end
-      when 'json'
-        @logger.info @errors.to_json
-      when 'yaml'
-        @logger.info @errors.to_yaml
+      when 'json', 'yaml'
+        print_formatted
       end
     end
 
     def finalize
-      total_errors.positive? ? ERROR_CODE : SUCCESS_CODE
+      @errors.size.positive? ? ERROR_CODE : SUCCESS_CODE
     end
 
     private
 
-    def format(word, suggestions)
-      if @format == 'readable'
-        "#{word[:file].gsub('//', '/')}:#{word[:line]}: #{@pastel.red(word[:text])} (suggestions: #{suggestions.join(', ')})"
-      else
+    def readable(word, suggestions)
+      format(FORMAT, file: word[:file], line: word[:line], text: @pastel.red(word[:text]), suggestions: suggestions.join(', '))
+    end
+
+    def print_formatted
+      puts (@errors.map do |error|
         {
-          file: word[:file].gsub('//', '/'),
-          line: word[:line],
-          error: word[:text],
-          suggestions: suggestions
+          file: error.first[:file],
+          line: error.first[:line],
+          error: error.first[:text],
+          suggestions: error.last
         }
-      end
+      end.public_send("to_#{@format}"))
     end
   end
 end

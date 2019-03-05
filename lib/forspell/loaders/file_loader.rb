@@ -26,7 +26,7 @@ module Forspell::Loaders
         generate_file_paths path
       end || []
 
-      @result = to_process - to_exclude
+      @result = (to_process - to_exclude).map{ |path| path.gsub('//', '/')}
 
       self
     end

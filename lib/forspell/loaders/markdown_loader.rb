@@ -36,7 +36,7 @@ module Forspell::Loaders
         next if words.empty?
 
         words.each do |word|
-          @result << Word.new(@file, location, word)
+          @result << Word.new(@file, location || 0, word)
         end
       end
     rescue RuntimeError => e
