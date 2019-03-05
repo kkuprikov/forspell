@@ -10,8 +10,8 @@ module Forspell
     SUCCESS_CODE = 0
     ERROR_CODE = 1
     ERROR_FORMAT = '%<file>s:%<line>i: %<text>s (suggestions: %<suggestions>s)'
-    EXTENSIONS_PROMPT = 'Forspell inspects *.rb, *.c, *.cpp, *.md files'
-    SUMMARY = '%<files>i inspected, %<errors>s detected'
+    SUMMARY = "Forspell inspects *.rb, *.c, *.cpp, *.md files\n"\
+              '%<files>i inspected, %<errors>s detected'
 
     def initialize(logfile:,
                    verbose:,
@@ -78,7 +78,6 @@ module Forspell
       color = err_count.positive? ? :red : :green
       total_errors_colorized = @pastel.decorate(err_count.to_s, color)
 
-      puts EXTENSIONS_PROMPT
       puts format(SUMMARY, files: @files.size, errors: total_errors_colorized)
     end
 
