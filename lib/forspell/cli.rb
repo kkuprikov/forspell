@@ -19,10 +19,9 @@ module Forspell
       o.array '-e', '--exclude', 'Specify subdirectories to exclude'
       o.array '-d', '--dictionary-name', 'Use another hunspell dictionary', default: 'en_US'
       o.array '-c', '--custom-dictionaries', 'Add your custom dictionaries by specifying paths', default: []
-      o.string '-f', '--format', 'Formats: readable, YAML, JSON', default: 'readable'
+      o.string '-f', '--format', 'Formats: dictionary, readable, JSON, YAML', default: 'readable'
       o.string '-l', '--logfile', 'Log to file'
       o.bool '-v', '--verbose', 'Verbose mode'
-      o.bool '-g', '--group', 'Group errors in dictionary format'
     end
 
     def initialize options
@@ -72,7 +71,7 @@ module Forspell
     end
 
     def init_reporter
-      @reporter = Reporter.new(**@opts.to_hash.slice(:logfile, :format, :verbose, :group))
+      @reporter = Reporter.new(**@opts.to_hash.slice(:logfile, :format, :verbose))
     end
 
     def run
