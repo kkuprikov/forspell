@@ -12,8 +12,6 @@ module Forspell
       md
     ].freeze
 
-    attr_reader :result
-
     def initialize(paths:, exclude_paths:)
       @paths = paths
       @exclude_paths = exclude_paths
