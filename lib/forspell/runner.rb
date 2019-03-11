@@ -1,6 +1,5 @@
 # frozen_string_literal: true
-
-require_relative 'reader'
+require_relative 'loader'
 
 module Forspell
   class Runner
@@ -23,16 +22,14 @@ module Forspell
     private
 
     def process_file path
-      @reporter.file(path)
-      reader = Reader.new.for(path)
-      begin
-        words = reader.read
-      rescue Forspell::Reader::ParsingError => e
-        @reporter.parsing_error(e) and return
-      end
-
+      @reporter.file(path) 
+      
+      words = Loader.for(path).read
       words.reject { |word| @speller.correct?(word.text) }
            .each { |word| @reporter.error(word, @speller.suggest(word.text)) }
+  
+    rescue Forspell::Loader::ParsingError => e
+      @reporter.parsing_error(e) and return
     end
   end
 end

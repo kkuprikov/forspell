@@ -1,6 +1,6 @@
-require_relative '../lib/loaders/file_loader'
+require_relative '../lib/file_list'
 
-RSpec.describe FileLoader do
+RSpec.describe FileList do
   describe 'including path' do
     subject { described_class.new(path: '.', include_paths: include_paths, exclude_paths: exclude_paths).process.result }
 

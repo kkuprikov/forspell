@@ -12,7 +12,6 @@ module Forspell
       split(sanitize_html(input)).reject do |word|
         CODE_MARKERS.any? { |marker| word.include?(marker) } ||
           word.count(('A'..'Z').to_a.join) > 1 ||
-          @custom_dictionary.include?(word) ||
           word.empty? || word.nil?
       end
     end

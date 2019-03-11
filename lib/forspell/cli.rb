@@ -1,11 +1,12 @@
 # frozen_string_literal: true
 
+require 'pry'
 require 'slop'
 require 'backports/2.5.0/hash/slice'
 require_relative 'runner'
 require_relative 'speller'
 require_relative 'reporter'
-require_relative 'loaders/file_loader'
+require_relative 'file_list'
 
 module Forspell
   class CLI
@@ -39,8 +40,7 @@ module Forspell
     private
 
     def create_files_list
-      @files = Loaders::FileLoader.new(paths: @opts.arguments, exclude_paths: @opts[:exclude])
-                                  .process.result
+      @files = FileList.new(paths: @opts.arguments, exclude_paths: @opts[:exclude]).process
     end
 
     def init_options

@@ -1,4 +1,4 @@
-plain text `code`:
+plain text isn't  `code`:
 ```
 code
 ```

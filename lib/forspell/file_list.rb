@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-module Forspell::Loaders
-  class FileLoader
+module Forspell
+  class FileList
     EXTENSION_GLOBS = %w[
       rb
       c
@@ -17,18 +17,16 @@ module Forspell::Loaders
       @exclude_paths = exclude_paths
     end
 
-    def process
+    def process      
       to_process = @paths.flat_map do |path|
         generate_file_paths path
-      end
+      end.compact
 
       to_exclude = @exclude_paths.flat_map do |path|
         generate_file_paths path
       end || []
 
-      @result = (to_process - to_exclude).map{ |path| path.gsub('//', '/')}
-
-      self
+      (to_process - to_exclude).map{ |path| path.gsub('//', '/')}.to_enum
     end
 
     private
@@ -36,8 +34,10 @@ module Forspell::Loaders
     def generate_file_paths(path)
       if File.directory?(path)
         Dir.glob("#{path}/**/*.{#{EXTENSION_GLOBS.join(',')}}")
-      else
+      elsif File.exists? path
         path
+      else
+        puts "Path not found: #{ path }"
       end
     end
   end
