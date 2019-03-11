@@ -40,7 +40,7 @@ module Forspell
     private
 
     def create_files_list
-      @files = FileList.new(paths: @opts.arguments, exclude_paths: @opts[:exclude]).process
+      @files = FileList.new(paths: @opts.arguments, exclude_paths: @opts[:exclude])
     end
 
     def init_options

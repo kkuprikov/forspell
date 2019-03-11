@@ -2,6 +2,8 @@
 
 module Forspell
   class FileList
+    include Enumerable
+
     EXTENSION_GLOBS = %w[
       rb
       c
@@ -17,7 +19,7 @@ module Forspell
       @exclude_paths = exclude_paths
     end
 
-    def process      
+    def each(&block)
       to_process = @paths.flat_map do |path|
         generate_file_paths path
       end.compact
@@ -26,7 +28,8 @@ module Forspell
         generate_file_paths path
       end || []
 
-      (to_process - to_exclude).map{ |path| path.gsub('//', '/')}.to_enum
+      (to_process - to_exclude).map{ |path| path.gsub('//', '/')}
+        .each(&block)
     end
 
     private
