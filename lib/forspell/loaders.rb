@@ -7,9 +7,7 @@ require_relative 'loaders/c'
 module Forspell
   module Loaders
     class ParsingError < StandardError; end
-
-    attr_accessor :loader
-
+    
     EXT_TO_PARSER_CLASS = {
       '.rb' => Loaders::Ruby,
       '.c' => Loaders::C,
@@ -19,7 +17,7 @@ module Forspell
     }.freeze
 
     def self.for(path)
-      @loader = EXT_TO_PARSER_CLASS[File.extname(path)].new(file: path)
+      EXT_TO_PARSER_CLASS[File.extname(path)].new(file: path)
     end
   end
 end

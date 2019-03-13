@@ -1,18 +1,35 @@
 # frozen_string_literal: true
 
 require 'kramdown'
-require 'pry'
 require 'kramdown-parser-gfm'
 
-require_relative'./base'
-require_relative'../kramdown/filtered_hash'
+require_relative './base'
 
 module Forspell::Loaders
   class Markdown < Base
-    attr_reader :result, :errors
+    class FilteredHash
+      PERMITTED_TYPES = %i[
+        text
+        smart_quote
+      ].freeze
+
+      def convert(el, options)
+        return if !PERMITTED_TYPES.include?(el.type) && el.children.empty?
+
+        hash = { type: el.type }
+        hash[:attr] = el.attr unless el.attr.empty?
+        hash[:value] = el.value unless el.value.nil?
+        hash[:location] = el.options[:location]
+        unless el.children.empty?
+          hash[:children] = []
+          el.children.each { |child| hash[:children] << convert(child, options) }
+        end
+        hash
+      end
+    end
 
     PARSER = 'GFM'
-    SPEC_MAP = {
+    SPECIAL_CHARS_MAP = {
       lsquo: "'",
       rsquo: "'",
       ldquo: '"',
@@ -21,26 +38,23 @@ module Forspell::Loaders
 
     def extract_words
       document = Kramdown::Document.new(@input, input: PARSER)
-      tree = Forspell::Kramdown::FilteredHash.new.convert(document.root, document.options)
-      @comments = []
+      tree = FilteredHash.new.convert(document.root, document.options)
       chunks = extract_chunks(tree)
       result = []
       return result if chunks.empty?
 
       group_by_location = chunks.group_by { |res| res[:location] }
                                 .transform_values do |lines|
-        lines.map { |v| SPEC_MAP[v[:value]] || v[:value] }.join.split(' ')
+        lines.map { |v| SPECIAL_CHARS_MAP[v[:value]] || v[:value] }.join.split(' ')
       end
       group_by_location.each_pair do |location, words|
-        words.reject(&:empty?).each { |word| result << Word.new(@file, location || 0, word) }
+        words.reject(&:empty?)
+             .each { |word| result << Word.new(@file, location || 0, word) }
       end
 
       result
     rescue RuntimeError => e
-      @errors << {
-        file: @file,
-        error_desc: e.inspect
-      }
+      raise Forspell::Loaders::ParsingError, e.message
     end
 
     private
@@ -56,13 +70,6 @@ module Forspell::Loaders
           }
         end
       end
-    end
-
-    def sanitize_value(value)
-      return "'" if %i[lsquo rsquo].include?(value)
-      return '"' if %i[ldquo rdquo].include?(value)
-
-      value
     end
   end
 end

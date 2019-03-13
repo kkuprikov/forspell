@@ -12,8 +12,8 @@ module Forspell::Loaders
 
     def extract_words
       YARD::Parser::C::CParser.new(@input, @file).parse
-                   .grep(YARD::Parser::C::Comment)
-                   .flat_map do |comment|
+                              .grep(YARD::Parser::C::Comment)
+                              .flat_map do |comment|
         Markdown.new(text: comment.source).read
                 .map do |word|
                   word.file = @file
@@ -21,8 +21,6 @@ module Forspell::Loaders
                   word
                 end
       end
-    rescue YARD::Parser::ParserSyntaxError, RuntimeError => e
-      raise Forspell::Loaders::ParsingError, e.message
     end
   end
 end
