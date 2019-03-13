@@ -5,7 +5,7 @@ require_relative 'loaders/ruby'
 require_relative 'loaders/c'
 
 module Forspell
-  module Loader
+  module Loaders
     class ParsingError < StandardError; end
 
     attr_accessor :loader

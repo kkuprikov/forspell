@@ -3,6 +3,7 @@
 module Forspell
   class FileList
     include Enumerable
+    class PathLoadError < StandardError; end
 
     EXTENSION_GLOBS = %w[
       rb
@@ -18,13 +19,9 @@ module Forspell
     end
 
     def each(&block)
-      to_process = @paths.flat_map do |path|
-        generate_file_paths path
-      end.compact
+      to_process = @paths.flat_map(&method(:expand_paths))
 
-      to_exclude = @exclude_paths.flat_map do |path|
-        generate_file_paths path
-      end || []
+      to_exclude = @exclude_paths.flat_map(&method(:expand_paths))
 
       (to_process - to_exclude).map{ |path| path.gsub('//', '/')}
         .each(&block)
@@ -32,13 +29,13 @@ module Forspell
 
     private
 
-    def generate_file_paths(path)
+    def expand_paths(path)
       if File.directory?(path)
         Dir.glob("#{path}/**/*.{#{EXTENSION_GLOBS.join(',')}}")
       elsif File.exists? path
         path
       else
-        puts "Path not found: #{ path }"
+        raise PathLoadError, path
       end
     end
   end

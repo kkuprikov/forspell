@@ -4,51 +4,37 @@ require_relative '../code_objects_filter'
 
 module Forspell::Loaders
   class Base
-    attr_reader :result, :errors
+    attr_reader :words, :errors
 
     include Forspell::CodeObjectsFilter
     Word = Struct.new(:file, :line, :text)
 
-    def initialize(file: nil, input: nil)
+    def initialize(file: nil, text: nil)
       @file = file
-      @result = []
+      @input = text || input
+      @words = []
       @errors = []
     end
 
     def read
       process
-      @result
+      @words
     end
+
+    private
 
     def process
-      read_file
-      load_comments
-      load_words
-      filter
-      self
+      @words = extract_words.each { |word| word.text = filter_code_objects(word.text) }
+                            .reject { |w| w.text.nil? || w.text.empty? }
+      @words
     end
 
-    def read_file
-      @input ||= File.read(@file)
+    def input
+      File.read(@file)
     end
 
-    def load_comments
+    def extract_words
       raise NotImplementedError
-    end
-
-    def load_words
-      raise NotImplementedError
-    end
-
-    def filter
-      @result.map! { |word| word[:text] = filter_code_objects(word[:text]).first; word }
-             .reject!{ |word| word[:text].nil? || word[:text].empty? }
-    end
-
-    %w[load_comments load_words].each do |method_name|
-      define_method method_name do
-        raise NotImplementedError
-      end
     end
   end
 end

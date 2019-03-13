@@ -1,20 +1,28 @@
 # frozen_string_literal: true
 
-require_relative 'ruby'
-
 module Forspell::Loaders
-  class C < Ruby
-    def initialize(file: nil)
-      super
-      @parser_class = YARD::Parser::C::CParser
+  class C < Base
+    def input
+      res = super
+      res.encode('UTF-8', invalid: :replace, replace: '?') unless res.valid_encoding?
+      res
     end
 
-    def load_comments
-      @input = @input.encode('UTF-8', invalid: :replace, replace: '?') unless @input.valid_encoding?
+    private
 
-      @comments = @parser_class.new(@input, @file).parse
-                               .grep(YARD::Parser::C::Comment)
-                               .map { |comment| [:comment, comment.source, [comment.line]] }
+    def extract_words
+      YARD::Parser::C::CParser.new(@input, @file).parse
+                   .grep(YARD::Parser::C::Comment)
+                   .flat_map do |comment|
+        Markdown.new(text: comment.source).read
+                .map do |word|
+                  word.file = @file
+                  word.line += comment.line - 1
+                  word
+                end
+      end
+    rescue YARD::Parser::ParserSyntaxError, RuntimeError => e
+      raise Forspell::Loaders::ParsingError, e.message
     end
   end
 end

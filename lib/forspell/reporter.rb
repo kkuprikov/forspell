@@ -42,6 +42,10 @@ module Forspell
       @logger.error "Parsing error in #{@files.last}: #{error}"
     end
 
+    def path_load_error path
+      @logger.error "Path not found: #{path}"
+    end
+
     def report
       case @format
       when 'readable'

@@ -51,7 +51,7 @@ module Forspell
       if @opts.arguments.empty?
         puts 'Usage: forspell paths to check [options]'
         puts 'Type --help for more info'
-        exit(2)
+        exit(ERROR_CODE)
       end
 
       @opts[:format] = @opts[:format]&.downcase
@@ -62,7 +62,7 @@ module Forspell
         next if File.exist?(path)
 
         puts "Custom dictionary not found: #{path}"
-        exit(2)
+        exit(ERROR_CODE)
       end
 
       @opts[:custom_dictionaries] << DEFAULT_CUSTOM_DICT if File.exist?(DEFAULT_CUSTOM_DICT)
@@ -78,6 +78,9 @@ module Forspell
       runner = Forspell::Runner.new(files: @files, speller: @speller, reporter: @reporter)
       runner.call
       exit @reporter.finalize
+    rescue Forspell::FileList::PathLoadError => path
+      @reporter.path_load_error path
+      exit ERROR_CODE
     end
   end
 end

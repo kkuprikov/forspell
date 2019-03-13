@@ -10,7 +10,7 @@ require_relative'../kramdown/filtered_hash'
 module Forspell::Loaders
   class Markdown < Base
     attr_reader :result, :errors
-    
+
     PARSER = 'GFM'
     SPEC_MAP = {
       lsquo: "'",
@@ -19,30 +19,23 @@ module Forspell::Loaders
       rdquo: '"'
     }.freeze
 
-    def initialize(input: nil, file: nil)
-      @file = file
-      @input = input
-      read_file
-      super
-    end
-
-    def load_comments
+    def extract_words
       document = Kramdown::Document.new(@input, input: PARSER)
-      @tree = Forspell::Kramdown::FilteredHash.new.convert(document.root, document.options)
+      tree = Forspell::Kramdown::FilteredHash.new.convert(document.root, document.options)
       @comments = []
-      extract_comments(@tree)
-    end
+      chunks = extract_chunks(tree)
+      result = []
+      return result if chunks.empty?
 
-    def load_words
-      return if @comments.empty?
+      group_by_location = chunks.group_by { |res| res[:location] }
+                                .transform_values do |lines|
+        lines.map { |v| SPEC_MAP[v[:value]] || v[:value] }.join.split(' ')
+      end
+      group_by_location.each_pair do |location, words|
+        words.reject(&:empty?).each { |word| result << Word.new(@file, location || 0, word) }
+      end
 
-      @comments
-        .group_by { |res| res[:location] }
-        .transform_values do |lines|
-          lines.map { |v| SPEC_MAP[v[:value]] || v[:value] }.join.split(' ')
-        end.each_pair do |location, words|
-          words.reject(&:empty?).each { |word| @result << Word.new(@file, location || 0, word) }
-        end
+      result
     rescue RuntimeError => e
       @errors << {
         file: @file,
@@ -52,12 +45,12 @@ module Forspell::Loaders
 
     private
 
-    def extract_comments(tree)
-      tree[:children].grep(Hash).each do |child|
+    def extract_chunks(tree)
+      tree[:children].grep(Hash).flat_map do |child|
         if child[:children]
-          extract_comments(child)
+          extract_chunks(child)
         else
-          @comments << {
+          {
             location: child[:location],
             value: child[:value]
           }

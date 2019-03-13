@@ -5,19 +5,21 @@ require 'cgi'
 
 module Forspell
   module CodeObjectsFilter
-    CODE_MARKERS = %w[_ # @].freeze
+    CODE_MARKERS = %w[_ # @ ( )].freeze
     URI_REGEX = %r{((?:(?:[^ :/?#]+):)(?://(?:[^ /?#]*))(?:[^ ?#]*)(?:\?(?:[^ #]*))?(?:#(?:[^ ]*))?)}.freeze
 
     def filter_code_objects(input)
-      split(sanitize_html(input)).reject do |word|
+      res = split(sanitize_html(input)).reject do |word|
         CODE_MARKERS.any? { |marker| word.include?(marker) } ||
           word.count(('A'..'Z').to_a.join) > 1 ||
+          word.count(('a'..'z').to_a.join) == 0 ||
           word.empty? || word.nil?
-      end
+      end.first&.gsub(/[.,()\"\[\]\{\};?]/, '')
+      res
     end
 
     def split(input)
-      result = input.split(/[^[[:word:]]_@!#:\'\.]+/)
+      result = [input]
       apostrophed_words = result.select { |word| word[0] == "'" || word[-1] == "'" }
       dotted_words = result.select { |word| word.chars.include?('.') }
       semicolon_words = result.select { |word| word.chars.include?(':') }
@@ -50,7 +52,6 @@ module Forspell
       bang_words.each do |word|
         result << word.chop if word.end_with?('!') && word.chars.count('!') == 1
       end
-
       result
     end
 
