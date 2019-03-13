@@ -1,22 +1,7 @@
 # frozen_string_literal: true
 
-require 'yard'
+require_relative 'source'
 
 module Forspell::Loaders
-  class Ruby < Base
-    private
-
-    def extract_words
-      YARD::Parser::Ruby::RubyParser.new(@input, @file).parse.tokens
-                                    .select { |(type, _)| type == :comment }
-                                    .flat_map do |_, text, (start, _fin)|
-        Markdown.new(text: text).read
-                .map do |word|
-                  word.file = @file
-                  word.line += start - 1
-                  word
-                end
-      end
-    end
-  end
+  class Ruby < Source; end
 end
