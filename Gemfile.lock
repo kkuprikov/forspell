@@ -19,7 +19,6 @@ GEM
       mini_portile2 (~> 2.4.0)
     nokogumbo (2.0.1)
       nokogiri (~> 1.8, >= 1.8.4)
-    optimist (3.0.0)
     parser (2.6.0.0)
       ast (~> 2.4.0)
     pastel (0.7.2)
@@ -46,6 +45,7 @@ GEM
       crass (~> 1.0.2)
       nokogiri (>= 1.8.0)
       nokogumbo (~> 2.0)
+    slop (4.6.2)
     tty-color (0.4.3)
     yard (0.9.18)
 
@@ -57,13 +57,13 @@ DEPENDENCIES
   ffi-hunspell
   kramdown (~> 2.0)
   kramdown-parser-gfm
-  optimist
   parser
   pastel
   pry
   rb-readline
   rspec
   sanitize
+  slop
   yard
 
 BUNDLED WITH
