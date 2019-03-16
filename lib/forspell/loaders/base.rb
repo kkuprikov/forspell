@@ -3,9 +3,10 @@
 require_relative '../sanitizer'
 
 module Forspell::Loaders
+  Word = Struct.new(:file, :line, :text)
+  
   class Base
     include Forspell::Sanitizer
-    Word = Struct.new(:file, :line, :text)
 
     WORD = %r{^
       \'?                      # could start with apostrophe
