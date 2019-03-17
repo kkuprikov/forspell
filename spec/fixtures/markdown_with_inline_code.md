@@ -1,8 +1,3 @@
-This is an example of inline code lines, 
-doesn't haven't: `This is spaghetti flash[:alert]`
-
-another line
-
-and ano'ther 
-
-))
+This is an example `puts 'Hello'` of inline code lines, 
+starting from here: `describe 'code block' do`
+The end!

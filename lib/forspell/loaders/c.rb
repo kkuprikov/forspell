@@ -1,4 +1,6 @@
 # frozen_string_literal: true
+require_relative 'source'
+
 module Forspell::Loaders
   class C < Source
     def input
@@ -16,6 +18,10 @@ module Forspell::Loaders
 
     def text(comment)
       comment.source
+    end
+
+    def line(comment)
+      comment.line
     end
   end
 end

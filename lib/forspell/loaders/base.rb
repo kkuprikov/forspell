@@ -10,12 +10,10 @@ module Forspell::Loaders
 
     WORD = %r{^
       \'?                      # could start with apostrophe
-      ([[:upper:]]|[[:lower]]) # at least one letter,
-      (
-        ([[:lower:]])*   # then any number of letters,
-        ([\'\-])?        # optional dash/apostrophe,
-        [[:lower:]]*     # another bunch of letters
-      )?
+      ([[:upper:]]|[[:lower]])? # at least one letter,
+      ([[:lower:]])+   # then any number of letters,
+      ([\'\-])?        # optional dash/apostrophe,
+      ([[:lower:]])*     # another bunch of letters
       \'?                # and finally, could end with apostrophe
     $}x
 

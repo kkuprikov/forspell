@@ -5,7 +5,7 @@ require 'cgi'
 
 module Forspell
   module Sanitizer    
-    REMOVE_PUNCT = /[[:punct:]&&[^\-\'\.]]/.freeze
+    REMOVE_PUNCT = /([[:punct:]&&[^\-\'\_]])+$/.freeze
 
     def sanitize(input)
 

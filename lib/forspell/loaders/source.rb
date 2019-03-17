@@ -2,6 +2,7 @@
 
 require 'yard'
 require_relative 'base'
+require_relative 'markdown'
 
 module Forspell
   module Loaders
@@ -13,7 +14,7 @@ module Forspell
           Markdown.new(text: text(comment)).read
                   .map do |word|
                     word.file = @file
-                    word.line += comment.line - 1
+                    word.line += line(comment) - 1
                     word
                   end
         end
