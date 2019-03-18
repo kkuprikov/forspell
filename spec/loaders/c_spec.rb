@@ -1,24 +1,71 @@
+# frozen_string_literal: true
+
 require_relative '../../lib/forspell/loaders/c'
+require_relative 'shared_examples'
 
 RSpec.describe Forspell::Loaders::C do
+  describe 'C' do
+    locations_with_words =
+      {
+        8 => %w[Copyright Daniel Stenberg et al],
+        10 => %w[This software is licensed as described in the file which],
+        11 => %w[you should have received as part of this distribution The terms],
+        12 => %w[are also available at],
+        14 => %w[You may opt to use copy modify merge publish distribute sell],
+        15 => %w[copies of the Software and permit persons to whom the Software is],
+        16 => %w[furnished to do so under the terms of the file],
+        18 => %w[This software is distributed on an basis],
+        19 => %w[either express or implied],
+        29 => %w[The last files should be],
+        32 => %w[appends a string to the linked list This function can be],
+        33 => %w[used as an initialization function as well as an append function],
+        62 => %w[be nice and clean up resources]
+      }
 
-  describe 'C/C++ files' do
-    
-    let(:loader) { described_class.new(file: path, text: nil) }
-    let(:words) { loader.read }
-    
-    subject { words.map(&:text) }
-    
-    describe 'C' do
-      let(:path) { File.join __dir__, '..', 'fixtures', 'example_module.c' }
-      specify { is_expected.to include(*%w[This software is licensed as described in the file]) }
-      specify { is_expected.to include(*%w[appends a string to the linked list]) }
-    end
+    path = File.join(__dir__, '..', 'fixtures', 'example_module.c')
 
-    describe 'C++' do
-      let(:path) { File.join __dir__, '..', 'fixtures', 'example_module.cxx' }
-      specify { is_expected.to include(*%w[The contents of this file are subject to the Mozilla Public License Version]) }
-      specify { is_expected.to include(*%w[read magic number]) }
-    end
+    subject { described_class.new(file: path, text: nil).read }
+    it_should_behave_like 'comment loader', locations_with_words, path
+  end
+
+  describe 'C++' do
+    locations_with_words =
+      { 2 => ['Version'],
+        4 => %w[Copyright Németh László],
+        6 => %w[The contents of this file are subject to the Mozilla Public License Version],
+        7 => %w[you may not use this file except in compliance with],
+        8 => %w[the License You may obtain a copy of the License at],
+        11 => %w[Software distributed under the License is distributed on an basis],
+        12 => %w[either express or implied See the License],
+        13 => %w[for the specific language governing rights and limitations under the],
+        14 => ['License'],
+        16 => %w[Hunspell is based on which is Copyright Kevin Hendricks],
+        18 => %w[David Einstein Davide Prina Giuseppe Modugno],
+        19 => %w[Gianluca Turconi Simon Brouwer Noll János Bíró Árpád],
+        20 => %w[Goldman Eleonóra Sarlós Tamás Bencsáth Boldizsár Halácsy Péter],
+        21 => %w[Dvornik László Gefferth András Nagy Viktor Varga Dániel Chris Halls],
+        22 => %w[Rene Engelhard Bram Moolenaar Dafydd Jones Harri Pitkänen],
+        24 => %w[Alternatively the contents of this file may be used under the terms of],
+        25 => %w[either the General Public License Version or later or],
+        26 => %w[the Lesser General Public License Version or later],
+        27 => %w[in which case the provisions of the or the are applicable instead],
+        28 => %w[of those above If you wish to allow use of your version of this file only],
+        29 => %w[under the terms of either the or the and not to allow others to],
+        30 => %w[use your version of this file under the terms of the indicate your],
+        31 => %w[decision by deleting the provisions above and replace them with the notice],
+        32 => %w[and other provisions required by the or the If you do not delete],
+        33 => %w[the provisions above a recipient may use your version of this file under],
+        34 => %w[the terms of any one of the the or the],
+        81 => %w[read magic number],
+        88 => %w[check encryption],
+        103 => %w[read record count],
+        119 => %w[read codes],
+        190 => %w[add last odd byte],
+        217 => ['escape'] }
+
+    path = File.join(__dir__, '..', 'fixtures', 'example_module.cxx')
+
+    subject { described_class.new(file: path, text: nil).read }
+    it_should_behave_like 'comment loader', locations_with_words, path
   end
 end

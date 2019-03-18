@@ -1,4 +1,5 @@
 require_relative '../../lib/forspell/loaders/markdown'
+require_relative 'shared_examples'
 
 RSpec.describe Forspell::Loaders::Markdown do
 
@@ -10,18 +11,34 @@ RSpec.describe Forspell::Loaders::Markdown do
     subject { words.map(&:text) }
     
     describe 'code blocks' do
-      let(:path) { File.join __dir__, '..', 'fixtures', 'markdown_with_code_blocks.md' }
-      specify { is_expected.to contain_exactly(*%w[This is an example of codeblock]) }
+      locations_with_words = { 1 => %w[This is an example of codeblock] }
+
+      path = File.join(__dir__, '..', 'fixtures', 'code_blocks.md')
+
+      subject { described_class.new(file: path, text: nil).read }
+      it_should_behave_like 'comment loader', locations_with_words, path
     end
 
     describe 'inline code' do
-      let(:path) { File.join __dir__, '..', 'fixtures', 'markdown_with_inline_code.md' }
-      specify { is_expected.to contain_exactly(*%w[This is an example of inline code lines starting from here The end]) }
+      locations_with_words = {
+        1 => %w[This is an example of inline code lines],
+        2 => %w[starting from here],
+        3 => %w[The end],
+       }
+
+      path = File.join(__dir__, '..', 'fixtures', 'inline_code.md')
+
+      subject { described_class.new(file: path, text: nil).read }
+      it_should_behave_like 'comment loader', locations_with_words, path
     end
 
     describe 'inline code mixed with code blocks' do
-      let(:path) { File.join __dir__, '..', 'fixtures', 'code_mixed.md' }
-      specify { is_expected.to contain_exactly(*%w[plain text isn't]) }
+      locations_with_words = { 1 => %w[plain text isn't] }
+
+      path = File.join(__dir__, '..', 'fixtures', 'code_mixed.md')
+
+      subject { described_class.new(file: path, text: nil).read }
+      it_should_behave_like 'comment loader', locations_with_words, path
     end
   end
 end
