@@ -2,8 +2,11 @@ require_relative '../lib/forspell/reporter'
 require_relative '../lib/forspell/loaders/base'
 require_relative 'shared_examples'
 require 'yaml'
+require 'pry'
+require 'fakefs/spec_helpers'
 
 RSpec.describe Forspell::Reporter do
+  include FakeFS::SpecHelpers
 
   let(:reporter) { described_class.new(logfile: logfile, verbose: verbose, format: format) }
   let(:file) { 'file.rb' }
@@ -12,26 +15,31 @@ RSpec.describe Forspell::Reporter do
   let(:error_data) { [{file: file, line: 5, text: 'typo', suggestions: ['type']}] }
 
   let(:format) { 'readable' }
-  let(:logfile) { STDERR }
+  let(:logfile) { 'log.out' }
   let(:verbose) { false }
 
   before do
+    FakeFS do
+      FileUtils.touch logfile
+    end
     reporter.file(file)
+  end
+
+  after do
+    FakeFS.deactivate!
   end
 
   describe '#parsing_error' do
     it 'should output parsing error' do
-      expect do
-        reporter.parsing_error('message')
-      end.to output("Parsing error in #{file}: message\n").to_stderr
+      reporter.parsing_error('message')
+      expect(File.read(logfile)).to eq("Parsing error in #{file}: message\n")
     end
   end
 
   describe '#path_load_error' do
     it 'should output parsing error' do
-      expect do
-        reporter.path_load_error('message')
-      end.to output("Path not found: #{file}\n").to_stderr
+      reporter.path_load_error(file)
+      expect(File.read(logfile)).to eq("Path not found: #{file}\n")
     end
   end
 
