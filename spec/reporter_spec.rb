@@ -2,7 +2,6 @@ require_relative '../lib/forspell/reporter'
 require_relative '../lib/forspell/loaders/base'
 require_relative 'shared_examples'
 require 'yaml'
-require 'pry'
 require 'fakefs/spec_helpers'
 
 RSpec.describe Forspell::Reporter do

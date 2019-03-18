@@ -63,6 +63,10 @@ RSpec.describe Forspell::FileList do
     let(:exclude_paths) { %w[foo/bar] }
     subject { described_class.new(paths: paths, exclude_paths: exclude_paths).each }
 
-    it { is_expected.to raise_error(Forspell::FileList::PathLoadError, 'foo/foo2') }
+    it 'should raise' do 
+      expect do
+        described_class.new(paths: paths, exclude_paths: exclude_paths).each
+      end.to raise_error(Forspell::FileList::PathLoadError, 'foo/foo2')
+    end
   end
 end
