@@ -6,7 +6,6 @@ module Forspell::Loaders
   Word = Struct.new(:file, :line, :text)
   
   class Base
-    include Forspell::Sanitizer
 
     WORD = %r{^
       \'?                      # could start with apostrophe
@@ -26,7 +25,7 @@ module Forspell::Loaders
     end
 
     def read
-      extract_words.each { |word| word.text = sanitize(word.text) }
+      extract_words.each { |word| word.text = Forspell::Sanitizer.sanitize(word.text) }
                    .select{ |word| WORD.match(word.text) }
                    .reject { |w| w.text.nil? || w.text.empty? }
     rescue YARD::Parser::ParserSyntaxError, RuntimeError => e

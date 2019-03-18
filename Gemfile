@@ -14,4 +14,5 @@ gem 'pastel'
 group :test, :development do
   gem 'pry'
   gem 'rspec'
+  gem 'fakefs'
 end

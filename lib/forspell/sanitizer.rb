@@ -7,7 +7,7 @@ module Forspell
   module Sanitizer    
     REMOVE_PUNCT = /([[:punct:]&&[^\-\'\_]])+$/.freeze
 
-    def sanitize(input)
+    def self.sanitize(input)
 
       CGI.unescapeHTML(Sanitize.fragment(input,
                                          elements: [], remove_contents: true))
