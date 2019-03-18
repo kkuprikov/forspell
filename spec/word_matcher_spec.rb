@@ -21,6 +21,8 @@ RSpec.describe Forspell::WordMatcher do
       'filename.txt' => false,
       'my_variable' => false,
       'MyClassName' => false,
+      ':param' => false,
+      ':param:' => false,
     }.each do |word, result|
       context "when #{word}" do
         let(:word) { word }

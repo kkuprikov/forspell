@@ -42,7 +42,7 @@ RSpec.describe Forspell::Loaders::C do
         14 => ['License'],
         16 => %w[Hunspell is based on which is Copyright Kevin Hendricks],
         18 => %w[David Einstein Davide Prina Giuseppe Modugno],
-        19 => %w[Gianluca Turconi Simon Brouwer Noll János Bíró Árpád],
+        19 => %w[Gianluca Turconi Simon Brouwer Noll János Bíró],
         20 => %w[Goldman Eleonóra Sarlós Tamás Bencsáth Boldizsár Halácsy Péter],
         21 => %w[Dvornik László Gefferth András Nagy Viktor Varga Dániel Chris Halls],
         22 => %w[Rene Engelhard Bram Moolenaar Dafydd Jones Harri Pitkänen],

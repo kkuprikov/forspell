@@ -1,5 +1,4 @@
 # frozen_string_literal: true
-
 require_relative '../sanitizer'
 require_relative '../word_matcher'
 
