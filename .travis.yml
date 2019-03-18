@@ -2,5 +2,6 @@ language: ruby
 rvm:
   - 2.5 
 before_install:
+    - sudo apt-get install hunspell
     - gem update --system
     - gem install bundler
