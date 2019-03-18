@@ -56,4 +56,12 @@ RSpec.describe Forspell::FileList do
       it { is_expected.to be_empty }
     end
   end
+
+  describe 'non-existing paths' do
+    let(:paths) { %w[foo/foo2] }
+    let(:exclude_paths) { %w[foo/bar] }
+    subject { described_class.new(paths: paths, exclude_paths: exclude_paths).each }
+
+    it { is_expected.to raise_error(Forspell::FileList::PathLoadError, 'foo/foo2') }
+  end
 end

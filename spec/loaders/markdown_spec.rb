@@ -8,37 +8,36 @@ RSpec.describe Forspell::Loaders::Markdown do
     let(:loader) { described_class.new(file: path, text: nil) }
     let(:words) { loader.read }
     
-    subject { words.map(&:text) }
+    
+    subject { described_class.new(file: path, text: nil).read }
     
     describe 'code blocks' do
-      locations_with_words = { 1 => %w[This is an example of codeblock] }
+      let(:locations_with_words) { { 1 => %w[This is an example of codeblock] } }
 
-      path = File.join(__dir__, '..', 'fixtures', 'code_blocks.md')
+      let(:path) { File.join(__dir__, '..', 'fixtures', 'code_blocks.md') }
 
-      subject { described_class.new(file: path, text: nil).read }
-      it_should_behave_like 'comment loader', locations_with_words, path
+      
+      it_behaves_like 'a comment loader'
     end
 
-    describe 'inline code' do
-      locations_with_words = {
+    describe 'with inline code' do
+      let(:locations_with_words) {{
         1 => %w[This is an example of inline code lines],
         2 => %w[starting from here],
         3 => %w[The end],
-       }
+       }}
 
-      path = File.join(__dir__, '..', 'fixtures', 'inline_code.md')
+      let(:path) { File.join(__dir__, '..', 'fixtures', 'inline_code.md') }
 
-      subject { described_class.new(file: path, text: nil).read }
-      it_should_behave_like 'comment loader', locations_with_words, path
+      it_behaves_like 'a comment loader'
     end
 
-    describe 'inline code mixed with code blocks' do
-      locations_with_words = { 1 => %w[plain text isn't] }
+    describe 'with inline code mixed with code blocks' do
+      let(:locations_with_words) { { 1 => %w[plain text isn't] } }
 
-      path = File.join(__dir__, '..', 'fixtures', 'code_mixed.md')
+      let(:path) { File.join(__dir__, '..', 'fixtures', 'code_mixed.md') }
 
-      subject { described_class.new(file: path, text: nil).read }
-      it_should_behave_like 'comment loader', locations_with_words, path
+      it_behaves_like 'a comment loader'
     end
   end
 end

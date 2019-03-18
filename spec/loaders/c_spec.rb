@@ -4,8 +4,10 @@ require_relative '../../lib/forspell/loaders/c'
 require_relative 'shared_examples'
 
 RSpec.describe Forspell::Loaders::C do
+  subject { described_class.new(file: path, text: nil).read }
+
   describe 'C' do
-    locations_with_words =
+    let(:locations_with_words) {
       {
         8 => %w[Copyright Daniel Stenberg et al],
         10 => %w[This software is licensed as described in the file which],
@@ -20,16 +22,15 @@ RSpec.describe Forspell::Loaders::C do
         32 => %w[appends a string to the linked list This function can be],
         33 => %w[used as an initialization function as well as an append function],
         62 => %w[be nice and clean up resources]
-      }
+      } }
 
-    path = File.join(__dir__, '..', 'fixtures', 'example_module.c')
+    let(:path) { File.join(__dir__, '..', 'fixtures', 'example_module.c') }
 
-    subject { described_class.new(file: path, text: nil).read }
-    it_should_behave_like 'comment loader', locations_with_words, path
+    it_behaves_like 'a comment loader'
   end
 
   describe 'C++' do
-    locations_with_words =
+    let(:locations_with_words) {
       { 2 => ['Version'],
         4 => %w[Copyright Németh László],
         6 => %w[The contents of this file are subject to the Mozilla Public License Version],
@@ -61,11 +62,10 @@ RSpec.describe Forspell::Loaders::C do
         103 => %w[read record count],
         119 => %w[read codes],
         190 => %w[add last odd byte],
-        217 => ['escape'] }
+        217 => ['escape'] } }
 
-    path = File.join(__dir__, '..', 'fixtures', 'example_module.cxx')
+    let(:path) { File.join(__dir__, '..', 'fixtures', 'example_module.cxx') }
 
-    subject { described_class.new(file: path, text: nil).read }
-    it_should_behave_like 'comment loader', locations_with_words, path
+    it_behaves_like 'a comment loader'
   end
 end
