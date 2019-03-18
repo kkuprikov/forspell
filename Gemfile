@@ -15,4 +15,5 @@ group :test, :development do
   gem 'pry'
   gem 'rspec'
   gem 'fakefs'
+  gem 'rake'
 end
