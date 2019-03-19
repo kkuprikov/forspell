@@ -7,11 +7,11 @@ Supports C, C++, Ruby and Markdown files.
 * [libhunspell] >= 1.2.0
 * [ffi] ~> 1.0
 
-# Installation
+## Installation
 
 `gem install forspell`
 
-# Usage
+## Usage
 
 `forspell lib *.md`
 
