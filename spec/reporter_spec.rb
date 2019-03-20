@@ -29,17 +29,11 @@ RSpec.describe Forspell::Reporter do
   end
 
   describe '#parsing_error' do
-    it 'should output parsing error' do
-      reporter.parsing_error('message')
-      expect(File.read(logfile)).to eq("Parsing error in #{file}: message\n")
-    end
+    it { expect { reporter.parsing_error('message') }.to change { File.read(logfile) }.to "Parsing error in #{file}: message\n" }
   end
 
   describe '#path_load_error' do
-    it 'should output parsing error' do
-      reporter.path_load_error(file)
-      expect(File.read(logfile)).to eq("Path not found: #{file}\n")
-    end
+    it { expect { reporter.path_load_error(file) }.to change { File.read(logfile) }.to "Path not found: #{file}\n" }
   end
 
   describe '#error' do

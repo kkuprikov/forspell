@@ -5,7 +5,7 @@ require_relative '../lib/forspell/file_list'
 
 RSpec.describe Forspell::FileList do
   include FakeFS::SpecHelpers
-  subject { described_class.new(paths: paths, exclude_paths: exclude_paths).each.to_a }
+  subject(:list) { described_class.new(paths: paths, exclude_paths: exclude_paths).each.to_a }
 
   before do
     FakeFS.with_fresh do
@@ -63,10 +63,8 @@ RSpec.describe Forspell::FileList do
     let(:exclude_paths) { %w[foo/bar] }
     subject { described_class.new(paths: paths, exclude_paths: exclude_paths).each }
 
-    it 'should raise' do 
-      expect do
-        described_class.new(paths: paths, exclude_paths: exclude_paths).each
-      end.to raise_error(Forspell::FileList::PathLoadError, 'foo/foo2')
+    it 'should raise' do
+      expect{ list }.to raise_error(Forspell::FileList::PathLoadError, 'foo/foo2')
     end
   end
 end
