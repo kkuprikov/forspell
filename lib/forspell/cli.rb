@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-require 'pry'
 require 'slop'
 require 'backports/2.5.0/hash/slice'
 require_relative 'runner'

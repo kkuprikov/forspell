@@ -1,30 +1,20 @@
 - paragraph: 'These are some params filesystem middlewares'
   words: ['These', 'are', 'some', 'params', 'filesystem', 'middlewares']
-  errors: []
 - paragraph: "Checking words with apostrohes like doesn't, haven't, don't"
   words: ["Checking", 'words', 'with', 'apostrohes', 'like', "doesn't", "haven't", "don't"]
-  errors: ['apostrohes']
-- paragraph: "example with <tt>need to filter that</tt> tags <p>*.asd</p> <dd>!@$#%@%SDF413ef#$&%&</dd>"
+- paragraph: 
   words: ['example', 'with', 'tags']
-  errors: []
 - paragraph: "fake apostrophed words like 'text/javascript'"
   words: ['fake', 'apostrophed', 'words', 'like', 'text', 'javascript']
-  errors: ['apostrophed', 'javascript']
 - paragraph: "words surrounded by quotes like 'like', 'these' 'ones"
   words: ['words', 'surrounded', 'by', 'quotes', 'like', 'like', 'these', 'ones']
-  errors: []
 - paragraph: "# Compares the +other+ MIME::Type based on how reliable it is before doing a normal <=> comparison. "
   words: ['Compares', 'the', 'other', 'based', 'on', 'how', 'reliable', 'it', 'is', 'before', 'doing', 'a', 'normal', 'comparison']
-  errors: []
 - paragraph: "This should not include urls like http://google.com, https://www.example.com, http://gofishing.com"
   words: ['This', 'should', 'not', 'include', 'urls', 'like']
-  errors: ['urls']
 - paragraph: "This should not include files like test.yml, example.rb, asd.qwe.zxc. Another_example.rb and any asd.qwe also."
   words: ['This', 'should', 'not', 'include', 'files', 'like', 'and', 'any', 'also']
-  errors: []
 - paragraph: 'Ruby words: Gemfile, Rakefile, whitespace, boolean, namespace. No::semicolon words::permitted'
   words: ['Ruby', 'words', 'Gemfile', 'Rakefile', 'whitespace', 'boolean', 'namespace']
-  errors: []
 - paragraph: "Combo apostrophed and dotted word: 'qwe.rty.asd'"
   words: ['Combo', 'apostrophed', 'and', 'dotted', 'word']
-  errors: ['apostrophed']

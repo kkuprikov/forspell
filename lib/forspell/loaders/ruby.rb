@@ -9,12 +9,17 @@ module Forspell::Loaders
     private
 
     def comments
-      YARD::Parser::Ruby::RipperParser.new(@input, @file).parse.enumerator
-        .grep(YARD::Parser::Ruby::CommentNode)
+      YARD::Parser::Ruby::RubyParser.new(@input, @file).parse
+        .tokens.select{ |token| token.first == :comment }
+      # example: [:comment, "# def loader_class path\n", [85, 2356]]
     end
 
     def text(comment)
-      comment.docstring
+      comment[1]
+    end
+
+    def line(comment)
+      comment.last.first
     end
   end
 end

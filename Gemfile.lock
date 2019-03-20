@@ -7,6 +7,7 @@ GEM
     crass (1.0.4)
     diff-lcs (1.3)
     equatable (0.5.0)
+    fakefs (0.20.0)
     ffi (1.10.0)
     ffi-hunspell (0.4.0)
       ffi (~> 1.0)
@@ -27,6 +28,7 @@ GEM
     pry (0.12.2)
       coderay (~> 1.1.0)
       method_source (~> 0.9.0)
+    rake (12.3.2)
     rb-readline (0.5.5)
     rspec (3.8.0)
       rspec-core (~> 3.8.0)
@@ -54,12 +56,14 @@ PLATFORMS
 
 DEPENDENCIES
   backports
+  fakefs
   ffi-hunspell
   kramdown (~> 2.0)
   kramdown-parser-gfm
   parser
   pastel
   pry
+  rake
   rb-readline
   rspec
   sanitize

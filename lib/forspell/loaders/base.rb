@@ -1,23 +1,11 @@
 # frozen_string_literal: true
-
 require_relative '../sanitizer'
+require_relative '../word_matcher'
 
 module Forspell::Loaders
+  Word = Struct.new(:file, :line, :text)
+  
   class Base
-    include Forspell::Sanitizer
-    Word = Struct.new(:file, :line, :text)
-
-    WORD = %r{^
-      \'?                      # could start with apostrophe
-      ([[:upper:]]|[[:lower]]) # at least one letter,
-      (
-        ([[:lower:]])*   # then any number of letters,
-        ([\'\-])?        # optional dash/apostrophe,
-        [[:lower:]]*     # another bunch of letters
-      )?
-      \'?                # and finally, could end with apostrophe
-    $}x
-
 
     def initialize(file: nil, text: nil)
       @file = file
@@ -27,8 +15,8 @@ module Forspell::Loaders
     end
 
     def read
-      extract_words.each { |word| word.text = sanitize(word.text) }
-                   .select{ |word| WORD.match(word.text) }
+      extract_words.each { |word| word.text = Forspell::Sanitizer.sanitize(word.text) }
+                   .select{ |word| Forspell::WordMatcher.word?(word.text) }
                    .reject { |w| w.text.nil? || w.text.empty? }
     rescue YARD::Parser::ParserSyntaxError, RuntimeError => e
       raise Forspell::Loaders::ParsingError, e.message
