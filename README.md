@@ -52,7 +52,7 @@ Adds `Processing file: ...` for debug purposes.
 forspell lib -f dictionary > custom.dict
 # Remove the actual errors from the custom.dict
 forspell lib -c custom.dict
-Or, export errors for further analysis
+# Or, export errors for further analysis
 forspell lib -c custom.dict -f json > result.json
 ```
 Then fix typos in your docs :)
