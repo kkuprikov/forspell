@@ -61,7 +61,6 @@ RSpec.describe Forspell::FileList do
   describe 'non-existing paths' do
     let(:paths) { %w[foo/foo2] }
     let(:exclude_paths) { %w[foo/bar] }
-    subject { described_class.new(paths: paths, exclude_paths: exclude_paths).each }
 
     it 'should raise' do
       expect{ list }.to raise_error(Forspell::FileList::PathLoadError, 'foo/foo2')
