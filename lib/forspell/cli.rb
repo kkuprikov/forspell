@@ -22,6 +22,10 @@ module Forspell
       o.string '-f', '--format', 'Formats: dictionary, readable, JSON, YAML', default: 'readable'
       o.string '-l', '--logfile', 'Log to file'
       o.bool '-v', '--verbose', 'Verbose mode'
+      o.on '--help' do
+        puts o
+        exit
+      end
     end
 
     def initialize options
