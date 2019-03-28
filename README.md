@@ -49,7 +49,7 @@ Use another hunspell dictionary from `lib/dictionaries` folder. Default is 'en_U
 * `-c, --custom-dictionaries`
 Use your own dictionary to prevent your project-specific slang reported as errors.
 
-Format is `custom_word: existing_word`, please note that your `custom_word` will inherit plural form from `existing word`.
+Format is `custom_word: existing_word`, please note that your `custom_word` will inherit plural form from `existing_word`.
 
 Or you could use just `custom_word`, therefore `custom_words` will be treated as an error.
 
@@ -63,13 +63,15 @@ Use the file instead of `STDERR`.
 * `-v, --verbose`
 Adds `Processing file: ...` for debug purposes.
 
-Guess you have a lot of specific terms in your project - don't panic :)
+### Okay, but we use so many fuzzy words in our project...
 
-* Forspell ships with `ruby.dict` "dictionary extension", treating popular Ruby terms as known!
+Guess you have a lot of specific terms - don't panic :)
+
+* Forspell ships with `ruby.dict` "dictionary extension", treating popular Ruby terms as known words!
 
 * Create your own custom dictionary from scratch,
 
-* ...or create it much easier!
+* ...or simply by running:
 ```
 forspell lib -f dictionary > custom.dict
 ```
@@ -77,7 +79,7 @@ forspell lib -f dictionary > custom.dict
 Then remove actual errors from `custom.dict` and re-run forspell:
 
 ```
-forspell -c custom.dict lib
+forspell lib -c custom.dict
 ```
 
 ## Integration with CI
