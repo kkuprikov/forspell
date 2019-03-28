@@ -9,12 +9,12 @@ You could easily integrate forspell into your CI tool!
 
 ## Features
 
-Supports `.rb`, `.c`, `.cxx`, `.md` files.
-Checks multiple directories or files at once.
-Could exclude any subdirectories unwanted to process.
-Supports any `hunspell` dictionary.
-Could use your custom project-specific dictionary and helps you to build it - see `--dictionary` option.
-Could output results in JSON and YAML for further processing.
+* Supports `.rb`, `.c`, `.cxx`, `.md` files.
+* Checks multiple directories or files at once.
+* Could exclude any subdirectories unwanted to process.
+* Supports any `hunspell` dictionary.
+* Could use your custom project-specific dictionary and helps you to build it - see `--dictionary` option.
+* Could output results in JSON and YAML for further processing.
 
 ## Installation
 
