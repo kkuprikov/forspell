@@ -84,7 +84,7 @@ forspell lib -c custom.dict
 
 ## Integration with CI
 
-Forspell uses return codes:
+Forspell return codes:
 
 * 0 - when no errors found
 
