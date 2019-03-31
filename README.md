@@ -3,7 +3,7 @@
 [![Gem Version](https://badge.fury.io/rb/forspell.svg)](http://badge.fury.io/rb/forspell)
 [![Build Status](https://travis-ci.org/kkuprikov/forspell.svg?branch=master)](https://travis-ci.org/kkuprikov/forspell)
 
-**Forspell** is spellchecker for code and documentation. It uses well-known [hunspell](https://en.wikipedia.org/wiki/Hunspell) tool and dictionary, provides customizable output, and is easily integratable into CI pipeline.
+**Forspell** is spellchecker for code and documentation. It uses well-known [hunspell](https://en.wikipedia.org/wiki/Hunspell) tool and dictionary, provides customizable output, and could be easily integrated into CI pipeline.
 
 Example of output:
 
@@ -25,7 +25,7 @@ Example of output:
 gem install forspell
 ```
 
-`forspell` requires `libhunspell` >= 1.2.0 to be installed, see [hunspell's site](https://github.com/hunspell/hunspell) for installation instructions (it is probably as easy as `<yourpackagemanager> install hunspell` on most of Linuxes and MacOS).
+`forspell` requires `libhunspell` >= 1.2.0 to be installed, see [hunspell site](https://github.com/hunspell/hunspell) for installation instructions (it is probably as easy as `<yourpackagemanager> install hunspell` on most of Linuxes and MacOS).
 
 ## Usage
 
@@ -59,7 +59,7 @@ You can also add your project's **custom dictionary** with internal terms, for t
 * ...or `word: example` -- in this case, "example" should be existing word from the main dictionary, and it means your custom term can have the same forms as example word. For example, "subclass: class" will mean that "subclass", "subclasses" and "subclass'" should be considered correct.
 * `#` marks comments.
 
-For larger projects, it is handy to generate custom dictionary with `forspell your,project,pathes --gen-dictionary`. This will create `forspell.dict` with all misspelling found in your project, you can proceed by deleting geniune errors and leave what should be considered correct internal terms.
+For larger projects, it is handy to generate custom dictionary with `forspell your,project,pathes --gen-dictionary`. This will create `forspell.dict` with all misspelling found in your project, you can proceed by deleting genuine errors and leave what should be considered correct internal terms.
 
 ## Integration with CI
 
