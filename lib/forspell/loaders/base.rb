@@ -1,4 +1,6 @@
 # frozen_string_literal: true
+
+require 'backports/2.4.0/hash'
 require_relative '../sanitizer'
 require_relative '../word_matcher'
 
