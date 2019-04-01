@@ -4,7 +4,10 @@ Gem::Specification.new do |s|
   s.authors     = ["Kirill Kuprikov"]
   s.email       = 'kkuprikov@gmail.com'
 
-  s.summary     = "For spelling check"
+  s.summary     = 'For spelling check'
+  s.description = 'Forspell is spellchecker for code and documentation.'\
+                  'It uses well-known hunspell tool and dictionary, provides customizable output, '\
+                  'and could be easily integrated into CI pipeline.'
   s.license       = 'MIT'
 
   s.files       = `git ls-files exe lib README.md`.split($RS)
