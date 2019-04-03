@@ -34,9 +34,9 @@ $ forspell --help
 Usage: forspell [list of files and folders] [options]
 
 Options:
-    -e, --exclude pathes       List of pathes to exclude
+    -e, --exclude paths        List of paths to exclude
     -d, --dictionary path      Path to main hunspell dictionary to use (by default, forspell's en_US)
-    -c, --custom pathes        Pathes to custom dictionaries
+    -c, --custom paths         Paths to custom dictionaries
     -f, --format format_name   Output formats: readable (default), json, yaml
     --gen-dictionary           Generate custom dictionary
     -l, --logfile path         Log to specified path
