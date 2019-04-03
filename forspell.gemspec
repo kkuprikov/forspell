@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   s.name        = 'forspell'
-  s.version     = '0.0.1'
-  s.authors     = ["Kirill Kuprikov"]
+  s.version     = '0.0.3'
+  s.authors     = ['Kirill Kuprikov', 'Victor Shepelev']
   s.email       = 'kkuprikov@gmail.com'
 
   s.summary     = 'For spelling check'
@@ -11,6 +11,10 @@ Gem::Specification.new do |s|
   s.license       = 'MIT'
 
   s.files       = `git ls-files exe lib README.md`.split($RS)
+  
+  s.add_dependency 'slop', '~> 4.6'
+  s.add_dependency 'backports', '~> 3.0'
+
   s.homepage    = 'http://github.com/kkuprikov/forspell'
   s.require_paths = ["lib"]
   s.bindir = 'exe'
