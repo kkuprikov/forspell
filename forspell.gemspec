@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'forspell'
-  s.version     = '0.0.3'
+  s.version     = '0.0.5'
   s.authors     = ['Kirill Kuprikov', 'Victor Shepelev']
   s.email       = 'kkuprikov@gmail.com'
 
@@ -16,6 +16,8 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
   s.bindir = 'exe'
   s.executables << 'forspell'
+
+  s.required_ruby_version = '>= 2.3.0'
   
   s.add_dependency 'slop', '~> 4.6'
   s.add_dependency 'backports', '~> 3.0'
