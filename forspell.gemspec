@@ -12,11 +12,22 @@ Gem::Specification.new do |s|
 
   s.files       = `git ls-files exe lib README.md`.split($RS)
   
-  s.add_dependency 'slop', '~> 4.6'
-  s.add_dependency 'backports', '~> 3.0'
-
   s.homepage    = 'http://github.com/kkuprikov/forspell'
   s.require_paths = ["lib"]
   s.bindir = 'exe'
   s.executables << 'forspell'
+  
+  s.add_dependency 'slop', '~> 4.6'
+  s.add_dependency 'backports', '~> 3.0'
+  s.add_dependency 'kramdown', '~> 2.0'
+  s.add_dependency 'kramdown-parser-gfm', '~> 1.0'
+  s.add_dependency 'sanitize', '~> 5.0'
+  s.add_dependency 'yard'
+  s.add_dependency 'ffi-hunspell'
+  s.add_dependency 'parser'
+  s.add_dependency 'pastel'
+
+  s.add_development_dependency 'rspec', '>= 3'
+  s.add_development_dependency 'rake'
+  s.add_development_dependency 'fakefs'
 end
