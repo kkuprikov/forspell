@@ -9,9 +9,14 @@ module Forspell
 
     def self.sanitize(input)
 
-      CGI.unescapeHTML(Sanitize.fragment(input,
+      result = CGI.unescapeHTML(Sanitize.fragment(input,
                                          elements: [], remove_contents: true))
-         .gsub(REMOVE_PUNCT, '').gsub(/[\!\.\?]{1}$/, '')
+                .gsub(REMOVE_PUNCT, '').gsub(/[\!\.\?]{1}$/, '')
+      if result.start_with?("'") && result.end_with?("'")
+        result[1..-2]
+      else
+        result
+      end
     end
   end
 end
