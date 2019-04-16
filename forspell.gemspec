@@ -28,6 +28,8 @@ Gem::Specification.new do |s|
   s.add_dependency 'ffi-hunspell'
   s.add_dependency 'parser'
   s.add_dependency 'pastel'
+  s.add_dependency 'highline'
+  s.add_dependency 'ruby-progressbar'
 
   s.add_development_dependency 'rspec', '>= 3'
   s.add_development_dependency 'rake'

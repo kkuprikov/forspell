@@ -3,11 +3,12 @@ require_relative '../lib/forspell/loaders/base'
 require_relative 'shared_examples'
 require 'yaml'
 require 'fakefs/spec_helpers'
+require 'ruby-progressbar'
 
 RSpec.describe Forspell::Reporter do
   include FakeFS::SpecHelpers
 
-  let(:reporter) { described_class.new(logfile: logfile, verbose: verbose, format: format) }
+  let(:reporter) { described_class.new(logfile: logfile, verbose: verbose, format: format, progress_bar: ProgressBar.create) }
   let(:file) { 'file.rb' }
   let(:word) { Forspell::Loaders::Word.new(file, 5, 'typo') }
   let(:error) { [word, ['type']] }

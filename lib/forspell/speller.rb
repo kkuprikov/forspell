@@ -6,11 +6,11 @@ module Forspell
   class Speller
     attr_reader :dictionary
 
-    SUGGESTIONS_SIZE = 3
     HUNSPELL_DIRS = [File.join(__dir__, 'dictionaries')]
     RUBY_DICT = File.join(__dir__, 'ruby.dict')
 
-    def initialize(main_dictionary, *custom_dictionaries)
+    def initialize(main_dictionary, *custom_dictionaries, suggestions_size: 0)
+      @suggestions_size = suggestions_size
       FFI::Hunspell.directories = HUNSPELL_DIRS << File.dirname(main_dictionary)
       @dictionary = FFI::Hunspell.dict(File.basename(main_dictionary))
 
@@ -32,7 +32,7 @@ module Forspell
     end
 
     def suggest(word)
-      dictionary.suggest(word).first(SUGGESTIONS_SIZE)
+      @suggestions_size.positive? ? dictionary.suggest(word).first(@suggestions_size) : []
     end
   end
 end

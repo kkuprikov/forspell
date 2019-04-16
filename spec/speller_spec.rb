@@ -4,7 +4,7 @@ require_relative '../lib/forspell/speller'
 
 RSpec.describe Forspell::Speller do
   let(:custom_dict_path) { File.join(__dir__, 'fixtures', 'custom_dict.dict') }
-  let(:speller) { described_class.new('en_US', custom_dict_path) }
+  let(:speller) { described_class.new('en_US', custom_dict_path, suggestions_size: 3) }
 
   describe '#suggest' do
     subject { speller.suggest(word) }
@@ -46,7 +46,11 @@ RSpec.describe Forspell::Speller do
       'Somerandomwords' => true,
       'somerandomwordes' => false,
       'Somerandomwordes' => false,
-      'somerandomwor' => false
+      'somerandomwor' => false,
+      'super' => true,
+      'good' => true,
+      'super-good' => true,
+      'super-g00d' => false
     }.each do |word, result|
       context "when #{word}" do
         let(:word) { word }

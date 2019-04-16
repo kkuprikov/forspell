@@ -4,18 +4,24 @@ require 'fileutils'
 require 'pastel'
 require 'logger'
 require 'json'
+require 'highline'
 
 module Forspell
   class Reporter
     SUCCESS_CODE = 0
     ERROR_CODE = 1
-    ERROR_FORMAT = '%<file>s:%<line>i: %<text>s (suggestions: %<suggestions>s)'
+    DICT_PATH = File.join(Dir.pwd, 'forspell.dict')
+    DICT_OVERWRITE = 'Do you want to overwrite forspell.dict? (yN)'
+    SUGGEST_FORMAT = '(suggestions: %<suggestions>s)'
+    ERROR_FORMAT = '%<file>s:%<line>i: %<text>s %<suggest>s'
     SUMMARY = "Forspell inspects *.rb, *.c, *.cpp, *.md files\n"\
               '%<files>i inspected, %<errors>s detected'
 
     def initialize(logfile:,
                    verbose:,
-                   format:)
+                   format:,
+                   print_filepaths: false,
+                   progress_bar:)
 
       FileUtils.touch(logfile) if logfile.is_a?(String)
       @logger = Logger.new(logfile || STDERR)
@@ -26,6 +32,8 @@ module Forspell
       @pastel = Pastel.new(enabled: $stdout.tty?)
       @errors = []
       @files = []
+      @print_filepaths = print_filepaths
+      @progress_bar = progress_bar
     end
 
     def file(path)
@@ -35,7 +43,7 @@ module Forspell
 
     def error(word, suggestions)
       @errors << [word, suggestions]
-      puts readable(word, suggestions) if @format == 'readable'
+      @progress_bar.log readable(word, suggestions) if @format == 'readable'
     end
 
     def parsing_error(error)
@@ -64,17 +72,19 @@ module Forspell
     private
 
     def readable(word, suggestions)
+      suggest = format(SUGGEST_FORMAT, suggestions: suggestions.join(', ')) unless suggestions.empty?
+
       format(ERROR_FORMAT,
              file: word[:file],
              line: word[:line],
              text: @pastel.red(word[:text]),
-             suggestions: suggestions.join(', '))
+             suggest: suggest)
     end
 
     def print_formatted
       @errors.map { |word, suggestions| word.to_h.merge(suggestions: suggestions) }
              .public_send("to_#{@format}")
-             .tap { |res| puts res }
+             .tap { |res| @progress_bar.log res }
     end
 
     def print_summary
@@ -82,17 +92,24 @@ module Forspell
       color = err_count.positive? ? :red : :green
       total_errors_colorized = @pastel.decorate(err_count.to_s, color)
 
-      puts format(SUMMARY, files: @files.size, errors: total_errors_colorized)
+      @progress_bar.log format(SUMMARY, files: @files.size, errors: total_errors_colorized)
     end
 
     def print_dictionary
+      if File.exist?(DICT_PATH)
+        cli = HighLine.new
+        answer = cli.ask(DICT_OVERWRITE)
+        out = answer.downcase == 'y' ? File.new(DICT_PATH, 'w') : $stdout
+      else
+        out = File.new(DICT_PATH, 'w')
+      end
       @errors.map(&:first)
              .group_by(&:text)
              .transform_values { |v| v.map(&:file).uniq }
              .sort_by { |word, *| word.downcase }
              .each do |text, files|
-        files.each { |file| puts "\# #{file}" }
-        puts @pastel.decorate(text, :red)
+        files.each { |file| out.puts "\# #{file}" } if @print_filepaths
+        out.puts out.tty? ? @pastel.decorate(text, :red) : text
       end
     end
   end
