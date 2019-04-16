@@ -10,10 +10,5 @@ RSpec.describe Forspell::Sanitizer do
 
       specify { is_expected.to eq("example with tags") }
     end
-
-    context 'with quotes' do
-      let(:input) {"'example with quotes'"}
-      specify { is_expected.to eq("example with quotes") }
-    end
   end
 end
