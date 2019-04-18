@@ -6,7 +6,6 @@ require 'logger'
 require 'json'
 require 'highline'
 require 'ruby-progressbar'
-require 'pry'
 
 module Forspell
   class Reporter
@@ -57,7 +56,6 @@ module Forspell
     end
 
     def report
-      # binding.pry
       case @format
       when 'readable'
         print_summary
