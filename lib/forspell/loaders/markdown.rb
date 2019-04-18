@@ -45,7 +45,7 @@ module Forspell::Loaders
 
       group_by_location = chunks.group_by { |res| res[:location] }
                                 .transform_values do |lines|
-        lines.map { |v| SPECIAL_CHARS_MAP[v[:value]] || v[:value] }.join.split(/^\'|\'$|\'?\s\'?|,|;|—/)
+        lines.map { |v| SPECIAL_CHARS_MAP[v[:value]] || v[:value] }.join.split(/[[:punct:]]&&[^\-\'\_\.\\\/]|\s/)
       end
       
       group_by_location.each_pair do |location, words|
