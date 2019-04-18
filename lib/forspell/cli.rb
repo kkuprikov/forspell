@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 require 'slop'
-require 'ruby-progressbar'
 require 'backports/2.5.0/hash/slice'
 require_relative 'runner'
 require_relative 'speller'
@@ -21,12 +20,12 @@ module Forspell
       o.string '-d', '--dictionary-path', 'Path to main hunspell dictionary to use (by default, forspell\'s en_US)', default: 'en_US'
       o.array '-c', '--custom-paths', 'Paths to custom dictionaries', default: []
       o.string '-f', '--format', 'Output formats: readable(default), JSON, YAML', default: 'readable'
-      o.boolean '--gen-dictionary', 'Generate custom dictionary'
-      o.boolean '--print-filepaths', 'Enable file paths in dictionary mode', default: false
+      o.bool '--gen-dictionary', 'Generate custom dictionary', default: false
+      o.bool '--print-filepaths', 'Enable file paths in dictionary mode', default: false
       o.string '-l', '--logfile', 'Log to specified path'
       o.bool '-v', '--verbose', 'Verbose mode', default: false
-      o.bool '--no-suggest', 'Output without suggestions'
-      o.integer '--suggestions-size', 'How many suggestions for each error should be returned'
+      o.bool '--no-suggest', 'Output without suggestions', default: false
+      o.integer '--suggestions-size', 'How many suggestions for each error should be returned', default: 3
       o.on '--help' do
         puts o
         exit
@@ -39,7 +38,6 @@ module Forspell
 
     def call
       init_options
-      init_progress_bar
       create_files_list
       init_speller
       init_reporter
@@ -50,10 +48,6 @@ module Forspell
 
     def create_files_list
       @files = FileList.new(paths: @opts.arguments, exclude_paths: @opts[:exclude_paths])
-    end
-
-    def init_progress_bar
-      @progress_bar = ProgressBar.create
     end
 
     def init_options
@@ -87,11 +81,11 @@ module Forspell
     end
 
     def init_reporter
-      @reporter = Reporter.new(progress_bar: @progress_bar, **@opts.to_hash.slice(:logfile, :format, :verbose, :print_filepaths))
+      @reporter = Reporter.new(**@opts.to_hash.slice(:logfile, :format, :verbose, :print_filepaths))
     end
 
     def run
-      runner = Forspell::Runner.new(files: @files, speller: @speller, reporter: @reporter, progress_bar: @progress_bar)
+      runner = Forspell::Runner.new(files: @files, speller: @speller, reporter: @reporter)
       runner.call
       exit @reporter.finalize
     rescue Forspell::FileList::PathLoadError => path

@@ -8,7 +8,7 @@ require 'ruby-progressbar'
 RSpec.describe Forspell::Reporter do
   include FakeFS::SpecHelpers
 
-  let(:reporter) { described_class.new(logfile: logfile, verbose: verbose, format: format, progress_bar: ProgressBar.create) }
+  let(:reporter) { described_class.new(logfile: logfile, verbose: verbose, format: format) }
   let(:file) { 'file.rb' }
   let(:word) { Forspell::Loaders::Word.new(file, 5, 'typo') }
   let(:error) { [word, ['type']] }
@@ -21,6 +21,8 @@ RSpec.describe Forspell::Reporter do
   before do
     FakeFS do
       FileUtils.touch logfile
+      FileUtils.mkdir_p File.dirname(described_class::DICT_PATH)
+      FileUtils.touch described_class::DICT_PATH
     end
     reporter.file(file)
   end
@@ -61,8 +63,8 @@ RSpec.describe Forspell::Reporter do
     context 'dictionary format' do
       let(:format) { 'dictionary' }
       let(:printed_output) { "\# #{file}\n\e[31mtypo\e[0m\n" }
-
-      it_behaves_like 'an error reporter'
+      let(:forspell_dict_file) { described_class::DICT_PATH }
+      # it { expect { reporter.report }.to change { File.read(forspell_dict_file) }.to "Path not found: #{file}\n" }
     end
   end
 end

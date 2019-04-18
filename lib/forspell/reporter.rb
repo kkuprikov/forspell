@@ -5,6 +5,8 @@ require 'pastel'
 require 'logger'
 require 'json'
 require 'highline'
+require 'ruby-progressbar'
+require 'pry'
 
 module Forspell
   class Reporter
@@ -17,11 +19,12 @@ module Forspell
     SUMMARY = "Forspell inspects *.rb, *.c, *.cpp, *.md files\n"\
               '%<files>i inspected, %<errors>s detected'
 
+    attr_accessor :progress_bar
+
     def initialize(logfile:,
                    verbose:,
                    format:,
-                   print_filepaths: false,
-                   progress_bar:)
+                   print_filepaths: false)
 
       FileUtils.touch(logfile) if logfile.is_a?(String)
       @logger = Logger.new(logfile || STDERR)
@@ -33,7 +36,6 @@ module Forspell
       @errors = []
       @files = []
       @print_filepaths = print_filepaths
-      @progress_bar = progress_bar
     end
 
     def file(path)
@@ -43,7 +45,7 @@ module Forspell
 
     def error(word, suggestions)
       @errors << [word, suggestions]
-      @progress_bar.log readable(word, suggestions) if @format == 'readable'
+      print(readable(word, suggestions)) if @format == 'readable'
     end
 
     def parsing_error(error)
@@ -55,6 +57,7 @@ module Forspell
     end
 
     def report
+      # binding.pry
       case @format
       when 'readable'
         print_summary
@@ -84,7 +87,7 @@ module Forspell
     def print_formatted
       @errors.map { |word, suggestions| word.to_h.merge(suggestions: suggestions) }
              .public_send("to_#{@format}")
-             .tap { |res| @progress_bar.log res }
+             .tap { |res| print res }
     end
 
     def print_summary
@@ -92,10 +95,11 @@ module Forspell
       color = err_count.positive? ? :red : :green
       total_errors_colorized = @pastel.decorate(err_count.to_s, color)
 
-      @progress_bar.log format(SUMMARY, files: @files.size, errors: total_errors_colorized)
+      print format(SUMMARY, files: @files.size, errors: total_errors_colorized)
     end
 
     def print_dictionary
+      puts DICT_PATH
       if File.exist?(DICT_PATH)
         cli = HighLine.new
         answer = cli.ask(DICT_OVERWRITE)
@@ -111,6 +115,12 @@ module Forspell
         files.each { |file| out.puts "\# #{file}" } if @print_filepaths
         out.puts out.tty? ? @pastel.decorate(text, :red) : text
       end
+    end
+
+    private
+
+    def print something
+      $stdout.tty? ? @progress_bar&.log(something) : puts(something)
     end
   end
 end

@@ -3,19 +3,21 @@ require_relative 'loaders'
 
 module Forspell
   class Runner
-    def initialize(files:, speller:, reporter:, progress_bar:)
+    def initialize(files:, speller:, reporter:)
       @files = files
       @speller = speller
       @reporter = reporter
-      @progress_bar = progress_bar
     end
 
     def call
       increment = (@files.size / 100.0).ceil
+      total = @files.size <= 100 ? @files.size : 100
+      @reporter.progress_bar = ProgressBar.create(total: total,
+        output: $stdout.tty? ? $stdout : $stderr)
 
       @files.each_with_index do |path, index|
         process_file path
-        @progress_bar.increment if index % increment == 0
+        @reporter.progress_bar.increment if (index + 1) % increment == 0
       end
 
       @reporter.report
