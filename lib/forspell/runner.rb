@@ -12,8 +12,7 @@ module Forspell
     def call
       increment = (@files.size / 100.0).ceil
       total = @files.size <= 100 ? @files.size : 100
-      @reporter.progress_bar = ProgressBar.create(total: total,
-        output: $stdout.tty? ? $stdout : $stderr)
+      @reporter.progress_bar = ProgressBar.create(total: total, output: $stderr)
 
       @files.each_with_index do |path, index|
         process_file path

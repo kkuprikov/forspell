@@ -5,8 +5,6 @@ module Forspell
     include Enumerable
     class PathLoadError < StandardError; end
 
-    attr_reader :size
-
     EXTENSION_GLOBS = %w[
       rb
       c
@@ -22,12 +20,15 @@ module Forspell
       to_process = @paths.flat_map(&method(:expand_paths))
       to_exclude = @exclude_paths.flat_map(&method(:expand_paths))
       @files = to_process - to_exclude
-      @size = @files.size
     end
 
     def each(&block)
       @files.map{ |path| path.gsub('//', '/')}
         .each(&block)
+    end
+
+    def size
+      @size ||= @files.size
     end
 
     private

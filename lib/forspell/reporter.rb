@@ -101,7 +101,7 @@ module Forspell
       if File.exist?(DICT_PATH)
         cli = HighLine.new
         answer = cli.ask(DICT_OVERWRITE)
-        out = answer.downcase == 'y' ? File.new(DICT_PATH, 'w') : $stdout
+        out = answer.downcase == 'y' ? File.new(DICT_PATH, 'w') : exit(1)
       else
         out = File.new(DICT_PATH, 'w')
       end

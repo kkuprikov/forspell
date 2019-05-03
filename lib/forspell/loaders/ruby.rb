@@ -10,9 +10,8 @@ module Forspell::Loaders
 
     def comments
       YARD::Parser::Ruby::RubyParser.new(@input, @file).parse
-        .tokens.select{ |token| token.first == :comment }
-        .reject{ |token| token[1].start_with?('#  ') }
-      # example: [:comment, "# def loader_class path\n", [85, 2356]]
+        .tokens.select{ |type,| type == :comment }
+        .reject{ |_, text,| text.start_with?('#  ') }
     end
 
     def text(comment)
