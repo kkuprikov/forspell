@@ -7,10 +7,13 @@ require_relative 'source'
 
 module Forspell::Loaders
   class Ruby < Source
+    MAX_COMMENT_LENGTH = 777
+    
     def initialize(file: nil, text: nil)
       super
       @markup = RDoc::Markup.new
       @formatter = RDoc::Markup::ToMarkdown.new
+      @formatter.width = MAX_COMMENT_LENGTH
     end
 
     private
