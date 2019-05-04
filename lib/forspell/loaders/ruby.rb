@@ -2,10 +2,17 @@
 
 require 'yard'
 require 'yard/parser/ruby/ruby_parser'
+require 'rdoc'
 require_relative 'source'
 
 module Forspell::Loaders
   class Ruby < Source
+    def initialize(file: nil, text: nil)
+      super
+      @markup = RDoc::Markup.new
+      @formatter = RDoc::Markup::ToMarkdown.new
+    end
+
     private
 
     def comments
@@ -15,7 +22,7 @@ module Forspell::Loaders
     end
 
     def text(comment)
-      comment[1]
+      @markup.convert(comment[1], @formatter)
     end
 
     def line(comment)
