@@ -3,13 +3,12 @@
 require 'yard'
 require 'yard/parser/ruby/ruby_parser'
 require 'rdoc'
-require 'pry'
 require_relative 'source'
 
 module Forspell::Loaders
   class Ruby < Source
     MAX_COMMENT_LENGTH = 777
-
+    
     def initialize(file: nil, text: nil)
       super
       @markup = RDoc::Markup.new
@@ -20,11 +19,17 @@ module Forspell::Loaders
     private
 
     def comments
-      super.reject{ |_, text| text.start_with?('  ') }
+      YARD::Parser::Ruby::RubyParser.new(@input, @file).parse
+        .tokens.select{ |type,| type == :comment }
+        .reject{ |_, text,| text.start_with?('#  ') }
     end
 
     def text(comment)
-      @markup.convert(super, @formatter)
+      @markup.convert(comment[1], @formatter)
+    end
+
+    def line(comment)
+      comment.last.first
     end
   end
 end
