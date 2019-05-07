@@ -18,7 +18,7 @@ RSpec.describe Forspell::Loaders::C do
         16 => %w[furnished to do so under the terms of the file],
         18 => %w[This software is distributed on an basis],
         19 => %w[either express or implied],
-        29 => %w[The last include files should be],
+        29 => %w[The last files should be],
         32 => %w[appends a string to the linked list This function can be],
         33 => %w[used as an initialization function as well as an append function],
         62 => %w[be nice and clean up resources]
