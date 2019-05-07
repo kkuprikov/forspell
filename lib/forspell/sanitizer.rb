@@ -5,12 +5,12 @@ require 'cgi'
 
 module Forspell
   module Sanitizer    
-    REMOVE_PUNCT = %r{[[:punct:]&&[^-'_.\\/+#]]}.freeze
+    REMOVE_PUNCT = %r{[!|?|,|(|)|"|;]+}.freeze
 
     def self.sanitize(input)
 
       CGI.unescapeHTML(Sanitize.fragment(input, elements: [], remove_contents: true))
-         .gsub(REMOVE_PUNCT, '').gsub(/[\.]{1}$/, '')
+         .gsub(REMOVE_PUNCT, '').gsub(%r{[.:]+$}, '')
       end
   end
 end

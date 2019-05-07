@@ -16,7 +16,7 @@ RSpec.describe Forspell::WordMatcher do
       "don''t" => false,
       "d'on't" => false,
       "D'on't" => false,
-      "'bout" => true,
+      "'bout" => false,
       "doin'" => true,
       'filename.txt' => false,
       'my_variable' => false,

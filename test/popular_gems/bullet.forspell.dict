@@ -1,6 +1,3 @@
-'coming
-'notification
-'should
 activerecord
 activesupport
 Airbrake
@@ -33,8 +30,6 @@ preload
 preloaded
 preloads
 rollbar
-rubocopdisable
-rubocopenable
 sinatra
 sql
 squeel

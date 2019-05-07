@@ -1,6 +1,3 @@
-'erb'
-'liquid'
-'ll
 Achrome
 alexgb
 amarshall
@@ -18,13 +15,11 @@ cowboyd
 data's
 dup
 elgalu
-endgroup
 Erubi
 Erubis
 eval
 execuatable
 fastercsv
-Foobar''
 Goodger
 Gruber
 guilleiguaran
@@ -61,8 +56,8 @@ mr-vinn
 nathanaeljones
 nghitran
 Nokogiri
-pandoc
 Pandoc
+pandoc
 pandoc-ruby
 Pathname
 postamble
@@ -81,7 +76,6 @@ Swartz
 teardown
 technobrat
 templating
-thats
 thinkerbot
 threfore
 timfel
@@ -90,5 +84,4 @@ tommay
 vasinov
 winebarrel
 Yajl
-yieldreturn
 yui-knk

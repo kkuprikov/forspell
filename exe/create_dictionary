@@ -1,6 +1,5 @@
 #!/usr/bin/env ruby
 require 'yaml'
-require 'pry'
 require 'csv'
 
 class DictionaryCreator
@@ -14,7 +13,6 @@ class DictionaryCreator
 
   def process
     (Dir.entries(@path) - ['.', '..']).each do |filename|
-      # binding.pry
       @data[filename] = YAML.load_file("#{@path}#{filename}")
     end
 

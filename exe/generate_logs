@@ -1,8 +1,11 @@
 #!/bin/bash
 cd ~/forspell
-rm ./test/popular_gems/json/*.log
+rm ./test/popular_gems/*.dict
 
 for var in $(ls ../gem_src/)
 do
-  ./exe/forspell --gen-dictionary ../gem_src/$var > test/popular_gems/$var.forspell.dict 
+  cd ~/gem_src/$var
+  rm forspell.dict
+  ~/forspell/exe/forspell --gen-dictionary .
+  cp forspell.dict ~/forspell/test/popular_gems/$var.forspell.dict
 done

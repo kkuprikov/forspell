@@ -1,16 +1,9 @@
-'de'
-'en'
-'Resources'
-'Smith'
-'w'
 Aimonetti
 arity
 baz
-buz
 Changelog
 colisions
 customizable
-de
 defition
 eval'ing
 explicitely
@@ -29,7 +22,6 @@ msg
 msgid
 Mutoh's
 ngettext
-nodoc
 npgettext
 nsgettext
 occurences
@@ -39,8 +31,8 @@ pluralizations
 pluralizer
 pluralizers
 po
-Procs
 procs
+Procs
 racc
 Rubinius
 Rusterholz
@@ -52,11 +44,10 @@ Soller
 subkey
 subtags
 subtree
-Subtrees
 subtrees
+Subtrees
 supress
 swappable
 tokenizefoo
 toplevel
 transliterator
-ü

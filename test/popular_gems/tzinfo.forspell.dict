@@ -1,12 +1,6 @@
-'character
-'tab'
-'tzinfo'
-'zic'
-'zoneinfo'
 autorequire
 aways
 behaviour
-bool
 Borodaenko
 chmod
 datetime
@@ -53,7 +47,6 @@ strftime
 subsec
 succ
 superset
-supportedefiner
 svn
 symlink
 symlinks
@@ -76,8 +69,6 @@ unreferenced
 Untaint
 utc
 Werle
-yieldparam
-yieldreturn
 zdump
 zdumptest
 zdumptestall

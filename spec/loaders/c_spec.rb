@@ -9,7 +9,7 @@ RSpec.describe Forspell::Loaders::C do
   describe 'C' do
     let(:locations_with_words) {
       {
-        8 => %w[Copyright Daniel Stenberg et al],
+        8 => %w[Copyright C Daniel Stenberg et al],
         10 => %w[This software is licensed as described in the file which],
         11 => %w[you should have received as part of this distribution The terms],
         12 => %w[are also available at],
@@ -32,7 +32,7 @@ RSpec.describe Forspell::Loaders::C do
   describe 'C++' do
     let(:locations_with_words) {
       { 2 => ['Version'],
-        4 => %w[Copyright Németh László],
+        4 => %w[Copyright C Németh László],
         6 => %w[The contents of this file are subject to the Mozilla Public License Version],
         7 => %w[the License you may not use this file except in compliance with],
         8 => %w[the License You may obtain a copy of the License at],
@@ -40,7 +40,7 @@ RSpec.describe Forspell::Loaders::C do
         12 => %w[either express or implied See the License],
         13 => %w[for the specific language governing rights and limitations under the],
         14 => ['License'],
-        16 => %w[Hunspell is based on which is Copyright Kevin Hendricks],
+        16 => %w[Hunspell is based on which is Copyright C Kevin Hendricks],
         18 => %w[Contributors David Einstein Davide Prina Giuseppe Modugno],
         19 => %w[Gianluca Turconi Simon Brouwer Noll János Bíró],
         20 => %w[Goldman Eleonóra Sarlós Tamás Bencsáth Boldizsár Halácsy Péter],

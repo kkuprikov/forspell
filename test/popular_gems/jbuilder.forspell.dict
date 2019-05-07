@@ -1,8 +1,3 @@
-'bar'
-'Create
-'name'
-'New
-amatsuda
 api
 Changelog
 edgecase
@@ -13,8 +8,6 @@ Jbuilder
 json
 keynames
 nitpicky
-nodoc
-ok
 ostruct
 railtie
 Rebase
@@ -24,5 +17,4 @@ serializable
 Struct
 structs
 thor
-upcase
 Yajl

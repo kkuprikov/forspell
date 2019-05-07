@@ -14,7 +14,7 @@ RSpec.describe Forspell::Loaders::Ruby do
                            58 => %w[don't want to close testing's logging],
                            70 => %w[This reopens logfiles in the process that have been rotated],
                            71 => %w[using without copytruncate or similar tools],
-                           72 => %w[object is considered for reopening if it is],
+                           72 => %w[A object is considered for reopening if it is],
                            76 => %w[Returns the number of files reopened],
                            109 => %w[not much we can do],
                            114 => %w[is disabled will only work with Class pass to enable] } }

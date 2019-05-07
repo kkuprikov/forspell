@@ -5,15 +5,12 @@ const
 de-duplicate
 eval
 globals
-jsdoc
 json
 Lautanala
 matchers
 minified
 Minifies
 minify
-rubocopdisable
-rubocopenable
 subdirectories
 submodules
 toplevel

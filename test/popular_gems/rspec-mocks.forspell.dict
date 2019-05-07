@@ -1,12 +1,7 @@
-'d
-'owner'
-'s
-'super'
 Adarsh
 Alessandro
 alextk
 Annesley
-api
 arg
 argsso
 arity
@@ -59,7 +54,6 @@ Dowad
 dup
 dup'ing
 Eguzkiza
-endgroup
 enviroment
 eval
 explict
@@ -78,7 +72,6 @@ irb
 Josep
 Joël
 jruby
-kaiwren
 Kernelnot
 Kilian
 klass
@@ -106,7 +99,6 @@ mutator
 mutators
 Nakayama
 Neha
-nocov
 noop
 Novak
 nullness
@@ -133,7 +125,6 @@ Quenneville
 Rafaniello
 rdoc
 readme
-receivemessage
 relase
 repos
 repro
@@ -144,17 +135,12 @@ rspec-
 rspec-core
 rspec-dev
 rspec-expectations
-rspec-expectations'
 rspec-mock
 rspec-mocks
-rspec-mocks'
 rspec-rails
 rspec-support
 rubinius
 Rubocop
-rubocopdisable
-rubocopenable
-samphippen
 Sant
 Schaefer
 securerandom

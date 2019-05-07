@@ -1,7 +1,3 @@
-'Central
-'currency'
-'locales'
-'monetize'
 activerecord
 adaptor
 addtion
@@ -12,7 +8,6 @@ automagically
 behaviour
 bigint
 btu
-cacher
 Canada'
 Carletti
 Changelog
@@ -22,8 +17,6 @@ compatability
 Compatiblity
 concatination
 Currentcy
-dbschemaload
-de
 dev
 differrent
 Dont
@@ -32,7 +25,6 @@ gemfile
 gemfiles
 Getter
 getter
-iphone
 iso
 lookups
 Loupasakis
@@ -42,8 +34,8 @@ minitest-matchers
 Mongo
 mongod
 mongodb
-mongoid
 Mongoid
+mongoid
 mongoization
 Mongoize
 mongoized
@@ -61,18 +53,14 @@ Rails's
 Railtie
 reqs
 riable
-rspec
 Rspec
+rspec
 rspec-rails
-rtf
-sql
 sqlite
 Stringify
 subdirectories
 subunit
 Subunit
 travis
-usd
-uuid
 va
 validator

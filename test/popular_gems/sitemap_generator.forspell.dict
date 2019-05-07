@@ -1,11 +1,3 @@
-'index'
-'Nested
-'no'
-'priority
-'simplecov'
-'weekly'
-'xmlnsvideo'
-'yes'
 addpath
 attibute
 aws-sdk
@@ -16,7 +8,6 @@ Bugfix
 bytesize
 Capfile
 capistrano
-changefreq
 compatibily
 configs
 cron
@@ -35,11 +26,11 @@ handlig
 hether
 hostname
 indexes'
-Licence
 licence
+Licence
 namer
-Namers
 namers
+Namers
 neccessary
 nofollow
 Nokogiri

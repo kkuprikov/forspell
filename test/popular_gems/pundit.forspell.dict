@@ -1,4 +1,3 @@
-api
 autodetection
 behaviour
 Customizable
@@ -10,7 +9,5 @@ metaprogramming
 pluralizations
 pundit-matchers
 Rspec
-rubocopdisable
-rubocopenable
 scaleable
 useage

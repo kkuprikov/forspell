@@ -1,17 +1,7 @@
-'a'
-'b'
-afterbuild
-aftercreate
-afterstub
-api
-beforecreate
 bugfixes
 buildname
-ci
 constantize
-createcomment
 createname
-createpost
 intializer
 Minitest
 minitest-rails
@@ -19,7 +9,6 @@ preloader
 Preloaders
 prerelease
 rspec
-rubocopdisable
 that're
 thoughtbot
 Upcase
