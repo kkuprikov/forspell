@@ -28,7 +28,12 @@ module Forspell
     end
 
     def correct?(word)
-      dictionary.check?(word)
+      parts = word.split('-')
+      if parts.size == 1
+        [word, word.upcase, word.capitalize].any?{ |w| dictionary.check?(w) }
+      else
+        parts.map { |part| correct?(part) }.all?(true)
+      end
     end
 
     def suggest(word)

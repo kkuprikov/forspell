@@ -39,7 +39,7 @@ RSpec.describe Forspell::Speller do
       'wourd' => false,
       'Word' => true,
       'Gemfile' => true,
-      'gemfile' => false,
+      'gemfile' => true,
       'somerandomword' => true,
       'somerandomwords' => true,
       'Somerandomword' => true,
@@ -50,6 +50,9 @@ RSpec.describe Forspell::Speller do
       'super' => true,
       'good' => true,
       'super-good' => true,
+      'ascii' => true,
+      'non-ascii' => true,
+      'non-ASCII' => true,
       'super-g00d' => false
     }.each do |word, result|
       context "when #{word}" do
