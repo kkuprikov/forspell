@@ -33,8 +33,6 @@ posix
 posixrules
 Pratik
 proxied
-Rails'
-range'
 rdoc
 repsenting
 Rubinius
@@ -49,8 +47,8 @@ succ
 superset
 svn
 symlink
-symlinks
 Symlinks
+symlinks
 testcases
 timeconfig
 timezoneidentifier
@@ -73,5 +71,5 @@ zdump
 zdumptest
 zdumptestall
 zic
-zoneinfo
 Zoneinfo
+zoneinfo

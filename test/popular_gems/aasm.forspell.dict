@@ -34,8 +34,8 @@ Michał
 Minitest
 Mongo
 Mongodb
-mongoid
 Mongoid
+mongoid
 mongomapper
 Nobrainer
 nop
@@ -50,7 +50,6 @@ rspec
 rspec-like
 rvm
 sharding
-string'
 sublicense
 Taberski
 teohm

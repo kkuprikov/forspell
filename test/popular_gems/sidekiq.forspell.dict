@@ -38,7 +38,6 @@ dervied
 deserialized
 dev
 dogfood
-done'
 dropdown
 Egor
 enqueue
@@ -72,7 +71,6 @@ jcoene
 jid
 jids
 jitter
-jobs'
 jruby's
 latencies
 logfile
@@ -120,13 +118,12 @@ raivil
 Re-enqueue
 Rearchitect
 redis
-Redis'
 redis-namespace
 redis-rb
 reentrant
 Reimplement
-Reloader
 reloader
+Reloader
 Requeue
 requeue
 requeued
@@ -148,10 +145,10 @@ serializer
 sexualized
 sferik
 Shardable
-Sharding
 sharding
-Sidekiq
+Sharding
 sidekiq
+Sidekiq
 Sidekiq's
 sidekiq-failures
 sidekiq-scheduler
@@ -162,8 +159,8 @@ spec'd
 statsd
 Statsd
 statsd-ruby
-stringify
 Stringify
+stringify
 subelsky
 substring
 systemwhile
@@ -179,7 +176,6 @@ undeliverable
 Undeprecate
 unpausing
 user-tunable
-webhook
 Webhook
-workers'
+webhook
 Youtube

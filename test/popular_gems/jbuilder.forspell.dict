@@ -3,8 +3,8 @@ Changelog
 edgecase
 gemfile
 Github
-jbuilder
 Jbuilder
+jbuilder
 json
 keynames
 nitpicky
@@ -12,7 +12,6 @@ ostruct
 railtie
 Rebase
 rebase
-request'
 serializable
 Struct
 structs

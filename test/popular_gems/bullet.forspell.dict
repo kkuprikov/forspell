@@ -6,10 +6,9 @@ api
 ar
 ascii
 associatioin
-autoload
 Autoload
+autoload
 bugsnag
-collector'
 dom
 env
 Goto
@@ -22,10 +21,9 @@ js
 loadings
 Memoize
 Mongo
-Mongoid
 mongoid
+Mongoid
 Nginx
-online'
 preload
 preloaded
 preloads

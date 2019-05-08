@@ -19,11 +19,10 @@ autoload
 Autoload
 autoloaded
 autorun
-autotest
 Autotest
-autotest'
-Autotest's
+autotest
 autotest's
+Autotest's
 Avdi
 Axnick
 Bacsi
@@ -46,8 +45,8 @@ Burgestrand
 Capybara
 cd
 Chaffee
-changelog
 Changelog
+changelog
 changesets
 Chelimsky
 Chernyatchik
@@ -79,8 +78,8 @@ debuggingyou
 definedfoo
 definedwarn
 Denman
-Deprecations
 deprecations
+Deprecations
 dev
 Dinkar
 dirs
@@ -91,8 +90,8 @@ dogfoods
 dom
 dont
 Doubrovkine
-Drb
 drb
+Drb
 dsisnero
 dup
 Durran
@@ -110,7 +109,6 @@ eval'd
 Evgeny
 Ewa
 examle
-exec'
 explicity
 Fabersky
 Faherty
@@ -135,7 +133,6 @@ Graaff
 Grathwell
 Greggory
 Griego
-group'
 Grzegorz
 Gunn
 Günther
@@ -159,8 +156,8 @@ interally
 interdependencies
 ip
 irb
-iteratively
 Iteratively
+iteratively
 Ivanisevic
 Janiszewski
 Janmejay
@@ -205,8 +202,8 @@ Marston
 Masaki
 matcher
 matcher-generated
-Matchers
 matchers
+Matchers
 mathn
 Matijs
 matrinox
@@ -298,7 +295,6 @@ rspec-support
 Rubinius
 Rubocop
 rubygem
-rubygems'
 sandboxed
 Savchenko
 Schaefer

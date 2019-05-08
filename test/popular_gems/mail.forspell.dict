@@ -2,8 +2,8 @@ Acceps
 addr-spec
 al
 ascii
-autoload
 Autoload
+autoload
 bcc
 Bcc
 behaviour
@@ -31,7 +31,6 @@ html
 Iconv
 identiy
 ie
-Image'
 imap
 incase
 init
@@ -58,8 +57,8 @@ metods
 Mikel
 mockup
 msg-id
-multibyte
 Multibyte
+multibyte
 normalizations
 openssl
 paramaters

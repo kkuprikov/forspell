@@ -5,18 +5,16 @@ auth
 Authenticatable
 authenticatable
 autoloading
-Bates'
 bcrypt
 behaviour
 checkboxes
 codebase
 Codecademy's
-confirmable
 Confirmable
+confirmable
 csrf
 deprecations
 dirs
-doesn'
 downcase
 downcased
 encryptors
@@ -27,8 +25,8 @@ gemfiles
 Gemspec
 hardcode
 Hartl's
-http
 Http
+http
 ie
 integrations
 ip
@@ -48,7 +46,6 @@ omniauth
 Omniauthable
 onwards
 openid
-Parameters'
 plaintext
 Plataformatec
 pragma
@@ -57,7 +54,6 @@ Precompile
 precompiled
 preloads
 preprocessing
-Rails'
 Rails's
 Railscast
 rc
@@ -65,8 +61,8 @@ recognise
 reconfirmable
 registerable
 Registerable
-Rememberable
 rememberable
+Rememberable
 resending
 responder
 responders

@@ -2,8 +2,8 @@ activerecord-diff
 activesupport
 apache
 Arel
-Autoload
 autoload
+Autoload
 behaviour
 Bodrov
 Changelog
@@ -39,7 +39,6 @@ matchers
 Matchers
 Minitest
 misconfigured
-models'
 modularity
 Muppets
 mutliple
@@ -49,16 +48,13 @@ occured
 occuring
 overridable
 overriden
-postgres
 Postgres
-postgres'
+postgres
 Precompile
 precompiled
 preprocessing
 Procs
 programatically
-rails'
-Rails'
 Rails's
 railties
 rc
