@@ -1,168 +1,154 @@
-abcd
-aginst
-al
-api
-asynchronicity
-attribue
-autodetect
-autoload
-baz
-behaviour
-Capybara
-Capybara's
-capybara-mechanize
-capybara-webkit
-Capybara-webkit
-Capybaras
-Cavalle
-Cavallé's
-certicficate
-Chaffee
-checkboxes
-Checkboxes
-Chelimsky
-childs
-Chromedriver
-chromedriver
-coercible
-Colyer
-compatability
-compounder
-concat
-contenteditable
-contextmenu
-Creux
-css
-ctrl-click
-Culerity
-customizable
-da
-datalist
-defence
-definiton
-del
-dependant
-Dependend
-deprecations
-descriptionoptions
-determin
-Dodwell
-draggable
-Duque
-durations
-et
-favour
-ffeature
-fieldset
-fieldset's
-firefox
-fullfilled
-Fullscreen
-fullscreen
-geckodriver
-gemspec
-Grathwell
-Gusev
-honours
-href
-html
-https
-iframe
-img
-Jari
-Javascript
-javascript
-jruby
-keypresses
-labellabel
-Launchy
-lile
-localhost
-Luismi
-Maan
-maintainance
-Maksyoma
-Marston
-matcher
-Matchers
-matchers
-matechers
-maxlength
-minitest
-Minitest
-mouseover
-namespace-uri
-nestable
-Nicklas
-Nokogiri
-Nokogumbo
-non-existant
-non-http
-obselete
-ok
-optgroups
-or'd
-Pathname
-Patreon
-performant
-Phillipe
-Pohorecki
-posix
-processe
-propertly
-qutting
-Ramhöj
-Readd
-readonly
-referer
-Reichstadt
-Relase
-reponse
-repost
-restting
-resynchronization
-Rosile
-rspec
-rspec-rails
-Sanemat
-secondsfor
-selectvalue
-selenium-webdriver
-Seleniums
-semver
-shouble
-Sobrinho
-stategy
-subdirectory
-substring
-substrings
-Suport
-tagname
-tempfile
-tempfiles
-textarea
-textareas
-threadsafe
-Threadsafe
-Timecop
-travis
-uncheck
-unhandled
-uniq
-unselect
-Unselect
-unselected
-unselectvalue
-url
-util
-viewport
-Visibile
-visibile
-webapp
-webdriver
-Webdriver
-webrick
-Windoze
-xfeature
-xpath
-Xvfb
+abcd # 1
+aginst # 1
+asynchronicity # 1
+attribue # 1
+autodetect # 1
+autoload # 1
+baz # 1
+behaviour # 7
+Capybara # 17
+Capybara's # 6
+capybara-mechanize # 1
+Capybara-webkit # 1
+capybara-webkit # 1
+Capybaras # 2
+Cavalle # 1
+Cavallé's # 1
+certicficate # 1
+Chaffee # 1
+Checkboxes # 1
+checkboxes # 1
+Chelimsky # 1
+childs # 1
+Chromedriver # 1
+chromedriver # 1
+coercible # 1
+Colyer # 1
+compatability # 1
+compounder # 1
+concat # 1
+contenteditable # 1
+contextmenu # 1
+Creux # 1
+ctrl-click # 1
+Culerity # 1
+customizable # 1
+datalist # 2
+defence # 1
+definiton # 1
+dependant # 2
+Dependend # 1
+deprecations # 1
+descriptionoptions # 1
+determin # 1
+Dodwell # 1
+draggable # 1
+Duque # 1
+durations # 1
+favour # 1
+ffeature # 1
+fieldset # 4
+fieldset's # 1
+fullfilled # 1
+Fullscreen # 1
+fullscreen # 2
+geckodriver # 2
+gemspec # 1
+Grathwell # 1
+Gusev # 1
+honours # 1
+href # 2
+https # 1
+iframe # 3
+img # 1
+Jari # 1
+jruby # 3
+keypresses # 1
+labellabel # 1
+Launchy # 1
+lile # 1
+localhost # 1
+Luismi # 1
+Maan # 1
+maintainance # 1
+Maksyoma # 1
+Marston # 1
+matcher # 4
+Matchers # 1
+matchers # 6
+matechers # 1
+maxlength # 1
+Minitest # 2
+minitest # 1
+mouseover # 1
+namespace-uri # 1
+nestable # 1
+Nicklas # 1
+Nokogiri # 2
+Nokogumbo # 1
+non-existant # 1
+obselete # 1
+optgroups # 1
+or'd # 1
+Pathname # 1
+Patreon # 1
+performant # 1
+Phillipe # 1
+Pohorecki # 1
+posix # 1
+processe # 1
+propertly # 1
+qutting # 1
+Ramhöj # 1
+Readd # 1
+readonly # 3
+referer # 1
+Reichstadt # 1
+Relase # 1
+reponse # 1
+repost # 1
+restting # 1
+resynchronization # 1
+Rosile # 1
+rspec # 1
+rspec-rails # 1
+Sanemat # 1
+secondsfor # 1
+selectvalue # 1
+selenium-webdriver # 1
+Seleniums # 1
+semver # 1
+shouble # 1
+Sobrinho # 1
+stategy # 1
+subdirectory # 1
+substring # 1
+substrings # 1
+Suport # 1
+tagname # 1
+tempfile # 1
+tempfiles # 1
+textarea # 2
+textareas # 2
+Threadsafe # 1
+threadsafe # 4
+Timecop # 1
+uncheck # 2
+unhandled # 1
+uniq # 1
+unselect # 1
+Unselect # 1
+unselected # 1
+unselectvalue # 1
+util # 1
+viewport # 1
+Visibile # 1
+visibile # 1
+webapp # 1
+Webdriver # 1
+webdriver # 1
+webrick # 1
+Windoze # 1
+xfeature # 1
+xpath # 7
+Xvfb # 1

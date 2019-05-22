@@ -1,11 +1,12 @@
 #!/usr/bin/env ruby
 require 'yaml'
 require 'csv'
+require 'pry'
 
 class DictionaryCreator
   attr_reader :result
 
-  def initialize(path: '../test/popular_gems/json/')
+  def initialize(path: 'test/popular_gems/')
     @path = path
     @data = {}
     @result = {}
@@ -13,20 +14,20 @@ class DictionaryCreator
 
   def process
     (Dir.entries(@path) - ['.', '..']).each do |filename|
-      @data[filename] = YAML.load_file("#{@path}#{filename}")
+      @data[filename] = File.read("#{@path}#{filename}")
     end
 
     @data.each_pair do |log_filename, data|
       next if data == false
 
       gem_name = log_filename.split('.').first
-      data.each do |data_entry|
-        data_entry[:errors].each do |error|
-          if @result[error]
-            @result[error] = @result[error].merge(count: @result.dig(error, :count) + 1, gems: (@result.dig(error, :gems) + [gem_name]).uniq)
-          else
-            @result[error] = { count: 1, gems: [gem_name] }
-          end
+      data.split(/\n/).each do |error_with_count|
+        error, count = error_with_count.split(' # ')
+        count = count.to_i
+        if @result[error]
+          @result[error] = @result[error].merge(count: @result.dig(error, :count) + count, gems: (@result.dig(error, :gems) + [gem_name]).uniq)
+        else
+          @result[error] = { count: count, gems: [gem_name] }
         end
       end
     end
@@ -35,11 +36,10 @@ class DictionaryCreator
   end
 end
 
-# DictionaryCreator.new.process.result
-
-CSV.open('../ruby_dict.csv', 'wb') do |csv|
+CSV.open('ruby_dict_sort.csv', 'wb') do |csv|
   csv << ['word', 'count', 'gems', 'should_include?']
-  DictionaryCreator.new.process.result.each_pair do |word, data|
-    csv << [word, data[:count], data[:gems].join(', '), nil]
+  res = DictionaryCreator.new.process.result
+  res.keys.sort.each do |word|
+    csv << [word, res[word][:count], res[word][:gems].join(', '), nil]
   end
 end

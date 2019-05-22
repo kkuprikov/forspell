@@ -1,53 +1,50 @@
-Aimonetti
-arity
-baz
-Changelog
-colisions
-customizable
-defition
-eval'ing
-explicitely
-Finnland
-gettext
-Gettext
-gettext's
-Kofler
-lookups
-Masao
-Masao's
-Memoize
-memoizes
-Mrz
-msg
-msgid
-Mutoh's
-ngettext
-npgettext
-nsgettext
-occurences
-pgettext
-Pluggable
-pluralizations
-pluralizer
-pluralizers
-po
-procs
-Procs
-racc
-Rubinius
-Rusterholz
-Saimon
-Sami
-scandinavian
-sgettext
-Soller
-subkey
-subtags
-subtree
-subtrees
-Subtrees
-supress
-swappable
-tokenizefoo
-toplevel
-transliterator
+Aimonetti # 1
+arity # 1
+baz # 1
+Changelog # 1
+colisions # 1
+customizable # 1
+defition # 1
+eval'ing # 1
+explicitely # 1
+Finnland # 1
+Gettext # 3
+gettext # 3
+gettext's # 1
+Kofler # 1
+lookups # 2
+Masao # 1
+Masao's # 1
+Memoize # 3
+memoizes # 1
+Mrz # 3
+msgid # 1
+Mutoh's # 1
+ngettext # 1
+npgettext # 1
+nsgettext # 1
+occurences # 1
+pgettext # 1
+Pluggable # 1
+pluralizations # 1
+pluralizer # 1
+pluralizers # 1
+procs # 1
+Procs # 2
+racc # 1
+Rubinius # 1
+Rusterholz # 1
+Saimon # 1
+Sami # 1
+sgettext # 1
+Soller # 1
+subkey # 1
+subtags # 2
+subtree # 1
+subtrees # 1
+Subtrees # 1
+supress # 1
+swappable # 1
+tokenizefoo # 1
+toplevel # 1
+transliterator # 1

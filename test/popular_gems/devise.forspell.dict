@@ -1,87 +1,78 @@
-ajax
-apache
-Auth
-auth
-Authenticatable
-authenticatable
-autoloading
-bcrypt
-behaviour
-checkboxes
-codebase
-Codecademy's
-Confirmable
-confirmable
-csrf
-deprecations
-dirs
-downcase
-downcased
-encryptors
-enqueued
-env
-expliciting
-gemfiles
-Gemspec
-hardcode
-Hartl's
-Http
-http
-ie
-integrations
-ip
-localpart
-lookups
-modelled
-modularity
-mongoid
-Mongoid
-namedscope
-Neighman
-nestings
-nginx
-oauth
-Oauthable
-omniauth
-Omniauthable
-onwards
-openid
-plaintext
-Plataformatec
-pragma
-precisions
-Precompile
-precompiled
-preloads
-preprocessing
-Rails's
-Railscast
-rc
-recognise
-reconfirmable
-registerable
-Registerable
-rememberable
-Rememberable
-resending
-responder
-responders
-resque
-sanitization
-serializable
-sexualized
-sidekiq
-signin
-singup
-subhash
-successfull
-Timeoutable
-timeoutable
-timezones
-Trackable
-transactional
-Turbolinks
-uncomment
-url
-Validatable
-webrat
+auth # 2
+Auth # 2
+authenticatable # 12
+Authenticatable # 3
+autoloading # 1
+bcrypt # 3
+behaviour # 2
+checkboxes # 1
+codebase # 1
+Codecademy's # 1
+confirmable # 3
+Confirmable # 7
+csrf # 1
+deprecations # 1
+dirs # 1
+downcase # 1
+downcased # 2
+encryptors # 1
+enqueued # 2
+env # 1
+expliciting # 1
+Gemspec # 1
+hardcode # 1
+Hartl's # 1
+integrations # 1
+localpart # 1
+lookups # 1
+modelled # 1
+modularity # 1
+mongoid # 2
+Mongoid # 2
+namedscope # 1
+Neighman # 1
+nestings # 1
+nginx # 1
+oauth # 2
+Oauthable # 1
+omniauth # 1
+Omniauthable # 1
+onwards # 1
+openid # 1
+plaintext # 1
+Plataformatec # 1
+pragma # 1
+precisions # 1
+Precompile # 1
+precompiled # 1
+preloads # 1
+preprocessing # 1
+Rails's # 1
+Railscast # 1
+recognise # 1
+reconfirmable # 7
+Registerable # 2
+registerable # 1
+rememberable # 2
+Rememberable # 9
+resending # 1
+responder # 1
+responders # 1
+resque # 1
+sanitization # 1
+serializable # 1
+sexualized # 1
+sidekiq # 1
+signin # 1
+singup # 1
+subhash # 1
+successfull # 1
+timeoutable # 1
+Timeoutable # 3
+timezones # 1
+Trackable # 7
+transactional # 2
+Turbolinks # 1
+uncomment # 1
+Validatable # 2
+webrat # 2

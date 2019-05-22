@@ -1,49 +1,45 @@
-addpath
-attibute
-aws-sdk
-behaviour
-Bing
-blockfor
-Bugfix
-bytesize
-Capfile
-capistrano
-compatibily
-configs
-cron
-Crontab
-Customizable
-dataobject
-Eg
-explicity
-fasion
-filesize
-gemspec
-gzip
-gzip'ed
-handlig
-hether
-hostname
-licence
-Licence
-namer
-namers
-Namers
-neccessary
-nofollow
-Nokogiri
-Pagemaps
-Pathname
-prerelease
-Rackspace
-Railtie
-reingest
-subdirectory
-uncompressing
-uploader
-url
-urls
-urlset
-Varga
-xml
-xmlns
+addpath # 1
+attibute # 1
+aws-sdk # 1
+behaviour # 2
+Bing # 2
+blockfor # 1
+Bugfix # 1
+bytesize # 3
+Capfile # 1
+compatibily # 1
+configs # 1
+cron # 1
+Crontab # 1
+Customizable # 1
+dataobject # 1
+Eg # 1
+explicity # 1
+fasion # 1
+filesize # 1
+gemspec # 1
+gzip # 2
+gzip'ed # 1
+handlig # 1
+hether # 1
+hostname # 1
+Licence # 1
+licence # 1
+namer # 8
+Namers # 2
+namers # 2
+neccessary # 1
+nofollow # 1
+Nokogiri # 3
+Pagemaps # 1
+Pathname # 2
+prerelease # 1
+Rackspace # 1
+Railtie # 1
+reingest # 1
+subdirectory # 1
+uncompressing # 1
+uploader # 1
+urlset # 2
+Varga # 1
+xmlns # 1

@@ -1,19 +1,15 @@
-api
-Changelog
-edgecase
-gemfile
-Github
-Jbuilder
-jbuilder
-json
-keynames
-nitpicky
-ostruct
-railtie
-Rebase
-rebase
-serializable
-Struct
-structs
-thor
-Yajl
+Changelog # 1
+edgecase # 1
+jbuilder # 1
+Jbuilder # 3
+json # 3
+keynames # 1
+nitpicky # 1
+ostruct # 1
+railtie # 1
+rebase # 1
+Rebase # 1
+serializable # 1
+Struct # 1
+structs # 1
+Yajl # 1

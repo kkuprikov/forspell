@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'ffi/hunspell'
+require 'backports/2.5.0/enumerable/all'
 
 module Forspell
   class Speller
@@ -30,9 +31,13 @@ module Forspell
     def correct?(word)
       parts = word.split('-')
       if parts.size == 1
-        [word, word.upcase, word.capitalize].any?{ |w| dictionary.check?(w) }
+        alterations = [word]
+        alterations << word.capitalize unless word.capitalize == word
+        alterations << word.upcase unless word.upcase == word
+        
+        alterations.any?{ |w| dictionary.check?(w) }
       else
-        parts.map { |part| correct?(part) }.all?(true)
+        parts.all? { |part| correct?(part) }
       end
     end
 

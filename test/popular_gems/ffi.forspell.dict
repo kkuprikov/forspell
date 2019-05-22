@@ -1,167 +1,153 @@
-Acces
-addr
-Adroid
-Alban
-Aman
-Andreas
-ansi
-api
-arg
-ary
-attachm
-autoconf
-Autorelease
-autorelease
-Bannasch
-behaviour
-bigdecimal
-Bignum
-Bitmask
-bitmask
-bitmaskname
-bitmaskvalues
-buf
-Burgestrand
-callbackname
-callbackparams
-cb
-Chikanaga
-Cholakian
-cname
-compat
-constname
-Costan
-cpu
-ctide
-ctx
-Cygwin
-Dalessio
-darwin
-Daubert
-decriptor
-dlclose
-dlerror
-dupping
-embbed
-endianness
-enumname
-Enums
-enums
-enumvalues
-env
-Errno
-errorerror
-evaluable
-execv
-Fazzi
-fd
-ffi
-flakey
-func
-García
-gcc
-getpointer
-gettype
-github
-hardcoded
-Heesob
-Hinegardner
-hobophobe
-Hongli
-idx
-ie
-initializeconverter
-initializefields
-initializeinfo
-initializelibname
-initializememory
-initializename
-initializepointer
-initializeprefix
-initializesize
-initializetype
-initializevalue
-intel
-ints
-invoker
-ivar
-Jesús
-Jurij
-Kanis
-Kearney
-Khoobyar
-Kurapati
-Lai
-Lavena
-len
-libffi
-libffi-dev
-libffi-devel
-libflags
-libname
-Luc
-Makoto
-malloc
-Matijs
-maximul
-Meissner
-minimalistic
-mips
-Morani
-mprotect
-msys
-multiline
-Niederl
-non-allocatable
-nul
-nul-terminated
-objet
-objets
-openlibname
-orderorder
-os
-overriden
-Peignier
-pid
-printf
-programmatically
-ptr
-putpointer
-puttype
-Redistributions
-releaser
-Releaser
-releasers
-ret
-ruby-ffi
-Rubyspec
-sliceoffset
-Smakov
-Solaris
-solaris
-somes
-stdcall
-str
-struct
-Struct
-Struct's
-structs
-stuf
-Suraj
-Sylvain
-Sáez
-Terceiro
-Tomoyuki
-typedef
-unix
-unmatch
-upcall
-variadic
-Variadic
-Videau
-wfd
-writeuintsizevalue
-Xcode
-Yee
-Yui
-Zuijlen
+Acces # 1
+addr # 1
+Adroid # 1
+Alban # 1
+Aman # 7
+Andreas # 1
+arg # 3
+ary # 2
+attachm # 1
+autoconf # 1
+Autorelease # 2
+autorelease # 3
+Bannasch # 1
+behaviour # 2
+bigdecimal # 1
+Bignum # 1
+Bitmask # 1
+bitmask # 1
+bitmaskname # 1
+bitmaskvalues # 1
+buf # 1
+Burgestrand # 1
+callbackname # 1
+callbackparams # 1
+Chikanaga # 1
+Cholakian # 1
+cname # 1
+compat # 3
+constname # 1
+Costan # 1
+ctide # 1
+ctx # 6
+Cygwin # 1
+Dalessio # 4
+Daubert # 1
+decriptor # 1
+dlclose # 1
+dlerror # 1
+dupping # 1
+embbed # 2
+endianness # 2
+enumname # 1
+Enums # 1
+enums # 2
+enumvalues # 1
+env # 1
+Errno # 1
+errorerror # 1
+evaluable # 1
+execv # 1
+Fazzi # 7
+ffi # 2
+flakey # 1
+func # 1
+García # 1
+getpointer # 1
+gettype # 1
+hardcoded # 1
+Heesob # 1
+Hinegardner # 1
+hobophobe # 1
+Hongli # 1
+idx # 1
+initializeconverter # 1
+initializefields # 1
+initializeinfo # 1
+initializelibname # 1
+initializememory # 1
+initializename # 1
+initializepointer # 4
+initializeprefix # 1
+initializesize # 2
+initializetype # 1
+initializevalue # 1
+ints # 1
+invoker # 1
+ivar # 1
+Jesús # 1
+Jurij # 1
+Kanis # 2
+Kearney # 1
+Khoobyar # 1
+Kurapati # 1
+Lai # 1
+Lavena # 1
+libffi # 3
+libffi-dev # 1
+libffi-devel # 1
+libflags # 1
+libname # 1
+Luc # 11
+Makoto # 1
+malloc # 1
+Matijs # 1
+maximul # 1
+Meissner # 66
+minimalistic # 1
+Morani # 1
+mprotect # 1
+msys # 1
+multiline # 1
+Niederl # 1
+non-allocatable # 1
+nul # 1
+nul-terminated # 1
+objet # 1
+objets # 1
+openlibname # 1
+orderorder # 2
+overriden # 1
+Peignier # 1
+pid # 1
+printf # 1
+programmatically # 1
+ptr # 2
+putpointer # 1
+puttype # 1
+Redistributions # 37
+Releaser # 1
+releaser # 1
+releasers # 1
+ret # 1
+ruby-ffi # 50
+Rubyspec # 1
+sliceoffset # 2
+Smakov # 1
+Solaris # 2
+solaris # 1
+somes # 1
+stdcall # 4
+str # 2
+struct # 12
+Struct # 6
+Struct's # 1
+structs # 3
+stuf # 1
+Suraj # 1
+Sylvain # 1
+Sáez # 1
+Terceiro # 1
+Tomoyuki # 1
+typedef # 7
+unmatch # 1
+upcall # 1
+variadic # 1
+Variadic # 1
+Videau # 1
+wfd # 1
+writeuintsizevalue # 1
+Xcode # 1
+Yee # 1
+Yui # 1
+Zuijlen # 1

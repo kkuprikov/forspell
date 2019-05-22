@@ -1,39 +1,33 @@
-al
-capistrano
-distributable
-dsl
-emacs
-env
-et
-filelist
-globbable
-gzipped
-ie
-lookups
-Makefile
-makefile
-nowrite
-nowritetrue
-pathmap
-Pathname
-Pathname-like
-Polylithic
-Polymorphically
-polymorphically
-procs
-rakefile
-Rakefiles
-rakefiles
-rakelib
-rakelibdir
-recognised
-redistributable
-reenable
-Reenable
-sublicense
-tgz
-toplevel
-unhandled
-unittest
-Weirich
-xz'd
+distributable # 1
+dsl # 1
+env # 1
+filelist # 1
+globbable # 1
+gzipped # 1
+lookups # 1
+makefile # 1
+Makefile # 1
+nowrite # 1
+nowritetrue # 1
+pathmap # 2
+Pathname # 1
+Pathname-like # 1
+Polylithic # 1
+polymorphically # 1
+Polymorphically # 1
+procs # 1
+rakefiles # 2
+Rakefiles # 1
+rakelib # 1
+rakelibdir # 1
+recognised # 1
+redistributable # 1
+Reenable # 1
+reenable # 1
+sublicense # 1
+tgz # 1
+toplevel # 1
+unhandled # 1
+unittest # 1
+Weirich # 1
+xz'd # 1

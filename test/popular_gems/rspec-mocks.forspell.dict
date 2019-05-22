@@ -1,174 +1,169 @@
-Adarsh
-Alessandro
-alextk
-Annesley
-arg
-argsso
-arity
-arounds
-autoloads
-Baginski
-Barabucci
-Bas
-behaviour
-benchmarking
-Berardi
-betesh
-Biesemeyer
-Braem
-Bundler's
-Bühlmann
-cd
-Ceh
-Cezar
-Cezary
-Changelog
-changelog
-changesets
-Chelimsky
-Cirera
-Claassen
-constnat
-contaning
-Cowlishaw
-Coyne
-Cukes
-cukes
-customisations
-customizations
-de
-debuggingyou
-defintion
-del
-delegator
-Deprecations
-deserialized
-dev
-Dieterle
-disapearing
-Dobzinski
-dogfoods
-doublename
-doublestubs
-Dowad
-dup
-dup'ing
-Eguzkiza
-enviroment
-eval
-explict
-falsey
-Giddins
-Gioele
-Gollapalli
-Graaff
-Griego
-hacky
-Halmagean
-Imhoff
-initialised
-interdependencies
-irb
-Josep
-Joël
-jruby
-Kernelnot
-Kilian
-klass
-klass's
-Ko
-Kozin
-Krizhanovsky
-Kumari
-Lafortune
-Langfeld
-Lindeman
-Linhares
-Marston
-matcher
-Matchers
-matchers
-Matijs
-Maurício
-Michi
-minitest
-mis-matched
-mock's
-mutator
-mutators
-Nakayama
-Neha
-noop
-Novak
-nullness
-Nurzynski
-oddbut
-oneline
-Oren
-overide
-Pandit
-Phippen
-Ponnappa
-precache
-precisions
-preethiramdev
-preferrable
-preloading
-Proby
-procs
-propogates
-proxied
-Proxying
-proxying
-Quenneville
-Rafaniello
-rdoc
-readme
-relase
-repos
-repro
-reseting
-rspec
-rspec's
-rspec-core
-rspec-dev
-rspec-expectations
-rspec-mock
-rspec-mocks
-rspec-rails
-rspec-support
-rubinius
-Rubocop
-Sant
-Schaefer
-securerandom
-Sergiy
-sexualized
-Shraibman
-Sidu
-spyname
-spystubs
-stdlibs
-Strother
-sublicense
-supressed
-syntaxes
-taskssuch
-Tibor
-Tobias
-transpec
-travis
-unstub
-unstubbed
-unstubing
-utilise
-validatiy
-verifier
-visbility
-Vodde
-wether
-yaml
-Yarinovskiy
-Yousuke
-Yuji
-Zuijlen
+Adarsh # 1
+Alessandro # 1
+alextk # 1
+Annesley # 1
+arg # 3
+argsso # 1
+arity # 4
+arounds # 1
+autoloads # 1
+Baginski # 1
+Barabucci # 1
+Bas # 1
+behaviour # 6
+benchmarking # 1
+Berardi # 1
+betesh # 1
+Biesemeyer # 1
+Braem # 1
+Bundler's # 1
+Bühlmann # 1
+Ceh # 1
+Cezar # 1
+Cezary # 1
+Changelog # 1
+changelog # 1
+changesets # 1
+Chelimsky # 2
+Cirera # 1
+Claassen # 1
+constnat # 1
+contaning # 1
+Cowlishaw # 1
+Coyne # 1
+Cukes # 1
+cukes # 2
+customisations # 1
+customizations # 2
+debuggingyou # 1
+defintion # 1
+delegator # 1
+Deprecations # 1
+deserialized # 1
+dev # 1
+Dieterle # 1
+disapearing # 1
+Dobzinski # 1
+dogfoods # 1
+doublename # 1
+doublestubs # 1
+Dowad # 1
+dup # 1
+dup'ing # 1
+Eguzkiza # 1
+enviroment # 1
+eval # 4
+explict # 1
+falsey # 1
+Giddins # 1
+Gioele # 1
+Gollapalli # 1
+Graaff # 1
+Griego # 1
+hacky # 1
+Halmagean # 1
+Imhoff # 1
+initialised # 1
+interdependencies # 1
+irb # 1
+Josep # 1
+Joël # 1
+jruby # 1
+Kernelnot # 1
+Kilian # 1
+klass # 1
+klass's # 1
+Kozin # 1
+Krizhanovsky # 1
+Kumari # 1
+Lafortune # 1
+Langfeld # 1
+Lindeman # 1
+Linhares # 1
+Marston # 2
+matcher # 4
+matchers # 6
+Matchers # 1
+Matijs # 1
+Maurício # 1
+Michi # 1
+minitest # 2
+mis-matched # 1
+mock's # 1
+mutator # 1
+mutators # 1
+Nakayama # 1
+Neha # 1
+noop # 1
+Novak # 1
+nullness # 1
+Nurzynski # 1
+oddbut # 1
+oneline # 1
+Oren # 1
+overide # 1
+Pandit # 1
+Phippen # 1
+Ponnappa # 1
+precache # 1
+precisions # 1
+preethiramdev # 1
+preferrable # 2
+preloading # 2
+Proby # 1
+procs # 1
+propogates # 1
+proxied # 2
+Proxying # 1
+proxying # 1
+Quenneville # 1
+Rafaniello # 1
+rdoc # 1
+readme # 1
+relase # 1
+repos # 3
+repro # 1
+reseting # 1
+rspec # 3
+rspec's # 1
+rspec-core # 6
+rspec-dev # 2
+rspec-expectations # 5
+rspec-mock # 1
+rspec-mocks # 15
+rspec-rails # 2
+rspec-support # 2
+rubinius # 1
+Rubocop # 2
+Sant # 1
+Schaefer # 1
+securerandom # 1
+Sergiy # 1
+sexualized # 1
+Shraibman # 1
+Sidu # 1
+spyname # 1
+spystubs # 1
+stdlibs # 2
+Strother # 1
+sublicense # 1
+supressed # 1
+syntaxes # 2
+taskssuch # 1
+Tibor # 1
+Tobias # 1
+transpec # 1
+unstub # 1
+unstubbed # 1
+unstubing # 1
+utilise # 1
+validatiy # 1
+verifier # 1
+visbility # 1
+Vodde # 1
+wether # 1
+yaml # 1
+Yarinovskiy # 1
+Yousuke # 1
+Yuji # 1
+Zuijlen # 1

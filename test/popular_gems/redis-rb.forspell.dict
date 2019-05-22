@@ -1,74 +1,69 @@
-arguemnts
-argv
-belows
-cardinality
-cmd
-commandstats
-containg
-decrementing
-dest
-destkey
-Dungan
-Eventmachine
-failover
-Fixnum
-Freenode
-gemspec
-geohash
-ghostunnel
-hashify
-Hiredis
-hiredis
-hiredis-rb
-hostname
-incrementing
-justid
-Kaes
-Keepalive
-Keyless
-keyspace
-len
-libmemcached
-loopback
-Lua
-maxlen
-mexlen
-mkstream
-natively
-noack
-numpat
-numsub
-pipelined
-Pipelined
-Pipelining
-pipelining
-readonly
-reconfiguring
-reconnection
-Reconnections
-reconnections
-redis
-redis-rb
-Redis-rb
-retrycount
-Rubyland
-Sanfilippo
-sanitization
-slowlog
-spefied
-src
-stunnel
-subcommand
-Subcommands
-subcommands
-sublicense
-substring
-ttl
-unitmkmftmi
-unix
-Unlink
-unlinked
-unwatches
-variadic
-Variadic
-Zygmuntowicz
+arguemnts # 1
+argv # 1
+belows # 1
+cardinality # 2
+cmd # 1
+commandstats # 1
+containg # 1
+decrementing # 1
+dest # 1
+destkey # 1
+Dungan # 1
+Eventmachine # 1
+failover # 3
+Fixnum # 1
+Freenode # 1
+gemspec # 1
+geohash # 1
+ghostunnel # 1
+hashify # 2
+hiredis # 5
+Hiredis # 2
+hiredis-rb # 1
+hostname # 1
+incrementing # 1
+justid # 1
+Kaes # 1
+Keepalive # 1
+Keyless # 1
+keyspace # 2
+libmemcached # 1
+loopback # 1
+Lua # 2
+maxlen # 1
+mexlen # 1
+mkstream # 1
+natively # 2
+noack # 1
+numpat # 1
+numsub # 1
+Pipelined # 1
+pipelined # 2
+pipelining # 3
+Pipelining # 1
+readonly # 1
+reconfiguring # 1
+reconnection # 2
+Reconnections # 1
+reconnections # 1
+retrycount # 1
+Rubyland # 1
+Sanfilippo # 3
+sanitization # 1
+slowlog # 1
+spefied # 1
+src # 1
+stunnel # 1
+subcommand # 2
+subcommands # 2
+Subcommands # 1
+sublicense # 1
+substring # 2
+ttl # 1
+unitmkmftmi # 1
+Unlink # 2
+unlinked # 1
+unwatches # 1
+Variadic # 1
+variadic # 1
+Zygmuntowicz # 1

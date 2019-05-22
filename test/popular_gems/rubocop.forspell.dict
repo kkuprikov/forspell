@@ -1,286 +1,276 @@
-abc
-additition
-analyse
-analysed
-apppear
-aref
-arg
-arglist
-arity
-Arvidsson
-asciibetical
-Autocorrect
-autocorrect
-autocorrected
-autocorrecting
-autocorrection
-Autocorrection
-autocorrections
-Autocorrections
-autocorrector
-autocorrects
-autofixer
-backquotes
-backreferences
-backtick
-backticks
-bareword
-basename
-Batsov
-beginend
-beginimplicit
-behaviour
-Bignum
-Bitbucket
-Bountysource
-Bozhidar
-braceless
-brackets-rubocop
-Bugfix
-bugfix-only
-bugfixes
-byebug
-canonicalized
-Capybara
-cbase
-Chacks
-Changelog
-changelog
-checkng
-cli
-Codacy
-codebase
-combinable
-concat
-concated
-cond
-Configs
-configs
-const
-Const
-Contrastive
-correctors
-crlf
-cx
-cyclomatic
-declaratively
-definee
-defs
-desc
-destructured
-destructures
-destructuring
-Destructuring
-Dimiter
-disjunction
-doend
-dotfile
-dotfiles
-Dowad
-downcase
-dstr
-dup
-dup'ed
-Dzhelyov
-eg
-elsif
-elsifs
-Enforcedstyle
-eoutvar
-eranges
-eval
-Evgeni
-exe
-exlamation
-extensionless
-extpression
-falsey
-falsiness
-falsy
-Fastfile
-Fastlane's
-fileencoding
-Fixnum
-flycheck
-Freenode
-fullwidth
-funcall
-Fuubar
-gemspec
-Gemspec
-Gemspecs
-gemspecs
-generates't
-gettext
-github
-Gitter
-gitter
-globbing
-guard-rubocop
-hardcoded
-heredoc
-heredocs
-Highlightling
-honours
-html
-http
-https
-inabled
-Intellij
-interation
-interop
-interruptible
-iranges
-irgnoring
-ivar
-ivars
-Johansson
-jruby
-json
-Koichi
-Kreeftmeijer
-Krizhanovski
-Kuwabara
-kwarg
-kwargs
-kwbegin
-kwrest
-kwrestarg
-lf
-Liberapay
-lietral
-linter
-linter-rubocop
-Locatable
-lt-rubocop
-Lucene
-lvar
-machine-parsable
-Machine-parsable
-Masataka
-masgn
-matcher
-matchers
-maxh
-maxiumum
-methodoptarg
-misconfiguration
-misconfigured
-misdetection
-mistranslating
-mlhs
-mry
-Multiline
-multiline
-Nakayama
-natively
-ndde
-neomake
-nils
-non-alnum
-non-ascii
-nonexecutable
-nonmutating
-nonoffensive
-normalcase
-offence
-offences
-Oj
-ok
-oneline
-op-asgn
-optarg
-Optimise
-or-asgn
-outdent
-outdented
-overcommit
-parameterless
-parenthesization
-pathname
-pathnames
-Patreon
-Petrov
-polymorphism
-postfix
-powerpack
-Powerpack
-prefices
-procs
-programmatically
-Quickstart
-Qux
-Racc
-rackup
-Rakefiles
-rbx
-rdoc
-readably
-rearange
-recurse
-recurses
-referencd
-referer
-regexes
-regopt
-repo's
-rescueing
-restarg
-rewriter
-rhs
-rspec
-rubocop
-rubocop-performance
-rubocop-rspec
-serializers
-Sider
-simplifly
-somegem
-sprintf
-stabby
-Stackoverflow
-str
-stracktrace
-Structs
-styleguide
-subdirectories
-subdirectory
-submodules
-subtrees
-syck
-sym
-Symlink
-symlink
-symlinks
-syntastic
-syntaxes
-timezones
-todo
-tokenize
-transcoding
-unanchored
-unannotated
-Unary
-unary
-unbracketed
-unhandled
-Unindent
-unindent
-uniq
-unnessary
-unparenthesized
-unparseable
-unreferenced
-unspaced
-untrusted
-url
-urls
-variable-ish
-Vasilka
-vim-rubocop
-yaml
-yamler
-yoda
-Yuji
-zero-arity
-zsuper
+additition # 1
+analyse # 1
+analysed # 1
+apppear # 2
+aref # 3
+arg # 5
+arglist # 1
+arity # 4
+Arvidsson # 1
+asciibetical # 2
+Autocorrect # 8
+autocorrect # 43
+autocorrected # 4
+autocorrecting # 11
+Autocorrection # 2
+autocorrection # 14
+Autocorrections # 2
+autocorrections # 2
+autocorrector # 2
+autocorrects # 3
+autofixer # 2
+backquotes # 2
+backreferences # 3
+backtick # 3
+backticks # 4
+bareword # 1
+basename # 1
+Batsov # 1
+beginend # 2
+beginimplicit # 2
+behaviour # 2
+Bignum # 2
+Bitbucket # 1
+Bountysource # 1
+Bozhidar # 1
+braceless # 2
+brackets-rubocop # 1
+Bugfix # 2
+bugfix-only # 4
+bugfixes # 4
+byebug # 2
+canonicalized # 2
+Capybara # 3
+cbase # 3
+Chacks # 1
+Changelog # 2
+changelog # 2
+checkng # 1
+cli # 3
+Codacy # 1
+codebase # 5
+combinable # 2
+concat # 2
+concated # 2
+cond # 1
+configs # 7
+Configs # 2
+Const # 1
+const # 1
+Contrastive # 2
+correctors # 1
+crlf # 2
+cx # 1
+cyclomatic # 3
+declaratively # 1
+definee # 1
+defs # 8
+desc # 1
+destructured # 1
+destructures # 1
+Destructuring # 1
+destructuring # 10
+Dimiter # 1
+disjunction # 2
+doend # 3
+dotfile # 1
+dotfiles # 2
+Dowad # 2
+downcase # 2
+dstr # 1
+dup # 1
+dup'ed # 1
+Dzhelyov # 1
+eg # 3
+elsif # 5
+elsifs # 2
+Enforcedstyle # 2
+eoutvar # 2
+eranges # 2
+eval # 3
+Evgeni # 1
+exe # 1
+exlamation # 2
+extensionless # 2
+extpression # 1
+falsey # 3
+falsiness # 2
+falsy # 2
+Fastfile # 2
+Fastlane's # 2
+fileencoding # 1
+Fixnum # 2
+flycheck # 1
+Freenode # 1
+fullwidth # 2
+funcall # 2
+Fuubar # 2
+Gemspec # 2
+gemspec # 10
+Gemspecs # 1
+gemspecs # 3
+generates't # 1
+gettext # 1
+gitter # 1
+Gitter # 1
+globbing # 3
+guard-rubocop # 1
+hardcoded # 2
+heredoc # 20
+heredocs # 13
+Highlightling # 1
+honours # 2
+https # 2
+inabled # 3
+Intellij # 1
+interation # 1
+interop # 1
+interruptible # 1
+iranges # 2
+irgnoring # 1
+ivar # 3
+ivars # 3
+Johansson # 1
+jruby # 3
+json # 1
+Koichi # 1
+Kreeftmeijer # 1
+Krizhanovski # 1
+Kuwabara # 1
+kwarg # 2
+kwargs # 1
+kwbegin # 1
+kwrest # 2
+kwrestarg # 1
+lf # 2
+Liberapay # 2
+lietral # 2
+linter # 3
+linter-rubocop # 1
+Locatable # 1
+lt-rubocop # 1
+Lucene # 1
+lvar # 2
+Machine-parsable # 1
+machine-parsable # 3
+Masataka # 1
+masgn # 3
+matcher # 2
+matchers # 4
+maxh # 1
+maxiumum # 2
+methodoptarg # 1
+misconfiguration # 1
+misconfigured # 2
+misdetection # 2
+mistranslating # 3
+mlhs # 1
+mry # 1
+multiline # 33
+Multiline # 2
+Nakayama # 1
+natively # 1
+ndde # 1
+neomake # 1
+nils # 1
+non-alnum # 1
+nonexecutable # 1
+nonmutating # 3
+nonoffensive # 2
+normalcase # 2
+offence # 4
+offences # 5
+oneline # 1
+op-asgn # 2
+optarg # 2
+Optimise # 2
+or-asgn # 1
+outdent # 2
+outdented # 3
+overcommit # 1
+parameterless # 2
+parenthesization # 2
+pathname # 1
+pathnames # 2
+Patreon # 2
+Petrov # 1
+polymorphism # 1
+postfix # 5
+powerpack # 2
+Powerpack # 2
+prefices # 2
+procs # 6
+programmatically # 2
+Quickstart # 1
+Qux # 1
+Racc # 1
+rackup # 4
+Rakefiles # 1
+rbx # 2
+rdoc # 2
+readably # 2
+rearange # 3
+recurse # 2
+recurses # 1
+referencd # 2
+referer # 2
+regexes # 2
+regopt # 1
+repo's # 2
+rescueing # 2
+restarg # 1
+rewriter # 1
+rhs # 8
+rspec # 2
+rubocop # 17
+rubocop-performance # 2
+rubocop-rspec # 1
+serializers # 1
+Sider # 1
+simplifly # 1
+somegem # 1
+sprintf # 2
+stabby # 6
+Stackoverflow # 1
+str # 3
+stracktrace # 2
+Structs # 2
+styleguide # 1
+subdirectories # 7
+subdirectory # 3
+submodules # 1
+subtrees # 1
+syck # 2
+sym # 1
+Symlink # 2
+symlink # 2
+symlinks # 1
+syntastic # 1
+syntaxes # 3
+timezones # 2
+todo # 3
+tokenize # 1
+transcoding # 2
+unanchored # 2
+unannotated # 2
+Unary # 1
+unary # 10
+unbracketed # 2
+unhandled # 2
+Unindent # 2
+unindent # 2
+uniq # 2
+unnessary # 2
+unparenthesized # 5
+unparseable # 1
+unreferenced # 2
+unspaced # 2
+untrusted # 3
+variable-ish # 2
+Vasilka # 1
+vim-rubocop # 1
+yaml # 2
+yamler # 2
+Yuji # 1
+zero-arity # 1
+zsuper # 1

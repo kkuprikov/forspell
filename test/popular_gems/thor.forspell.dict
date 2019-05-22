@@ -1,66 +1,59 @@
-al
-Autoload
-baseclass
-basename
-binfiles
-colwidth
-dest
-doesnt
-dup
-et
-Everytime
-gem-ified
-Hansson
-Heinemeier
-heredocs
-Highline
-Hodel
-ie
-immediates
-invocable
-invoker
-Katz
-klass
-klasses
-Klishin
-mislav
-Neopolitan
-Nicklas
-noecho
-open-uri
-rakefile
-rdoc
-Readline
-rebasing
-rr
-rspec
-rubocop
-runcommand
-sandboxing
-Settingsjames
-Settingsjamesdev
-Settingsjamesdevthor
-string-arg
-Subcommand
-subcommand
-subcommand-specific
-subcommands
-subfolder
-sublicense
-substring
-substrings
-symlink
-Templater
-thor
-Thor-subcommand
-Thorfile
-thorfiles
-Thorfiles
-Tis
-Uncomment
-uncomment
-undefine
-url
-Weirich
-yaml
-Yehuda
+Autoload # 1
+baseclass # 1
+basename # 1
+binfiles # 1
+colwidth # 1
+dest # 1
+doesnt # 1
+dup # 1
+Everytime # 1
+gem-ified # 1
+Hansson # 1
+Heinemeier # 1
+heredocs # 1
+Highline # 3
+Hodel # 1
+immediates # 1
+invocable # 1
+invoker # 2
+Katz # 1
+klass # 5
+klasses # 1
+Klishin # 1
+mislav # 1
+Neopolitan # 1
+Nicklas # 1
+noecho # 1
+open-uri # 2
+rdoc # 2
+Readline # 2
+rebasing # 1
+rspec # 3
+rubocop # 1
+runcommand # 1
+sandboxing # 1
+Settingsjames # 1
+Settingsjamesdev # 1
+Settingsjamesdevthor # 1
+string-arg # 1
+Subcommand # 1
+subcommand # 2
+subcommand-specific # 1
+subcommands # 2
+subfolder # 1
+sublicense # 1
+substring # 1
+substrings # 1
+symlink # 2
+Templater # 1
+Thor-subcommand # 1
+Thorfile # 1
+thorfiles # 1
+Thorfiles # 2
+Tis # 1
+Uncomment # 1
+uncomment # 1
+undefine # 1
+Weirich # 1
+yaml # 1
+Yehuda # 1

@@ -1,64 +1,62 @@
-aasm
-aasm-enabled
-Anil
-arg
-arity
-autocreation
-autoloading
-bugfix
-Böttger
-chainable
-Choreinvokers
-codez
-czhc
-dup'ed
-Dynamoid
-dynamoid
-enums
-env
-fireevent
-flexoid
-focusshifter
-gemsets
-getter
-ie
-inspectable
-invoker
-invokers
-Lampesberger
-matcher
-matchers
-Maurya
-merchantibility
-Michał
-Minitest
-Mongo
-Mongodb
-Mongoid
-mongoid
-mongomapper
-Nobrainer
-nop
-optionaldefault
-orm
-pandomic
-Proc's
-procs
-Procs
-readme
-rspec
-rspec-like
-rvm
-sharding
-sublicense
-Taberski
-teohm
-Thorsten
-Tilley
-transactional
-Transactional
-transation
-transiton
-uninitialised
-utilising
-zedtux
+aasm # 5
+aasm-enabled # 1
+Anil # 1
+arg # 1
+arity # 3
+autocreation # 1
+autoloading # 1
+bugfix # 1
+Böttger # 1
+chainable # 1
+Choreinvokers # 1
+codez # 1
+czhc # 1
+dup'ed # 1
+Dynamoid # 4
+dynamoid # 1
+enums # 2
+env # 1
+fireevent # 1
+flexoid # 1
+focusshifter # 1
+gemsets # 1
+getter # 1
+inspectable # 1
+invoker # 5
+invokers # 2
+Lampesberger # 1
+matcher # 1
+matchers # 2
+Maurya # 1
+merchantibility # 1
+Michał # 1
+Minitest # 2
+Mongo # 1
+mongoid # 2
+Mongoid # 3
+mongomapper # 1
+Nobrainer # 2
+nop # 1
+optionaldefault # 1
+orm # 1
+pandomic # 1
+Proc's # 1
+Procs # 3
+procs # 1
+readme # 1
+rspec # 2
+rspec-like # 1
+rvm # 1
+sharding # 1
+sublicense # 1
+Taberski # 1
+teohm # 1
+Thorsten # 1
+Tilley # 1
+transactional # 2
+Transactional # 1
+transation # 1
+transiton # 1
+uninitialised # 1
+utilising # 1
+zedtux # 1

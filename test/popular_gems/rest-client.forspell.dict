@@ -1,104 +1,94 @@
-Archiloque
-auth
-autodetect
-Backeus
-Benchmarking
-Braintree
-Brody
-bugfixes
-Böhm
-certifcates
-Cloudify
-compatability
-compatbility
-darwin-based
-delate
-dereferenced
-Dinn
-Dittmann
-dup
-Eanes
-Emeriti
-eq
-erroring
-exept
-extentions
-falsey
-falsy
-ffi
-François
-freenode
-gemspec
-Gierth
-gzip
-haarts
-hashery
-heroku
-Hiroshi
-http
-http-accept
-http-cookie
-init
-irc
-iso
-iteratively
-jruby
-Jruby
-Julien
-keypair
-keystore
-keyvalue
-Kirch
-Klett
-kludgy
-Librelist
-Loe
-managment
-microframework
-Mizerany
-mri
-Nakamura
-natively
-Netrc
-netrc
-Niko
-oauth
-occassion
-openssl
-Panachi
-paththrought
-playload
-procs
-rdoc
-recurse
-redirections
-reimplement
-Remer
-Reponse
-restclient
-Rohr
-rspec
-Satisfiable
-ssl
-streameable
-stringified
-subresource
-subresources
-Suleyman
-Syl
-Tekin
-Tempfile
-tempfile
-tpresa
-travis
-typedef
-uncompress
-unlink
-unlinked
-unlinking
-unstub
-uri
-url
-urlencode
-Warshak
-Wieland
+Archiloque # 1
+auth # 2
+autodetect # 1
+Backeus # 1
+Benchmarking # 1
+Braintree # 1
+Brody # 1
+bugfixes # 1
+Böhm # 1
+certifcates # 1
+Cloudify # 1
+compatability # 1
+compatbility # 1
+delate # 1
+dereferenced # 1
+Dinn # 1
+Dittmann # 1
+dup # 1
+Eanes # 1
+Emeriti # 1
+eq # 2
+erroring # 1
+exept # 1
+extentions # 1
+falsey # 1
+falsy # 1
+ffi # 1
+François # 1
+freenode # 1
+gemspec # 1
+Gierth # 1
+gzip # 2
+haarts # 1
+hashery # 1
+Hiroshi # 1
+init # 1
+iteratively # 1
+Jruby # 1
+jruby # 5
+Julien # 1
+keypair # 1
+keystore # 1
+keyvalue # 1
+Kirch # 1
+Klett # 1
+kludgy # 1
+Librelist # 1
+Loe # 1
+managment # 1
+microframework # 1
+Mizerany # 1
+Nakamura # 1
+natively # 1
+netrc # 2
+Netrc # 2
+Niko # 1
+oauth # 1
+occassion # 1
+openssl # 2
+Panachi # 1
+paththrought # 1
+playload # 1
+procs # 2
+rdoc # 1
+recurse # 1
+redirections # 2
+reimplement # 1
+Remer # 1
+Reponse # 1
+restclient # 2
+Rohr # 1
+rspec # 2
+Satisfiable # 1
+ssl # 3
+streameable # 1
+stringified # 1
+subresource # 1
+subresources # 1
+Suleyman # 1
+Syl # 1
+Tekin # 1
+tempfile # 4
+Tempfile # 2
+tpresa # 1
+typedef # 1
+uncompress # 1
+unlink # 1
+unlinked # 1
+unlinking # 1
+unstub # 1
+uri # 1
+urlencode # 1
+Warshak # 1
+Wieland # 1

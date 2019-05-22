@@ -1,138 +1,122 @@
-Aliasee
-ansi
-argc
-argv
-autoload
-backtick
-bitmask
-blockquote
-Blockquotes
-bs
-chagened
-const
-crossref
-cvs
-darkfish
-Darkfish
-datastore
-dddd
-De-serializes
-dedent
-deduplicates
-deveiant
-documentable
-dotfile
-downcases
-dup
-emacs
-emacs-style
-erb
-frontend
-func
-getter
-Gettext
-gettext
-github
-Granger
-gsub
-gzip
-handlings
-heredoc
-Hodel
-html
-ie
-img
-Instantiation
-Ipsum
-isruby
-ivar
-javascript
-jruby
-js
-klass
-Kolesnikov
-Mahlon
-Masatoshi
-metaprogrammed
-Metaprogrammed
-metaprogramming
-minitest
-modeline
-msgid
-msginit
-msgstr
-multiline
-nodoc
-ok
-outputter
-parseable
-Pathname
-Pathname-like
-postfix
-preprocessor
-programmatically
-rdoc
-rdoc's
-rdoc-data
-rdoc-ref
-rdoc-schemed
-rdoc-style
-rdocable
-rdtool
-Readline
-recursing
-Redistributions
-rerdoc
-ri
-Riker
-rmsginit
-Roadmap
-Romulans
-rtags
-ruby-lang
-Rubyists
-rw
-sdoc
-servlet
-siginfo
-sprintf
-stopdoc
-struct
-subdirectories
-sublicense
-Tansifex
-teardown
-Tempfile
-testcase
-textto
-tfunc
-tidylink
-Tidylinks
-tokenizes
-tomdoc
-transcode
-transcodeable
-transcoded
-Transcodes
-tt
-tt-only
-tts
-un-marshaled
-Unescapes
-unget
-unhandled
-unindented
-unparseable
-untrusted
-url
-us-ascii
-validator
-Validators
-validators
-valus
-visibilities
-webcvs
-Weirich
-Yay
-Zl
-Zlib
+Aliasee # 1
+argc # 1
+argv # 1
+autoload # 1
+backtick # 1
+bitmask # 2
+blockquote # 1
+Blockquotes # 1
+chagened # 1
+const # 1
+crossref # 4
+Darkfish # 2
+darkfish # 1
+datastore # 1
+dddd # 1
+dedent # 1
+deduplicates # 1
+deveiant # 1
+documentable # 1
+dotfile # 1
+downcases # 1
+dup # 1
+erb # 1
+frontend # 1
+func # 1
+getter # 1
+Gettext # 1
+gettext # 2
+Granger # 1
+gsub # 3
+gzip # 1
+handlings # 3
+heredoc # 1
+Hodel # 3
+img # 1
+Instantiation # 1
+Ipsum # 1
+isruby # 1
+ivar # 1
+jruby # 1
+js # 1
+klass # 2
+Kolesnikov # 1
+Mahlon # 1
+Masatoshi # 1
+Metaprogrammed # 1
+metaprogrammed # 1
+metaprogramming # 1
+minitest # 1
+modeline # 1
+msgid # 1
+msginit # 1
+msgstr # 1
+multiline # 1
+nodoc # 4
+outputter # 2
+parseable # 1
+Pathname # 1
+Pathname-like # 1
+postfix # 2
+preprocessor # 1
+programmatically # 1
+rdoc # 11
+rdoc's # 1
+rdoc-data # 1
+rdoc-ref # 1
+rdoc-schemed # 2
+rdoc-style # 1
+rdocable # 1
+rdtool # 1
+Readline # 1
+recursing # 1
+Redistributions # 1
+rerdoc # 1
+Riker # 1
+rmsginit # 1
+Roadmap # 1
+Romulans # 1
+rtags # 1
+Rubyists # 1
+rw # 1
+sdoc # 1
+servlet # 2
+siginfo # 1
+sprintf # 1
+stopdoc # 1
+struct # 1
+subdirectories # 1
+sublicense # 2
+Tansifex # 1
+teardown # 1
+Tempfile # 1
+testcase # 1
+textto # 1
+tfunc # 1
+tidylink # 1
+Tidylinks # 1
+tokenizes # 1
+tomdoc # 3
+transcode # 1
+transcodeable # 1
+transcoded # 3
+Transcodes # 1
+tt # 3
+tt-only # 1
+tts # 1
+Unescapes # 1
+unget # 1
+unhandled # 1
+unindented # 1
+unparseable # 1
+untrusted # 1
+validator # 1
+Validators # 1
+validators # 1
+valus # 1
+visibilities # 2
+webcvs # 1
+Weirich # 1
+Yay # 1
+Zl # 1
+Zlib # 1

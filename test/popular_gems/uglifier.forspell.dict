@@ -1,22 +1,20 @@
-babel-transpiler
-Bracketize
-characterss
-const
-de-duplicate
-eval
-globals
-json
-Lautanala
-matchers
-minified
-Minifies
-minify
-subdirectories
-submodules
-toplevel
-transpile
-Uglifier
-uglify-es
-unreferenced
-Url
-Ville
+babel-transpiler # 1
+Bracketize # 1
+characterss # 1
+const # 1
+eval # 1
+globals # 1
+json # 1
+Lautanala # 1
+matchers # 1
+minified # 2
+Minifies # 1
+minify # 1
+subdirectories # 1
+submodules # 1
+toplevel # 1
+transpile # 1
+Uglifier # 4
+uglify-es # 1
+unreferenced # 1
+Ville # 1

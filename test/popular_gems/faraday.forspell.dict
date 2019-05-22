@@ -1,36 +1,32 @@
-Ad-hoc
-autoload
-autoloadable
-autoloaded
-autoloading
-backoff
-behaviour
-Changelog
-customizations
-env
-Excon
-faraday
-gzip
-Hobson
-http
-marshalled
-matcher
-Memoize
-pipelining
-resyncing
-retry's
-Rubinius
-sesions
-stringified
-Struct
-structs
-sublicense
-Typhoeus
-unencoded
-unescaping
-unregister
-uri
-url
-urls
-varibale
-Zack
+Ad-hoc # 1
+autoload # 1
+autoloadable # 1
+autoloaded # 1
+autoloading # 1
+backoff # 1
+behaviour # 1
+Changelog # 1
+customizations # 1
+env # 2
+Excon # 2
+gzip # 1
+Hobson # 2
+marshalled # 1
+matcher # 1
+Memoize # 1
+pipelining # 1
+resyncing # 1
+retry's # 1
+Rubinius # 3
+sesions # 1
+stringified # 1
+Struct # 1
+structs # 1
+sublicense # 1
+Typhoeus # 3
+unencoded # 1
+unescaping # 1
+unregister # 1
+uri # 1
+varibale # 1
+Zack # 2

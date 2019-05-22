@@ -1,181 +1,169 @@
-ack
-acknowlege
-Airbrake
-artifical
-atomicity
-autoload
-autoloading
-autoscaling
-backoff
-badosu
-bensie
-betelgeuse
-bootstap's
-bootup
-brandonhilkert
-calculatons
-capistrano
-capistrano-sidekiq
-changelog
-cli
-constantize
-contribsys
-copytruncate
-crashy
-Cron
-cron-like
-css
-daemonization
-daemonize
-daemonizing
-Datadog
-decrypt
-deprecations
-dequeues
-der
-dereference
-dervied
-deserialized
-dev
-dogfood
-dropdown
-Egor
-enqueue
-enqueued
-enqueueing
-enqueuing
-env
-evented
-ezkl
-Failover
-fbjork
-fi
-gemfile
-gemspec
-Gerrit
-hakanensari
-hardcoded
-hinrik
-hiredis
-Hoeven
-Homakov
-Honeybadger
-hostname
-hostnames
-html
-Hyman
-impl
-irb
-ivars
-jcoene
-jid
-jids
-jitter
-jruby's
-latencies
-logfile
-logfiles
-lookups
-Lua
-Lua's
-Lua-based
-masterkain
-maxjustus
-memoize
-mget
-Minitest
-monit
-monitrc
-mperham
-msg
-myapp
-natematykiewicz
-navbar
-nginx
-non-falsy
-ok
-Opscode's
-panthomakos
-Pape
-Perham
-pidfile
-pluggable
-Poller
-poller
-Precompile
-precompiled
-preloaded
-preloads
-preprocessing
-procline
-profiler
-ps
-pubsub
-qcachegrind
-queueing
-railsexpress
-raivil
-Re-enqueue
-Rearchitect
-redis
-redis-namespace
-redis-rb
-reentrant
-Reimplement
-reloader
-Reloader
-Requeue
-requeue
-requeued
-requeueing
-resiliant
-Resque
-Resque-compatible
-resque-scheduler
-resque-web
-retriable
-roundtrips
-Rspec
-Runit
-runit
-runsvdir
-ryanlecompte
-scalability
-serializer
-sexualized
-sferik
-Shardable
-sharding
-Sharding
-sidekiq
-Sidekiq
-Sidekiq's
-sidekiq-failures
-sidekiq-scheduler
-sidekiq-web
-sidekiqctl
-sidekiqswarm
-spec'd
-statsd
-Statsd
-statsd-ruby
-Stringify
-stringify
-subelsky
-substring
-systemwhile
-testing's
-threadsafe
-Timberman
-timespan
-tooltips
-topbar
-tradeoff
-uncomment
-undeliverable
-Undeprecate
-unpausing
-user-tunable
-Webhook
-webhook
-Youtube
+ack # 1
+acknowlege # 1
+Airbrake # 2
+artifical # 1
+atomicity # 1
+autoload # 1
+autoloading # 1
+autoscaling # 1
+backoff # 2
+badosu # 1
+bensie # 1
+bootstap's # 1
+bootup # 1
+brandonhilkert # 1
+calculatons # 1
+capistrano-sidekiq # 2
+changelog # 1
+cli # 1
+constantize # 2
+contribsys # 1
+copytruncate # 1
+crashy # 1
+Cron # 1
+cron-like # 1
+daemonization # 1
+daemonize # 1
+daemonizing # 1
+Datadog # 1
+decrypt # 1
+deprecations # 1
+dequeues # 1
+der # 1
+dereference # 1
+dervied # 1
+deserialized # 1
+dev # 2
+dogfood # 1
+dropdown # 1
+Egor # 1
+enqueue # 4
+enqueued # 7
+enqueueing # 1
+enqueuing # 2
+env # 2
+evented # 1
+ezkl # 1
+Failover # 1
+fbjork # 1
+fi # 1
+gemspec # 3
+Gerrit # 1
+hakanensari # 1
+hardcoded # 1
+hinrik # 1
+hiredis # 1
+Hoeven # 1
+Homakov # 1
+Honeybadger # 2
+hostname # 2
+hostnames # 2
+Hyman # 1
+impl # 1
+irb # 1
+ivars # 1
+jcoene # 1
+jid # 2
+jids # 1
+jitter # 1
+jruby's # 1
+latencies # 1
+logfile # 1
+logfiles # 1
+lookups # 2
+Lua # 3
+Lua's # 1
+Lua-based # 1
+masterkain # 1
+maxjustus # 1
+memoize # 1
+mget # 1
+Minitest # 1
+monit # 1
+monitrc # 1
+mperham # 2
+myapp # 1
+natematykiewicz # 1
+navbar # 1
+nginx # 1
+non-falsy # 1
+Opscode's # 1
+panthomakos # 1
+Pape # 1
+Perham # 1
+pidfile # 1
+pluggable # 1
+poller # 1
+Poller # 2
+Precompile # 1
+precompiled # 1
+preloaded # 1
+preloads # 1
+preprocessing # 1
+procline # 1
+profiler # 1
+pubsub # 1
+qcachegrind # 1
+queueing # 1
+railsexpress # 1
+raivil # 1
+Re-enqueue # 1
+Rearchitect # 1
+reentrant # 1
+Reimplement # 2
+Reloader # 3
+reloader # 3
+requeue # 1
+Requeue # 1
+requeued # 1
+requeueing # 1
+resiliant # 1
+Resque # 2
+Resque-compatible # 1
+resque-scheduler # 1
+resque-web # 1
+retriable # 1
+roundtrips # 1
+Rspec # 2
+runit # 1
+Runit # 1
+runsvdir # 1
+ryanlecompte # 1
+scalability # 3
+serializer # 1
+sexualized # 1
+sferik # 1
+Shardable # 1
+sharding # 4
+Sharding # 1
+sidekiq # 5
+Sidekiq # 30
+Sidekiq's # 10
+sidekiq-failures # 1
+sidekiq-scheduler # 1
+sidekiq-web # 2
+sidekiqctl # 1
+sidekiqswarm # 1
+spec'd # 1
+Statsd # 2
+statsd # 2
+statsd-ruby # 1
+Stringify # 1
+stringify # 3
+subelsky # 1
+substring # 1
+systemwhile # 1
+testing's # 1
+threadsafe # 1
+Timberman # 1
+timespan # 1
+tooltips # 1
+topbar # 1
+tradeoff # 1
+uncomment # 1
+undeliverable # 1
+Undeprecate # 1
+unpausing # 1
+user-tunable # 1
+webhook # 1
+Webhook # 1

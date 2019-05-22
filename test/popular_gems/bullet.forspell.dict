@@ -1,42 +1,33 @@
-activerecord
-activesupport
-Airbrake
-airbrake
-api
-ar
-ascii
-associatioin
-Autoload
-autoload
-bugsnag
-dom
-env
-Goto
-Honeybadger
-Hotfix
-html
-http
-inversed
-js
-loadings
-Memoize
-Mongo
-mongoid
-Mongoid
-Nginx
-preload
-preloaded
-preloads
-rollbar
-sinatra
-sql
-squeel
-sse
-stacktrace
-substring
-substrings
-travis
-triger
-unpreload
-unpreloaded
-whoami
+activerecord # 2
+activesupport # 1
+airbrake # 2
+Airbrake # 1
+associatioin # 1
+autoload # 1
+Autoload # 1
+bugsnag # 2
+dom # 1
+env # 2
+Goto # 1
+Honeybadger # 1
+Hotfix # 1
+inversed # 2
+js # 1
+loadings # 2
+Memoize # 1
+Mongo # 1
+Mongoid # 1
+mongoid # 3
+Nginx # 1
+preload # 4
+preloaded # 3
+preloads # 1
+rollbar # 1
+squeel # 1
+stacktrace # 1
+substring # 1
+substrings # 1
+triger # 1
+unpreload # 2
+unpreloaded # 2
+whoami # 1
