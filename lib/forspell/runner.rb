@@ -10,8 +10,13 @@ module Forspell
     end
 
     def call
-      @files.each do |path|
+      increment = (@files.size / 100.0).ceil
+      total = @files.size <= 100 ? @files.size : 100
+      @reporter.progress_bar = ProgressBar.create(total: total, output: $stderr)
+
+      @files.each_with_index do |path, index|
         process_file path
+        @reporter.progress_bar.increment if (index + 1) % increment == 0
       end
 
       @reporter.report

@@ -5,6 +5,8 @@ RSpec.describe Forspell::WordMatcher do
     subject { described_class.word?(word) }
 
     {
+      'A' => true,
+      'a' => true,
       'word' => true,
       'wrd' => true,
       'Word' => true,
@@ -16,8 +18,8 @@ RSpec.describe Forspell::WordMatcher do
       "don''t" => false,
       "d'on't" => false,
       "D'on't" => false,
-      "'bout" => true,
-      "doin'" => true,
+      "'bout" => false,
+      "doin'" => false,
       'filename.txt' => false,
       'my_variable' => false,
       'MyClassName' => false,

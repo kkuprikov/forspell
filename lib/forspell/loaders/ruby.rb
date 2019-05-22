@@ -2,20 +2,30 @@
 
 require 'yard'
 require 'yard/parser/ruby/ruby_parser'
+require 'rdoc'
 require_relative 'source'
 
 module Forspell::Loaders
   class Ruby < Source
+    MAX_COMMENT_LENGTH = 777
+    
+    def initialize(file: nil, text: nil)
+      super
+      @markup = RDoc::Markup.new
+      @formatter = RDoc::Markup::ToMarkdown.new
+      @formatter.width = MAX_COMMENT_LENGTH
+    end
+
     private
 
     def comments
       YARD::Parser::Ruby::RubyParser.new(@input, @file).parse
-        .tokens.select{ |token| token.first == :comment }
-      # example: [:comment, "# def loader_class path\n", [85, 2356]]
+        .tokens.select{ |type,| type == :comment }
+        .reject{ |_, text,| text.start_with?('#  ') }
     end
 
     def text(comment)
-      comment[1]
+      @markup.convert(comment[1], @formatter)
     end
 
     def line(comment)

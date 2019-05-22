@@ -16,15 +16,19 @@ module Forspell
     def initialize(paths:, exclude_paths:)
       @paths = paths
       @exclude_paths = exclude_paths
+
+      to_process = @paths.flat_map(&method(:expand_paths))
+      to_exclude = @exclude_paths.flat_map(&method(:expand_paths))
+      @files = to_process - to_exclude
     end
 
     def each(&block)
-      to_process = @paths.flat_map(&method(:expand_paths))
-
-      to_exclude = @exclude_paths.flat_map(&method(:expand_paths))
-
-      (to_process - to_exclude).map{ |path| path.gsub('//', '/')}
+      @files.map{ |path| path.gsub('//', '/')}
         .each(&block)
+    end
+
+    def size
+      @size ||= @files.size
     end
 
     private

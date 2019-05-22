@@ -20,9 +20,12 @@ module Forspell
       o.string '-d', '--dictionary-path', 'Path to main hunspell dictionary to use (by default, forspell\'s en_US)', default: 'en_US'
       o.array '-c', '--custom-paths', 'Paths to custom dictionaries', default: []
       o.string '-f', '--format', 'Output formats: readable(default), JSON, YAML', default: 'readable'
-      o.boolean '--gen-dictionary', 'Generate custom dictionary'
+      o.bool '--gen-dictionary', 'Generate custom dictionary', default: false
+      o.bool '--print-filepaths', 'Enable file paths in dictionary mode', default: false
       o.string '-l', '--logfile', 'Log to specified path'
-      o.bool '-v', '--verbose', 'Verbose mode'
+      o.bool '-v', '--verbose', 'Verbose mode', default: false
+      o.bool '--no-suggest', 'Output without suggestions', default: false
+      o.integer '--suggestions-size', 'How many suggestions for each error should be returned', default: 3
       o.on '--help' do
         puts o
         exit
@@ -71,12 +74,14 @@ module Forspell
       end
 
       @opts[:custom_paths] << DEFAULT_CUSTOM_DICT if File.exist?(DEFAULT_CUSTOM_DICT)
+      suggestions_size = (@opts[:gen_dictionary] || @opts[:no_suggest]) ? 0 : @opts[:suggestions_size]
+      suggestions_size ||= 0
 
-      @speller = Speller.new(@opts[:dictionary_path], *@opts[:custom_paths])
+      @speller = Speller.new(@opts[:dictionary_path], *@opts[:custom_paths], suggestions_size: suggestions_size)
     end
 
     def init_reporter
-      @reporter = Reporter.new(**@opts.to_hash.slice(:logfile, :format, :verbose))
+      @reporter = Reporter.new(**@opts.to_hash.slice(:logfile, :format, :verbose, :print_filepaths))
     end
 
     def run

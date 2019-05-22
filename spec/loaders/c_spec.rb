@@ -9,7 +9,7 @@ RSpec.describe Forspell::Loaders::C do
   describe 'C' do
     let(:locations_with_words) {
       {
-        8 => %w[Copyright Daniel Stenberg et al],
+        8 => %w[Copyright C Daniel Stenberg et al],
         10 => %w[This software is licensed as described in the file which],
         11 => %w[you should have received as part of this distribution The terms],
         12 => %w[are also available at],
@@ -32,23 +32,23 @@ RSpec.describe Forspell::Loaders::C do
   describe 'C++' do
     let(:locations_with_words) {
       { 2 => ['Version'],
-        4 => %w[Copyright Németh László],
+        4 => %w[Copyright C Németh László],
         6 => %w[The contents of this file are subject to the Mozilla Public License Version],
-        7 => %w[you may not use this file except in compliance with],
+        7 => %w[the License you may not use this file except in compliance with],
         8 => %w[the License You may obtain a copy of the License at],
         11 => %w[Software distributed under the License is distributed on an basis],
         12 => %w[either express or implied See the License],
         13 => %w[for the specific language governing rights and limitations under the],
         14 => ['License'],
-        16 => %w[Hunspell is based on which is Copyright Kevin Hendricks],
-        18 => %w[David Einstein Davide Prina Giuseppe Modugno],
+        16 => %w[Hunspell is based on which is Copyright C Kevin Hendricks],
+        18 => %w[Contributors David Einstein Davide Prina Giuseppe Modugno],
         19 => %w[Gianluca Turconi Simon Brouwer Noll János Bíró],
         20 => %w[Goldman Eleonóra Sarlós Tamás Bencsáth Boldizsár Halácsy Péter],
         21 => %w[Dvornik László Gefferth András Nagy Viktor Varga Dániel Chris Halls],
         22 => %w[Rene Engelhard Bram Moolenaar Dafydd Jones Harri Pitkänen],
         24 => %w[Alternatively the contents of this file may be used under the terms of],
-        25 => %w[either the General Public License Version or later or],
-        26 => %w[the Lesser General Public License Version or later],
+        25 => %w[either the General Public License Version or later the or],
+        26 => %w[the Lesser General Public License Version or later the],
         27 => %w[in which case the provisions of the or the are applicable instead],
         28 => %w[of those above If you wish to allow use of your version of this file only],
         29 => %w[under the terms of either the or the and not to allow others to],
