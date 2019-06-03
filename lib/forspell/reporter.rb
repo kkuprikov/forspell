@@ -16,7 +16,7 @@ module Forspell
     SUGGEST_FORMAT = '(suggestions: %<suggestions>s)'
     ERROR_FORMAT = '%<file>s:%<line>i: %<text>s %<suggest>s'
     SUMMARY = "Forspell inspects *.rb, *.c, *.cpp, *.md files\n"\
-              '%<files>i inspected, %<errors>s detected'
+              '%<files>i file%<files_plural>s inspected, %<errors>s error%<errors_plural>s detected'
 
     attr_accessor :progress_bar
 
@@ -51,7 +51,7 @@ module Forspell
       @logger.error "Parsing error in #{@files.last}: #{error}"
     end
 
-    def path_load_error path
+    def path_load_error(path)
       @logger.error "Path not found: #{path}"
     end
 
@@ -93,7 +93,11 @@ module Forspell
       color = err_count.positive? ? :red : :green
       total_errors_colorized = @pastel.decorate(err_count.to_s, color)
 
-      print format(SUMMARY, files: @files.size, errors: total_errors_colorized)
+      print format(SUMMARY,
+                   files: @files.size,
+                   errors: total_errors_colorized,
+                   files_plural: @files.size == 1 ? '' : 's',
+                   errors_plural: err_count == 1 ? '' : 's')
     end
 
     def print_dictionary
@@ -117,7 +121,7 @@ module Forspell
 
     private
 
-    def print something
+    def print(something)
       $stdout.tty? ? @progress_bar&.log(something) : puts(something)
     end
   end

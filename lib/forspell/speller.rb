@@ -37,12 +37,12 @@ module Forspell
         
         alterations.any?{ |w| dictionary.check?(w) }
       else
-        parts.all? { |part| correct?(part) }
+        dictionary.check?(word) || parts.all? { |part| correct?(part) }
       end
     end
 
     def suggest(word)
-      @suggestions_size.positive? ? dictionary.suggest(word).first(@suggestions_size) : []
+      @suggestions_size.positive? ? dictionary.suggest(word).first(@suggestions_size) - [word, word.capitalize] : []
     end
   end
 end
