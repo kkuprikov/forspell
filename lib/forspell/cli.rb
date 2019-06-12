@@ -38,9 +38,9 @@ module Forspell
 
     def call
       init_options
+      init_reporter
       create_files_list
       init_speller
-      init_reporter
       run
     end
 
@@ -48,6 +48,9 @@ module Forspell
 
     def create_files_list
       @files = FileList.new(paths: @opts.arguments, exclude_paths: @opts[:exclude_paths])
+    rescue Forspell::FileList::PathLoadError => path
+      @reporter.path_load_error path
+      exit ERROR_CODE
     end
 
     def init_options
@@ -55,11 +58,7 @@ module Forspell
 
       @opts = Slop.parse(@options, &DEFINITIONS)
 
-      if @opts.arguments.empty?
-        puts 'Usage: forspell paths to check [options]'
-        puts 'Type --help for more info'
-        exit(ERROR_CODE)
-      end
+      @opts.arguments << '.' if @opts.arguments.empty?
       
       @opts[:format] = 'dictionary' if @opts[:gen_dictionary]
       @opts[:format] = @opts[:format]&.downcase
@@ -88,9 +87,6 @@ module Forspell
       runner = Forspell::Runner.new(files: @files, speller: @speller, reporter: @reporter)
       runner.call
       exit @reporter.finalize
-    rescue Forspell::FileList::PathLoadError => path
-      @reporter.path_load_error path
-      exit ERROR_CODE
     end
   end
 end
