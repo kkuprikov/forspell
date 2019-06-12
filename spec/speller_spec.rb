@@ -47,6 +47,7 @@ RSpec.describe Forspell::Speller do
       'somerandomwordes' => false,
       'Somerandomwordes' => false,
       'somerandomwor' => false,
+      'customdash-customword' => true,
       'super' => true,
       'good' => true,
       'super-good' => true,
