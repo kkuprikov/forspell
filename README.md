@@ -44,7 +44,10 @@ Options:
     --help
 ```
 
-forspell automatically loads command-line arguments from `.forspell` file in current folder, if it is present.
+`forspell` automatically loads command-line arguments from `.forspell` file in current folder, if it is present.
+Arguments for `forspell` command are directories or separate files you want to check.
+If no arguments provided, current directory will be processed.
+Supported file extensions are `.rb`, `.c`, `.cpp`, `.md`.
 
 ### Dictionaries
 
