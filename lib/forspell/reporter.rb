@@ -13,10 +13,12 @@ module Forspell
     ERROR_CODE = 1
     DICT_PATH = File.join(Dir.pwd, 'forspell.dict')
     DICT_OVERWRITE = 'Do you want to overwrite forspell.dict? (yN)'
-    DICT_PROMPT = "# Format: one word per line. Empty lines and #-comments are supported too.\n"\
-                  "# If you want to add word with its forms, you can write 'word: example' (without quotes) on the line,\n"\
-                  "# where 'example' is existing word with the same possible forms (endings) as your word.\n"\
-                  "# Example: deduplicate: duplicate\n"
+    DICT_PROMPT = <<~PROMPT 
+      # Format: one word per line. Empty lines and #-comments are supported too.
+      # If you want to add word with its forms, you can write 'word: example' (without quotes) on the line,
+      # where 'example' is existing word with the same possible forms (endings) as your word.
+      # Example: deduplicate: duplicate
+    PROMPT
     SUGGEST_FORMAT = '(suggestions: %<suggestions>s)'
     ERROR_FORMAT = '%<file>s:%<line>i: %<text>s %<suggest>s'
     SUMMARY = "Forspell inspects *.rb, *.c, *.cpp, *.md files\n"\
