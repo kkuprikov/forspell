@@ -36,7 +36,7 @@ module Forspell
     def expand_paths(path)
       if File.directory?(path)
         Dir.glob(File.join(path, '**', "*.{#{EXTENSION_GLOBS.join(',')}}"))
-      elsif File.exists? path
+      elsif File.exist? path
         path
       else
         raise PathLoadError, path

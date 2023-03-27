@@ -23,7 +23,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'backports', '~> 3.0'
   s.add_dependency 'kramdown', '~> 2.0'
   s.add_dependency 'kramdown-parser-gfm', '~> 1.0'
-  s.add_dependency 'sanitize', '~> 5.0'
+  s.add_dependency 'sanitize', '~> 6.0'
   s.add_dependency 'yard'
   s.add_dependency 'ffi-hunspell'
   s.add_dependency 'parser'
