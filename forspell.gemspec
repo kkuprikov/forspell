@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'forspell'
-  s.version     = '0.0.8'
+  s.version     = '0.0.9'
   s.authors     = ['Kirill Kuprikov', 'Victor Shepelev']
   s.email       = 'kkuprikov@gmail.com'
 
